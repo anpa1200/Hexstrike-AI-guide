@@ -21,8 +21,8 @@ const FEATURES = [
   },
   {
     icon: '⚡',
-    title: 'Full Kill Chain Coverage',
-    desc: 'Recon → Enumeration → Exploitation → Lateral Movement → Reporting. A single natural-language goal drives the entire engagement, phase by phase.',
+    title: 'Full Lab Assessment Coverage',
+    desc: 'Recon → Enumeration → Validation → Reporting. A single natural-language goal drives the workflow phase by phase in authorized lab environments — with operator checkpoints at each high-risk step.',
   },
   {
     icon: '🛡️',
@@ -354,7 +354,7 @@ export default function Home() {
       <section className={styles.ctaBanner}>
         <div className="container">
           <h2>Ready to start your first AI-driven pentest?</h2>
-          <p>Follow the complete guide — from installation to root shell.</p>
+          <p>Follow the complete guide — from installation to your first authorized lab assessment.</p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/getting-started/installation">
               ▶ Get Started

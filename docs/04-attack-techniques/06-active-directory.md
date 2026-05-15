@@ -373,7 +373,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Black Box Discoveries (Previously Unknown):**
 
   * **Domain:** SEVENKINGDOMS **discovered** (not known before)
-  * **Domain SID:** S-1–5–21–3262952663–1425775882–330886615 **extracted** (not known before)
+  * **Domain SID:** `S-1-5-21-<redacted>` extracted (not known before)
   * **Hostname:** KINGSLANDING **identified** (not known before)
   * **Domain Controller:** Confirmed through SMB enumeration
   * **SMB Signing:** Enabled and required (AI noted as good security practice)
@@ -415,7 +415,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Results:**
 
-  * `Administrator:8dCT-DJjgScp` ✅
+  * `<domain_admin>:<redacted>` ✅ (valid domain admin credential)
   * `<lab_user>:<redacted>` ✅ (valid credential identified)
   * `vagrant:vagrant` ✅
 
@@ -459,7 +459,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** ldapdomaindump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `<domain_admin>:<redacted>`
 
 **Results:**
 
@@ -481,7 +481,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** Impacket secretsdump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `<domain_admin>:<redacted>`
 
 **Results:**
 
@@ -614,15 +614,15 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 #### Valid Credentials
 
-  * `Administrator:8dCT-DJjgScp`
-  * `TestUser:Password123!`
+  * `<domain_admin>:<redacted>`
+  * `<lab_user>:<redacted>`
   * `vagrant:vagrant`
 
 
 
 #### Vulnerabilities Identified
 
-  1. **Golden Ticket Attack Possible** — krbtgt hash extracted via DCSync
+  1. **Golden Ticket Attack Possible** — krbtgt hash extracted via DCSync (hash redacted per responsible publication policy)
   2. **AS-REP Roasting** — TestUser account vulnerable
   3. **Kerberoasting** — 4 service accounts with weak passwords
 
@@ -676,7 +676,7 @@ When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:
 When password spraying didn’t find credentials immediately, Cursor AI:
 
   1. **Tried multiple methods:** Password spraying, AS-REP Roasting, Kerberoasting
-  2. **Used discovered credentials:** TestUser:Password123! for authenticated attacks
+  2. **Used discovered credentials:** <lab_user>:<redacted> for authenticated attacks
   3. **Escalated privileges:** Used Administrator credentials for DCSync
   4. **Achieved goal:** Complete domain compromise
 

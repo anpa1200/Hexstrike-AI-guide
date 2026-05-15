@@ -246,7 +246,7 @@ Simple and strong!
       
     RESULTS:  
     admin:password  
-    root:toor  
+    root:<redacted>   # Metasploitable default — lab VM only  
     it_admin:C0mplex_77!_HArd_To_Gu3ss  
       
     DECISION: CRITICAL FINDING! Leaked credentials found. These can be tested  
@@ -755,7 +755,7 @@ Simple and strong!
       
     RESULTS:  
     it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    ftp_user:123456  
+    ftp_user:<redacted>  # intentional weak lab credential  
     web_admin:password123  
     guest_user:password123  
     root:password  
@@ -1345,7 +1345,7 @@ The final report consolidates the engagement into clear, defensible findings:
     Windows (172.16.59.144):  
     - it_admin:C0mplex_77!_HArd_To_Gu3ss ✓ (WORKING - Admin Access)  
     - admin:password  
-    - root:toor  
+    - root:<redacted>  # Metasploitable default — lab VM only  
     - Vuln: (AutoAdminLogon enabled)  
       
     Linux (172.16.59.128):  
@@ -1475,7 +1475,7 @@ The final report consolidates the engagement into clear, defensible findings:
       
     CREDENTIALS DISCOVERED ON 172.16.59.140 (via anonymous SMB root share):  
     - it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    - ftp_user:123456  
+    - ftp_user:<redacted>  # intentional weak lab credential  
     - web_admin:password123  
     - guest_user:password123  
     - root:password  

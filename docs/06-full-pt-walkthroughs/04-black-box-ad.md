@@ -410,8 +410,8 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Results:**
 
-  * `Administrator:8dCT-DJjgScp` ✅
-  * `TestUser:Password123!` ✅
+  * `<domain_admin>:<redacted>` ✅
+  * `<lab_user>:<redacted>` ✅
   * `vagrant:vagrant` ✅
 
 
@@ -454,7 +454,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** ldapdomaindump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `<domain_admin>:<redacted>`
 
 **Results:**
 
@@ -476,13 +476,13 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** Impacket secretsdump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `<domain_admin>:<redacted>`
 
 **Results:**
 
   * ✅ **Complete domain credential database extracted**
   * **27 user NTLM hashes** obtained
-  * **krbtgt hash extracted:** `1c455e2c1f50aa2c4c0fb3d14188ee65`
+  * **krbtgt hash extracted:** `<redacted>` (hash redacted per responsible publication policy)
   * **Kerberos AES keys** extracted for all users
 
 
@@ -532,7 +532,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Decision 4: Exploitation Priority**
 
-  * **Trigger:** Valid credentials obtained (Administrator:8dCT-DJjgScp)
+  * **Trigger:** Valid credentials obtained (<domain_admin>:<redacted>)
   * **AI Decision:** Perform DCSync attack immediately
   * **Reasoning:** “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”
   * **Tool Selected:** Impacket secretsdump
@@ -609,8 +609,8 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 #### Valid Credentials
 
-  * `Administrator:8dCT-DJjgScp`
-  * `TestUser:Password123!`
+  * `<domain_admin>:<redacted>`
+  * `<lab_user>:<redacted>`
   * `vagrant:vagrant`
 
 
@@ -671,7 +671,7 @@ When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:
 When password spraying didn’t find credentials immediately, Cursor AI:
 
   1. **Tried multiple methods:** Password spraying, AS-REP Roasting, Kerberoasting
-  2. **Used discovered credentials:** TestUser:Password123! for authenticated attacks
+  2. **Used discovered credentials:** <lab_user>:<redacted> for authenticated attacks
   3. **Escalated privileges:** Used Administrator credentials for DCSync
   4. **Achieved goal:** Complete domain compromise
 

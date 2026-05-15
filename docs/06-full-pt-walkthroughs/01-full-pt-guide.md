@@ -1,5 +1,5 @@
 ---
-title: "Full Penetration Test with HexStrike AI — Complete Guide"
+title: "Controlled Lab Assessment Workflow with HexStrike AI"
 sidebar_position: 1
 ---
 
