@@ -353,7 +353,7 @@ export default function Home() {
       <section className={styles.ctaBanner}>
         <div className="container">
           <h2>Ready to start your first AI-driven pentest?</h2>
-          <p>Follow the complete guide — from installation to root shell.</p>
+          <p>Follow the complete guide — from installation to full lab compromise.</p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/getting-started/installation">
               ▶ Get Started

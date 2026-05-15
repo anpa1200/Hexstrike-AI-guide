@@ -24,7 +24,7 @@ Single-Prompt Lab Demonstration — GOAD-Mini Environment
 
 This article documents a **single-prompt lab engagement** that achieves domain compromise through the ADCS ESC8 vulnerability. Starting from nothing more than an IP address, the AI-orchestrated attack framework executed the entire chain — from reconnaissance to domain compromise — in one session against the GOAD-Mini lab.
 
-**Key Innovation:** This attack demonstrates the power of AI-driven penetration testing, where a single comprehensive prompt orchestrates multiple tools, handles troubleshooting automatically, and adapts to challenges in real-time.
+**Lab result:** In this GOAD-Mini run, a single high-level prompt initiated a multi-phase workflow. The outcome demonstrates orchestration capability in a controlled environment, not guaranteed autonomous reliability in production.
 
 * * *
 
@@ -543,7 +543,7 @@ This lab-observed ADCS ESC8 attack demonstrates:
 ### Key Takeaways
 
   * ✅ **ESC8 is Critical:** HTTP Web Enrollment is a severe vulnerability
-  * ✅ **Automation Works:** AI can execute complex attack chains automatically
+  * ✅ **Orchestration Works:** AI can sequence complex attack chains in a prepared lab environment
   * ✅ **Defense is Possible:** Proper configuration prevents this attack
   * ✅ **Monitoring is Essential:** Detect and respond to certificate-based attacks
 

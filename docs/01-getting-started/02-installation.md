@@ -120,12 +120,14 @@ _HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, an
 |-----------|---------|
 | OS | Kali Linux 2025.4 |
 | HexStrike AI | Kali package `hexstrike-ai` `0.0~git20260306.8333779` |
-| Gemini CLI | `@google/gemini-cli` 0.1.x (latest 0.1 at test time) |
+| Gemini CLI | `@google/gemini-cli` 0.1.x ¹ |
 | OpenAI Codex CLI | `@openai/codex` 0.77.0 |
 | Cursor | 0.44+ with MCP support |
-| Ollama | 0.3.x (latest 0.3 at test time) |
+| Ollama | 0.3.x ¹ |
 
 > Results may vary on other versions. Always pin versions in production lab configs.
+> 
+> ¹ Exact minor version not pinned — tested on latest available `0.x` at time of writing (May 2026). Run `npm list @google/gemini-cli` / `ollama --version` to confirm yours.
 
 ---
 
