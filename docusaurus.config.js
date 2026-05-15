@@ -113,34 +113,27 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Articles',
+            title: 'Getting Started',
             items: [
-              {
-                label: 'HexStrike Guides',
-                to: '/docs/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama',
-              },
+              { label: 'Installation', to: '/docs/getting-started/installation' },
+              { label: 'Overview', to: '/docs/getting-started/overview' },
+              { label: 'Full PT Guide', to: '/docs/full-pt-walkthroughs/full-pt-guide' },
+            ],
+          },
+          {
+            title: 'Attack Techniques',
+            items: [
+              { label: 'Network Discovery', to: '/docs/attack-techniques/network-discovery' },
+              { label: 'Web Application', to: '/docs/attack-techniques/web-application' },
+              { label: 'Active Directory', to: '/docs/attack-techniques/active-directory' },
+              { label: 'Password Recovery', to: '/docs/password-recovery/modern-cracking' },
             ],
           },
           {
             title: 'Author',
             items: [
-              {
-                label: 'Medium',
-                href: 'https://medium.com/@1200km',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/anpa1200',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              { label: 'Medium', href: 'https://medium.com/@1200km' },
+              { label: 'GitHub', href: 'https://github.com/anpa1200' },
             ],
           },
         ],

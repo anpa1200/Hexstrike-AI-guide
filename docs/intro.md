@@ -16,12 +16,12 @@ Unlike a scanner or a chatbot with tools, HexStrike **maintains context across a
 
 | Section | What You'll Learn |
 |---------|-------------------|
-| [Getting Started](./01-getting-started/01-overview) | What HexStrike is, installation on Kali Linux, and how it compares to other AI security tools |
-| [LLM Integrations](./02-llm-integrations/01-overview) | How to connect HexStrike to Gemini CLI, OpenAI Codex, Cursor MCP, and local Ollama models |
-| [Recon & OSINT](./03-recon-osint/01-shodan) | Passive intelligence with Shodan, email-to-exposure mapping via Cursor |
-| [Attack Techniques](./04-attack-techniques/01-network-discovery) | Network, web, wireless, SSH, SMB, Active Directory, ADCS ESC8, and cloud attacks |
-| [Password Recovery](./05-password-recovery/01-modern-cracking) | AI-orchestrated recovery for ZIP, PDF, Office, WiFi, and SSH credentials |
-| [Full PT Walkthroughs](./06-full-pt-walkthroughs/01-full-pt-guide) | End-to-end lab penetration tests: single target, full subnet, black-box AD, web+cloud |
+| [Getting Started](/docs/getting-started/overview) | What HexStrike is, installation on Kali Linux, and how it compares to other AI security tools |
+| [LLM Integrations](/docs/llm-integrations/overview) | How to connect HexStrike to Gemini CLI, OpenAI Codex, Cursor MCP, and local Ollama models |
+| [Recon & OSINT](/docs/recon-osint/shodan) | Passive intelligence with Shodan, email-to-exposure mapping via Cursor |
+| [Attack Techniques](/docs/attack-techniques/network-discovery) | Network, web, wireless, SSH, SMB, Active Directory, ADCS ESC8, and cloud attacks |
+| [Password Recovery](/docs/password-recovery/modern-cracking) | AI-orchestrated recovery for ZIP, PDF, Office, WiFi, and SSH credentials |
+| [Full PT Walkthroughs](/docs/full-pt-walkthroughs/full-pt-guide) | End-to-end lab penetration tests: single target, full subnet, black-box AD, web+cloud |
 
 ---
 
@@ -39,7 +39,7 @@ python hexstrike.py --mcp
 gemini --mcp hexstrike
 ```
 
-See the full [Installation Guide](./01-getting-started/02-installation) for all LLM clients.
+See the full [Installation Guide](/docs/getting-started/installation) for all LLM clients.
 
 ---
 

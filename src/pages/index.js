@@ -42,11 +42,11 @@ const SECTIONS = [
     emoji: '🚀',
     title: 'Getting Started',
     desc: 'What HexStrike is, installation on Kali Linux, and how it compares to HackerAI and other AI security tools.',
-    to: '/docs/01-getting-started/01-overview',
+    to: '/docs/getting-started/overview',
     links: [
-      { label: 'Overview', to: '/docs/01-getting-started/01-overview' },
-      { label: 'Installation', to: '/docs/01-getting-started/02-installation' },
-      { label: 'vs HackerAI', to: '/docs/01-getting-started/03-vs-other-tools' },
+      { label: 'Overview', to: '/docs/getting-started/overview' },
+      { label: 'Installation', to: '/docs/getting-started/installation' },
+      { label: 'vs HackerAI', to: '/docs/getting-started/vs-other-tools' },
     ],
   },
   {
@@ -54,12 +54,12 @@ const SECTIONS = [
     emoji: '🤖',
     title: 'LLM Integrations',
     desc: 'Connect HexStrike to Gemini CLI, OpenAI Codex, Cursor MCP, or local Ollama models for air-gapped labs.',
-    to: '/docs/02-llm-integrations/01-overview',
+    to: '/docs/llm-integrations/overview',
     links: [
-      { label: 'Gemini', to: '/docs/02-llm-integrations/02-gemini' },
-      { label: 'OpenAI Codex', to: '/docs/02-llm-integrations/03-openai-codex' },
-      { label: 'Cursor MCP', to: '/docs/02-llm-integrations/04-cursor-mcp' },
-      { label: 'Ollama', to: '/docs/02-llm-integrations/05-ollama-local' },
+      { label: 'Gemini', to: '/docs/llm-integrations/gemini' },
+      { label: 'OpenAI Codex', to: '/docs/llm-integrations/openai-codex' },
+      { label: 'Cursor MCP', to: '/docs/llm-integrations/cursor-mcp' },
+      { label: 'Ollama', to: '/docs/llm-integrations/ollama-local' },
     ],
   },
   {
@@ -67,10 +67,10 @@ const SECTIONS = [
     emoji: '🔍',
     title: 'Recon & OSINT',
     desc: 'Passive intelligence with Shodan integration and email-to-full-exposure-map OSINT workflows.',
-    to: '/docs/03-recon-osint/01-shodan',
+    to: '/docs/recon-osint/shodan',
     links: [
-      { label: 'Shodan', to: '/docs/03-recon-osint/01-shodan' },
-      { label: 'Email OSINT', to: '/docs/03-recon-osint/02-email-osint' },
+      { label: 'Shodan', to: '/docs/recon-osint/shodan' },
+      { label: 'Email OSINT', to: '/docs/recon-osint/email-osint' },
     ],
   },
   {
@@ -78,13 +78,13 @@ const SECTIONS = [
     emoji: '⚔️',
     title: 'Attack Techniques',
     desc: 'Network, web, wireless, SSH, SMB, Active Directory, ADCS ESC8, and combined web+cloud attack walkthroughs.',
-    to: '/docs/04-attack-techniques/01-network-discovery',
+    to: '/docs/attack-techniques/network-discovery',
     links: [
-      { label: 'Network', to: '/docs/04-attack-techniques/01-network-discovery' },
-      { label: 'Web App', to: '/docs/04-attack-techniques/02-web-application' },
-      { label: 'WiFi', to: '/docs/04-attack-techniques/03-wireless-wifi' },
-      { label: 'Active Directory', to: '/docs/04-attack-techniques/06-active-directory' },
-      { label: 'ADCS ESC8', to: '/docs/04-attack-techniques/07-adcs-esc8' },
+      { label: 'Network', to: '/docs/attack-techniques/network-discovery' },
+      { label: 'Web App', to: '/docs/attack-techniques/web-application' },
+      { label: 'WiFi', to: '/docs/attack-techniques/wireless-wifi' },
+      { label: 'Active Directory', to: '/docs/attack-techniques/active-directory' },
+      { label: 'ADCS ESC8', to: '/docs/attack-techniques/adcs-esc8' },
     ],
   },
   {
@@ -92,12 +92,12 @@ const SECTIONS = [
     emoji: '🔑',
     title: 'Password Recovery',
     desc: 'AI-orchestrated recovery for ZIP, PDF, Office documents. Brute force, wordlists, modern cracking methods.',
-    to: '/docs/05-password-recovery/01-modern-cracking',
+    to: '/docs/password-recovery/modern-cracking',
     links: [
-      { label: 'Overview', to: '/docs/05-password-recovery/01-modern-cracking' },
-      { label: 'ZIP', to: '/docs/05-password-recovery/02-zip' },
-      { label: 'PDF', to: '/docs/05-password-recovery/03-pdf' },
-      { label: 'Office', to: '/docs/05-password-recovery/04-office-documents' },
+      { label: 'Overview', to: '/docs/password-recovery/modern-cracking' },
+      { label: 'ZIP', to: '/docs/password-recovery/zip' },
+      { label: 'PDF', to: '/docs/password-recovery/pdf' },
+      { label: 'Office', to: '/docs/password-recovery/office-documents' },
     ],
   },
   {
@@ -105,12 +105,12 @@ const SECTIONS = [
     emoji: '📋',
     title: 'Full PT Walkthroughs',
     desc: 'End-to-end lab engagements: full subnet compromise, black-box Active Directory, web+cloud — all AI-driven.',
-    to: '/docs/06-full-pt-walkthroughs/01-full-pt-guide',
+    to: '/docs/full-pt-walkthroughs/full-pt-guide',
     links: [
-      { label: 'Full PT Guide', to: '/docs/06-full-pt-walkthroughs/01-full-pt-guide' },
-      { label: 'Lab Setup', to: '/docs/06-full-pt-walkthroughs/02-lab-setup' },
-      { label: 'Full Subnet', to: '/docs/06-full-pt-walkthroughs/03-full-subnet' },
-      { label: 'Black-Box AD', to: '/docs/06-full-pt-walkthroughs/04-black-box-ad' },
+      { label: 'Full PT Guide', to: '/docs/full-pt-walkthroughs/full-pt-guide' },
+      { label: 'Lab Setup', to: '/docs/full-pt-walkthroughs/lab-setup' },
+      { label: 'Full Subnet', to: '/docs/full-pt-walkthroughs/full-subnet' },
+      { label: 'Black-Box AD', to: '/docs/full-pt-walkthroughs/black-box-ad' },
     ],
   },
 ];
@@ -217,10 +217,10 @@ export default function Home() {
 
           {/* CTAs */}
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/docs/06-full-pt-walkthroughs/01-full-pt-guide">
+            <Link className={styles.btnPrimary} to="/docs/full-pt-walkthroughs/full-pt-guide">
               ▶ Full PT Guide
             </Link>
-            <Link className={styles.btnSecondary} to="/docs/01-getting-started/02-installation">
+            <Link className={styles.btnSecondary} to="/docs/getting-started/installation">
               📦 Installation
             </Link>
             <Link className={styles.btnSecondary} to="/docs/">
@@ -325,10 +325,10 @@ export default function Home() {
           <h2>Ready to start your first AI-driven pentest?</h2>
           <p>Follow the complete guide — from installation to root shell.</p>
           <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} to="/docs/01-getting-started/02-installation">
+            <Link className={styles.btnPrimary} to="/docs/getting-started/installation">
               ▶ Get Started
             </Link>
-            <Link className={styles.btnSecondary} to="/docs/06-full-pt-walkthroughs/01-full-pt-guide">
+            <Link className={styles.btnSecondary} to="/docs/full-pt-walkthroughs/full-pt-guide">
               📋 Full PT Guide
             </Link>
           </div>

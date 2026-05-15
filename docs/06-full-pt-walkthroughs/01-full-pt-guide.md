@@ -16,8 +16,8 @@ All techniques demonstrated here are covered in detail in the linked articles, a
 | Requirement | Details |
 |-------------|---------|
 | Kali Linux 2025+ | HexStrike runs best on Kali with full toolset installed |
-| HexStrike AI installed | See [Installation Guide](../01-getting-started/02-installation) |
-| LLM client connected | Gemini CLI, Cursor, or OpenAI Codex — see [LLM Integrations](../02-llm-integrations/01-overview) |
+| HexStrike AI installed | See [Installation Guide](/docs/getting-started/installation) |
+| LLM client connected | Gemini CLI, Cursor, or OpenAI Codex — see [LLM Integrations](/docs/llm-integrations/overview) |
 | Authorized target | Lab VM, vulnerable box, or scoped engagement |
 
 ---
@@ -37,8 +37,8 @@ List open ports, service banners, CVE matches, and geolocation.
 Summarize the attack surface.
 ```
 
-- Full guide: [Shodan Integration](../03-recon-osint/01-shodan)
-- Identity-based OSINT (email → full exposure map): [OSINT from One Email](../03-recon-osint/02-email-osint)
+- Full guide: [Shodan Integration](/docs/recon-osint/shodan)
+- Identity-based OSINT (email → full exposure map): [OSINT from One Email](/docs/recon-osint/email-osint)
 
 ### Network Discovery
 
@@ -51,7 +51,7 @@ For each host found, enumerate all open ports and service versions.
 Identify potential attack vectors and prioritize by risk.
 ```
 
-- Full guide: [Network Discovery & Exploitation](../04-attack-techniques/01-network-discovery)
+- Full guide: [Network Discovery & Exploitation](/docs/attack-techniques/network-discovery)
 
 ---
 
@@ -70,7 +70,7 @@ Perform full web recon: directory brute force, technology fingerprinting,
 authentication analysis, identify injection points and misconfigurations.
 ```
 
-- Full guide: [Web Application Pentesting](../04-attack-techniques/02-web-application)
+- Full guide: [Web Application Pentesting](/docs/attack-techniques/web-application)
 
 ### SMB Enumeration
 
@@ -80,7 +80,7 @@ Enumerate SMB shares, check for null sessions, list accessible files,
 and test default credentials.
 ```
 
-- Full guide: [SMB Brute-Force](../04-attack-techniques/05-smb-brute-force)
+- Full guide: [SMB Brute-Force](/docs/attack-techniques/smb-brute-force)
 
 ### SSH Enumeration
 
@@ -90,7 +90,7 @@ Check SSH version, test known weak credentials,
 validate key-based auth configuration.
 ```
 
-- Full guide: [SSH Brute-Force](../04-attack-techniques/04-ssh-brute-force)
+- Full guide: [SSH Brute-Force](/docs/attack-techniques/ssh-brute-force)
 
 ### Wireless Networks (if in scope)
 
@@ -100,7 +100,7 @@ Capture WPA2 handshakes from all visible networks.
 Attempt cracking with rockyou.txt wordlist.
 ```
 
-- Full guide: [Wireless / WiFi Cracking](../04-attack-techniques/03-wireless-wifi)
+- Full guide: [Wireless / WiFi Cracking](/docs/attack-techniques/wireless-wifi)
 
 ### Active Directory (if in scope)
 
@@ -110,8 +110,8 @@ Enumerate domain: users, groups, SPNs, ACLs, GPOs, trust relationships.
 Identify Kerberoastable accounts and privilege escalation paths.
 ```
 
-- Full guide: [Active Directory PT](../04-attack-techniques/06-active-directory)
-- ESC8 certificate attack: [ADCS ESC8](../04-attack-techniques/07-adcs-esc8)
+- Full guide: [Active Directory PT](/docs/attack-techniques/active-directory)
+- ESC8 certificate attack: [ADCS ESC8](/docs/attack-techniques/adcs-esc8)
 
 ---
 
@@ -129,8 +129,8 @@ Attempt exploitation in sequence. For each success, capture proof
 (hostname, whoami, network interfaces). Continue until root is obtained.
 ```
 
-- Full walkthrough with Metasploitable: [OpenAI Codex Integration](../02-llm-integrations/03-openai-codex)
-- Full subnet compromise: [Full Subnet Compromise](./03-full-subnet)
+- Full walkthrough with Metasploitable: [OpenAI Codex Integration](/docs/llm-integrations/openai-codex)
+- Full subnet compromise: [Full Subnet Compromise](/docs/full-pt-walkthroughs/full-subnet)
 
 ### Web Exploitation
 
@@ -141,8 +141,8 @@ Test for SQLi, XSS, CSRF, auth bypass, and IDOR.
 Demonstrate impact with PoC for each confirmed vulnerability.
 ```
 
-- Full guide: [Web Application Pentesting](../04-attack-techniques/02-web-application)
-- Combined web + cloud: [Web & Cloud PT](../04-attack-techniques/08-web-cloud)
+- Full guide: [Web Application Pentesting](/docs/attack-techniques/web-application)
+- Combined web + cloud: [Web & Cloud PT](/docs/attack-techniques/web-cloud)
 
 ### Active Directory Exploitation
 
@@ -152,7 +152,7 @@ Use enumeration results to exploit the attack path with highest impact.
 Goal: Domain Admin. Document every step.
 ```
 
-Full autonomous black-box walkthrough: [Black-Box AD PT Walkthrough](./04-black-box-ad)
+Full autonomous black-box walkthrough: [Black-Box AD PT Walkthrough](/docs/full-pt-walkthroughs/black-box-ad)
 
 ESC8 single-prompt domain compromise:
 ```
@@ -160,7 +160,7 @@ Perform a complete ADCS ESC8 attack against lab.local.
 Start from enumeration, identify vulnerable templates,
 request and abuse the certificate, obtain DA.
 ```
-Guide: [ADCS ESC8](../04-attack-techniques/07-adcs-esc8)
+Guide: [ADCS ESC8](/docs/attack-techniques/adcs-esc8)
 
 ---
 
@@ -175,10 +175,10 @@ For encrypted files found during the engagement:
 | Office | `Recover access to credentials.docx` |
 | WiFi | `Crack the captured WPA2 handshake for SSID CorpNet` |
 
-- [Modern Password Cracking Overview](../05-password-recovery/01-modern-cracking)
-- [ZIP Recovery](../05-password-recovery/02-zip)
-- [PDF Recovery](../05-password-recovery/03-pdf)
-- [Office Documents Recovery](../05-password-recovery/04-office-documents)
+- [Modern Password Cracking Overview](/docs/password-recovery/modern-cracking)
+- [ZIP Recovery](/docs/password-recovery/zip)
+- [PDF Recovery](/docs/password-recovery/pdf)
+- [Office Documents Recovery](/docs/password-recovery/office-documents)
 
 ---
 
@@ -253,5 +253,5 @@ Produce actionable findings with PoCs.
 
 Practice all techniques safely in your own lab:
 
-- [Build a Vulnerable Ubuntu 24.04 Lab](./02-lab-setup) — SSH, FTP, Samba, NFS, Apache, MariaDB, privesc vectors
+- [Build a Vulnerable Ubuntu 24.04 Lab](/docs/full-pt-walkthroughs/lab-setup) — SSH, FTP, Samba, NFS, Apache, MariaDB, privesc vectors
 - Vulnerable Windows lab, AD lab, Kubernetes lab, and GCP lab covered in the extended article series at [medium.com/@1200km](https://medium.com/@1200km)
