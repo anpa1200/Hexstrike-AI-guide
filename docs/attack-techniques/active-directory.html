@@ -1,0 +1,461 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-attack-techniques/active-directory" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.1"><title data-rh=true>Active Directory Penetration Testing | HexStrike AI</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://anpa1200.github.io/Hexstrike-AI-guide/img/docusaurus-social-card.jpg /><meta data-rh=true name=twitter:image content=https://anpa1200.github.io/Hexstrike-AI-guide/img/docusaurus-social-card.jpg /><meta data-rh=true property=og:url content=https://anpa1200.github.io/Hexstrike-AI-guide/docs/attack-techniques/active-directory /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Active Directory Penetration Testing | HexStrike AI"/><meta data-rh=true name=description content="Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump."/><meta data-rh=true property=og:description content="Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump."/><link data-rh=true rel=icon href=/Hexstrike-AI-guide/img/favicon.ico /><link data-rh=true rel=canonical href=https://anpa1200.github.io/Hexstrike-AI-guide/docs/attack-techniques/active-directory /><link data-rh=true rel=alternate href=https://anpa1200.github.io/Hexstrike-AI-guide/docs/attack-techniques/active-directory hreflang=en /><link data-rh=true rel=alternate href=https://anpa1200.github.io/Hexstrike-AI-guide/docs/attack-techniques/active-directory hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://anpa1200.github.io/Hexstrike-AI-guide/docs/attack-techniques/active-directory","name":"Active Directory Penetration Testing","position":1}]}</script><link rel=alternate type=application/rss+xml href=/Hexstrike-AI-guide/blog/rss.xml title="HexStrike AI RSS Feed"><link rel=alternate type=application/atom+xml href=/Hexstrike-AI-guide/blog/atom.xml title="HexStrike AI Atom Feed"><link rel=stylesheet href=/Hexstrike-AI-guide/assets/css/styles.f8989b77.css /><script src=/Hexstrike-AI-guide/assets/js/runtime~main.0d9f2bb9.js defer></script><script src=/Hexstrike-AI-guide/assets/js/main.4bbe7b6c.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-6b1")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/Hexstrike-AI-guide/img/logo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/Hexstrike-AI-guide/><div class=navbar__logo><img src=/Hexstrike-AI-guide/img/logo.svg alt="HexStrike AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/Hexstrike-AI-guide/img/logo.svg alt="HexStrike AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">HexStrike AI</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/Hexstrike-AI-guide/docs/getting-started/overview>Guides</a><a class="navbar__item navbar__link" href=/Hexstrike-AI-guide/blog>Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/anpa1200/Hexstrike-AI-guide target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><a href=https://medium.com/@1200km target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">Medium<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/getting-started/overview><span title="Getting Started" class=categoryLinkLabel_W154>Getting Started</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/getting-started/overview><span title="HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape" class=linkLabel_WmDU>HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/getting-started/installation><span title="Installation & Configuration" class=linkLabel_WmDU>Installation & Configuration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/getting-started/vs-other-tools><span title="HexStrike vs. HackerAI" class=linkLabel_WmDU>HexStrike vs. HackerAI</span></a></ul><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/Hexstrike-AI-guide/docs><span title="HexStrike AI — Documentation" class=linkLabel_WmDU>HexStrike AI — Documentation</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/llm-integrations/overview><span title="LLM Integrations" class=categoryLinkLabel_W154>LLM Integrations</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/llm-integrations/overview><span title="LLM Integrations Overview" class=linkLabel_WmDU>LLM Integrations Overview</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/llm-integrations/gemini><span title="Gemini CLI Integration" class=linkLabel_WmDU>Gemini CLI Integration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/llm-integrations/openai-codex><span title="OpenAI Codex Integration" class=linkLabel_WmDU>OpenAI Codex Integration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/llm-integrations/cursor-mcp><span title="Cursor MCP Integration" class=linkLabel_WmDU>Cursor MCP Integration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/llm-integrations/ollama-local><span title="Ollama Local Integration" class=linkLabel_WmDU>Ollama Local Integration</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/recon-osint/shodan><span title="Recon & OSINT" class=categoryLinkLabel_W154>Recon & OSINT</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/recon-osint/shodan><span title="Integrating Shodan with HexStrike-AI Using Gemini-CLI" class=linkLabel_WmDU>Integrating Shodan with HexStrike-AI Using Gemini-CLI</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/recon-osint/email-osint><span title="OSINT: From One Email to a Full Exposure Map" class=linkLabel_WmDU>OSINT: From One Email to a Full Exposure Map</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/attack-techniques/network-discovery><span title="Attack Techniques" class=categoryLinkLabel_W154>Attack Techniques</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/network-discovery><span title="Network Discovery & Exploitation" class=linkLabel_WmDU>Network Discovery & Exploitation</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/web-application><span title="Web Application Pentesting" class=linkLabel_WmDU>Web Application Pentesting</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/wireless-wifi><span title="Wireless / WiFi Cracking" class=linkLabel_WmDU>Wireless / WiFi Cracking</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/ssh-brute-force><span title="SSH Credential Brute-Force" class=linkLabel_WmDU>SSH Credential Brute-Force</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/smb-brute-force><span title="SMB Exposure & Credential Brute-Force" class=linkLabel_WmDU>SMB Exposure & Credential Brute-Force</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/active-directory><span title="Active Directory Penetration Testing" class=linkLabel_WmDU>Active Directory Penetration Testing</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/adcs-esc8><span title="ADCS ESC8 — Domain Compromise via Certificates" class=linkLabel_WmDU>ADCS ESC8 — Domain Compromise via Certificates</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/attack-techniques/web-cloud><span title="Web & Cloud Penetration Testing" class=linkLabel_WmDU>Web & Cloud Penetration Testing</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/password-recovery/zip><span title="Password Recovery" class=categoryLinkLabel_W154>Password Recovery</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/password-recovery/zip><span title="ZIP Password Recovery" class=linkLabel_WmDU>ZIP Password Recovery</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/password-recovery/pdf><span title="PDF Password Recovery" class=linkLabel_WmDU>PDF Password Recovery</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/password-recovery/office-documents><span title="Office Documents Password Recovery" class=linkLabel_WmDU>Office Documents Password Recovery</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/Hexstrike-AI-guide/docs/full-pt-walkthroughs/full-pt-guide><span title="Full PT Walkthroughs" class=categoryLinkLabel_W154>Full PT Walkthroughs</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/full-pt-walkthroughs/full-pt-guide><span title="Full Penetration Test with HexStrike AI — Complete Guide" class=linkLabel_WmDU>Full Penetration Test with HexStrike AI — Complete Guide</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup><span title="Lab Setup: Vulnerable Ubuntu 24.04 Server" class=linkLabel_WmDU>Lab Setup: Vulnerable Ubuntu 24.04 Server</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/full-pt-walkthroughs/full-subnet><span title="Full Subnet Compromise Walkthrough" class=linkLabel_WmDU>Full Subnet Compromise Walkthrough</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/Hexstrike-AI-guide/docs/full-pt-walkthroughs/black-box-ad><span title="Black-Box Active Directory PT Walkthrough" class=linkLabel_WmDU>Black-Box Active Directory PT Walkthrough</span></a></ul></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/Hexstrike-AI-guide/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Attack Techniques</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Active Directory Penetration Testing</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AI-Driven Black Box Active Directory Penetration Testing</h1></header>
+<p>Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=ai-driven-black-box-active-directory-penetration-testing-1>AI-Driven Black Box Active Directory Penetration Testing<a href=#ai-driven-black-box-active-directory-penetration-testing-1 class=hash-link aria-label="Direct link to AI-Driven Black Box Active Directory Penetration Testing" title="Direct link to AI-Driven Black Box Active Directory Penetration Testing" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=fully-automated-ad-discovery-and-exploitation-with-cursor-ai-and-hexstrike-ai-mcp-from-ip-to-full-dump>Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump.<a href=#fully-automated-ad-discovery-and-exploitation-with-cursor-ai-and-hexstrike-ai-mcp-from-ip-to-full-dump class=hash-link aria-label="Direct link to Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump." title="Direct link to Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump." translate=no>​</a></h4>
+<p><img decoding=async loading=lazy src=/Hexstrike-AI-guide/assets/images/1-1dn9h-_X8_E_EoVV9LR5Zw-038dd3c0e3faba99411478c391c49b71.png width=1536 height=1024 class=img_ev3q /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=abstract>Abstract<a href=#abstract class=hash-link aria-label="Direct link to Abstract" title="Direct link to Abstract" translate=no>​</a></h3>
+<p>This article documents a groundbreaking <strong>black box penetration test</strong> orchestrated entirely by <strong>Cursor AI</strong> (an advanced AI coding assistant) integrated with <strong>HexStrike-ai MCP</strong> (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.</p>
+<p><strong>Critical Context:</strong> This was a <strong>true black box assessment</strong> — the only information provided was a single IP address (<strong>192.168.56.10</strong>). Cursor AI had no prior knowledge of:</p>
+<ul>
+<li class="">Whether the target was a Domain Controller</li>
+<li class="">If Active Directory was present</li>
+<li class="">What services were running</li>
+<li class="">What operating system was in use</li>
+<li class="">Any credentials or domain information</li>
+</ul>
+<p>The entire penetration test was initiated with <strong>a single human language prompt</strong> and executed completely autonomously, with Cursor AI discovering the environment, identifying it as an Active Directory domain controller, and then systematically exploiting it. All strategic decisions, error handling, and troubleshooting were performed automatically without human intervention.</p>
+<hr/>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running>If you like this research, <a href="https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&amp;currency_code=USD" target=_blank rel="noopener noreferrer" class="">buy me a coffee (PayPal) — Keep the lab running</a><a href=#if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running class=hash-link aria-label="Direct link to if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running" title="Direct link to if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running" translate=no>​</a></h4>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=table-of-contents>Table of Contents<a href=#table-of-contents class=hash-link aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents" translate=no>​</a></h2>
+<ol>
+<li class="">Introduction</li>
+<li class="">Technology Stack: HexStrike MCP</li>
+<li class="">AI-Driven Methodology</li>
+<li class="">Phase 1: Network Discovery</li>
+<li class="">Phase 2: SMB Enumeration</li>
+<li class="">Phase 3: User Enumeration</li>
+<li class="">Phase 4: Credential Discovery</li>
+<li class="">Phase 5: Authenticated Enumeration</li>
+<li class="">Phase 6: Advanced Exploitation</li>
+<li class="">AI Decision-Making Process</li>
+<li class="">Results and Findings</li>
+<li class="">Conclusion</li>
+</ol>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=introduction>Introduction<a href=#introduction class=hash-link aria-label="Direct link to Introduction" title="Direct link to Introduction" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=the-black-box-challenge>The Black Box Challenge<a href=#the-black-box-challenge class=hash-link aria-label="Direct link to The Black Box Challenge" title="Direct link to The Black Box Challenge" translate=no>​</a></h3>
+<p>This penetration test was conducted as a <strong>complete black box assessment</strong> — meaning Cursor AI started with <strong>zero knowledge</strong> about the target. The only information provided was a single IP address.</p>
+<p><strong>Initial State (Unknown to AI):</strong></p>
+<ul>
+<li class="">❓ Is this a Domain Controller?</li>
+<li class="">❓ Is Active Directory present?</li>
+<li class="">❓ What services are running?</li>
+<li class="">❓ What operating system?</li>
+<li class="">❓ What domain name?</li>
+<li class="">❓ Any credentials available?</li>
+</ul>
+<p><strong>Final State (Discovered by AI):</strong></p>
+<ul>
+<li class="">✅ Domain Controller identified</li>
+<li class="">✅ Active Directory environment mapped</li>
+<li class="">✅ Complete domain structure enumerated</li>
+<li class="">✅ All credentials extracted</li>
+<li class="">✅ Full domain compromise achieved</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=the-single-prompt-black-box-penetration-test>The Single-Prompt Black Box Penetration Test<a href=#the-single-prompt-black-box-penetration-test class=hash-link aria-label="Direct link to The Single-Prompt Black Box Penetration Test" title="Direct link to The Single-Prompt Black Box Penetration Test" translate=no>​</a></h3>
+<p>This entire black box penetration test was initiated with <strong>one simple human language prompt</strong> :</p>
+<blockquote>
+<p><strong>“Do deep blackBox pentest on target 192.168.56.10. USE MCP Hexstrike. Do All needed troubleshooting”</strong></p>
+</blockquote>
+<p>From this single instruction, Cursor AI:</p>
+<ol>
+<li class=""><strong>Discovered</strong> the target environment from scratch</li>
+<li class=""><strong>Identified</strong> it as an Active Directory domain controller</li>
+<li class=""><strong>Enumerated</strong> all services, users, and domain structure</li>
+<li class=""><strong>Exploited</strong> vulnerabilities systematically</li>
+<li class=""><strong>Handled</strong> all errors and troubleshooting autonomously</li>
+<li class=""><strong>Adapted</strong> strategies based on discoveries</li>
+<li class=""><strong>Generated</strong> comprehensive reports and articles</li>
+</ol>
+<p><strong>No manual intervention was required</strong> — Cursor AI orchestrated everything using HexStrike-ai MCP tools and direct tool execution, discovering the entire environment from a single IP address.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=target-configuration-discovered-during-assessment>Target Configuration (Discovered During Assessment)<a href=#target-configuration-discovered-during-assessment class=hash-link aria-label="Direct link to Target Configuration (Discovered During Assessment)" title="Direct link to Target Configuration (Discovered During Assessment)" translate=no>​</a></h3>
+<p><strong>Target:</strong> 192.168.56.10 (initially unknown)<br/>
+<strong>Domain:</strong> sevenkingdoms.local (SEVENKINGDOMS) — <strong>discovered during enumeration</strong><br/>
+<strong>Hostname:</strong> KINGSLANDING — <strong>discovered during enumeration</strong><br/>
+<strong>Assessment Date:</strong> 2026–01–26<br/>
+<strong>Execution Method:</strong> Fully automated black box via Cursor AI + HexStrike-ai MCP<br/>
+<strong>Assessment Type:</strong> Black Box (zero prior knowledge)</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=lab-environment-setup>Lab Environment Setup<a href=#lab-environment-setup class=hash-link aria-label="Direct link to Lab Environment Setup" title="Direct link to Lab Environment Setup" translate=no>​</a></h3>
+<p><strong>Manual PenTest of the same lab here:</strong></p>
+<p><a href=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d target=_blank rel="noopener noreferrer" title=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d class=""><strong>Active Directory Lab for PenTest. Manual Deployment Guide</strong><br/>
+<em>This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…</em> medium.com</a><a href=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d target=_blank rel="noopener noreferrer" class=""></a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=target-environment>Target Environment<a href=#target-environment class=hash-link aria-label="Direct link to Target Environment" title="Direct link to Target Environment" translate=no>​</a></h4>
+<p><strong>How this environment was deployed:</strong></p>
+<p><a href=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d target=_blank rel="noopener noreferrer" title=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d class=""><strong>Active Directory Lab for PenTest. Manual Deployment Guide</strong><br/>
+<em>This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…</em> medium.com</a><a href=https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d target=_blank rel="noopener noreferrer" class=""></a></p>
+<p><strong>Or here:</strong></p>
+<p><a href=https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc target=_blank rel="noopener noreferrer" title=https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc class=""><strong>Deploy a Complete Active Directory PenTest Lab in One Prompt with Cursor AI</strong><br/>
+<em>How I automated the deployment of a complex AD lab environment using AI assistance</em> medium.com</a><a href=https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc target=_blank rel="noopener noreferrer" class=""></a></p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=technology-stack-cursor-ai-and-hexstrike-ai-mcp>Technology Stack: Cursor AI and HexStrike-ai MCP<a href=#technology-stack-cursor-ai-and-hexstrike-ai-mcp class=hash-link aria-label="Direct link to Technology Stack: Cursor AI and HexStrike-ai MCP" title="Direct link to Technology Stack: Cursor AI and HexStrike-ai MCP" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=cursor-ai-the-autonomous-orchestrator>Cursor AI: The Autonomous Orchestrator<a href=#cursor-ai-the-autonomous-orchestrator class=hash-link aria-label="Direct link to Cursor AI: The Autonomous Orchestrator" title="Direct link to Cursor AI: The Autonomous Orchestrator" translate=no>​</a></h4>
+<p><a href=https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 target=_blank rel="noopener noreferrer" title=https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 class=""><strong>HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama</strong><br/>
+<em>A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…</em> medium.com</a><a href=https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 target=_blank rel="noopener noreferrer" class=""></a></p>
+<p><strong>Cursor AI</strong> is an advanced AI coding assistant that combines large language models with code understanding capabilities. In this assessment, Cursor AI served as:</p>
+<ul>
+<li class=""><strong>Strategic Planner:</strong> Analyzing the single prompt and creating comprehensive attack plans</li>
+<li class=""><strong>Command Executor:</strong> Running tools via HexStrike-ai MCP and direct execution</li>
+<li class=""><strong>Result Analyzer:</strong> Interpreting output and making intelligent decisions</li>
+<li class=""><strong>Problem Solver:</strong> Automatically troubleshooting errors and adapting strategies</li>
+<li class=""><strong>Report Generator:</strong> Creating comprehensive documentation</li>
+</ul>
+<p><strong>Key Capabilities:</strong></p>
+<ul>
+<li class="">Natural language understanding of security objectives</li>
+<li class="">Real-time error analysis and self-correction</li>
+<li class="">Context-aware decision making</li>
+<li class="">Multi-tool orchestration</li>
+<li class="">Autonomous troubleshooting without human intervention</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=hexstrike-ai-mcp-the-tool-integration-layer>HexStrike-ai MCP: The Tool Integration Layer<a href=#hexstrike-ai-mcp-the-tool-integration-layer class=hash-link aria-label="Direct link to HexStrike-ai MCP: The Tool Integration Layer" title="Direct link to HexStrike-ai MCP: The Tool Integration Layer" translate=no>​</a></h4>
+<p><strong>HexStrike-ai MCP</strong> (Model Context Protocol) provides a standardized interface for security tools, enabling Cursor AI to interact with penetration testing tools programmatically. MCP allows:</p>
+<ul>
+<li class=""><strong>Tool Discovery:</strong> AI can discover available security tools</li>
+<li class=""><strong>Standardized Execution:</strong> Consistent interface across different tools</li>
+<li class=""><strong>Result Parsing:</strong> Structured output for AI analysis</li>
+<li class=""><strong>Error Handling:</strong> Standardized error reporting for automated troubleshooting</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=hexstrike-ai-mcp-tools-used>HexStrike-ai MCP Tools Used<a href=#hexstrike-ai-mcp-tools-used class=hash-link aria-label="Direct link to HexStrike-ai MCP Tools Used" title="Direct link to HexStrike-ai MCP Tools Used" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>mcp_hexstrike-ai_nmap_scan</strong> — Network port scanning</li>
+<li class=""><strong>mcp_hexstrike-ai_enum4linux_scan</strong> — SMB enumeration</li>
+<li class=""><strong>mcp_hexstrike-ai_nbtscan_netbios</strong> — NetBIOS discovery</li>
+<li class=""><strong>mcp_hexstrike-ai_netexec_scan</strong> — Modern SMB enumeration (CrackMapExec/NetExec)</li>
+<li class=""><strong>Additional tools</strong> — Comprehensive AD assessment</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=integration-architecture>Integration Architecture<a href=#integration-architecture class=hash-link aria-label="Direct link to Integration Architecture" title="Direct link to Integration Architecture" translate=no>​</a></h4>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">┌─────────────────────────────────────────────────────────┐  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│                    Cursor AI                            │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  (Strategic Planning, Decision Making, Orchestration)   │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  (Autonomous Troubleshooting, Adaptive Learning)        │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">└────────────────────┬────────────────────────────────────┘  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                     │ Single Human Prompt  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                     │ "Run full real flow on 192.168.56.10"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">┌────────────────────▼────────────────────────────────────┐  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│              HexStrike-ai MCP Layer                     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  (Tool Discovery, Execution, Result Parsing)            │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  (Error Handling, Status Reporting)                     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">└────────────────────┬────────────────────────────────────┘  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        ┌────────────┼────────────┐  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        │            │            │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">┌───────▼───┐ ┌──────▼──────┐ ┌──▼──────────┐  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│   Nmap    │ │ Enum4linux  │ │  Impacket   │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│   Tools   │ │   Tools     │ │   Tools     │  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">└───────────┘ └─────────────┘ └─────────────┘</span><br/></div></code></pre></div></div>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=black-box-methodology>Black Box Methodology<a href=#black-box-methodology class=hash-link aria-label="Direct link to Black Box Methodology" title="Direct link to Black Box Methodology" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=the-discovery-first-approach>The Discovery-First Approach<a href=#the-discovery-first-approach class=hash-link aria-label="Direct link to The Discovery-First Approach" title="Direct link to The Discovery-First Approach" translate=no>​</a></h4>
+<p>Unlike traditional penetration tests where the target environment is known, this assessment followed a <strong>true black box methodology</strong> — starting with zero knowledge and discovering everything through systematic enumeration.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=the-single-prompt-black-box-assessment-flow>The Single-Prompt Black Box Assessment Flow<a href=#the-single-prompt-black-box-assessment-flow class=hash-link aria-label="Direct link to The Single-Prompt Black Box Assessment Flow" title="Direct link to The Single-Prompt Black Box Assessment Flow" translate=no>​</a></h4>
+<p>The entire black box penetration test was initiated with one human prompt and executed completely autonomously:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Human Input:  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">└─ Single Prompt: "Do deep blackBox pentest on target 192.168.56.10. USE MCP Hexstrike. Do All needed troubleshooting"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Cursor AI Processing (Black Box Discovery):  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 1. Initial Reconnaissance (Unknown Target)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ AI starts with: Only IP address 192.168.56.10  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ No assumptions about target  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI analyzes: "Need to discover what this target is"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 2. Network Discovery Phase  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Port scanning to discover services  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Service version detection  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ OS fingerprinting  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI discovers: Open ports, services, potential OS  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 3. Service Identification Phase  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Analyze discovered services  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Identify service types (SMB, LDAP, Kerberos, DNS)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ AI recognizes: "This looks like a Domain Controller!"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI adapts: "Switch to AD-specific enumeration"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 4. Active Directory Discovery  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ SMB enumeration to discover domain  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ LDAP enumeration to discover structure  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ DNS enumeration for domain information  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI discovers: Domain name, hostname, AD structure  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 5. User and Credential Discovery  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ User enumeration (Kerbrute, LDAP)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Password attacks (spraying, Kerberoasting, AS-REP)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI discovers: Valid users and credentials  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 6. Authenticated Enumeration  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Use discovered credentials  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Complete AD enumeration  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI discovers: Full domain structure, all users, groups  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 7. Exploitation Phase  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ DCSync attack with discovered credentials  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Extract all domain credentials  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ AI achieves: Complete domain compromise  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 8. Autonomous Troubleshooting (Robust & Automated)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Detect errors or failures automatically  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Analyze root cause intelligently  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Attempt multiple automatic fixes  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Try alternative tools/methods  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Adapt strategy dynamically based on discoveries  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ Continue execution despite failures  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">├─ 9. Adaptive Learning  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Update understanding based on discoveries  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Modify approach based on target type identified  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  ├─ Learn from failures  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  └─ Optimize tool usage for discovered environment  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">│  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">└─ 10. Report Generation  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   └─ AI synthesizes all discoveries and findings into comprehensive reports</span><br/></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=key-innovation-black-box-discovery--zero-human-intervention>Key Innovation: Black Box Discovery + Zero Human Intervention<a href=#key-innovation-black-box-discovery--zero-human-intervention class=hash-link aria-label="Direct link to Key Innovation: Black Box Discovery + Zero Human Intervention" title="Direct link to Key Innovation: Black Box Discovery + Zero Human Intervention" translate=no>​</a></h3>
+<p><strong>What makes this revolutionary:</strong></p>
+<ol>
+<li class=""><strong>True Black Box:</strong> Started with zero knowledge, discovered everything</li>
+<li class=""><strong>Environment Detection:</strong> AI automatically identified AD environment</li>
+<li class=""><strong>Adaptive Strategy:</strong> Methodology adapted based on discoveries</li>
+<li class=""><strong>Single Prompt Execution:</strong> Entire black box pentest from one instruction</li>
+<li class=""><strong>Autonomous Decision Making:</strong> AI makes all strategic decisions</li>
+<li class=""><strong>Robust Error Handling:</strong> Automatic troubleshooting without human help</li>
+<li class=""><strong>Self-Adaptation:</strong> AI modifies approach based on findings</li>
+<li class=""><strong>Complete Automation:</strong> No manual steps required</li>
+</ol>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-1-network-discovery>Phase 1: Network Discovery<a href=#phase-1-network-discovery class=hash-link aria-label="Direct link to Phase 1: Network Discovery" title="Direct link to Phase 1: Network Discovery" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=ai-planning-process>AI Planning Process<a href=#ai-planning-process class=hash-link aria-label="Direct link to AI Planning Process" title="Direct link to AI Planning Process" translate=no>​</a></h4>
+<p><strong>Initial Analysis:</strong></p>
+<p>The automated framework analyzed the requirements and created a comprehensive network discovery plan.</p>
+<p><strong>Tool Selection:</strong></p>
+<p>The framework selected HexStrike MCP tools for network scanning:</p>
+<ul>
+<li class=""><code>mcp_hexstrike-ai_nmap_scan</code> for comprehensive port scanning</li>
+<li class=""><code>mcp_hexstrike-ai_nbtscan_netbios</code> for NetBIOS discovery</li>
+</ul>
+<p><strong>Execution:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> # AI-generated execution via HexStrike MCP  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">mcp_hexstrike-ai_nmap_scan(  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    target="192.168.56.10",  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    scan_type="-sV",  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ports="1-1000",  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    additional_args="-sC"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">)</span><br/></div></code></pre></div></div>
+<p><strong>Results:</strong></p>
+<ul>
+<li class=""><strong>14 open ports</strong> identified</li>
+<li class=""><strong>Domain:</strong> sevenkingdoms.local discovered</li>
+<li class=""><strong>Hostname:</strong> KINGSLANDING identified</li>
+<li class=""><strong>Services:</strong> DNS, HTTP, Kerberos, LDAP, SMB, WinRM</li>
+</ul>
+<p><strong>AI Decision:</strong> Confirmed as Domain Controller. Proceed with AD-specific enumeration.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-2-active-directory-discovery-via-smb-enumeration>Phase 2: Active Directory Discovery via SMB Enumeration<a href=#phase-2-active-directory-discovery-via-smb-enumeration class=hash-link aria-label="Direct link to Phase 2: Active Directory Discovery via SMB Enumeration" title="Direct link to Phase 2: Active Directory Discovery via SMB Enumeration" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=black-box-ad-environment-discovery>Black Box AD Environment Discovery<a href=#black-box-ad-environment-discovery class=hash-link aria-label="Direct link to Black Box AD Environment Discovery" title="Direct link to Black Box AD Environment Discovery" translate=no>​</a></h4>
+<p><strong>AI Context:</strong> After Phase 1, AI discovered ports suggesting AD, but still needed to confirm and gather domain information.</p>
+<p><strong>AI Tool Selection:</strong></p>
+<p>Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to discover AD details:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"># AI-executed via HexStrike-ai MCP for AD discovery  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">mcp_hexstrike-ai_enum4linux_scan(  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    target="192.168.56.10",  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    additional_args="-a"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">mcp_hexstrike-ai_nbtscan_netbios(  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    target="192.168.56.10"  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">)</span><br/></div></code></pre></div></div>
+<p><strong>Black Box Discoveries (Previously Unknown):</strong></p>
+<ul>
+<li class=""><strong>Domain:</strong> SEVENKINGDOMS <strong>discovered</strong> (not known before)</li>
+<li class=""><strong>Domain SID:</strong> S-1–5–21–3262952663–1425775882–330886615 <strong>extracted</strong> (not known before)</li>
+<li class=""><strong>Hostname:</strong> KINGSLANDING <strong>identified</strong> (not known before)</li>
+<li class=""><strong>Domain Controller:</strong> Confirmed through SMB enumeration</li>
+<li class=""><strong>SMB Signing:</strong> Enabled and required (AI noted as good security practice)</li>
+</ul>
+<p><strong>AI Decision (Adaptive):</strong> “Confirmed: This is an Active Directory domain controller. SMB signing enabled means MITM attacks won’t work. I need to focus on credential-based attacks and Kerberos-based enumeration.”</p>
+<p><strong>Black Box Achievement:</strong> AI confirmed AD environment and discovered domain name without prior knowledge.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-3-user-enumeration>Phase 3: User Enumeration<a href=#phase-3-user-enumeration class=hash-link aria-label="Direct link to Phase 3: User Enumeration" title="Direct link to Phase 3: User Enumeration" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=kerbrute-user-enumeration>Kerbrute User Enumeration<a href=#kerbrute-user-enumeration class=hash-link aria-label="Direct link to Kerbrute User Enumeration" title="Direct link to Kerbrute User Enumeration" translate=no>​</a></h4>
+<p><strong>Tool:</strong> Kerbrute</p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class=""><strong>5 valid usernames</strong> discovered:</li>
+<li class="">Administrator</li>
+<li class="">administrator</li>
+<li class="">TestAdmin</li>
+<li class="">TestUser</li>
+<li class="">vagrant</li>
+</ul>
+<p><strong>AI Decision:</strong> Proceed with password attacks against discovered users.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-4-credential-discovery>Phase 4: Credential Discovery<a href=#phase-4-credential-discovery class=hash-link aria-label="Direct link to Phase 4: Credential Discovery" title="Direct link to Phase 4: Credential Discovery" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=password-spraying>Password Spraying<a href=#password-spraying class=hash-link aria-label="Direct link to Password Spraying" title="Direct link to Password Spraying" translate=no>​</a></h4>
+<p><strong>Strategy:</strong> Test common passwords against all discovered users</p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class=""><code>Administrator:8dCT-DJjgScp</code> ✅</li>
+<li class=""><code>TestUser:Password123!</code> ✅</li>
+<li class=""><code>vagrant:vagrant</code> ✅</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=as-rep-roasting>AS-REP Roasting<a href=#as-rep-roasting class=hash-link aria-label="Direct link to AS-REP Roasting" title="Direct link to AS-REP Roasting" translate=no>​</a></h4>
+<p><strong>Tool:</strong> Impacket GetNPUsers</p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class=""><strong>TestUser</strong> vulnerable (no pre-authentication required)</li>
+<li class="">Hash extracted: <code>$krb5asrep$23$TestUser@SEVENKINGDOMS.LOCAL:...</code></li>
+</ul>
+<p><strong>AI Decision:</strong> TestUser account is vulnerable to AS-REP Roasting. Extract hash for cracking.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=kerberoasting>Kerberoasting<a href=#kerberoasting class=hash-link aria-label="Direct link to Kerberoasting" title="Direct link to Kerberoasting" translate=no>​</a></h4>
+<p><strong>Tool:</strong> Impacket GetUserSPNs</p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class=""><strong>4 service accounts</strong> vulnerable:</li>
+<li class="">SQLService</li>
+<li class="">WebService</li>
+<li class="">FileService</li>
+<li class="">ExchangeService</li>
+<li class=""><strong>4 Kerberos hashes</strong> extracted</li>
+</ul>
+<p><strong>AI Decision:</strong> Service accounts can be Kerberoasted. Extract hashes for password cracking.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-5-authenticated-enumeration>Phase 5: Authenticated Enumeration<a href=#phase-5-authenticated-enumeration class=hash-link aria-label="Direct link to Phase 5: Authenticated Enumeration" title="Direct link to Phase 5: Authenticated Enumeration" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=ldap-domain-dump>LDAP Domain Dump<a href=#ldap-domain-dump class=hash-link aria-label="Direct link to LDAP Domain Dump" title="Direct link to LDAP Domain Dump" translate=no>​</a></h4>
+<p><strong>Tool:</strong> ldapdomaindump</p>
+<p><strong>Credentials Used:</strong> <code>Administrator:8dCT-DJjgScp</code></p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class="">Complete domain structure mapped</li>
+<li class="">All users enumerated (26 users)</li>
+<li class="">All groups enumerated</li>
+<li class="">All computers enumerated</li>
+<li class="">OU structure documented</li>
+</ul>
+<p><strong>AI Decision:</strong> With valid credentials, perform comprehensive AD enumeration to understand full domain structure.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=phase-6-advanced-exploitation>Phase 6: Advanced Exploitation<a href=#phase-6-advanced-exploitation class=hash-link aria-label="Direct link to Phase 6: Advanced Exploitation" title="Direct link to Phase 6: Advanced Exploitation" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=dcsync-attack>DCSync Attack<a href=#dcsync-attack class=hash-link aria-label="Direct link to DCSync Attack" title="Direct link to DCSync Attack" translate=no>​</a></h4>
+<p><strong>Tool:</strong> Impacket secretsdump</p>
+<p><strong>Credentials Used:</strong> <code>Administrator:8dCT-DJjgScp</code></p>
+<p><strong>Results:</strong></p>
+<ul>
+<li class="">✅ <strong>Complete domain credential database extracted</strong></li>
+<li class=""><strong>27 user NTLM hashes</strong> obtained</li>
+<li class=""><strong>krbtgt hash extracted:</strong> <code>1c455e2c1f50aa2c4c0fb3d14188ee65</code></li>
+<li class=""><strong>Kerberos AES keys</strong> extracted for all users</li>
+</ul>
+<p><strong>Critical Finding:</strong> krbtgt hash enables Golden Ticket attacks for persistent domain access.</p>
+<p><strong>AI Decision:</strong> DCSync successful. Extract all credentials for complete domain compromise.</p>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=ai-decision-making-process>AI Decision-Making Process<a href=#ai-decision-making-process class=hash-link aria-label="Direct link to AI Decision-Making Process" title="Direct link to AI Decision-Making Process" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=autonomous-decision-examples>Autonomous Decision Examples<a href=#autonomous-decision-examples class=hash-link aria-label="Direct link to Autonomous Decision Examples" title="Direct link to Autonomous Decision Examples" translate=no>​</a></h4>
+<p><strong>Decision 1: Network Discovery Strategy</strong></p>
+<ul>
+<li class=""><strong>Trigger:</strong> Initial prompt received</li>
+<li class=""><strong>AI Decision:</strong> Start with comprehensive Nmap scan via HexStrike-ai MCP</li>
+<li class=""><strong>Reasoning:</strong> “Need to identify all open ports and services to understand attack surface. HexStrike-ai MCP provides standardized interface.”</li>
+<li class=""><strong>Tool Selected:</strong> <code>mcp_hexstrike-ai_nmap_scan</code></li>
+<li class=""><strong>Execution:</strong> Automatic via MCP protocol</li>
+<li class=""><strong>Result:</strong> 14 ports discovered, domain identified</li>
+</ul>
+<p><strong>Decision 2: SMB Enumeration Approach</strong></p>
+<ul>
+<li class=""><strong>Trigger:</strong> Network discovery complete, SMB port (445) identified</li>
+<li class=""><strong>AI Decision:</strong> Use Enum4linux via HexStrike-ai MCP for comprehensive SMB enumeration</li>
+<li class=""><strong>Reasoning:</strong> “Enum4linux provides detailed domain information. HexStrike-ai MCP ensures consistent execution and error handling.”</li>
+<li class=""><strong>Tool Selected:</strong> <code>mcp_hexstrike-ai_enum4linux_scan</code></li>
+<li class=""><strong>Troubleshooting:</strong> When access denied errors occurred, AI recognized as expected and continued</li>
+<li class=""><strong>Result:</strong> Domain information extracted successfully</li>
+</ul>
+<p><strong>Decision 3: Credential Discovery Strategy</strong></p>
+<ul>
+<li class=""><strong>Trigger:</strong> Users discovered, need to find valid credentials</li>
+<li class=""><strong>AI Decision:</strong> Start with password spraying, then Kerberoasting, then AS-REP Roasting</li>
+<li class=""><strong>Reasoning:</strong> “Password spraying is safer (avoids lockouts). Kerberoasting targets service accounts. AS-REP Roasting targets accounts without pre-auth.”</li>
+<li class=""><strong>Tool Selected:</strong> Direct Impacket execution (more reliable than MCP for these tools)</li>
+<li class=""><strong>Adaptation:</strong> When some tools failed, AI tried alternatives automatically</li>
+<li class=""><strong>Result:</strong> 3 valid credentials found, multiple hashes extracted</li>
+</ul>
+<p><strong>Decision 4: Exploitation Priority</strong></p>
+<ul>
+<li class=""><strong>Trigger:</strong> Valid credentials obtained (Administrator:8dCT-DJjgScp)</li>
+<li class=""><strong>AI Decision:</strong> Perform DCSync attack immediately</li>
+<li class=""><strong>Reasoning:</strong> “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”</li>
+<li class=""><strong>Tool Selected:</strong> Impacket secretsdump</li>
+<li class=""><strong>Error Handling:</strong> If DCSync failed, AI would try alternative methods</li>
+<li class=""><strong>Result:</strong> Complete domain dump successful, 27 hashes extracted</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=robust-automated-troubleshooting>Robust Automated Troubleshooting<a href=#robust-automated-troubleshooting class=hash-link aria-label="Direct link to Robust Automated Troubleshooting" title="Direct link to Robust Automated Troubleshooting" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=example-1-tool-not-found><strong>Example 1: Tool Not Found</strong><a href=#example-1-tool-not-found class=hash-link aria-label="Direct link to example-1-tool-not-found" title="Direct link to example-1-tool-not-found" translate=no>​</a></h4>
+<p><strong>Error:</strong> <code>nxc: not found</code> (NetExec not available)</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=ai-troubleshooting-process><strong>AI Troubleshooting Process:</strong><a href=#ai-troubleshooting-process class=hash-link aria-label="Direct link to ai-troubleshooting-process" title="Direct link to ai-troubleshooting-process" translate=no>​</a></h4>
+<ol>
+<li class=""><strong>Detected:</strong> Tool execution failed</li>
+<li class=""><strong>Analyzed:</strong> NetExec not installed on HexStrike server</li>
+<li class=""><strong>Adapted:</strong> Used alternative tool (CrackMapExec) or direct execution</li>
+<li class=""><strong>Continued:</strong> Proceeded with available tools</li>
+<li class=""><strong>Learned:</strong> Updated tool selection for future steps</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=example-2-authentication-failures><strong>Example 2: Authentication Failures</strong><a href=#example-2-authentication-failures class=hash-link aria-label="Direct link to example-2-authentication-failures" title="Direct link to example-2-authentication-failures" translate=no>​</a></h4>
+<p><strong>Error:</strong> <code>NT_STATUS_LOGON_FAILURE</code> with smbclient</p>
+<p><strong>AI Troubleshooting Process:</strong></p>
+<ol>
+<li class=""><strong>Detected:</strong> SMB authentication failing</li>
+<li class=""><strong>Analyzed:</strong> Possible account lockout or wrong password format</li>
+<li class=""><strong>Tried Alternatives:</strong></li>
+</ol>
+<ul>
+<li class="">Different authentication format</li>
+<li class="">Pass-the-Hash method</li>
+<li class="">CrackMapExec (better error handling)</li>
+</ul>
+<p><strong>4. Adapted:</strong> Switched to CrackMapExec which worked</p>
+<p><strong>5. Continued:</strong> Used working method for all subsequent tests</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=example-3-ldap-anonymous-bind-failed><strong>Example 3: LDAP Anonymous Bind Failed</strong><a href=#example-3-ldap-anonymous-bind-failed class=hash-link aria-label="Direct link to example-3-ldap-anonymous-bind-failed" title="Direct link to example-3-ldap-anonymous-bind-failed" translate=no>​</a></h4>
+<p><strong>Error:</strong> Anonymous LDAP enumeration failed</p>
+<p><strong>AI Troubleshooting Process:</strong></p>
+<ol>
+<li class=""><strong>Detected:</strong> Anonymous access not allowed (expected)</li>
+<li class=""><strong>Analyzed:</strong> Need authenticated enumeration</li>
+<li class=""><strong>Adapted:</strong> Used discovered credentials for authenticated LDAP</li>
+<li class=""><strong>Continued:</strong> Performed comprehensive authenticated enumeration</li>
+<li class=""><strong>Result:</strong> Complete domain structure mapped</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=key-feature-all-troubleshooting-was-autonomous--cursor-ai-handled-every-error-without-human-intervention><strong>Key Feature:</strong> All troubleshooting was <strong>autonomous</strong> — Cursor AI handled every error without human intervention.<a href=#key-feature-all-troubleshooting-was-autonomous--cursor-ai-handled-every-error-without-human-intervention class=hash-link aria-label="Direct link to key-feature-all-troubleshooting-was-autonomous--cursor-ai-handled-every-error-without-human-intervention" title="Direct link to key-feature-all-troubleshooting-was-autonomous--cursor-ai-handled-every-error-without-human-intervention" translate=no>​</a></h4>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=results-and-findings>Results and Findings<a href=#results-and-findings class=hash-link aria-label="Direct link to Results and Findings" title="Direct link to Results and Findings" translate=no>​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=summary>Summary<a href=#summary class=hash-link aria-label="Direct link to Summary" title="Direct link to Summary" translate=no>​</a></h4>
+<ul>
+<li class=""><strong>Users Discovered:</strong> 26</li>
+<li class=""><strong>Valid Credentials:</strong> 3</li>
+<li class=""><strong>Vulnerabilities:</strong> 3</li>
+<li class=""><strong>Exploits Executed:</strong> 3</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=valid-credentials>Valid Credentials<a href=#valid-credentials class=hash-link aria-label="Direct link to Valid Credentials" title="Direct link to Valid Credentials" translate=no>​</a></h4>
+<ul>
+<li class=""><code>Administrator:8dCT-DJjgScp</code></li>
+<li class=""><code>TestUser:Password123!</code></li>
+<li class=""><code>vagrant:vagrant</code></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=vulnerabilities-identified>Vulnerabilities Identified<a href=#vulnerabilities-identified class=hash-link aria-label="Direct link to Vulnerabilities Identified" title="Direct link to Vulnerabilities Identified" translate=no>​</a></h4>
+<ol>
+<li class=""><strong>Golden Ticket Attack Possible</strong> — krbtgt hash extracted via DCSync</li>
+<li class=""><strong>AS-REP Roasting</strong> — TestUser account vulnerable</li>
+<li class=""><strong>Kerberoasting</strong> — 4 service accounts with weak passwords</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=exploits-executed>Exploits Executed<a href=#exploits-executed class=hash-link aria-label="Direct link to Exploits Executed" title="Direct link to Exploits Executed" translate=no>​</a></h4>
+<ol>
+<li class=""><strong>DCSync Attack</strong> — Complete domain credential extraction</li>
+<li class=""><strong>Kerberoasting</strong> — Service account password extraction</li>
+<li class=""><strong>AS-REP Roasting</strong> — TestUser password extraction</li>
+</ol>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=advantages-of-cursor-ai--hexstrike-ai-mcp-automated-penetration-testing>Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing<a href=#advantages-of-cursor-ai--hexstrike-ai-mcp-automated-penetration-testing class=hash-link aria-label="Direct link to Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing" title="Direct link to Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=revolutionary-capabilities>Revolutionary Capabilities<a href=#revolutionary-capabilities class=hash-link aria-label="Direct link to Revolutionary Capabilities" title="Direct link to Revolutionary Capabilities" translate=no>​</a></h3>
+<ol>
+<li class=""><strong>Single-Prompt Execution</strong> — Entire pentest from one human instruction</li>
+<li class=""><strong>Fully Autonomous Operation</strong> — Zero human intervention required</li>
+<li class=""><strong>Robust Automated Troubleshooting</strong> — Handles all errors automatically</li>
+<li class=""><strong>Intelligent Adaptation</strong> — Adapts to unexpected errors and situations in real-time</li>
+<li class=""><strong>Context-Aware Decision Making</strong> — Understands relationships between findings</li>
+<li class=""><strong>Self-Learning</strong> — Improves approach based on failures and successes</li>
+<li class=""><strong>Comprehensive Error Recovery</strong> — Multiple fallback strategies for each tool</li>
+<li class=""><strong>Scalability</strong> — Can assess multiple targets simultaneously</li>
+<li class=""><strong>Consistency</strong> — Follows methodology consistently without human error</li>
+<li class=""><strong>Automatic Documentation</strong> — Generates comprehensive reports and articles</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=comparison-manual-vs-ai-driven>Comparison: Manual vs. AI-Driven<a href=#comparison-manual-vs-ai-driven class=hash-link aria-label="Direct link to Comparison: Manual vs. AI-Driven" title="Direct link to Comparison: Manual vs. AI-Driven" translate=no>​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=robust-troubleshooting-examples>Robust Troubleshooting Examples<a href=#robust-troubleshooting-examples class=hash-link aria-label="Direct link to Robust Troubleshooting Examples" title="Direct link to Robust Troubleshooting Examples" translate=no>​</a></h3>
+<p><strong>Scenario 1: Multiple Tool Failures</strong></p>
+<p>When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:</p>
+<ol>
+<li class=""><strong>Detected pattern:</strong> SMB protocol compatibility issues</li>
+<li class=""><strong>Analyzed root cause:</strong> Outdated SMB implementations</li>
+<li class=""><strong>Found solution:</strong> Use CrackMapExec or smbclient</li>
+<li class=""><strong>Implemented fix:</strong> Switched to working tools</li>
+<li class=""><strong>Documented learning:</strong> Updated tool selection strategy</li>
+</ol>
+<p><strong>Scenario 2: Credential Discovery Challenges</strong></p>
+<p>When password spraying didn’t find credentials immediately, Cursor AI:</p>
+<ol>
+<li class=""><strong>Tried multiple methods:</strong> Password spraying, AS-REP Roasting, Kerberoasting</li>
+<li class=""><strong>Used discovered credentials:</strong> TestUser:Password123! for authenticated attacks</li>
+<li class=""><strong>Escalated privileges:</strong> Used Administrator credentials for DCSync</li>
+<li class=""><strong>Achieved goal:</strong> Complete domain compromise</li>
+</ol>
+<p><strong>Scenario 3: Report Generation Issues</strong></p>
+<p>When report generation had path issues, Cursor AI:</p>
+<ol>
+<li class=""><strong>Detected error:</strong> File path problems</li>
+<li class=""><strong>Fixed paths:</strong> Corrected directory structure</li>
+<li class=""><strong>Regenerated reports:</strong> Created comprehensive documentation</li>
+<li class=""><strong>Verified output:</strong> Ensured all files created successfully</li>
+</ol>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=conclusion>Conclusion<a href=#conclusion class=hash-link aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate=no>​</a></h3>
+<p>This automated <strong>black box assessment</strong> successfully demonstrated <strong>revolutionary AI-driven penetration testing capabilities</strong> using <strong>Cursor AI</strong> orchestrated with <strong>HexStrike-ai MCP</strong> tools. The entire assessment was initiated with <strong>a single human language prompt</strong> and executed completely autonomously, with Cursor AI:</p>
+<ol>
+<li class=""><strong>Discovering</strong> the target environment from scratch (starting with only an IP address)</li>
+<li class=""><strong>Identifying</strong> it as an Active Directory domain controller</li>
+<li class=""><strong>Enumerating</strong> all services, users, and domain structure</li>
+<li class=""><strong>Exploiting</strong> vulnerabilities systematically</li>
+<li class="">Making all strategic decisions autonomously</li>
+<li class="">Handling all errors robustly</li>
+<li class="">Generating comprehensive documentation</li>
+</ol>
+<p><strong>Key Black Box Achievement:</strong> Starting with zero knowledge of the target, Cursor AI successfully discovered and compromised a complete Active Directory environment.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=key-achievements>Key Achievements<a href=#key-achievements class=hash-link aria-label="Direct link to Key Achievements" title="Direct link to Key Achievements" translate=no>​</a></h3>
+<ul>
+<li class="">✅ <strong>Single-Prompt Execution</strong> — Entire pentest from one instruction</li>
+<li class="">✅ <strong>Zero Human Intervention</strong> — Fully autonomous operation</li>
+<li class="">✅ <strong>Robust Automated Troubleshooting</strong> — All errors handled automatically</li>
+<li class="">✅ <strong>Complete domain enumeration</strong> — 26 users, all groups, complete structure</li>
+<li class="">✅ <strong>Credential discovery and validation</strong> — 3 valid credentials found</li>
+<li class="">✅ <strong>Advanced exploitation techniques</strong> — DCSync, Kerberoasting, AS-REP Roasting</li>
+<li class="">✅ <strong>Complete domain compromise</strong> — 27 NTLM hashes, krbtgt hash extracted</li>
+<li class="">✅ <strong>Comprehensive documentation</strong> — PT report and AI article generated automatically</li>
+<li class="">✅ <strong>AI-driven decision making</strong> — All strategic decisions made autonomously</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=the-human-prompt-that-started-it-all>The Human Prompt That Started It All<a href=#the-human-prompt-that-started-it-all class=hash-link aria-label="Direct link to The Human Prompt That Started It All" title="Direct link to The Human Prompt That Started It All" translate=no>​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">"Do deep blackBox pentest on target 192.168.56.10. USE MCP Hexstrike. Do All needed troubleshooting"</span><br/></div></code></pre></div></div>
+<p>From this single instruction, Cursor AI:</p>
+<ul>
+<li class=""><strong>Discovered</strong> the target environment from scratch (black box)</li>
+<li class=""><strong>Identified</strong> it as an Active Directory domain controller</li>
+<li class=""><strong>Enumerated</strong> all services, users, and domain structure</li>
+<li class=""><strong>Exploited</strong> vulnerabilities systematically</li>
+<li class="">Created the entire automated framework</li>
+<li class="">Executed all phases autonomously</li>
+<li class="">Handled all errors and troubleshooting</li>
+<li class="">Adapted strategies based on discoveries</li>
+<li class="">Generated comprehensive reports</li>
+</ul>
+<p><strong>This represents a paradigm shift in penetration testing</strong> — from manual, time-intensive processes to fully automated, AI-driven <strong>black box</strong> assessments that can discover and exploit unknown environments, initiated with natural language and executed completely autonomously.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=future-implications>Future Implications<a href=#future-implications class=hash-link aria-label="Direct link to Future Implications" title="Direct link to Future Implications" translate=no>​</a></h3>
+<p>The combination of Cursor AI and HexStrike-ai MCP opens new possibilities:</p>
+<ul>
+<li class=""><strong>24/7 Automated Security Testing</strong> — Continuous assessment capabilities</li>
+<li class=""><strong>Rapid Response</strong> — Immediate testing when new vulnerabilities discovered</li>
+<li class=""><strong>Scalability</strong> — Test multiple environments simultaneously</li>
+<li class=""><strong>Consistency</strong> — Eliminate human error and variation</li>
+<li class=""><strong>Accessibility</strong> — Non-experts can initiate comprehensive pentests</li>
+</ul>
+<p><strong>Andrey Pautov</strong></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running-1>If you like this research, <a href="https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&amp;currency_code=USD" target=_blank rel="noopener noreferrer" class="">buy me a coffee (PayPal) — Keep the lab running</a><a href=#if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running-1 class=hash-link aria-label="Direct link to if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running-1" title="Direct link to if-you-like-this-research-buy-me-a-coffee-paypal--keep-the-lab-running-1" translate=no>​</a></h4>
+<p>By <a href=https://medium.com/@1200km target=_blank rel="noopener noreferrer" class="">Andrey Pautov</a> on <a href=https://medium.com/p/8de0b9ad38b7 target=_blank rel="noopener noreferrer" class="">January 27, 2026</a>.</p>
+<p><a href=https://medium.com/@1200km/ai-driven-black-box-active-directory-penetration-testing-8de0b9ad38b7 target=_blank rel="noopener noreferrer" class="">Canonical link</a></p>
+<p>Exported from <a href=https://medium.com target=_blank rel="noopener noreferrer" class="">Medium</a> on May 15, 2026.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/anpa1200/Hexstrike-AI-guide/tree/main/docs/04-attack-techniques/06-active-directory.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/Hexstrike-AI-guide/docs/attack-techniques/smb-brute-force><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>SMB Exposure & Credential Brute-Force</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/Hexstrike-AI-guide/docs/attack-techniques/adcs-esc8><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>ADCS ESC8 — Domain Compromise via Certificates</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#ai-driven-black-box-active-directory-penetration-testing-1 class="table-of-contents__link toc-highlight">AI-Driven Black Box Active Directory Penetration Testing</a><li><a href=#abstract class="table-of-contents__link toc-highlight">Abstract</a><li><a href=#table-of-contents class="table-of-contents__link toc-highlight">Table of Contents</a><li><a href=#introduction class="table-of-contents__link toc-highlight">Introduction</a><ul><li><a href=#the-black-box-challenge class="table-of-contents__link toc-highlight">The Black Box Challenge</a><li><a href=#the-single-prompt-black-box-penetration-test class="table-of-contents__link toc-highlight">The Single-Prompt Black Box Penetration Test</a><li><a href=#target-configuration-discovered-during-assessment class="table-of-contents__link toc-highlight">Target Configuration (Discovered During Assessment)</a><li><a href=#lab-environment-setup class="table-of-contents__link toc-highlight">Lab Environment Setup</a><li><a href=#technology-stack-cursor-ai-and-hexstrike-ai-mcp class="table-of-contents__link toc-highlight">Technology Stack: Cursor AI and HexStrike-ai MCP</a><li><a href=#black-box-methodology class="table-of-contents__link toc-highlight">Black Box Methodology</a><li><a href=#key-innovation-black-box-discovery--zero-human-intervention class="table-of-contents__link toc-highlight">Key Innovation: Black Box Discovery + Zero Human Intervention</a><li><a href=#phase-1-network-discovery class="table-of-contents__link toc-highlight">Phase 1: Network Discovery</a><li><a href=#phase-2-active-directory-discovery-via-smb-enumeration class="table-of-contents__link toc-highlight">Phase 2: Active Directory Discovery via SMB Enumeration</a><li><a href=#phase-3-user-enumeration class="table-of-contents__link toc-highlight">Phase 3: User Enumeration</a><li><a href=#phase-4-credential-discovery class="table-of-contents__link toc-highlight">Phase 4: Credential Discovery</a><li><a href=#phase-5-authenticated-enumeration class="table-of-contents__link toc-highlight">Phase 5: Authenticated Enumeration</a><li><a href=#phase-6-advanced-exploitation class="table-of-contents__link toc-highlight">Phase 6: Advanced Exploitation</a><li><a href=#ai-decision-making-process class="table-of-contents__link toc-highlight">AI Decision-Making Process</a><li><a href=#robust-automated-troubleshooting class="table-of-contents__link toc-highlight">Robust Automated Troubleshooting</a><li><a href=#results-and-findings class="table-of-contents__link toc-highlight">Results and Findings</a></ul><li><a href=#advantages-of-cursor-ai--hexstrike-ai-mcp-automated-penetration-testing class="table-of-contents__link toc-highlight">Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing</a><ul><li><a href=#revolutionary-capabilities class="table-of-contents__link toc-highlight">Revolutionary Capabilities</a><li><a href=#comparison-manual-vs-ai-driven class="table-of-contents__link toc-highlight">Comparison: Manual vs. AI-Driven</a><li><a href=#robust-troubleshooting-examples class="table-of-contents__link toc-highlight">Robust Troubleshooting Examples</a><li><a href=#conclusion class="table-of-contents__link toc-highlight">Conclusion</a><li><a href=#key-achievements class="table-of-contents__link toc-highlight">Key Achievements</a><li><a href=#the-human-prompt-that-started-it-all class="table-of-contents__link toc-highlight">The Human Prompt That Started It All</a><li><a href=#future-implications class="table-of-contents__link toc-highlight">Future Implications</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Articles</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Hexstrike-AI-guide/docs/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama>HexStrike Guides</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Author</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://medium.com/@1200km target=_blank rel="noopener noreferrer" class=footer__link-item>Medium<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://github.com/anpa1200 target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>More</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Hexstrike-AI-guide/blog>Blog</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Andrey Pautov. Built with Docusaurus.</div></div></div></footer></div></body>
