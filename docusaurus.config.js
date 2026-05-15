@@ -78,6 +78,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'authorized_labs_only',
+        content: '⚠️ All techniques in this guide are for <strong>authorized lab environments only</strong>. Never test against systems you do not own or have explicit written permission to test.',
+        backgroundColor: '#1e293b',
+        textColor: '#f8b400',
+        isCloseable: true,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {

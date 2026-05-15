@@ -4,13 +4,13 @@ date: 2025-12-24
 sidebar_position: 3
 ---
 
-# AI-Driven Wireless Penetration Testing. One Promt WIFI cracking
+# AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking
 
 Using Aircrack-ng with HexStrike-AI and Gemini-CLI 
 
 * * *
 
-### AI-Driven Wireless Penetration Testing. One Promt WIFI cracking
+### AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking
 
 #### Using Aircrack-ng with HexStrike-AI and Gemini-CLI
 
@@ -101,7 +101,7 @@ Key principle:
       
     aircrack-ng toolset.  
     Capture a WPA/WPA2 handshake and attempt offline cracking using:  
-     /home/andrey/Documents/passwords_list.txt  
+     /path/to/wordlist.txt  
       
     Do it agressive, Keep scans short with time out, stop on success or timeout, and produce a brief report  
     with results and remediation.
@@ -189,7 +189,7 @@ Verification:
 ### 7\. Offline cracking
 
   * Dictionary attack launched using:
-  * `/home/andrey/Documents/passwords_list.txt`
+  * `/path/to/wordlist.txt`
   * Cracking speed: ~2500 keys/sec
   * Password found almost immediately.
 

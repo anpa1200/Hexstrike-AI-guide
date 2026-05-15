@@ -49,12 +49,12 @@ This is a fully authorized, local scenario.
 #### Inputs
 
   * Encrypted file:  
-`/home/andrey/my_secret_file.txt`
+`/path/to/secret_file.txt`
 
 ![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-kduNgL5-qOphNtjqD8Y5Gw.png)
 
   * Password Dictionary:  
-`/home/andrey/Documents/passwords_list.txt`
+`/path/to/wordlist.txt`
 
 ![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
 
@@ -80,10 +80,10 @@ This is a fully authorized, local scenario.
 
 ![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
 
-#### Promt:
+#### Prompt:
     
     
-    @hexstrike Crack password of /home/andrey/Documents/my_secret_file.txt. use passwords list /home/andrey/Documents/password_list.txt
+    @hexstrike Crack password of /path/to/secret_file.txt. use passwords list /path/to/wordlist.txt
 
 * * *
 
@@ -93,7 +93,7 @@ This is a fully authorized, local scenario.
 
 You issued one objective:
 
-  * Recover access to /home/andrey/Documents/my_secret_file.txt using a provided candidate list
+  * Recover access to /path/to/secret_file.txt using a provided candidate list
   * Proceed until the document content is readable
 
 

@@ -49,12 +49,12 @@ This is a fully authorized, local scenario.
 #### **Inputs**
 
   * Encrypted PDF:  
-`/home/andrey/secret.pdf`
+`/path/to/secret.pdf`
 
 ![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XQddQOCsLdZJttqMFUzdwg.png)
 
   * Password Dictionary:  
-`/home/andrey/Documents/passwords_list.txt`
+`/path/to/wordlist.txt`
 
 ![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
 
@@ -80,7 +80,7 @@ This is a fully authorized, local scenario.
 
 ![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
 
-#### Promt:
+#### Prompt:
     
     
     @hexstrike Crack password of ~/Documents/enc_secret.pdf. use passwords list ~/Documents/password_list.txt

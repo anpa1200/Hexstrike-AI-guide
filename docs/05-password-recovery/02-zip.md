@@ -41,9 +41,9 @@ This is a **fully authorized, local lab scenario**.
 **Inputs**
 
   * Encrypted ZIP:  
-`/home/andrey/secret_file.zip`
+`/path/to/secret_file.zip`
   * Password dictionary:  
-`/home/andrey/Documents/passwords_list.txt`
+`/path/to/wordlist.txt`
 
 
 
@@ -100,7 +100,7 @@ HexStrike-AI:
   * Enumerates `/home`
   * Identifies the correct user (`andrey`)
   * Locates:
-  * `/home/andrey/secret_file.zip`
+  * `/path/to/secret_file.zip`
 
 
 

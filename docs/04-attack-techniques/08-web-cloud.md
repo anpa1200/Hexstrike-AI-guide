@@ -95,7 +95,7 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
  _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
-**Location:** `/home/andrey/.cursor/mcp.json`
+**Location:** `~/.cursor/mcp.json`
     
     
     {  
@@ -103,8 +103,8 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
     "hexstrike-ai": {  
     "command": "python3",  
     "args": [  
-    "/home/andrey/hexstrike-ai/hexstrike_mcp.py",  
-    " - server",  
+    "/path/to/hexstrike-ai/hexstrike_mcp.py",  
+    "--server",  
     "http://127.0.0.1:8889"  
     ],  
     "description": "HexStrike AI v6.0 - Advanced Cybersecurity Automation Platform",  
@@ -153,7 +153,7 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
         "hexstrike-ai": {  
           "command": "python3",  
           "args": [  
-            "/home/andrey/hexstrike-ai/hexstrike_mcp.py",  
+            "/path/to/hexstrike-ai/hexstrike_mcp.py",  
             "--server",  
             "http://127.0.0.1:8888"  
           ],  
@@ -213,7 +213,7 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
   * HexStrike AI server running on `http://127.0.0.1:8889` **Configuration:**
 
 
-  1. Edit `/home/andrey/.cursor/mcp.json`
+  1. Edit `~/.cursor/mcp.json`
   2. Add HexStrike MCP configuration (see above)
   3. Restart Cursor to load MCP servers
   4. Verify connection in Cursor’s MCP status **Verification:**
@@ -1745,7 +1745,7 @@ The AI (Cursor) uses several factors to make decisions:
      # Check server status  
     curl http://127.0.0.1:8889/health  
     # If not running, start it  
-    cd /home/andrey/hexstrike-ai  
+    cd /path/to/hexstrike-ai  
     python3 hexstrike_server.py --port 8889
 
 **AI Adaptation:**

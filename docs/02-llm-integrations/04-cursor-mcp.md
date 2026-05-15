@@ -57,13 +57,13 @@ All captured in a raw, decision-by-decision log and consolidated into a final ne
 #### Additional HexStrike guides:  
 Core Guides and Setup
 
-[**HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-0678d8a632e1>)
+[**HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape**](<https://medium.com/@1200km/hexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-0678d8a632e1>)
 
   *  _Focus: Analysis of AI-orchestrated pentesting and its implications._
 
 
 
-[**HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, and Performance…**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-318a803730e7>)
+[**HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, and Performance…**](<https://medium.com/@1200km/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-318a803730e7>)
 
   *  _Focus: Technical architecture using Model Context Protocol (MCP) and local LLMs._
 
@@ -71,13 +71,13 @@ Core Guides and Setup
 
 #### Practical Applications & Lab Comparisons
 
-[**HexStrike + Gemini vs. HackerAI: “Ops Copilot” vs. “Chatbot with Tools”**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-000c28303867>)
+[**HexStrike + Gemini vs. HackerAI: “Ops Copilot” vs. “Chatbot with Tools”**](<https://medium.com/@1200km/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-000c28303867>)
 
   *  _Focus: Practical lab comparison of orchestration quality between different AI security tools._
 
 
 
-[**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-8a602d29528d>)
+[**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](<https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-8a602d29528d>)
 
   *  _Focus: Step-by-step home lab application for network enumeration._
 
@@ -85,13 +85,13 @@ Core Guides and Setup
 
 #### Specific Tooling & Technique Guides
 
-  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-web-application-pentesting-with-hexstrike-ai-961906961445>)
+  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-961906961445>)
   * [**HexStrike+OpenAI Codex. AI-Driven Exploitation of Metasploitable**](<https://medium.com/@1200km/ai-driven-exploitation-of-metasploitable2-from-recon-to-root-with-codex-hexstrike-ai-b892c07be39f>)**.**
-  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fintegrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f>)
-  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e>) (Using HexStrike-AI)
-  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190>)
-  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873>)
-  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756>)
+  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](<https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f>)
+  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e>) (Using HexStrike-AI)
+  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190>)
+  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873>)
+  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756>)
 
 
 

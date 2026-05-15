@@ -185,8 +185,8 @@ Press enter or click to view image in full size
   * Alphanumeric only (letters and numbers).
   * Full ASCII set (letters, numbers, and special characters).
   * **Password Length** : The length of the password exponentially increases the number of possible combinations. For example:
-  * A 4-digit numeric PIN (0–9) has 10,000 possible combinations (1⁰⁴).
-  * A 5-character password using only lowercase letters (a-z) has 11,881,376 possible combinations (2⁶⁵).
+  * A 4-digit numeric PIN (0–9) has 10,000 possible combinations (10⁴).
+  * A 5-character password using only lowercase letters (a-z) has 11,881,376 possible combinations (26⁵).
 
 
 

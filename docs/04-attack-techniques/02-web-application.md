@@ -52,7 +52,7 @@ In this guide, I demonstrate **end-to-end Web Application Pentesting** of the in
 
   1. **What Is HexStrike-AI (In Web PT Context)?**
   2. **Lab Setup**
-  3. **Promt**
+  3. **Prompt**
   4. **Web Application Pentesting Methodology (HexStrike Flow)****  
 **Step 1: Application Discovery  
 Step 2: Attack Surface Mapping  
@@ -123,7 +123,7 @@ Gruyere contains **deliberate vulnerabilities** , including:
 
 * * *
 
-### Promt
+### Prompt
     
     
     > @hexstrike perform full PT on http://192.168.1.242/1142014131/  

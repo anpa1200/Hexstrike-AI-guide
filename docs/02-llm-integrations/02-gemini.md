@@ -102,13 +102,13 @@ _HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, an
 
 #### **Specific Tooling & Technique Guides**
 
-  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://www.google.com/search?q=https://medium.com/%401200km/ai-driven-web-application-pentesting-with-hexstrike-ai-961906961445>)
+  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-961906961445>)
   * [**HexStrike+OpenAI Codex. AI-Driven Exploitation of Metasploitable**](<https://medium.com/@1200km/ai-driven-exploitation-of-metasploitable2-from-recon-to-root-with-codex-hexstrike-ai-b892c07be39f>)**.**
-  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](<https://www.google.com/search?q=https://medium.com/%401200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f>)
-  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](<https://www.google.com/search?q=https://medium.com/%401200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e>) (Using HexStrike-AI)
-  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https://medium.com/%401200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190>)
-  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https://medium.com/%401200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873>)
-  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https://medium.com/%401200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756>)
+  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](<https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f>)
+  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e>) (Using HexStrike-AI)
+  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190>)
+  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873>)
+  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756>)
 
 
 
@@ -151,7 +151,7 @@ Once installed, launch the HexStrike server. In Kali, you can run the provided P
     # Start the HexStrike MCP server (default port 8888)  
     hexstrike_server
 
-**O run on a different port:**
+**To run on a different port:**
     
     
      hexstrike_server --port 8090
@@ -246,14 +246,14 @@ On the machine running Codex (Ubuntu host):
   * You have SSH access to Kali:
   * User: `andrey`
   * Host: `172.16.59.132`
-  * Key: `/home/andrey/.ssh/hexstrike_kali`
+  * Key: `~/.ssh/hexstrike_kali`
 
 
 
 Confirm SSH works non-interactively:
     
     
-    ssh -i /home/andrey/.ssh/hexstrike_kali \  
+    ssh -i ~/.ssh/hexstrike_kali \  
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
       andrey@172.16.59.132 "echo ok"
@@ -271,7 +271,7 @@ On the Kali machine, HexStrike MCP command must exist:
     
     
      codex mcp add hexstrike -- \  
-      ssh -i /home/andrey/.ssh/hexstrike_kali \  
+      ssh -i ~/.ssh/hexstrike_kali \  
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
       -o LogLevel=ERROR \  

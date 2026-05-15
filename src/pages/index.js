@@ -232,8 +232,8 @@ export default function Home() {
           <div className={styles.stats}>
             {[
               { num: '150+', label: 'Security Tools' },
-              { num: '21',   label: 'Guides' },
-              { num: '6',    label: 'LLM Clients' },
+              { num: '25+',  label: 'Guides' },
+              { num: '4',    label: 'LLM Clients' },
               { num: '6',    label: 'Attack Phases' },
             ].map((s) => (
               <div key={s.label} className={styles.statItem}>

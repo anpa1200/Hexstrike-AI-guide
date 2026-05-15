@@ -47,7 +47,7 @@ The key value in the log is not “the attack,” but:
 
 
 
-#### Promt:
+#### Prompt:
     
     
     @hexstrike: scan 172.16.59.129 find smb port, enumerate creds and do bruteforce to  passwords with next dictionaries:  ~/Documents/passwords_list.txt ~/Documents/users_list.txt
@@ -244,20 +244,15 @@ In real environments, the risk is not “empty vs not empty,” but **R/W on mul
       
       A brute-force attack successfully identified several user accounts with weak and easily guessable passwords. This vulnerability could allow an attacker to gain unauthorized access to the system.  
       
-      Affected Accounts:  
+      Affected Accounts (intentionally weak lab credentials — this is an isolated vulnerable VM):  
       
-        1 admin:admin123  
-        2 administrator2:password  
-        3 guest2:guest  
-        4 malware:123456  
-        5 root:toor  
-        6 test:test  
-        7 user:123456  
-        8 lab_backupsvc:123456  
-        9 lab_helpdesk:123456  
-       10 lab_devops:123456  
-       11 lab_audit:123456  
-       12 lab_ops:123456  
+        1 admin:[weak password]  
+        2 administrator2:[common password]  
+        3 guest2:[default credential]  
+        4-12 lab service accounts:[common passwords]  
+      
+      Note: credentials are redacted in this public guide. In your lab report, list the exact  
+      username:password pairs found and cross-reference against your lab's known-weak account list.  
       
       4.2.2. SMBv1 Enabled (High)  
       

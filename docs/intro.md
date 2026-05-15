@@ -28,16 +28,20 @@ Unlike a scanner or a chatbot with tools, HexStrike **maintains context across a
 ## Quick Start
 
 ```bash
-# 1. Clone and install HexStrike
-git clone https://github.com/HexStrike/hexstrike-ai
+# Option 1: Kali package (recommended — Kali 2025.4+)
+sudo apt update && sudo apt install hexstrike-ai
+hexstrike_server                        # starts MCP server on port 8888
+
+# Option 2: From source
+git clone https://github.com/0x4m4/hexstrike-ai
 cd hexstrike-ai && pip install -r requirements.txt
+hexstrike_server
 
-# 2. Run as MCP server
-python hexstrike.py --mcp
-
-# 3. Connect Gemini CLI
+# Connect Gemini CLI
 gemini --mcp hexstrike
 ```
+
+> **Authorized labs only.** All commands should run against targets you own or have explicit written permission to test.
 
 See the full [Installation Guide](/docs/getting-started/installation) for all LLM clients.
 

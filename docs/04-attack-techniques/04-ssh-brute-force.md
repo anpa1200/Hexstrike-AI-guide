@@ -57,7 +57,7 @@ This guide documents a **fully authorized lab** workflow where an AI-orchestrate
 
 ### Step-by-step execution flow
 
-#### 1) Promt
+#### 1) Prompt
     
     
     @hexstrike: scan 172.16.59.129 find ssh port, do bruteforce for credentials with password dictionaries

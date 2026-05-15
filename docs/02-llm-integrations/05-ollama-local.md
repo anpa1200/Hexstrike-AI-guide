@@ -35,7 +35,7 @@ Below is a practical, end-to-end setup that keeps the **LLM on Ubuntu (host)** a
 [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**  
  _From Encrypted Archive to Flag Using LLM-Orchestrated Tooling_ medium.com](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc> "https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc")[](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc>)
 
-[**AI-Driven Wireless Penetration Testing. One Promt WIFI cracking**  
+[**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**  
  _Using Aircrack-ng with HexStrike-AI and Gemini-CLI_ medium.com](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4> "https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4")[](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
 
 * * *
