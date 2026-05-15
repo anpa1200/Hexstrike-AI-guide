@@ -4,6 +4,9 @@ date: 2026-01-04
 sidebar_position: 4
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # HexStrike + Gemini. AI-Assisted SSH Credential Brute-Force
 
 From Service Validation → Dependency Fixes → Findings → Defensive Takeaways 

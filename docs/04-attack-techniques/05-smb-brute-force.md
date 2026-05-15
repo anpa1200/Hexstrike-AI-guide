@@ -4,6 +4,9 @@ date: 2026-01-05
 sidebar_position: 5
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # HexStrike + Gemini. AI-Assisted SMB Exposure Credential Brute-Force
 
 From Toolchain Failures → Service Fingerprinting → Authentication Findings → Share Risk 

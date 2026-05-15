@@ -4,21 +4,24 @@ date: 2026-01-27
 sidebar_position: 4
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # AI-Driven Black Box Active Directory Penetration Testing
 
-Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump. 
+Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
 
 * * *
 
 ### AI-Driven Black Box Active Directory Penetration Testing
 
-#### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump.
+#### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump.
 
 ![](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
 
 ### Abstract
 
-This article documents a groundbreaking **black box penetration test** orchestrated entirely by **Cursor AI** (an advanced AI coding assistant) integrated with **HexStrike-ai MCP** (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.
+This article documents a groundbreaking **black box penetration test** orchestrated entirely by **Cursor AI** (an advanced AI coding assistant) integrated with **HexStrike AI MCP** (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.
 
 **Critical Context:** This was a **true black box assessment** — the only information provided was a single IP address (**192.168.56.10**). Cursor AI had no prior knowledge of:
 
@@ -102,7 +105,7 @@ From this single instruction, Cursor AI:
 
 
 
-**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike-ai MCP tools and direct tool execution, discovering the entire environment from a single IP address.
+**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike AI MCP tools and direct tool execution, discovering the entire environment from a single IP address.
 
 * * *
 
@@ -112,7 +115,7 @@ From this single instruction, Cursor AI:
 **Domain:** sevenkingdoms.local (SEVENKINGDOMS) — **discovered during enumeration**  
 **Hostname:** KINGSLANDING — **discovered during enumeration**  
 **Assessment Date:** 2026–01–26  
-**Execution Method:** Fully automated black box via Cursor AI + HexStrike-ai MCP  
+**Execution Method:** Fully automated black box via Cursor AI + HexStrike AI MCP  
 **Assessment Type:** Black Box (zero prior knowledge)
 
 ### Lab Environment Setup
@@ -136,7 +139,7 @@ From this single instruction, Cursor AI:
 
 * * *
 
-### Technology Stack: Cursor AI and HexStrike-ai MCP
+### Technology Stack: Cursor AI and HexStrike AI MCP
 
 #### Cursor AI: The Autonomous Orchestrator
 
@@ -146,7 +149,7 @@ From this single instruction, Cursor AI:
 **Cursor AI** is an advanced AI coding assistant that combines large language models with code understanding capabilities. In this assessment, Cursor AI served as:
 
   * **Strategic Planner:** Analyzing the single prompt and creating comprehensive attack plans
-  * **Command Executor:** Running tools via HexStrike-ai MCP and direct execution
+  * **Command Executor:** Running tools via HexStrike AI MCP and direct execution
   * **Result Analyzer:** Interpreting output and making intelligent decisions
   * **Problem Solver:** Automatically troubleshooting errors and adapting strategies
   * **Report Generator:** Creating comprehensive documentation
@@ -163,9 +166,9 @@ From this single instruction, Cursor AI:
 
 
 
-#### HexStrike-ai MCP: The Tool Integration Layer
+#### HexStrike AI MCP: The Tool Integration Layer
 
-**HexStrike-ai MCP** (Model Context Protocol) provides a standardized interface for security tools, enabling Cursor AI to interact with penetration testing tools programmatically. MCP allows:
+**HexStrike AI MCP** (Model Context Protocol) provides a standardized interface for security tools, enabling Cursor AI to interact with penetration testing tools programmatically. MCP allows:
 
   * **Tool Discovery:** AI can discover available security tools
   * **Standardized Execution:** Consistent interface across different tools
@@ -174,7 +177,7 @@ From this single instruction, Cursor AI:
 
 
 
-#### HexStrike-ai MCP Tools Used
+#### HexStrike AI MCP Tools Used
 
   * **mcp_hexstrike-ai_nmap_scan** — Network port scanning
   * **mcp_hexstrike-ai_enum4linux_scan** — SMB enumeration
@@ -197,7 +200,7 @@ From this single instruction, Cursor AI:
                          │ "Run full real flow on 192.168.56.10"  
                          │  
     ┌────────────────────▼────────────────────────────────────┐  
-    │              HexStrike-ai MCP Layer                     │  
+    │              HexStrike AI MCP Layer                     │  
     │  (Tool Discovery, Execution, Result Parsing)            │  
     │  (Error Handling, Status Reporting)                     │  
     └────────────────────┬────────────────────────────────────┘  
@@ -348,10 +351,10 @@ The framework selected HexStrike MCP tools for network scanning:
 
 **AI Tool Selection:**
 
-Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to discover AD details:
+Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to discover AD details:
     
     
-    # AI-executed via HexStrike-ai MCP for AD discovery  
+    # AI-executed via HexStrike AI MCP for AD discovery  
     mcp_hexstrike-ai_enum4linux_scan(  
         target="192.168.56.10",  
         additional_args="-a"  
@@ -497,8 +500,8 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 **Decision 1: Network Discovery Strategy**
 
   * **Trigger:** Initial prompt received
-  * **AI Decision:** Start with comprehensive Nmap scan via HexStrike-ai MCP
-  * **Reasoning:** “Need to identify all open ports and services to understand attack surface. HexStrike-ai MCP provides standardized interface.”
+  * **AI Decision:** Start with comprehensive Nmap scan via HexStrike AI MCP
+  * **Reasoning:** “Need to identify all open ports and services to understand attack surface. HexStrike AI MCP provides standardized interface.”
   * **Tool Selected:** `mcp_hexstrike-ai_nmap_scan`
   * **Execution:** Automatic via MCP protocol
   * **Result:** 14 ports discovered, domain identified
@@ -508,8 +511,8 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 **Decision 2: SMB Enumeration Approach**
 
   * **Trigger:** Network discovery complete, SMB port (445) identified
-  * **AI Decision:** Use Enum4linux via HexStrike-ai MCP for comprehensive SMB enumeration
-  * **Reasoning:** “Enum4linux provides detailed domain information. HexStrike-ai MCP ensures consistent execution and error handling.”
+  * **AI Decision:** Use Enum4linux via HexStrike AI MCP for comprehensive SMB enumeration
+  * **Reasoning:** “Enum4linux provides detailed domain information. HexStrike AI MCP ensures consistent execution and error handling.”
   * **Tool Selected:** `mcp_hexstrike-ai_enum4linux_scan`
   * **Troubleshooting:** When access denied errors occurred, AI recognized as expected and continued
   * **Result:** Domain information extracted successfully
@@ -630,7 +633,7 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 
 * * *
 
-## Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing
+## Advantages of Cursor AI + HexStrike AI MCP Automated Penetration Testing
 
 ### Revolutionary Capabilities
 
@@ -689,7 +692,7 @@ When report generation had path issues, Cursor AI:
 
 ### Conclusion
 
-This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike-ai MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
+This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike AI MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
 
   1. **Discovering** the target environment from scratch (starting with only an IP address)
   2. **Identifying** it as an Active Directory domain controller
@@ -740,7 +743,7 @@ From this single instruction, Cursor AI:
 
 ### Future Implications
 
-The combination of Cursor AI and HexStrike-ai MCP opens new possibilities:
+The combination of Cursor AI and HexStrike AI MCP opens new possibilities:
 
   * **24/7 Automated Security Testing** — Continuous assessment capabilities
   * **Rapid Response** — Immediate testing when new vulnerabilities discovered

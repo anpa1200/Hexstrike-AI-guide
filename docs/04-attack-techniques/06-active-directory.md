@@ -4,21 +4,24 @@ date: 2026-01-27
 sidebar_position: 6
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # AI-Driven Black Box Active Directory Penetration Testing
 
-Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump. 
+Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
 
 * * *
 
 ### AI-Driven Black Box Active Directory Penetration Testing
 
-#### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump.
+#### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump.
 
 ![](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
 
 ### Abstract
 
-This article documents a groundbreaking **black box penetration test** orchestrated entirely by **Cursor AI** (an advanced AI coding assistant) integrated with **HexStrike-ai MCP** (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.
+This article documents a groundbreaking **black box penetration test** orchestrated entirely by **Cursor AI** (an advanced AI coding assistant) integrated with **HexStrike AI MCP** (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.
 
 **Critical Context:** This was a **true black box assessment** — the only information provided was a single IP address (**192.168.56.10**). Cursor AI had no prior knowledge of:
 
@@ -30,7 +33,7 @@ This article documents a groundbreaking **black box penetration test** orchestra
 
 
 
-The entire penetration test was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI discovering the environment, identifying it as an Active Directory domain controller, and then systematically exploiting it. All strategic decisions, error handling, and troubleshooting were performed automatically without human intervention.
+The lab assessment was initiated with a single prompt. In this specific run, the AI handled most tool-execution and decision steps with minimal manual intervention. **This should not be interpreted as safe unsupervised operation** — production use requires scope controls, approval gates, and human review of every high-impact action.
 
 * * *
 
@@ -102,7 +105,7 @@ From this single instruction, Cursor AI:
 
 
 
-**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike-ai MCP tools and direct tool execution, discovering the entire environment from a single IP address.
+**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike AI MCP tools and direct tool execution, discovering the entire environment from a single IP address.
 
 * * *
 
@@ -112,7 +115,7 @@ From this single instruction, Cursor AI:
 **Domain:** sevenkingdoms.local (SEVENKINGDOMS) — **discovered during enumeration**  
 **Hostname:** KINGSLANDING — **discovered during enumeration**  
 **Assessment Date:** 2026–01–26  
-**Execution Method:** Fully automated black box via Cursor AI + HexStrike-ai MCP  
+**Execution Method:** Fully automated black box via Cursor AI + HexStrike AI MCP  
 **Assessment Type:** Black Box (zero prior knowledge)
 
 ### Lab Environment Setup
@@ -136,9 +139,9 @@ From this single instruction, Cursor AI:
 
 * * *
 
-### Technology Stack: Cursor AI and HexStrike-ai MCP
+### Technology Stack: Cursor AI and HexStrike AI MCP
 
-#### Cursor AI: The Autonomous Orchestrator
+#### Cursor AI: The AI-Assisted Orchestrator
 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
  _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
@@ -146,7 +149,7 @@ From this single instruction, Cursor AI:
 **Cursor AI** is an advanced AI coding assistant that combines large language models with code understanding capabilities. In this assessment, Cursor AI served as:
 
   * **Strategic Planner:** Analyzing the single prompt and creating comprehensive attack plans
-  * **Command Executor:** Running tools via HexStrike-ai MCP and direct execution
+  * **Command Executor:** Running tools via HexStrike AI MCP and direct execution
   * **Result Analyzer:** Interpreting output and making intelligent decisions
   * **Problem Solver:** Automatically troubleshooting errors and adapting strategies
   * **Report Generator:** Creating comprehensive documentation
@@ -159,13 +162,13 @@ From this single instruction, Cursor AI:
   * Real-time error analysis and self-correction
   * Context-aware decision making
   * Multi-tool orchestration
-  * Autonomous troubleshooting without human intervention
+  * Adaptive troubleshooting with minimal manual input (lab-observed)
 
 
 
-#### HexStrike-ai MCP: The Tool Integration Layer
+#### HexStrike AI MCP: The Tool Integration Layer
 
-**HexStrike-ai MCP** (Model Context Protocol) provides a standardized interface for security tools, enabling Cursor AI to interact with penetration testing tools programmatically. MCP allows:
+**HexStrike AI MCP** (Model Context Protocol) provides a standardized interface for security tools, enabling Cursor AI to interact with penetration testing tools programmatically. MCP allows:
 
   * **Tool Discovery:** AI can discover available security tools
   * **Standardized Execution:** Consistent interface across different tools
@@ -174,7 +177,7 @@ From this single instruction, Cursor AI:
 
 
 
-#### HexStrike-ai MCP Tools Used
+#### HexStrike AI MCP Tools Used
 
   * **mcp_hexstrike-ai_nmap_scan** — Network port scanning
   * **mcp_hexstrike-ai_enum4linux_scan** — SMB enumeration
@@ -197,7 +200,7 @@ From this single instruction, Cursor AI:
                          │ "Run full real flow on 192.168.56.10"  
                          │  
     ┌────────────────────▼────────────────────────────────────┐  
-    │              HexStrike-ai MCP Layer                     │  
+    │              HexStrike AI MCP Layer                     │  
     │  (Tool Discovery, Execution, Result Parsing)            │  
     │  (Error Handling, Status Reporting)                     │  
     └────────────────────┬────────────────────────────────────┘  
@@ -219,7 +222,7 @@ Unlike traditional penetration tests where the target environment is known, this
 
 #### The Single-Prompt Black Box Assessment Flow
 
-The entire black box penetration test was initiated with one human prompt and executed completely autonomously:
+The lab assessment was initiated with one prompt. The AI handled the following steps with minimal manual intervention (lab environment, GOAD-Mini isolated VM):
     
     
     Human Input:  
@@ -348,10 +351,10 @@ The framework selected HexStrike MCP tools for network scanning:
 
 **AI Tool Selection:**
 
-Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to discover AD details:
+Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to discover AD details:
     
     
-    # AI-executed via HexStrike-ai MCP for AD discovery  
+    # AI-executed via HexStrike AI MCP for AD discovery  
     mcp_hexstrike-ai_enum4linux_scan(  
         target="192.168.56.10",  
         additional_args="-a"  
@@ -497,8 +500,8 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 **Decision 1: Network Discovery Strategy**
 
   * **Trigger:** Initial prompt received
-  * **AI Decision:** Start with comprehensive Nmap scan via HexStrike-ai MCP
-  * **Reasoning:** “Need to identify all open ports and services to understand attack surface. HexStrike-ai MCP provides standardized interface.”
+  * **AI Decision:** Start with comprehensive Nmap scan via HexStrike AI MCP
+  * **Reasoning:** “Need to identify all open ports and services to understand attack surface. HexStrike AI MCP provides standardized interface.”
   * **Tool Selected:** `mcp_hexstrike-ai_nmap_scan`
   * **Execution:** Automatic via MCP protocol
   * **Result:** 14 ports discovered, domain identified
@@ -508,8 +511,8 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 **Decision 2: SMB Enumeration Approach**
 
   * **Trigger:** Network discovery complete, SMB port (445) identified
-  * **AI Decision:** Use Enum4linux via HexStrike-ai MCP for comprehensive SMB enumeration
-  * **Reasoning:** “Enum4linux provides detailed domain information. HexStrike-ai MCP ensures consistent execution and error handling.”
+  * **AI Decision:** Use Enum4linux via HexStrike AI MCP for comprehensive SMB enumeration
+  * **Reasoning:** “Enum4linux provides detailed domain information. HexStrike AI MCP ensures consistent execution and error handling.”
   * **Tool Selected:** `mcp_hexstrike-ai_enum4linux_scan`
   * **Troubleshooting:** When access denied errors occurred, AI recognized as expected and continued
   * **Result:** Domain information extracted successfully
@@ -630,7 +633,7 @@ Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to d
 
 * * *
 
-## Advantages of Cursor AI + HexStrike-ai MCP Automated Penetration Testing
+## Advantages of Cursor AI + HexStrike AI MCP Automated Penetration Testing
 
 ### Revolutionary Capabilities
 
@@ -689,7 +692,7 @@ When report generation had path issues, Cursor AI:
 
 ### Conclusion
 
-This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike-ai MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
+This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike AI MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
 
   1. **Discovering** the target environment from scratch (starting with only an IP address)
   2. **Identifying** it as an Active Directory domain controller
@@ -740,7 +743,7 @@ From this single instruction, Cursor AI:
 
 ### Future Implications
 
-The combination of Cursor AI and HexStrike-ai MCP opens new possibilities:
+The combination of Cursor AI and HexStrike AI MCP opens new possibilities:
 
   * **24/7 Automated Security Testing** — Continuous assessment capabilities
   * **Rapid Response** — Immediate testing when new vulnerabilities discovered
@@ -759,3 +762,40 @@ By [Andrey Pautov](<https://medium.com/@1200km>) on [January 27, 2026](<https://
 [Canonical link](<https://medium.com/@1200km/ai-driven-black-box-active-directory-penetration-testing-8de0b9ad38b7>)
 
 Exported from [Medium](<https://medium.com>) on May 15, 2026.
+
+---
+
+## Defensive Value — AD Hardening Checklist
+
+Every attack technique in this guide maps directly to a defensive control. Use this checklist when validating your AD environment.
+
+### Detection Opportunities
+
+| Attack Step | Event ID | Log Source |
+|-------------|----------|------------|
+| Kerberoasting | 4769 (TGS request, RC4) | DC Security Log |
+| AS-REP Roasting | 4768 (no preauth) | DC Security Log |
+| DCSync | 4662 (replication rights used) | DC Security Log |
+| Pass-the-Hash / PTH | 4624 Type 3, 4648 | DC Security Log |
+| BloodHound enum | LDAP query volume spike | Network/SIEM |
+| SMB lateral movement | 4624 Type 3 + 5140 share access | Target host |
+
+### Hardening Checklist
+
+- [ ] Disable RC4 encryption in Kerberos — force AES256
+- [ ] Enable AES encryption for all service accounts (remove RC4 from SPNs)
+- [ ] Enable "Do not require Kerberos preauthentication" audit
+- [ ] Restrict replication permissions — only DCs should hold `Replicating Directory Changes`
+- [ ] Enable Protected Users security group for privileged accounts
+- [ ] Deploy tiered admin model: Tier 0 (DC), Tier 1 (servers), Tier 2 (workstations)
+- [ ] Enable Credential Guard on all Windows 10/11 and Server 2016+ hosts
+- [ ] Audit ACL paths in BloodHound quarterly — look for unexpected `GenericAll`, `WriteDACL`, `DCSync` edges
+- [ ] Restrict LDAP signing and channel binding
+- [ ] Enable LDAP signing and LDAPS where possible
+- [ ] Review and restrict GPO delegation rights
+
+### Resources
+
+- [BloodHound CE](https://github.com/SpecterOps/BloodHound) — attack path mapping
+- [PingCastle](https://www.pingcastle.com/) — AD risk score auditing
+- [Microsoft AD Security Best Practices](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)

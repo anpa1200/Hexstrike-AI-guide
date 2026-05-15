@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Full Penetration Test with HexStrike AI
 
-This guide walks through a complete, end-to-end penetration test using HexStrike AI as the execution orchestrator. Every phase is AI-driven — you write goals in natural language, HexStrike plans and executes the tool chain, recovers from failures, and chains findings into attack paths autonomously.
+This guide walks through a complete, end-to-end lab assessment using HexStrike AI as the workflow orchestrator in an authorized, isolated lab environment. You write goals in natural language — HexStrike plans and executes the tool chain, recovers from failures, and chains findings into attack paths with human oversight at each phase.
 
 All techniques demonstrated here are covered in detail in the linked articles, all performed in authorized lab environments.
 
@@ -186,21 +186,24 @@ For encrypted files found during the engagement:
 
 Once initial access is obtained, HexStrike continues the chain:
 
+> **Authorization requirement:** Confirm written scope covers post-exploitation, credential collection, and lateral movement before this phase.
+
 **Prompt:**
 ```
-I have a shell on 192.168.1.50 as www-data.
+I have a shell on 192.168.1.50 as www-data on an authorized lab target.
 Enumerate the host: running processes, sudo rights, SUID binaries,
 cron jobs, readable sensitive files, network connections.
-Find a privilege escalation path to root.
-After root, dump credentials and pivot to other hosts.
+Identify privilege escalation paths and document findings.
 ```
 
 HexStrike will:
 1. Run `sudo -l`, `find / -perm -4000`, `cat /etc/crontab`
-2. Identify the escalation vector (kernel exploit, sudo misconfiguration, SUID binary)
-3. Execute the escalation
-4. Dump `/etc/shadow`, SSH keys, credentials files
-5. Use found credentials against other hosts on the subnet
+2. Identify the escalation vector (sudo misconfiguration, SUID binary, writable cron)
+3. Document the escalation path with evidence
+4. Collect proof-of-compromise artifacts for the report (hostname, id, interfaces)
+5. Map credentials found to scope and note reuse risk
+
+**Operator checkpoint:** Review escalation paths before executing. Document every command run and its output for the report evidence chain.
 
 ---
 
@@ -224,10 +227,9 @@ Generate a penetration test report including:
 ### Single-prompt full network PT (Gemini CLI):
 ```
 Target network: 192.168.1.0/24
-Authorized penetration test.
-Goal: compromise as many hosts as possible and document findings.
-Start with discovery, enumerate services, exploit vulnerabilities,
-escalate privileges, and produce a final report.
+Authorized lab assessment — isolated vulnerable VM lab.
+Goal: discover and enumerate all hosts, identify exploitable vulnerabilities,
+demonstrate impact on highest-risk findings with evidence, and produce a report.
 ```
 
 ### Single-prompt black-box AD engagement (Cursor MCP):

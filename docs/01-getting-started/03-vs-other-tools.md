@@ -138,3 +138,31 @@ By [Andrey Pautov](<https://medium.com/@1200km>) on [December 26, 2025](<https:/
 [Canonical link](<https://medium.com/@1200km/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-1d799845410b>)
 
 Exported from [Medium](<https://medium.com>) on May 15, 2026.
+
+---
+
+## Benchmark Methodology — Appendix
+
+This comparison is an **opinionated field assessment**, not a statistically rigorous benchmark. Treat findings as directional observations, not definitive proof.
+
+| Parameter | Value |
+|-----------|-------|
+| **Test date** | December 2025 |
+| **HexStrike AI version** | Kali package (2025.4 repo) |
+| **Gemini CLI version** | @google/gemini-cli 0.1.x |
+| **HackerAI version** | Web app, December 2025 |
+| **Lab target** | Isolated vulnerable VM (Metasploitable-style) |
+| **Task set** | Subnet discovery, service enumeration, web recon, error recovery |
+| **Number of runs** | 3–5 per task per tool |
+| **Success criteria** | Task completed without manual re-prompting |
+| **Failure criteria** | Stuck loop, wrong tool selected, unresolved error |
+| **Human interventions** | Logged informally |
+| **Raw transcripts** | Available in original Medium article |
+
+### Limitations
+
+- Single operator, single lab environment — results may not generalize.
+- HackerAI was tested at a specific point in time; the product may have improved.
+- Model behavior is non-deterministic; run count is too small for statistical significance.
+- "Faster" is wall-clock time observed by the operator, not automated timing.
+- Read this as: *"in my lab, with these tools, on these tasks, HexStrike + Gemini performed better"* — not a universal claim.

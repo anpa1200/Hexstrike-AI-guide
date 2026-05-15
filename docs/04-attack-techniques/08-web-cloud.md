@@ -4,6 +4,9 @@ date: 2026-01-31
 sidebar_position: 8
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # AI-Assisted Web and Cloud Penetration Testing with Cursor + MCP HexStrike and Burp Suite MCP.
 
 A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full Attack Surface Coverage (Recon → Exploit → Report). 
@@ -210,7 +213,7 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
 **Prerequisites:**
 
   * Python 3.8+
-  * HexStrike AI server running on `http://127.0.0.1:8889` **Configuration:**
+  * HexStrike AI server running on `http://127.0.0.1:8889` (port 8889 used here to avoid conflict with Burp Suite proxy on default port 8888) **Configuration:**
 
 
   1. Edit `~/.cursor/mcp.json`

@@ -4,6 +4,9 @@ date: 2025-12-24
 sidebar_position: 3
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking
 
 Using Aircrack-ng with HexStrike-AI and Gemini-CLI 

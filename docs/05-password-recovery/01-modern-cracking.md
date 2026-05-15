@@ -85,15 +85,14 @@ Passwords are hashed as a security measure to protect the original plaintext pas
 
 
 
-**Where to Find Hashed Passwords:**
+**Where Password Hashes Appear in Authorized Audits:**
 
-Hashed passwords are typically found in database management systems where user credentials are stored, especially in systems that adhere to good security practices. Here are a few common places:
+During an authorized password security audit, hashes may be encountered in the following locations. **Access to these locations requires system-owner authorization and appropriate legal permissions.**
 
   * **User Databases** : In web applications, user passwords are stored in databases as hashes. These can be part of the backend of nearly any system requiring user authentication, from small websites to large corporate networks.
 
 
 
-Press enter or click to view image in full size
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-JK4cWEE0W83N1Ks9.png)
 
@@ -101,7 +100,6 @@ Press enter or click to view image in full size
 
 
 
-Press enter or click to view image in full size
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-71F_FLnXWliBfJzE.png)
 
@@ -109,7 +107,6 @@ Press enter or click to view image in full size
 
 
 
-Press enter or click to view image in full size
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-dBJpu_yqu23eh-q9.png)
 
@@ -117,11 +114,10 @@ Press enter or click to view image in full size
 
 
 
-Press enter or click to view image in full size
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-jMTEyP8FzSAmP0O3.jpg)
 
-  * **Data Breaches** : Unfortunately, hashed passwords can also be found in datasets that become available after a data breach. These are often distributed on hacker forums or dark web marketplaces.
+  * **Authorized penetration test evidence** : During a scoped engagement, extracted hashes are handled as sensitive evidence — encrypted, access-controlled, and destroyed after the engagement per the rules of engagement.
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-YFj3MGZqXCX9DX63.png)
 
@@ -175,7 +171,6 @@ A brute force attack is one of the simplest yet most aggressive methods to crack
 
 In a brute force attack, an attacker uses software that continuously inputs passwords into a system until it achieves success. The process starts with the shortest possible password and typically uses a predetermined sequence to attempt every possible combination of characters from the defined character set (letters, numbers, symbols).
 
-Press enter or click to view image in full size
 
 ![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0--S9oChJMgVfEEVS1.jpg)
 

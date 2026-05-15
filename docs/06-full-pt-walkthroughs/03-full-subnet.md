@@ -4,6 +4,9 @@ date: 2026-01-08
 sidebar_position: 3
 ---
 
+> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
+
+
 # HexStrike + Cursor (MCP): From Single Target → Full Subnet Compromise (Lab PT Walkthrough)
 
 A real end-to-end lab engagement: recon → credential discovery → share abuse → lateral movement → multi-host compromise → reporting 
