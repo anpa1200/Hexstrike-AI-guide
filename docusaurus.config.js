@@ -97,6 +97,7 @@ const config = {
             label: 'Guides',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/about', label: 'About', position: 'left'},
           {
             href: 'https://github.com/anpa1200/Hexstrike-AI-guide',
             label: 'GitHub',

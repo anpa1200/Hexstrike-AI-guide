@@ -1,6 +1,6 @@
 ---
 title: "About the Author"
-sidebar_position: 99
+sidebar_position: 2
 ---
 
 # About the Author
