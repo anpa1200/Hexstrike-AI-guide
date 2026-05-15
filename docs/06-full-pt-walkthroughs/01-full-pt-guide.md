@@ -1,13 +1,11 @@
 ---
-title: "Controlled Lab Assessment Workflow with HexStrike AI"
+title: "Full Penetration Test with HexStrike AI — Complete Guide"
 sidebar_position: 1
 ---
 
-# Controlled Lab Assessment Workflow with HexStrike AI
+# Full Penetration Test with HexStrike AI
 
-> **Authorized lab environments only.** This guide covers an AI-assisted assessment workflow for isolated, vulnerable lab targets. Each phase requires explicit scope authorization. Every exploitation step must be human-reviewed before execution.
-
-This guide walks through a complete lab assessment using HexStrike AI as the workflow orchestrator. Each phase includes: **objective → authorization gate → prompt template → expected evidence → detection/logging value → remediation mapping.**
+This guide walks through a complete, end-to-end penetration test using HexStrike AI as the execution orchestrator. Every phase is AI-driven — you write goals in natural language, HexStrike plans and executes the tool chain, recovers from failures, and chains findings into attack paths autonomously.
 
 All techniques demonstrated here are covered in detail in the linked articles, all performed in authorized lab environments.
 
@@ -117,63 +115,52 @@ Identify Kerberoastable accounts and privilege escalation paths.
 
 ---
 
-## Phase 3 — Exploitation (Lab)
+## Phase 3 — Exploitation
 
-**Objective:** Demonstrate real impact by exploiting confirmed vulnerabilities in an isolated lab VM.
-
-> **Authorization gate:** Before this phase, confirm: written scope covers exploitation, target is an isolated lab VM, audit logging is active, and you have an operator present to review findings before escalation.
+**Goal:** Gain initial access and demonstrate real impact.
 
 ### Network Exploitation (Metasploitable lab)
 
-**Lab prompt template:**
+**Prompt (OpenAI Codex or Cursor):**
 ```
-Target: 192.168.1.100 — isolated Metasploitable lab VM, authorized.
-Review scan results and identify the highest-probability vulnerability.
-Attempt to exploit one service. Capture proof of access:
-hostname, id output, and network interfaces.
-Stop and report before any further escalation.
+You have scan results for 192.168.1.100.
+Select the highest-probability exploits for each open service.
+Attempt exploitation in sequence. For each success, capture proof
+(hostname, whoami, network interfaces). Continue until root is obtained.
 ```
-
-**Expected evidence:** shell access proof, service banner, CVE identifier, CVSS score
-**Detection log:** failed auth attempts, exploit traffic signatures, unexpected process spawn
-**Remediation:** patch or disable vulnerable service, network segmentation
 
 - Full walkthrough with Metasploitable: [OpenAI Codex Integration](/docs/llm-integrations/openai-codex)
-- Full subnet lab: [Full Subnet Lab Walkthrough](/docs/full-pt-walkthroughs/full-subnet)
+- Full subnet compromise: [Full Subnet Compromise](/docs/full-pt-walkthroughs/full-subnet)
 
 ### Web Exploitation
 
-**Lab prompt template:**
 ```
-Target: http://192.168.1.50 — authorized isolated web app lab.
 Using the attack surface map from Phase 2,
-test for SQLi and XSS on identified input fields.
-Demonstrate impact with a safe PoC (no data destruction, no persistence).
-Document evidence: request, response, and reproduction steps.
+exploit the highest-severity findings.
+Test for SQLi, XSS, CSRF, auth bypass, and IDOR.
+Demonstrate impact with PoC for each confirmed vulnerability.
 ```
-
-**Expected evidence:** PoC request/response, CWE/CVE identifier, impact statement
-**Detection log:** WAF alerts, error-rate spike, abnormal parameter payloads
-**Remediation:** parameterized queries, output encoding, CSP headers
 
 - Full guide: [Web Application Pentesting](/docs/attack-techniques/web-application)
 - Combined web + cloud: [Web & Cloud PT](/docs/attack-techniques/web-cloud)
 
-### Active Directory Exploitation (Lab)
+### Active Directory Exploitation
 
-**Lab prompt template:**
 ```
-Domain: lab.local — isolated GOAD-Mini lab VM, authorized.
-Using enumeration results from Phase 2,
-identify the single highest-impact attack path.
-Document the path with evidence before executing.
-Operator approval required before each privilege escalation step.
+Domain: lab.local
+Use enumeration results to exploit the attack path with highest impact.
+Goal: Domain Admin. Document every step.
 ```
 
-> **Operator checkpoint:** Review the proposed attack path before allowing execution. Log every command and its output.
+Full autonomous black-box walkthrough: [Black-Box AD PT Walkthrough](/docs/full-pt-walkthroughs/black-box-ad)
 
-Lab walkthrough: [Black-Box AD PT Walkthrough](/docs/full-pt-walkthroughs/black-box-ad)
-AD CS ESC8 lab: [ADCS ESC8](/docs/attack-techniques/adcs-esc8)
+ESC8 single-prompt domain compromise:
+```
+Perform a complete ADCS ESC8 attack against lab.local.
+Start from enumeration, identify vulnerable templates,
+request and abuse the certificate, obtain DA.
+```
+Guide: [ADCS ESC8](/docs/attack-techniques/adcs-esc8)
 
 ---
 
@@ -199,24 +186,21 @@ For encrypted files found during the engagement:
 
 Once initial access is obtained, HexStrike continues the chain:
 
-> **Authorization requirement:** Confirm written scope covers post-exploitation, credential collection, and lateral movement before this phase.
-
 **Prompt:**
 ```
-I have a shell on 192.168.1.50 as www-data on an authorized lab target.
+I have a shell on 192.168.1.50 as www-data.
 Enumerate the host: running processes, sudo rights, SUID binaries,
 cron jobs, readable sensitive files, network connections.
-Identify privilege escalation paths and document findings.
+Find a privilege escalation path to root.
+After root, dump credentials and pivot to other hosts.
 ```
 
 HexStrike will:
 1. Run `sudo -l`, `find / -perm -4000`, `cat /etc/crontab`
-2. Identify the escalation vector (sudo misconfiguration, SUID binary, writable cron)
-3. Document the escalation path with evidence
-4. Collect proof-of-compromise artifacts for the report (hostname, id, interfaces)
-5. Map credentials found to scope and note reuse risk
-
-**Operator checkpoint:** Review escalation paths before executing. Document every command run and its output for the report evidence chain.
+2. Identify the escalation vector (kernel exploit, sudo misconfiguration, SUID binary)
+3. Execute the escalation
+4. Dump `/etc/shadow`, SSH keys, credentials files
+5. Use found credentials against other hosts on the subnet
 
 ---
 
@@ -235,34 +219,32 @@ Generate a penetration test report including:
 
 ---
 
-## Lab Assessment Prompt Templates
+## Full Engagement Example Prompts
 
-> These templates are for **isolated vulnerable VM labs only**. Always add explicit scope, authorization confirmation, and stop conditions to every prompt.
-
-### Scoped network lab assessment (Gemini CLI):
+### Single-prompt full network PT (Gemini CLI):
 ```
-Target: 192.168.1.0/24 — authorized, isolated lab network.
-Authorization: confirmed in writing.
-Phase: discovery and enumeration only. Do not exploit without explicit operator approval.
-Goal: map all live hosts, open ports, service versions, and potential attack surface.
-Stop after enumeration and report findings for operator review.
+Target network: 192.168.1.0/24
+Authorized penetration test.
+Goal: compromise as many hosts as possible and document findings.
+Start with discovery, enumerate services, exploit vulnerabilities,
+escalate privileges, and produce a final report.
 ```
 
-### Structured black-box AD lab (Cursor MCP):
+### Single-prompt black-box AD engagement (Cursor MCP):
 ```
-IP: 192.168.10.5 — isolated Windows domain lab VM, authorized.
-Phase 1: enumerate environment, identify domain name and DC.
-Stop and report before any exploitation.
-Operator will review findings and authorize next steps.
+IP: 192.168.10.5 — believed to be a Windows domain environment.
+Authorized engagement.
+Enumerate the environment, identify the domain, find attack paths,
+compromise a domain admin account. Document everything.
 ```
 
-### Web + cloud lab (Cursor + HexStrike + Burp MCP):
+### One-prompt web + cloud PT (Cursor + HexStrike + Burp MCP):
 ```
-Target: https://app.target.lab (isolated lab, AWS sandbox)
+Target: https://app.target.lab (AWS-hosted)
 Authorized.
 Map the web attack surface and cloud configuration.
-Document all findings. Produce PoC only for confirmed findings in isolated lab.
-No persistence, no data exfil, no lateral movement without operator approval.
+Find and exploit vulnerabilities across both layers.
+Produce actionable findings with PoCs.
 ```
 
 ---

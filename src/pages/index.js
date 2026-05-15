@@ -6,8 +6,8 @@ import styles from './index.module.css';
 const FEATURES = [
   {
     icon: '🧠',
-    title: 'AI-Assisted Orchestrator',
-    desc: 'HexStrike is not a scanner — it\'s an AI operator. It maintains context, reasons about findings, recovers from failures, and chains tools into multi-stage workflows. Designed for authorized labs with human approval gates.',
+    title: 'Autonomous Orchestrator',
+    desc: 'HexStrike is not a scanner — it\'s an AI operator. It maintains context, reasons about findings, recovers from failures, and chains tools into multi-stage attack paths without human input.',
   },
   {
     icon: '🔗',
@@ -21,8 +21,8 @@ const FEATURES = [
   },
   {
     icon: '⚡',
-    title: 'Full Lab Assessment Coverage',
-    desc: 'Recon → Enumeration → Validation → Reporting. A single natural-language goal drives the workflow phase by phase in authorized lab environments — with operator checkpoints at each high-risk step.',
+    title: 'Full Kill Chain Coverage',
+    desc: 'Recon → Enumeration → Exploitation → Lateral Movement → Reporting. A single natural-language goal drives the entire engagement, phase by phase.',
   },
   {
     icon: '🛡️',
@@ -162,8 +162,8 @@ export default function Home() {
 
           <p className={styles.heroSubtitle}>
             Bridge large language models to real-world security tools via MCP.
-            Write a goal in plain language — HexStrike plans, executes, and recovers
-            across the full engagement lifecycle in authorized lab environments.
+            Write a goal in plain language — HexStrike plans, executes, recovers,
+            and reports autonomously.
           </p>
 
           {/* Terminal */}
@@ -189,7 +189,7 @@ export default function Home() {
               <span className={styles.terminalCmd}>
                 Scan 192.168.1.0/24, find all services,
                 <br />
-                &nbsp;&nbsp;map attack surface and identify high-risk findings.
+                &nbsp;&nbsp;exploit the highest-risk vulnerabilities, get root.
               </span>
             </div>
             <div className={styles.terminalLine}>
@@ -209,7 +209,7 @@ export default function Home() {
             </div>
             <div className={styles.terminalLine}>
               <span className={styles.terminalSuccess}>
-                [✓] CVE-2021-4034 exploited — lab VM 192.168.1.42
+                [✓] root@192.168.1.42 — shell obtained
               </span>
               <span className={styles.cursor} />
             </div>
@@ -232,8 +232,8 @@ export default function Home() {
           <div className={styles.stats}>
             {[
               { num: '150+', label: 'Security Tools' },
-              { num: '25+',  label: 'Guides' },
-              { num: '4',    label: 'LLM Clients' },
+              { num: '21',   label: 'Guides' },
+              { num: '6',    label: 'LLM Clients' },
               { num: '6',    label: 'Attack Phases' },
             ].map((s) => (
               <div key={s.label} className={styles.statItem}>
@@ -279,11 +279,10 @@ export default function Home() {
       <section className={styles.whySection}>
         <div className="container">
           <p className={styles.sectionLabel}>Why HexStrike</p>
-          <h2 className={styles.sectionTitle}>Not a scanner. An AI-assisted operator.</h2>
+          <h2 className={styles.sectionTitle}>Not a scanner. An operator.</h2>
           <p className={styles.sectionSubtitle}>
             Traditional tools execute one command at a time. HexStrike reasons about the
-            entire engagement, adapts to failures, and drives the workflow forward —
-            with a human operator staying in control at every high-risk decision point.
+            entire engagement, adapts to failures, and drives the attack chain to completion.
           </p>
           <div className={styles.featureGrid}>
             {FEATURES.map((f) => (
@@ -354,7 +353,7 @@ export default function Home() {
       <section className={styles.ctaBanner}>
         <div className="container">
           <h2>Ready to start your first AI-driven pentest?</h2>
-          <p>Follow the complete guide — from installation to your first authorized lab assessment.</p>
+          <p>Follow the complete guide — from installation to root shell.</p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/getting-started/installation">
               ▶ Get Started

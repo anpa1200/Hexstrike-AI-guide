@@ -4,9 +4,6 @@ date: 2026-01-27
 sidebar_position: 4
 ---
 
-> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
-
-
 # AI-Driven Black Box Active Directory Penetration Testing
 
 Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
@@ -410,8 +407,8 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Results:**
 
-  * `<domain_admin>:<redacted>` ✅
-  * `<lab_user>:<redacted>` ✅
+  * `Administrator:8dCT-DJjgScp` ✅
+  * `TestUser:Password123!` ✅
   * `vagrant:vagrant` ✅
 
 
@@ -454,7 +451,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** ldapdomaindump
 
-**Credentials Used:** `<domain_admin>:<redacted>`
+**Credentials Used:** `Administrator:8dCT-DJjgScp`
 
 **Results:**
 
@@ -476,13 +473,13 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** Impacket secretsdump
 
-**Credentials Used:** `<domain_admin>:<redacted>`
+**Credentials Used:** `Administrator:8dCT-DJjgScp`
 
 **Results:**
 
   * ✅ **Complete domain credential database extracted**
   * **27 user NTLM hashes** obtained
-  * **krbtgt hash extracted:** `<redacted>` (hash redacted per responsible publication policy)
+  * **krbtgt hash extracted:** `1c455e2c1f50aa2c4c0fb3d14188ee65`
   * **Kerberos AES keys** extracted for all users
 
 
@@ -532,7 +529,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Decision 4: Exploitation Priority**
 
-  * **Trigger:** Valid credentials obtained (<domain_admin>:<redacted>)
+  * **Trigger:** Valid credentials obtained (Administrator:8dCT-DJjgScp)
   * **AI Decision:** Perform DCSync attack immediately
   * **Reasoning:** “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”
   * **Tool Selected:** Impacket secretsdump
@@ -609,8 +606,8 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 #### Valid Credentials
 
-  * `<domain_admin>:<redacted>`
-  * `<lab_user>:<redacted>`
+  * `Administrator:8dCT-DJjgScp`
+  * `TestUser:Password123!`
   * `vagrant:vagrant`
 
 
@@ -671,7 +668,7 @@ When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:
 When password spraying didn’t find credentials immediately, Cursor AI:
 
   1. **Tried multiple methods:** Password spraying, AS-REP Roasting, Kerberoasting
-  2. **Used discovered credentials:** <lab_user>:<redacted> for authenticated attacks
+  2. **Used discovered credentials:** TestUser:Password123! for authenticated attacks
   3. **Escalated privileges:** Used Administrator credentials for DCSync
   4. **Achieved goal:** Complete domain compromise
 

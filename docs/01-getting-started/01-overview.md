@@ -219,21 +219,30 @@ I observed it directly.
 
 * * *
 
-### Will HexStrike Change Junior Pentester Roles?
+### Will HexStrike Replace Junior Pentesters?
 
-**Partially — yes.** Several routine tasks are already automated more consistently by HexStrike:
+Yes — **partially and inevitably**.
+
+Many traditional junior tasks are already automated better by HexStrike:
 
   * Basic enumeration
-  * Tool sequencing and retry logic
-  * Re-running scans with adjusted parameters
-  * Manual correlation of scan output
+  * Tool babysitting
+  * Re-running scans
+  * Manual correlation
   * Boilerplate reporting
 
 
 
-HexStrike handles these faster, more consistently, and without fatigue.
+HexStrike does these:
 
-But **automation amplifies skill — it does not replace judgment.** Scoping, target understanding, false-positive triage, business risk assessment, exploit validation, and legal accountability still require an experienced human operator. Entry-level roles will shift toward higher-value work: interpreting results, designing attack paths, and operating the toolchain rather than just running commands.
+  * Faster
+  * More consistently
+  * Without fatigue
+  * With built-in troubleshooting
+
+
+
+This will reshape entry-level roles.
 
 * * *
 
@@ -286,7 +295,7 @@ But also:
 
 For defenders, the takeaway is simple:
 
-**Attackers with lower skill floors can now execute more complex workflows — but skill, judgment, and operational discipline still separate effective operators from noisy ones.**
+**Attackers are no longer limited by skill — only by intent and access.**
 
 For Red Teams and pentesters:
 

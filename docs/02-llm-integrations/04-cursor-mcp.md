@@ -4,11 +4,6 @@ date: 2026-01-08
 sidebar_position: 4
 ---
 
-:::info Last tested
-Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
-:::
-
-
 # HexStrike + Cursor (MCP): From Single Target → Full Subnet Compromise (Lab PT Walkthrough)
 
 A real end-to-end lab engagement: recon → credential discovery → share abuse → lateral movement → multi-host compromise → reporting 
@@ -246,7 +241,7 @@ Simple and strong!
       
     RESULTS:  
     admin:password  
-    root:<redacted>   # Metasploitable default — lab VM only  
+    root:toor  
     it_admin:C0mplex_77!_HArd_To_Gu3ss  
       
     DECISION: CRITICAL FINDING! Leaked credentials found. These can be tested  
@@ -755,7 +750,7 @@ Simple and strong!
       
     RESULTS:  
     it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    ftp_user:<redacted>  # intentional weak lab credential  
+    ftp_user:123456  
     web_admin:password123  
     guest_user:password123  
     root:password  
@@ -1345,7 +1340,7 @@ The final report consolidates the engagement into clear, defensible findings:
     Windows (172.16.59.144):  
     - it_admin:C0mplex_77!_HArd_To_Gu3ss ✓ (WORKING - Admin Access)  
     - admin:password  
-    - root:<redacted>  # Metasploitable default — lab VM only  
+    - root:toor  
     - Vuln: (AutoAdminLogon enabled)  
       
     Linux (172.16.59.128):  
@@ -1475,7 +1470,7 @@ The final report consolidates the engagement into clear, defensible findings:
       
     CREDENTIALS DISCOVERED ON 172.16.59.140 (via anonymous SMB root share):  
     - it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    - ftp_user:<redacted>  # intentional weak lab credential  
+    - ftp_user:123456  
     - web_admin:password123  
     - guest_user:password123  
     - root:password  

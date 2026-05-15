@@ -35,7 +35,7 @@ sidebar_position: 100
 - Password math formulas corrected: `10⁴`, `26⁵`
 - MCP config argument fixed: ` - server` (Unicode dash) → `--server`
 - Port 8889 in web+cloud page labeled and explained
-- HexStrike-ai capitalization normalized to HexStrike AI
+- HexStrike AI capitalization normalized to HexStrike AI
 - "Press enter or click to view image" Medium residue removed (5 instances)
 - All "Promt" typos fixed (7 files)
 - Tested version matrix added to installation page

@@ -323,7 +323,7 @@ Insert Guest Additions CD, run installer.
     mkdir -p /secrets /database  
     cat > /secrets/passwords.txt <<EOF  
     it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    ftp_user:<weak_lab_password>   # intentionally weak — lab use only  
+    ftp_user:123456  
     web_admin:password123  
     guest_user:password123  
     root:password  
@@ -507,7 +507,7 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
         *   Contents of `/tmp/nfs_root/secrets/passwords.txt`:  
             ```  
             it_admin:C0mplex_77!_HArd_To_Gu3ss  
-            ftp_user:<weak_lab_password>   # intentionally weak — lab use only  
+            ftp_user:123456  
             web_admin:password123  
             guest_user:password123  
             root:password  
@@ -526,7 +526,7 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
     *   **`/etc/shadow`:** Contains hashed passwords for all users on the system. The hash for user `andrey` was extracted: `andrey:$y$j9T$9WBQ0H4N9M0/BG4OjPGZF/$OLzBJRQBeNiqCWIDtWr9abtMkyorDYUrIH5pzG5fqf5`.  
     *   **`/secrets/passwords.txt`:** Contains plaintext credentials:  
         *   `it_admin:C0mplex_77!_HArd_To_Gu3ss`  
-        *   `ftp_user:<weak_lab_password>`   # intentionally weak lab credential  
+        *   `ftp_user:123456`  
         *   `web_admin:password123`  
         *   `guest_user:password123`  
         *   `root:password`  

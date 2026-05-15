@@ -4,14 +4,6 @@ date: 2026-01-27
 sidebar_position: 6
 ---
 
-:::info Last tested
-Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
-:::
-
-
-> **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
-
-
 # AI-Driven Black Box Active Directory Penetration Testing
 
 Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
@@ -38,7 +30,7 @@ This article documents a groundbreaking **black box penetration test** orchestra
 
 
 
-The lab assessment was initiated with a single prompt. In this specific run, the AI handled most tool-execution and decision steps with minimal manual intervention. **This should not be interpreted as safe unsupervised operation** — production use requires scope controls, approval gates, and human review of every high-impact action.
+The entire penetration test was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI discovering the environment, identifying it as an Active Directory domain controller, and then systematically exploiting it. All strategic decisions, error handling, and troubleshooting were performed automatically without human intervention.
 
 * * *
 
@@ -110,7 +102,7 @@ From this single instruction, Cursor AI:
 
 
 
-**Minimal manual intervention was required in this lab run** — Cursor AI orchestrated tool sequencing using HexStrike AI MCP, discovering the environment from a single IP. This is a **lab-specific observation**, not a production guarantee. Real engagements require operator oversight at each high-risk step.
+**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike AI MCP tools and direct tool execution, discovering the entire environment from a single IP address.
 
 * * *
 
@@ -146,7 +138,7 @@ From this single instruction, Cursor AI:
 
 ### Technology Stack: Cursor AI and HexStrike AI MCP
 
-#### Cursor AI: The AI-Assisted Orchestrator
+#### Cursor AI: The Autonomous Orchestrator
 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
  _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
@@ -167,7 +159,7 @@ From this single instruction, Cursor AI:
   * Real-time error analysis and self-correction
   * Context-aware decision making
   * Multi-tool orchestration
-  * Adaptive troubleshooting with minimal manual input (lab-observed)
+  * Autonomous troubleshooting without human intervention
 
 
 
@@ -227,7 +219,7 @@ Unlike traditional penetration tests where the target environment is known, this
 
 #### The Single-Prompt Black Box Assessment Flow
 
-The lab assessment was initiated with one prompt. The AI handled the following steps with minimal manual intervention (lab environment, GOAD-Mini isolated VM):
+The entire black box penetration test was initiated with one human prompt and executed completely autonomously:
     
     
     Human Input:  
@@ -373,7 +365,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Black Box Discoveries (Previously Unknown):**
 
   * **Domain:** SEVENKINGDOMS **discovered** (not known before)
-  * **Domain SID:** `S-1-5-21-<redacted>` extracted (not known before)
+  * **Domain SID:** S-1–5–21–3262952663–1425775882–330886615 **extracted** (not known before)
   * **Hostname:** KINGSLANDING **identified** (not known before)
   * **Domain Controller:** Confirmed through SMB enumeration
   * **SMB Signing:** Enabled and required (AI noted as good security practice)
@@ -415,8 +407,8 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Results:**
 
-  * `<domain_admin>:<redacted>` ✅ (valid domain admin credential)
-  * `<lab_user>:<redacted>` ✅ (valid credential identified)
+  * `Administrator:8dCT-DJjgScp` ✅
+  * `TestUser:Password123!` ✅
   * `vagrant:vagrant` ✅
 
 
@@ -428,7 +420,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Results:**
 
   * **TestUser** vulnerable (no pre-authentication required)
-  * Hash extracted: `<redacted_asrep_hash>` (AS-REP hash for offline cracking)
+  * Hash extracted: `$krb5asrep$23$TestUser@SEVENKINGDOMS.LOCAL:...`
 
 
 
@@ -445,7 +437,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
   * WebService
   * FileService
   * ExchangeService
-  * **Kerberos service account hashes** extracted (redacted — offline cracking demonstrated in lab)
+  * **4 Kerberos hashes** extracted
 
 
 
@@ -459,7 +451,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** ldapdomaindump
 
-**Credentials Used:** `<domain_admin>:<redacted>`
+**Credentials Used:** `Administrator:8dCT-DJjgScp`
 
 **Results:**
 
@@ -481,18 +473,18 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** Impacket secretsdump
 
-**Credentials Used:** `<domain_admin>:<redacted>`
+**Credentials Used:** `Administrator:8dCT-DJjgScp`
 
 **Results:**
 
   * ✅ **Complete domain credential database extracted**
-  * **Domain NTLM hashes** obtained (redacted — used only within isolated lab environment)
-  * **krbtgt hash extracted:** `<redacted>` (enables Golden Ticket — critical lab finding)
+  * **27 user NTLM hashes** obtained
+  * **krbtgt hash extracted:** `1c455e2c1f50aa2c4c0fb3d14188ee65`
   * **Kerberos AES keys** extracted for all users
 
 
 
-**Critical Finding:** krbtgt hash enables Golden Ticket attacks for persistent domain access. Full hash redacted per responsible publication policy.
+**Critical Finding:** krbtgt hash enables Golden Ticket attacks for persistent domain access.
 
 **AI Decision:** DCSync successful. Extract all credentials for complete domain compromise.
 
@@ -537,7 +529,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Decision 4: Exploitation Priority**
 
-  * **Trigger:** Valid domain admin credentials obtained (credential redacted)
+  * **Trigger:** Valid credentials obtained (Administrator:8dCT-DJjgScp)
   * **AI Decision:** Perform DCSync attack immediately
   * **Reasoning:** “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”
   * **Tool Selected:** Impacket secretsdump
@@ -597,7 +589,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 
 
-#### **Key Feature:** Most troubleshooting was **AI-assisted** — Cursor AI handled error recovery with minimal manual input in this lab run.
+#### **Key Feature:** All troubleshooting was **autonomous** — Cursor AI handled every error without human intervention.
 
 * * *
 
@@ -614,15 +606,15 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 #### Valid Credentials
 
-  * `<domain_admin>:<redacted>`
-  * `<lab_user>:<redacted>`
+  * `Administrator:8dCT-DJjgScp`
+  * `TestUser:Password123!`
   * `vagrant:vagrant`
 
 
 
 #### Vulnerabilities Identified
 
-  1. **Golden Ticket Attack Possible** — krbtgt hash extracted via DCSync (hash redacted per responsible publication policy)
+  1. **Golden Ticket Attack Possible** — krbtgt hash extracted via DCSync
   2. **AS-REP Roasting** — TestUser account vulnerable
   3. **Kerberoasting** — 4 service accounts with weak passwords
 
@@ -650,7 +642,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
   6. **Self-Learning** — Improves approach based on failures and successes
   7. **Comprehensive Error Recovery** — Multiple fallback strategies for each tool
   8. **Scalability** — Can assess multiple targets simultaneously
-  9. **Consistency** — Follows methodology steps consistently within lab constraints
+  9. **Consistency** — Follows methodology consistently without human error
   10. **Automatic Documentation** — Generates comprehensive reports and articles
 
 
@@ -676,7 +668,7 @@ When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:
 When password spraying didn’t find credentials immediately, Cursor AI:
 
   1. **Tried multiple methods:** Password spraying, AS-REP Roasting, Kerberoasting
-  2. **Used discovered credentials:** <lab_user>:<redacted> for authenticated attacks
+  2. **Used discovered credentials:** TestUser:Password123! for authenticated attacks
   3. **Escalated privileges:** Used Administrator credentials for DCSync
   4. **Achieved goal:** Complete domain compromise
 
@@ -697,7 +689,7 @@ When report generation had path issues, Cursor AI:
 
 ### Conclusion
 
-This AI-assisted **black box lab assessment** successfully demonstrated practical AI-driven orchestration using **Cursor AI** with **HexStrike AI MCP** tools in an isolated GOAD-Mini environment. The assessment was initiated with a single prompt and executed with minimal manual intervention. Key findings:
+This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike AI MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
 
   1. **Discovering** the target environment from scratch (starting with only an IP address)
   2. **Identifying** it as an Active Directory domain controller
@@ -744,7 +736,7 @@ From this single instruction, Cursor AI:
 
 
 
-**This demonstrates the practical value of AI-assisted orchestration** — reducing manual tool-chaining effort and accelerating lab-environment assessments. **In production**, every high-impact action requires explicit operator authorization, scope validation, and audit logging.
+**This represents a paradigm shift in penetration testing** — from manual, time-intensive processes to fully automated, AI-driven **black box** assessments that can discover and exploit unknown environments, initiated with natural language and executed completely autonomously.
 
 ### Future Implications
 
@@ -767,40 +759,3 @@ By [Andrey Pautov](<https://medium.com/@1200km>) on [January 27, 2026](<https://
 [Canonical link](<https://medium.com/@1200km/ai-driven-black-box-active-directory-penetration-testing-8de0b9ad38b7>)
 
 Exported from [Medium](<https://medium.com>) on May 15, 2026.
-
----
-
-## Defensive Value — AD Hardening Checklist
-
-Every attack technique in this guide maps directly to a defensive control. Use this checklist when validating your AD environment.
-
-### Detection Opportunities
-
-| Attack Step | Event ID | Log Source |
-|-------------|----------|------------|
-| Kerberoasting | 4769 (TGS request, RC4) | DC Security Log |
-| AS-REP Roasting | 4768 (no preauth) | DC Security Log |
-| DCSync | 4662 (replication rights used) | DC Security Log |
-| Pass-the-Hash / PTH | 4624 Type 3, 4648 | DC Security Log |
-| BloodHound enum | LDAP query volume spike | Network/SIEM |
-| SMB lateral movement | 4624 Type 3 + 5140 share access | Target host |
-
-### Hardening Checklist
-
-- [ ] Disable RC4 encryption in Kerberos — force AES256
-- [ ] Enable AES encryption for all service accounts (remove RC4 from SPNs)
-- [ ] Enable "Do not require Kerberos preauthentication" audit
-- [ ] Restrict replication permissions — only DCs should hold `Replicating Directory Changes`
-- [ ] Enable Protected Users security group for privileged accounts
-- [ ] Deploy tiered admin model: Tier 0 (DC), Tier 1 (servers), Tier 2 (workstations)
-- [ ] Enable Credential Guard on all Windows 10/11 and Server 2016+ hosts
-- [ ] Audit ACL paths in BloodHound quarterly — look for unexpected `GenericAll`, `WriteDACL`, `DCSync` edges
-- [ ] Restrict LDAP signing and channel binding
-- [ ] Enable LDAP signing and LDAPS where possible
-- [ ] Review and restrict GPO delegation rights
-
-### Resources
-
-- [BloodHound CE](https://github.com/SpecterOps/BloodHound) — attack path mapping
-- [PingCastle](https://www.pingcastle.com/) — AD risk score auditing
-- [Microsoft AD Security Best Practices](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)
