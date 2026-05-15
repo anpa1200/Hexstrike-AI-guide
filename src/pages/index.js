@@ -253,8 +253,8 @@ export default function Home() {
               <p className={styles.sectionLabel}>The Author</p>
               <h2>Andrey Pautov</h2>
               <p className={styles.authorBio}>
-                Security researcher, penetration tester, and AI offensive security practitioner.
-                Focused on offensive security, AI security, real-world attack simulations, CTI, and detection engineering.
+                CTI researcher with a strong background in offensive security, penetration testing, and AI-driven attack simulation.
+                Focused on adversary profiling, real-world attack simulations, detection engineering, and red teaming.
                 All techniques are demonstrated in authorized lab environments.
               </p>
               <div className={styles.authorLinks}>

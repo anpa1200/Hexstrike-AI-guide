@@ -5,9 +5,9 @@ sidebar_position: 2
 
 # About the Author
 
-**Andrey Pautov** — security researcher, penetration tester, and AI offensive security practitioner.
+**Andrey Pautov** — CTI researcher with a strong background in offensive security, penetration testing, and AI-driven attack simulation.
 
-I focus on **offensive security, AI security, real-world attack simulations, cyber threat intelligence (CTI), and detection engineering** — building tools and publishing research that bridges the gap between theoretical security knowledge and hands-on practice.
+I focus on **cyber threat intelligence, adversary profiling, real-world attack simulations, and detection engineering** — with deep hands-on roots in red teaming, Active Directory exploitation, and cloud security. Building tools and publishing research that bridges the gap between threat intelligence and offensive practice.
 
 HexStrike AI is one of those tools: a real, working MCP orchestrator that bridges large language models to the full penetration testing toolkit — built from experience in the field, not from specs.
 
@@ -54,4 +54,4 @@ Follow for practical cybersecurity research. New guides, tool releases, and rese
 
 ---
 
-*If you're interested in offensive security, AI security, real-world attack simulations, CTI, and detection engineering — this is exactly what I focus on.*
+*CTI researcher with a strong background in offensive security — if that's your world too, this is the right place.*
