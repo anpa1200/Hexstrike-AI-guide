@@ -266,7 +266,7 @@ export default function Home() {
             </div>
             <div className={styles.authorDonate}>
               <p className={styles.donateText}>If this research saves you time or helps your work —</p>
-              <a href="https://paypal.me/anpa1200" target="_blank" rel="noopener noreferrer" className={styles.donateBtn}>
+              <a href="https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD" target="_blank" rel="noopener noreferrer" className={styles.donateBtn}>
                 ☕ Buy Me a Coffee
               </a>
               <p className={styles.donateNote}>Keep the lab running</p>

@@ -136,7 +136,7 @@ const config = {
               { label: 'Medium', href: 'https://medium.com/@1200km' },
               { label: 'LinkedIn', href: 'https://linkedin.com/in/andrey-pautov' },
               { label: 'GitHub', href: 'https://github.com/anpa1200' },
-              { label: '☕ Buy Me a Coffee', href: 'https://paypal.me/anpa1200' },
+              { label: '☕ Buy Me a Coffee', href: 'https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD' },
             ],
           },
         ],
