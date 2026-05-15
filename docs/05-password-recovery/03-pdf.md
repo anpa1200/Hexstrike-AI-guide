@@ -1,0 +1,175 @@
+---
+title: "PDF Password Recovery"
+date: 2025-12-29
+sidebar_position: 3
+---
+
+# AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI
+
+From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling 
+
+* * *
+
+### AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI
+
+#### From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/0-NEMwBOBGpCmEwBNd.png)
+
+### Overview
+
+This guide shows how HexStrike-AI, orchestrated through Gemini-CLI, can autonomously handle a common, **authorized** security task:
+
+**Regain access to a password-protected PDF you own** (or are explicitly authorized to access), **identify the encryption scheme** , and **restore usability** — without handholding.
+
+The core value here is not “magic cracking.” It’s the AI’s ability to **reason** , **validate assumptions** , and **pivot** when reality disagrees with the first plan.
+
+This is a fully authorized, local scenario.
+
+* * *
+
+**Full guide how to install and use HexstrikeAI here:**
+
+[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](<https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
+
+**Manual PDF file Password cracking. Guide with real life examples here:|  
+**<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>
+
+### Scenario
+
+#### **Objective**
+
+  * Confirm a PDF is encrypted and determine _how_
+  * Distinguish between **user password** vs **owner password / permissions**
+  * Restore access **using known credentials** (password manager candidates, documented passphrases, owner-provided secrets)
+  * Extract the content and retrieve the flag (CTF-style) _after access is legitimately obtained_
+
+
+
+#### **Inputs**
+
+  * Encrypted PDF:  
+`/home/andrey/secret.pdf`
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XQddQOCsLdZJttqMFUzdwg.png)
+
+  * Password Dictionary:  
+`/home/andrey/Documents/passwords_list.txt`
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
+
+* * *
+
+### Step-by-Step Execution Flow
+
+  * Run the HexstrikeAI server
+
+
+    
+    
+    hexstrike_server
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TogAVXnHW6s_p2I_SU9lUw.png)
+
+  * Run Gemini-CLI
+
+
+    
+    
+    gemeni-cli
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
+
+#### Promt:
+    
+    
+    @hexstrike Crack password of ~/Documents/enc_secret.pdf. use passwords list ~/Documents/password_list.txt
+
+* * *
+
+### Execution Flow:
+
+#### 1) Task initiation (single high-level prompt)
+
+You issued one objective:
+
+  * Recover access to `~/Documents/enc_secret.pdf` using a provided candidate list
+  * Proceed until the document content is readable
+
+
+
+No manual tool selection, no pre-planned commands.
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-mLHP1zLmjFUncRQ8A9F7Eg.png)
+
+#### 2) Tool capability gap identified
+
+HexStrike initially reported it didn’t have a dedicated “crack PDF” tool.
+
+**AI behavior:** rather than stopping, it shifted to a plan that starts with **deriving a verification artifact** from the PDF (a representation suitable for offline validation).
+
+#### 3) First failure: write location permissions
+
+The AI attempted to save output under a system directory (`/usr/lib/...`) and hit **Permission denied**.
+
+**Pivot:** it switched to a user-writable temp directory under the Gemini working area and retried.
+
+#### 4) Second failure: dependency not in PATH
+
+The helper utility needed for extraction wasn’t callable directly (**command not found**).
+
+**Pivot:** the AI performed filesystem discovery, located the tool in a non-PATH location, and re-ran it using the full path.
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-HvPSDZgdwCKE4Ny2lOmWNw.png)
+
+#### 5) Extraction succeeded (hash/verification artifact produced)
+
+With the correct tool path and a writable output directory, the AI generated the intermediate artifact successfully and prepared it for offline checking.
+
+#### 6) Offline candidate validation (dictionary replay)
+
+The AI ran an **offline candidate check** using:
+
+  * The extracted artifact from the PDF
+  * The provided wordlist
+
+
+
+**Failure:** wordlist path mismatch (`password_list.txt` vs `passwords_list.txt`).
+
+**Pivot:** it listed `~/Documents`, confirmed the actual filename, and reran with the corrected path.
+
+#### 7) Success: password recovered
+
+After correcting the wordlist filename, the run completed and returned a valid password for the PDF:
+
+  * **Recovered password:** `MyStrongPass`
+
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ytS5p4_dOzbiZ5ewyHMohg.png)
+
+* * *
+
+### Conclusion
+
+This flow is a clear example of why AI-orchestrated security tooling is qualitatively different from “running commands.”
+
+With a single high-level prompt, the system executed an end-to-end objective and — more importantly — **self-troubleshot its own failures** without human intervention:
+
+  * It detected a **permission boundary** (writing into a protected directory), then automatically rerouted output to a **user-writable workspace**.
+  * It hit a **missing dependency in PATH** , then performed **environment discovery** , located the tool by searching the filesystem, and continued using the correct absolute path.
+  * It encountered a **bad input assumption** (wrong wordlist filename), then validated reality by enumerating `~/Documents`, corrected the path, and retried.
+  * It maintained a consistent strategy throughout: **derive an offline verification artifact → validate candidates offline → confirm success**.
+
+
+
+The key takeaway is not the specific PDF outcome — it is the **closed-loop execution model** :
+
+**Plan → execute → observe error → diagnose → adapt → retry → validate** , repeated at machine speed.
+
+That is what “one prompt success” really means here: the user didn’t babysit the workflow. The AI treated errors as telemetry, not blockers, and completed the task by dynamically chaining tools, correcting assumptions, and converging on a verified result.
+
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 29, 2025](<https://medium.com/p/cfa7eb0fae91>).
+
+[Canonical link](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91>)
+
+Exported from [Medium](<https://medium.com>) on May 15, 2026.
