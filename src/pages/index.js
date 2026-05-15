@@ -319,6 +319,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── AUTHOR ───────────────────────────────────────────────────── */}
+      <section className={styles.authorSection}>
+        <div className="container">
+          <div className={styles.authorCard}>
+            <div className={styles.authorInfo}>
+              <p className={styles.sectionLabel}>The Author</p>
+              <h2>Andrey Pautov</h2>
+              <p className={styles.authorBio}>
+                Security researcher, penetration tester, and AI offensive security practitioner.
+                Focused on offensive security, AI security, real-world attack simulations, CTI, and detection engineering.
+                All techniques are demonstrated in authorized lab environments.
+              </p>
+              <div className={styles.authorLinks}>
+                <a href="https://medium.com/@1200km" target="_blank" rel="noopener noreferrer" className={styles.authorLink}>Medium</a>
+                <a href="https://linkedin.com/in/andrey-pautov" target="_blank" rel="noopener noreferrer" className={styles.authorLink}>LinkedIn</a>
+                <a href="https://github.com/anpa1200" target="_blank" rel="noopener noreferrer" className={styles.authorLink}>GitHub</a>
+                <a href="mailto:1200km@gmail.com" className={styles.authorLink}>Email</a>
+              </div>
+            </div>
+            <div className={styles.authorDonate}>
+              <p className={styles.donateText}>If this research saves you time or helps your work —</p>
+              <a href="https://paypal.me/anpa1200" target="_blank" rel="noopener noreferrer" className={styles.donateBtn}>
+                ☕ Buy Me a Coffee
+              </a>
+              <p className={styles.donateNote}>Keep the lab running</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA BANNER ───────────────────────────────────────────────── */}
       <section className={styles.ctaBanner}>
         <div className="container">

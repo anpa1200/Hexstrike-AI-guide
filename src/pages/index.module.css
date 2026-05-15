@@ -484,10 +484,117 @@
   margin-bottom: 2rem;
 }
 
+/* ── Author ───────────────────────────────────────────────────────────── */
+.authorSection {
+  padding: 5rem 0;
+  background: #060d1a;
+  border-top: 1px solid rgba(14, 165, 233, 0.12);
+}
+
+.authorCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background: rgba(14, 165, 233, 0.05);
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 16px;
+  padding: 3rem;
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorInfo h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0.25rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.authorBio {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.authorLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.authorLink {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s;
+}
+
+.authorLink:hover {
+  background: rgba(14, 165, 233, 0.12);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.authorDonate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  min-width: 200px;
+}
+
+.donateText {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.donateBtn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.18s, transform 0.18s;
+  white-space: nowrap;
+}
+
+.donateBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+.donateNote {
+  color: #475569;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero { padding: 4rem 0 3.5rem; }
   .stats { flex-wrap: wrap; }
   .statItem { min-width: 45%; border-bottom: 1px solid rgba(14,165,233,0.15); }
   .terminal { font-size: 0.75rem; }
+  .authorCard { flex-direction: column; padding: 2rem; }
+  .authorDonate { width: 100%; }
 }

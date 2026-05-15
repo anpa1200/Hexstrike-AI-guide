@@ -43,10 +43,20 @@ See the full [Installation Guide](/docs/getting-started/installation) for all LL
 
 ---
 
-## Author
+## About the Author
 
 Written by **Andrey Pautov** — security researcher, penetration tester, and AI offensive security practitioner.
+
+Focused on **offensive security, AI security, real-world attack simulations, CTI, and detection engineering**.
 All techniques are demonstrated in authorized lab environments.
 
-- Medium: [medium.com/@1200km](https://medium.com/@1200km)
-- GitHub: [github.com/anpa1200](https://github.com/anpa1200)
+| | |
+|--|--|
+| Medium | [medium.com/@1200km](https://medium.com/@1200km) |
+| LinkedIn | [linkedin.com/in/andrey-pautov](https://linkedin.com/in/andrey-pautov) |
+| GitHub | [github.com/anpa1200](https://github.com/anpa1200) |
+| Contact | [1200km@gmail.com](mailto:1200km@gmail.com) |
+
+If this research is useful to you — **[buy me a coffee ☕](https://paypal.me/anpa1200)** to keep the lab running.
+
+→ [Full author page & support](/docs/about)

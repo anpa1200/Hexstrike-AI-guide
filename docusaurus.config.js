@@ -132,8 +132,11 @@ const config = {
           {
             title: 'Author',
             items: [
+              { label: 'About & Support', to: '/docs/about' },
               { label: 'Medium', href: 'https://medium.com/@1200km' },
+              { label: 'LinkedIn', href: 'https://linkedin.com/in/andrey-pautov' },
               { label: 'GitHub', href: 'https://github.com/anpa1200' },
+              { label: '☕ Buy Me a Coffee', href: 'https://paypal.me/anpa1200' },
             ],
           },
         ],
