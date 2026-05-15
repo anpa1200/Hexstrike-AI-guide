@@ -4,6 +4,10 @@ date: 2025-12-21
 sidebar_position: 1
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation
 
 How I Used Gemini + HexStrike-AI on Kali Linux to Scan, Enumerate, and Exploit My Own Network 

@@ -4,6 +4,10 @@ date: 2026-01-08
 sidebar_position: 3
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # HexStrike + Cursor (MCP): From Single Target → Full Subnet Compromise (Lab PT Walkthrough)
 
 A real end-to-end lab engagement: recon → credential discovery → share abuse → lateral movement → multi-host compromise → reporting 
@@ -1541,6 +1545,18 @@ After a lot of testing, I stand by it: **HexStrike + Cursor is the most efficien
 **Andrey Pautov**
 
 #### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
+
+---
+
+## Known Limitations
+
+:::caution
+- Results are specific to the lab configuration used; outcomes will differ on hardened or patched targets.
+- AI tool selection is heuristic — novel service configurations may require re-prompting or manual follow-up.
+- All walkthroughs ran in an isolated VirtualBox/VMware network, not a production environment.
+- Timing and success rates vary with host CPU, RAM, and network latency.
+- Some tool outputs are truncated in the screenshots; full output was reviewed live during the session.
+:::
 
 By [Andrey Pautov](<https://medium.com/@1200km>) on [January 8, 2026](<https://medium.com/p/f2e1fd793ad7>).
 

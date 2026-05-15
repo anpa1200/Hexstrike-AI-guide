@@ -4,6 +4,10 @@ date: 2025-12-29
 sidebar_position: 4
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI
 
 From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling 

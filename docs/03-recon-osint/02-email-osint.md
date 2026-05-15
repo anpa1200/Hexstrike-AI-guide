@@ -4,6 +4,10 @@ date: 2026-01-11
 sidebar_position: 2
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # HexStrike + Cursor for OSINT: From One Email to a Full Exposure Map
 
 Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks like in practice, and how to publish a real report without… 

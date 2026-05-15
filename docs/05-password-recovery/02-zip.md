@@ -4,6 +4,10 @@ date: 2025-12-25
 sidebar_position: 2
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI
 
 From Encrypted Archive to Flag Using LLM-Orchestrated Tooling 

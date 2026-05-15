@@ -4,6 +4,10 @@ date: 2026-01-06
 sidebar_position: 2
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # Building an Extremely Vulnerable Ubuntu 24.04 Server Lab (Bonus: Full PT with Hexstrike)
 
 A Step-by-Step Guide: Hands-on guide to creating an intentionally insecure Ubuntu 24.04.3 Server VM with open SSH, FTP, Samba, NFS… 
@@ -581,6 +585,18 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
 
 
 This lab is ideal for tools like Metasploit, enum4linux, nfs-common. Use only in isolated VMs for ethical learning.
+
+---
+
+## Known Limitations
+
+:::caution
+- Results are specific to the lab configuration used; outcomes will differ on hardened or patched targets.
+- AI tool selection is heuristic — novel service configurations may require re-prompting or manual follow-up.
+- All walkthroughs ran in an isolated VirtualBox/VMware network, not a production environment.
+- Timing and success rates vary with host CPU, RAM, and network latency.
+- Some tool outputs are truncated in the screenshots; full output was reviewed live during the session.
+:::
 
 By [Andrey Pautov](<https://medium.com/@1200km>) on [January 6, 2026](<https://medium.com/p/90034032775b>).
 

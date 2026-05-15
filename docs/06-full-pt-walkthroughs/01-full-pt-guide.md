@@ -3,6 +3,10 @@ title: "Full Penetration Test with HexStrike AI — Complete Guide"
 sidebar_position: 1
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # Full Penetration Test with HexStrike AI
 
 This guide walks through a complete, end-to-end penetration test using HexStrike AI as the execution orchestrator. Every phase is AI-driven — you write goals in natural language, HexStrike plans and executes the tool chain, recovers from failures, and chains findings into attack paths autonomously.

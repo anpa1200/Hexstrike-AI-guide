@@ -255,7 +255,7 @@ Note the **host-only** IP (example: `172.16.59.132`).
 From Ubuntu, confirm SSH works:
     
     
-    ssh andrey@172.16.59.132
+    ssh <your_user>@<kali-ip>
 
 ![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2Qj7uyDh8SLZndzkTN05zg.png)
 
@@ -297,13 +297,13 @@ Ensure it’s in PATH:
 On Ubuntu:
     
     
-    ssh-keygen -t ed25519 -C "hexstrike-kali" -f ~/.ssh/hexstrike_kali  
-    ssh-copy-id -i ~/.ssh/hexstrike_kali.pub andrey@172.16.59.132
+    ssh-keygen -t ed25519 -C "hexstrike-kali" -f ~/.ssh/<your_key>  
+    ssh-copy-id -i ~/.ssh/<your_key>.pub <your_user>@<kali-ip>
 
 Test:
     
     
-    ssh -i ~/.ssh/hexstrike_kali andrey@172.16.59.132 "echo ok"
+    ssh -i ~/.ssh/<your_key> <your_user>@<kali-ip> "echo ok"
 
 ![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-WGcR15hfphnOYHTo7pXrSA.png)
 
@@ -341,7 +341,7 @@ On **Ubuntu** , create `~/.mcphost.yml`:
           - "StrictHostKeyChecking=accept-new"  
           - "-o"  
           - "LogLevel=ERROR"  
-          - "andrey@172.16.59.132"  
+          - "<your_user>@<kali-ip>"  
           - "hexstrike_mcp"  
           - "--server"  
           - "http://127.0.0.1:8888"  

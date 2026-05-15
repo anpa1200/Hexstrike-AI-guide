@@ -4,6 +4,10 @@ date: 2026-01-27
 sidebar_position: 4
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # AI-Driven Black Box Active Directory Penetration Testing
 
 Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
@@ -290,7 +294,7 @@ The entire black box penetration test was initiated with one human prompt and ex
   2. **Environment Detection:** AI automatically identified AD environment
   3. **Adaptive Strategy:** Methodology adapted based on discoveries
   4. **Single Prompt Execution:** Entire black box pentest from one instruction
-  5. **Autonomous Decision Making:** AI makes all strategic decisions
+  5. **Contextual Decision Making:** AI proposes each step based on discovered context
   6. **Robust Error Handling:** Automatic troubleshooting without human help
   7. **Self-Adaptation:** AI modifies approach based on findings
   8. **Complete Automation:** No manual steps required
@@ -736,7 +740,7 @@ From this single instruction, Cursor AI:
 
 
 
-**This represents a paradigm shift in penetration testing** — from manual, time-intensive processes to fully automated, AI-driven **black box** assessments that can discover and exploit unknown environments, initiated with natural language and executed completely autonomously.
+**This represents a significant capability advance in penetration testing** — AI-orchestrated **black box** assessments can discover and chain findings across an unknown environment, initiated with a single natural-language prompt.
 
 ### Future Implications
 
@@ -753,6 +757,18 @@ The combination of Cursor AI and HexStrike AI MCP opens new possibilities:
 **Andrey Pautov**
 
 #### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
+
+---
+
+## Known Limitations
+
+:::caution
+- Results are specific to the lab configuration used; outcomes will differ on hardened or patched targets.
+- AI tool selection is heuristic — novel service configurations may require re-prompting or manual follow-up.
+- All walkthroughs ran in an isolated VirtualBox/VMware network, not a production environment.
+- Timing and success rates vary with host CPU, RAM, and network latency.
+- Some tool outputs are truncated in the screenshots; full output was reviewed live during the session.
+:::
 
 By [Andrey Pautov](<https://medium.com/@1200km>) on [January 27, 2026](<https://medium.com/p/8de0b9ad38b7>).
 

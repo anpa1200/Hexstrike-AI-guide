@@ -3,6 +3,10 @@ title: "AI-Assisted Password Security Auditing"
 sidebar_position: 1
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
 # AI-Assisted Password Security Auditing with HexStrike AI
 
 Authorized password audit methodology — ZIP, PDF, Office, WiFi, and credential security validation 

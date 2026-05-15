@@ -121,7 +121,7 @@ _HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, an
 | OS | Kali Linux 2025.4 |
 | HexStrike AI | Kali package `hexstrike-ai` (2025.4 repo) |
 | Gemini CLI | `@google/gemini-cli` 0.1.x |
-| OpenAI Codex CLI | `@openai/codex` 0.1.x |
+| OpenAI Codex CLI | `@openai/codex` 0.77.0 |
 | Cursor | 0.44+ with MCP support |
 | Ollama | 0.3.x |
 
@@ -271,7 +271,7 @@ Confirm SSH works non-interactively:
     ssh -i ~/.ssh/<your_key> \  
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
-      andrey@172.16.59.132 "echo ok"
+      <your_user>@<kali-ip> "echo ok"
 
 On the Kali machine, HexStrike MCP command must exist:
 
@@ -290,7 +290,7 @@ On the Kali machine, HexStrike MCP command must exist:
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
       -o LogLevel=ERROR \  
-      andrey@172.16.59.132 \  
+      <your_user>@<kali-ip> \  
       hexstrike_mcp --server http://127.0.0.1:8888 --timeout 300
 
 **Notes** :

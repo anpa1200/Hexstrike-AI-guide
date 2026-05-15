@@ -5,7 +5,25 @@ sidebar_position: 100
 
 # Changelog
 
-## May 2026 — v2.0 (Current)
+## May 2026 — v2.1 (Current)
+
+**Technical accuracy**
+- Fixed OpenAI Codex version in Tested Environment table: `0.1.x` → `0.77.0` (installation page)
+- Normalized Web & Cloud page ports: both HexStrike MCP configs now consistently use port 8889 (Burp Suite occupies default 8888)
+- Replaced personal IP (`172.16.59.132`) and SSH key name (`hexstrike_kali`) with generic placeholders across installation, gemini, and ollama pages
+
+**Framing**
+- ADCS ESC8 article renamed: "One-Prompt Domain Compromise" → "Single-Prompt ADCS ESC8 Attack Chain"
+- "Fully automated" / "AI makes all strategic decisions" replaced with observed-lab language across AD and ADCS pages
+- Old disclaimer title "Passwords Cracking: Full Guide with Real-Life Examples" updated to match current page title
+
+**Coverage**
+- `:::info Last tested` banner added to all 16 technical pages that were missing it
+- `Known Limitations` section added to 5 lab/walkthrough pages (lab-setup, full-subnet, black-box-ad, active-directory, adcs-esc8)
+
+---
+
+## May 2026 — v2.0
 
 **Safety & framing**
 - Added site-wide authorization banner on every page

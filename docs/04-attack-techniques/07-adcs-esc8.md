@@ -4,21 +4,25 @@ date: 2026-01-29
 sidebar_position: 7
 ---
 
-# Cursor + Hexstrike. Fully Automated ADCS ESC8 Attack
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
 
-One-Prompt Domain Compromise 
+# Cursor + HexStrike. ADCS ESC8 Attack Chain
+
+Single-Prompt Lab Demonstration — GOAD-Mini Environment 
 
 * * *
 
 ### Cursor + Hexstrike. Fully Automated ADCS ESC8 Attack
 
-#### One-Prompt Domain Compromise
+#### Single-Prompt ADCS ESC8 Attack Chain
 
 ![](/img/hexstrike-articles/cursor-hexstrike-fully-automated-adcs-esc8-attack/1-npVtspHqp4Ac88UEt_5ziQ.png)
 
 ### Abstract
 
-This article documents a **fully automated, single-prompt penetration test** that achieves complete domain compromise through the ADCS ESC8 vulnerability. Starting from nothing more than an IP address, an AI-powered attack framework successfully executed the entire attack chain — from reconnaissance to domain compromise — in a single automated session.
+This article documents a **single-prompt lab engagement** that achieves domain compromise through the ADCS ESC8 vulnerability. Starting from nothing more than an IP address, the AI-orchestrated attack framework executed the entire chain — from reconnaissance to domain compromise — in one session against the GOAD-Mini lab.
 
 **Key Innovation:** This attack demonstrates the power of AI-driven penetration testing, where a single comprehensive prompt orchestrates multiple tools, handles troubleshooting automatically, and adapts to challenges in real-time.
 
@@ -30,7 +34,7 @@ This article documents a **fully automated, single-prompt penetration test** tha
 
 ### Introduction
 
-Traditional penetration testing requires manual intervention at each step: running tools, interpreting results, making decisions, and troubleshooting failures. This article presents a revolutionary approach: **a fully automated attack that requires only one prompt** to execute the complete ADCS ESC8 attack chain.
+Traditional penetration testing requires manual intervention at each step: running tools, interpreting results, making decisions, and troubleshooting failures. This article demonstrates **an attack chain driven by a single prompt** to execute the complete ADCS ESC8 sequence in a controlled lab environment.
 
 ### What Makes This Attack Complicated?
 
@@ -103,7 +107,7 @@ Traditional penetration testing requires manual intervention at each step: runni
 #### The Prompt
     
     
-    Perform a fully automated blackbox penetration test starting from IP address 192.168.56.10.   
+    Perform a blackbox penetration test starting from IP address 192.168.56.10.   
     Execute the complete ADCS ESC8 attack chain to achieve domain compromise. Use HexStrike MCP   
     tools and handle all troubleshooting automatically.
 
@@ -527,7 +531,7 @@ Every action is logged:
 
 ### Conclusion
 
-This fully automated ADCS ESC8 attack demonstrates:
+This lab-observed ADCS ESC8 attack demonstrates:
 
   1. **The Power of AI-Driven Pentesting:** Single prompt achieves complete attack chain
   2. **The Severity of ESC8:** One misconfiguration leads to full domain compromise
@@ -556,6 +560,18 @@ This fully automated ADCS ESC8 attack demonstrates:
 **Andrey Pautov**
 
 ### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
+
+---
+
+## Known Limitations
+
+:::caution
+- Results are specific to the lab configuration used; outcomes will differ on hardened or patched targets.
+- AI tool selection is heuristic — novel service configurations may require re-prompting or manual follow-up.
+- All walkthroughs ran in an isolated VirtualBox/VMware network, not a production environment.
+- Timing and success rates vary with host CPU, RAM, and network latency.
+- Some tool outputs are truncated in the screenshots; full output was reviewed live during the session.
+:::
 
 By [Andrey Pautov](<https://medium.com/@1200km>) on [January 29, 2026](<https://medium.com/p/8736fec53c58>).
 
