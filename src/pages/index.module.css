@@ -1,23 +1,493 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 5rem;
+  background: #060d1a;
+  color: #e2e8f0;
+}
 
-.heroBanner {
-  padding: 4rem 0;
+/* Hex-grid background */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Radial glow */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(14, 165, 233, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 6px #00ff88;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.heroTitle {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  color: #f1f5f9;
+}
+
+.heroTitle span {
+  background: linear-gradient(135deg, #38bdf8 0%, #00ff88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #94a3b8;
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+
+/* Terminal */
+.terminal {
+  background: #0a1628;
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.82rem;
+  margin: 0 auto 2.5rem;
+  max-width: 640px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(14,165,233,0.1);
+}
+
+.terminalBar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.9rem;
+  align-items: center;
+}
+
+.terminalDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.terminalDotRed   { background: #ff5f56; }
+.terminalDotYellow{ background: #ffbd2e; }
+.terminalDotGreen { background: #27c93f; }
+
+.terminalTitle {
+  flex: 1;
+  text-align: center;
+  color: #475569;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.terminalLine {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.terminalPrompt { color: #00ff88; }
+.terminalCmd    { color: #e2e8f0; }
+.terminalOut    { color: #38bdf8; }
+.terminalWarn   { color: #fbbf24; }
+.terminalSuccess{ color: #00ff88; }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #00ff88;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CTAs */
+.ctaRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(14, 165, 233, 0.5);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.05);
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btnSecondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.1);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(14, 165, 233, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.statItem {
+  flex: 1;
+  padding: 1.1rem 0.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.statItem:last-child { border-right: none; }
+
+.statNum {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #38bdf8;
+  display: block;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.25rem;
+}
+
+/* ── Why HexStrike section ────────────────────────────────────────────── */
+.whySection {
+  padding: 5rem 0;
+  background: var(--ifm-background-color);
+}
+
+.sectionLabel {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--hs-text-muted);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: var(--hs-bg-card);
+  border: 1px solid var(--hs-border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--ifm-color-primary);
 }
 
-.buttons {
+[data-theme='dark'] .featureCard:hover {
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.12);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.featureCard h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.featureCard p {
+  font-size: 0.9rem;
+  color: var(--hs-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Sections grid ────────────────────────────────────────────────────── */
+.sectionsArea {
+  padding: 5rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .sectionsArea {
+  background: #060d1a;
+}
+
+.sectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.sectionCard {
+  background: var(--hs-bg-card);
+  border: 1px solid var(--hs-border);
+  border-radius: 14px;
+  padding: 1.6rem;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.sectionCard:hover {
+  transform: translateY(-4px);
+  text-decoration: none !important;
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .sectionCard:hover {
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.1);
+}
+
+.sectionCardTop {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.sectionCardEmoji {
+  font-size: 1.7rem;
+  flex-shrink: 0;
+}
+
+.sectionCardNum {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+}
+
+.sectionCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ifm-font-color-base);
+}
+
+.sectionCard p {
+  font-size: 0.85rem;
+  color: var(--hs-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sectionCardLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.sectionCardLink {
+  font-size: 0.74rem;
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--ifm-color-primary) !important;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  text-decoration: none !important;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  transition: background 0.15s;
+}
+
+.sectionCardLink:hover {
+  background: rgba(14, 165, 233, 0.2);
+  text-decoration: none !important;
+}
+
+/* ── How It Works ─────────────────────────────────────────────────────── */
+.howSection {
+  padding: 5rem 0;
+  background: var(--ifm-background-color);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+}
+
+.stepNum {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 20px rgba(14,165,233,0.35);
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.step p {
+  font-size: 0.87rem;
+  color: var(--hs-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── CTA Banner ───────────────────────────────────────────────────────── */
+.ctaBanner {
+  background: linear-gradient(135deg, #0a1628 0%, #0c1f3d 100%);
+  border-top: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.ctaBanner h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.ctaBanner p {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { padding: 4rem 0 3.5rem; }
+  .stats { flex-wrap: wrap; }
+  .statItem { min-width: 45%; border-bottom: 1px solid rgba(14,165,233,0.15); }
+  .terminal { font-size: 0.75rem; }
 }
