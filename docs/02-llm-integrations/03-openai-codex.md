@@ -4,6 +4,11 @@ date: 2026-01-03
 sidebar_position: 3
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
+
 # HexStrike+OpenAI Codex. AI-Driven Exploitation of Metasploitable.
 
 How I Used an LLM-Orchestrated Toolchain to Enumerate and Exploit a Deliberately Vulnerable Host (With Real Proofs) 

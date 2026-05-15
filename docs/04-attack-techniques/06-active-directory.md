@@ -4,6 +4,11 @@ date: 2026-01-27
 sidebar_position: 6
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
+
 > **Authorization required.** All techniques on this page are for use in **authorized lab environments only**. Never test against systems you do not own or have explicit written permission to assess. Document scope, maintain an audit log, and obtain approval before executing any exploitation step.
 
 
@@ -105,7 +110,7 @@ From this single instruction, Cursor AI:
 
 
 
-**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike AI MCP tools and direct tool execution, discovering the entire environment from a single IP address.
+**Minimal manual intervention was required in this lab run** — Cursor AI orchestrated tool sequencing using HexStrike AI MCP, discovering the environment from a single IP. This is a **lab-specific observation**, not a production guarantee. Real engagements require operator oversight at each high-risk step.
 
 * * *
 
@@ -411,7 +416,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Results:**
 
   * `Administrator:8dCT-DJjgScp` ✅
-  * `TestUser:Password123!` ✅
+  * `<lab_user>:<redacted>` ✅ (valid credential identified)
   * `vagrant:vagrant` ✅
 
 
@@ -423,7 +428,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Results:**
 
   * **TestUser** vulnerable (no pre-authentication required)
-  * Hash extracted: `$krb5asrep$23$TestUser@SEVENKINGDOMS.LOCAL:...`
+  * Hash extracted: `<redacted_asrep_hash>` (AS-REP hash for offline cracking)
 
 
 
@@ -440,7 +445,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
   * WebService
   * FileService
   * ExchangeService
-  * **4 Kerberos hashes** extracted
+  * **Kerberos service account hashes** extracted (redacted — offline cracking demonstrated in lab)
 
 
 
@@ -481,13 +486,13 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 **Results:**
 
   * ✅ **Complete domain credential database extracted**
-  * **27 user NTLM hashes** obtained
-  * **krbtgt hash extracted:** `1c455e2c1f50aa2c4c0fb3d14188ee65`
+  * **Domain NTLM hashes** obtained (redacted — used only within isolated lab environment)
+  * **krbtgt hash extracted:** `<redacted>` (enables Golden Ticket — critical lab finding)
   * **Kerberos AES keys** extracted for all users
 
 
 
-**Critical Finding:** krbtgt hash enables Golden Ticket attacks for persistent domain access.
+**Critical Finding:** krbtgt hash enables Golden Ticket attacks for persistent domain access. Full hash redacted per responsible publication policy.
 
 **AI Decision:** DCSync successful. Extract all credentials for complete domain compromise.
 
@@ -532,7 +537,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Decision 4: Exploitation Priority**
 
-  * **Trigger:** Valid credentials obtained (Administrator:8dCT-DJjgScp)
+  * **Trigger:** Valid domain admin credentials obtained (credential redacted)
   * **AI Decision:** Perform DCSync attack immediately
   * **Reasoning:** “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”
   * **Tool Selected:** Impacket secretsdump
@@ -592,7 +597,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 
 
-#### **Key Feature:** All troubleshooting was **autonomous** — Cursor AI handled every error without human intervention.
+#### **Key Feature:** Most troubleshooting was **AI-assisted** — Cursor AI handled error recovery with minimal manual input in this lab run.
 
 * * *
 
@@ -645,7 +650,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
   6. **Self-Learning** — Improves approach based on failures and successes
   7. **Comprehensive Error Recovery** — Multiple fallback strategies for each tool
   8. **Scalability** — Can assess multiple targets simultaneously
-  9. **Consistency** — Follows methodology consistently without human error
+  9. **Consistency** — Follows methodology steps consistently within lab constraints
   10. **Automatic Documentation** — Generates comprehensive reports and articles
 
 
@@ -692,7 +697,7 @@ When report generation had path issues, Cursor AI:
 
 ### Conclusion
 
-This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike AI MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
+This AI-assisted **black box lab assessment** successfully demonstrated practical AI-driven orchestration using **Cursor AI** with **HexStrike AI MCP** tools in an isolated GOAD-Mini environment. The assessment was initiated with a single prompt and executed with minimal manual intervention. Key findings:
 
   1. **Discovering** the target environment from scratch (starting with only an IP address)
   2. **Identifying** it as an Active Directory domain controller
@@ -739,7 +744,7 @@ From this single instruction, Cursor AI:
 
 
 
-**This represents a paradigm shift in penetration testing** — from manual, time-intensive processes to fully automated, AI-driven **black box** assessments that can discover and exploit unknown environments, initiated with natural language and executed completely autonomously.
+**This demonstrates the practical value of AI-assisted orchestration** — reducing manual tool-chaining effort and accelerating lab-environment assessments. **In production**, every high-impact action requires explicit operator authorization, scope validation, and audit logging.
 
 ### Future Implications
 

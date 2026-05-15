@@ -73,7 +73,7 @@ This article documents a comprehensive penetration test conducted using an innov
   1. AI suggests tools based on context
   2. Tools execute and return results
   3. AI analyzes results and understands relationships
-  4. AI automatically determines optimal next steps
+  4. AI proposes next steps based on available context — operator reviews and approves before high-impact actions
   5. AI documents everything in real-time
 
 

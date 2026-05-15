@@ -4,6 +4,11 @@ date: 2026-01-08
 sidebar_position: 4
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
+
 # HexStrike + Cursor (MCP): From Single Target → Full Subnet Compromise (Lab PT Walkthrough)
 
 A real end-to-end lab engagement: recon → credential discovery → share abuse → lateral movement → multi-host compromise → reporting 

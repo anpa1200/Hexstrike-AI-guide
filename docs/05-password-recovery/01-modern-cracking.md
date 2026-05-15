@@ -1,17 +1,17 @@
 ---
-title: "Modern Password Cracking — Overview"
+title: "AI-Assisted Password Security Auditing"
 sidebar_position: 1
 ---
 
-# HexStrikeAI+Gemini Modern Passwords cracking.
+# AI-Assisted Password Security Auditing with HexStrike AI
 
-Full guide with real-life examples! (Zip, PDF, WiFi, RDP, Cameras, Web interface) 
+Authorized password audit methodology — ZIP, PDF, Office, WiFi, and credential security validation 
 
 * * *
 
-### HexStrikeAI+Gemini Modern Passwords cracking. 
+### AI-Assisted Password Security Auditing with HexStrike AI
 
-#### Full guide with real-life examples! (Zip, PDF, WiFi, RDP, Cameras, Web interface)
+#### Authorized methodology for validating password strength, auditing credential exposure, and hardening authentication in lab environments
 
 ###   
 

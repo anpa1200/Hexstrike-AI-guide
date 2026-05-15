@@ -261,14 +261,14 @@ On the machine running Codex (Ubuntu host):
   * You have SSH access to Kali:
   * User: `andrey`
   * Host: `172.16.59.132`
-  * Key: `~/.ssh/hexstrike_kali`
+  * Key: `~/.ssh/<your_key>`
 
 
 
 Confirm SSH works non-interactively:
     
     
-    ssh -i ~/.ssh/hexstrike_kali \  
+    ssh -i ~/.ssh/<your_key> \  
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
       andrey@172.16.59.132 "echo ok"
@@ -286,7 +286,7 @@ On the Kali machine, HexStrike MCP command must exist:
     
     
      codex mcp add hexstrike -- \  
-      ssh -i ~/.ssh/hexstrike_kali \  
+      ssh -i ~/.ssh/<your_key> \  
       -o BatchMode=yes \  
       -o StrictHostKeyChecking=accept-new \  
       -o LogLevel=ERROR \  

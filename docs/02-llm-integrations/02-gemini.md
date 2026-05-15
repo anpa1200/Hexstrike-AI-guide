@@ -4,6 +4,11 @@ date: 2025-12-18
 sidebar_position: 2
 ---
 
+:::info Last tested
+Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
+:::
+
+
 # HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama
 
 A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven workflows (recon →… 

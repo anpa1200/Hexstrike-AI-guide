@@ -1,0 +1,41 @@
+name: Link Check
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'   # every Monday 06:00 UTC
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check internal links (Docusaurus build)
+        run: |
+          npm ci
+          npm run build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --exclude 'google\.com/search'
+            --exclude 'linkedin\.com'
+            --exclude 'paypal\.com'
+            --exclude 'localhost'
+            --exclude '127\.0\.0\.1'
+            --exclude '192\.168\.'
+            --exclude '10\.0\.'
+            --timeout 30
+            --retry-wait-time 5
+            --max-retries 2
+            './docs/**/*.md'
+          fail: false   # warn only — broken external links should not block deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
