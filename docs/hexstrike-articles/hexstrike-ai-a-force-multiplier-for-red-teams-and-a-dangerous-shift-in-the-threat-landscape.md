@@ -13,7 +13,7 @@ Why AI-Orchestrated Pentesting Is a Force Multiplier for Red Teams — and a War
 
 #### Why AI-Orchestrated Pentesting Is a Force Multiplier for Red Teams — and a Warning Sign for Defenders
 
-![](https://cdn-images-1.medium.com/max/800/0*3aT5ccS08ZmUK0Y6.png)
+![](/img/hexstrike-articles/hexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape/0-3aT5ccS08ZmUK0Y6.png)
 
 Over the past months, I’ve been deeply experimenting with **HexStrike-AI** in real, **authorized penetration-testing scenarios** :  
 home networks, vulnerable web applications, OSINT workflows, wireless attacks, and controlled exploitation labs.
@@ -300,8 +300,8 @@ For Red Teams and pentesters:
 
 **Adapt — or become the bottleneck.**
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 25, 2025](https://medium.com/p/3e1d4e86f3ae).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 25, 2025](<https://medium.com/p/3e1d4e86f3ae>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-3e1d4e86f3ae)
+[Canonical link](<https://medium.com/@1200km/hexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-3e1d4e86f3ae>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

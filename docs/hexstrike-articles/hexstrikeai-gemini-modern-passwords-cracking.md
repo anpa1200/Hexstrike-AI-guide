@@ -27,46 +27,46 @@ The information provided in this article, “Passwords Cracking: Full Guide with
 
 ### Table of contents:
 
-  * [**Introduction**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a)
-  * [**Overview of Password Security**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a)
-  * [**Basic Cracking Methods**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#b920)
-  * [**Brute Force Attacks**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6d83)
-  * [**Dictionary Attacks**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d110)
-  * [**Default passwords**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#fe57)
-  * [**Rainbow tables**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6fd8)
-  * [**Password leaks**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d8c7)
-  * [**Social engineering**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#220a)
-  * [**Useful links**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#3234)
-  * [**Conclusion**](https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6448)
+  * [**Introduction**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a>)
+  * [**Overview of Password Security**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a>)
+  * [**Basic Cracking Methods**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#b920>)
+  * [**Brute Force Attacks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6d83>)
+  * [**Dictionary Attacks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d110>)
+  * [**Default passwords**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#fe57>)
+  * [**Rainbow tables**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6fd8>)
+  * [**Password leaks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d8c7>)
+  * [**Social engineering**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#220a>)
+  * [**Useful links**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#3234>)
+  * [**Conclusion**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6448>)
 
 
 
 #### **Real-Life Examples for Basic Cracking Methods**
 
-  * Manual [Zip files password cracking here](https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897)  
-**One prompt**[**AI Zip files password cracking here**](https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc)
-  * Manual [PDF files password cracking here](https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4)   
-**One prompt**[**AI PDF files password cracking here**](https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91)
-  * Manual [Office files password cracking here](https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4)  
-[**One prompt AI Office files password cracking here**](https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d)
-  * Manual [WiFi password cracking here](https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f)  
-[**One prompt AI WiFi password cracking here**](https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4)
-  * [**One prompt AI SMB credentials enumerating and pass cracking**](https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4)**here**
-  * [RDP passwords cracking here](https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7)
-  * [SSH password cracking here](https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b)  
-[**One prompt AI SSH password cracking here**](https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b)
-  * [FTP passwords cracking here](https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602)
-  * [Telnet password cracking here](https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09)
-  * Security [Camera password cracking here](https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee)
-  * [Web interface cracking here](https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0)
+  * Manual [Zip files password cracking here](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)  
+**One prompt**[**AI Zip files password cracking here**](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc>)
+  * Manual [PDF files password cracking here](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)   
+**One prompt**[**AI PDF files password cracking here**](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91>)
+  * Manual [Office files password cracking here](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)  
+[**One prompt AI Office files password cracking here**](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d>)
+  * Manual [WiFi password cracking here](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)  
+[**One prompt AI WiFi password cracking here**](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
+  * [**One prompt AI SMB credentials enumerating and pass cracking**](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4>)**here**
+  * [RDP passwords cracking here](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
+  * [SSH password cracking here](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)  
+[**One prompt AI SSH password cracking here**](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b>)
+  * [FTP passwords cracking here](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
+  * [Telnet password cracking here](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
+  * Security [Camera password cracking here](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
+  * [Web interface cracking here](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
 
 
 
 **Best tools:**
 
-  * [**John the Ripper**](https://medium.com/@1200km/mastering-john-the-ripper-a-complete-guide-to-password-cracking-e42d68239c71)
-  * [**HashCat**](https://medium.com/@1200km/breaking-the-code-how-to-use-hashcat-for-effective-password-cracking-15f8da8facb8)
-  * [**Hydra**](https://medium.com/@1200km/mastering-hydra-the-ultimate-guide-to-network-logon-cracking-182579dbaed1)
+  * [**John the Ripper**](<https://medium.com/@1200km/mastering-john-the-ripper-a-complete-guide-to-password-cracking-e42d68239c71>)
+  * [**HashCat**](<https://medium.com/@1200km/breaking-the-code-how-to-use-hashcat-for-effective-password-cracking-15f8da8facb8>)
+  * [**Hydra**](<https://medium.com/@1200km/mastering-hydra-the-ultimate-guide-to-network-logon-cracking-182579dbaed1>)
 
 
 
@@ -95,7 +95,7 @@ Hashed passwords are typically found in database management systems where user c
 
 Press enter or click to view image in full size
 
-![](https://cdn-images-1.medium.com/max/800/0*JK4cWEE0W83N1Ks9.png)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-JK4cWEE0W83N1Ks9.png)
 
   * **Operating System Authentication** : Systems like Linux and Windows store user password hashes locally. For example, Linux stores these hashes in the `/etc/shadow` file, which is accessible only by privileged users.
 
@@ -103,7 +103,7 @@ Press enter or click to view image in full size
 
 Press enter or click to view image in full size
 
-![](https://cdn-images-1.medium.com/max/800/0*71F_FLnXWliBfJzE.png)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-71F_FLnXWliBfJzE.png)
 
   * Here is my own shadow file:
 
@@ -111,7 +111,7 @@ Press enter or click to view image in full size
 
 Press enter or click to view image in full size
 
-![](https://cdn-images-1.medium.com/max/800/0*dBJpu_yqu23eh-q9.png)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-dBJpu_yqu23eh-q9.png)
 
   * **Network Authentication Servers** : Technologies like RADIUS and LDAP, which are used for managing network authentication, store password hashes to verify user credentials during the authentication process.
 
@@ -119,11 +119,11 @@ Press enter or click to view image in full size
 
 Press enter or click to view image in full size
 
-![](https://cdn-images-1.medium.com/max/800/0*jMTEyP8FzSAmP0O3.jpg)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-jMTEyP8FzSAmP0O3.jpg)
 
   * **Data Breaches** : Unfortunately, hashed passwords can also be found in datasets that become available after a data breach. These are often distributed on hacker forums or dark web marketplaces.
 
-![](https://cdn-images-1.medium.com/max/800/0*YFj3MGZqXCX9DX63.png)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-YFj3MGZqXCX9DX63.png)
 
 ### Importance of Understanding Cracking Techniques
 
@@ -177,7 +177,7 @@ In a brute force attack, an attacker uses software that continuously inputs pass
 
 Press enter or click to view image in full size
 
-![](https://cdn-images-1.medium.com/max/800/0*-S9oChJMgVfEEVS1.jpg)
+![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0--S9oChJMgVfEEVS1.jpg)
 
 ### Character Sets and Complexity
 
@@ -229,11 +229,11 @@ An attacker might use a straightforward list of the most common passwords (such 
 
 You can obtain dictionaries for dictionary attacks from various online sources, often used for educational and ethical hacking purposes. Here are some common places to find them:
 
-**Security Websites** : Websites like [Weakpass](https://weakpass.com/) offer extensive collections of wordlists and password dictionaries specifically designed for cracking passwords.
+**Security Websites** : Websites like [Weakpass](<https://weakpass.com/>) offer extensive collections of wordlists and password dictionaries specifically designed for cracking passwords.
 
 **GitHub** : Many security professionals and researchers share their custom wordlists on GitHub. You can find these by searching for repositories labeled as “password wordlists” or “security wordlists”.
 
-For example: [SecLists](https://github.com/danielmiessler/SecLists)
+For example: [SecLists](<https://github.com/danielmiessler/SecLists>)
 
 **Public Data Breaches** : Sometimes, data from public breaches, which include password dumps, are compiled into wordlists that can be used to understand common password trends.
 
@@ -243,9 +243,9 @@ For example: [SecLists](https://github.com/danielmiessler/SecLists)
 
 Advanced dictionary attacks can customize their lists based on target-specific details. For instance, if targeting a particular company, an attacker might include common industry terms, the company’s history, or known interests of employees derived from social media.
 
-To create customized passwords list you can use special tool like: **Personal**[**Pass Generator (PPG): The Ultimate Tool for Custom Password Lists, full guide to this tool here**](https://medium.com/@1200km/personal-pass-generator-ppg-the-ultimate-tool-for-custom-password-lists-4979a3a1385c)**.**
+To create customized passwords list you can use special tool like: **Personal**[**Pass Generator (PPG): The Ultimate Tool for Custom Password Lists, full guide to this tool here**](<https://medium.com/@1200km/personal-pass-generator-ppg-the-ultimate-tool-for-custom-password-lists-4979a3a1385c>)**.**
 
-  1. **Hybrid Dictionary Attack** : Combining dictionary words with brute force elements, these attacks try adding numbers or symbols to dictionary words (e.g., “password1!”, “winter2023”). [Use can use PPG for this propose to.](https://medium.com/@1200km/personal-pass-generator-ppg-the-ultimate-tool-for-custom-password-lists-4979a3a1385c)
+  1. **Hybrid Dictionary Attack** : Combining dictionary words with brute force elements, these attacks try adding numbers or symbols to dictionary words (e.g., “password1!”, “winter2023”). [Use can use PPG for this propose to.](<https://medium.com/@1200km/personal-pass-generator-ppg-the-ultimate-tool-for-custom-password-lists-4979a3a1385c>)
 
 
 
@@ -296,16 +296,16 @@ Manufacturers often use simple and widely known default passwords for the sake o
 
 ### Real-Life Examples for Basic Cracking Methods
 
-  * [Zip files passwords cracking here](https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897)
-  * [PDF files passwords cracking here](https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4)
-  * [Office files passwords cracking here](https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4)
-  * [WiFi passwords cracking here](https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f)
-  * [RDP passwords cracking here](https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7)
-  * [SSH passwords cracking here](https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b)
-  * [FTP passwords cracking here](https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602)
-  * [Telnet passwords cracking here](https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09)
-  * [Cameras passwords cracking here](https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee)
-  * [Web interface cracking here](https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0)
+  * [Zip files passwords cracking here](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)
+  * [PDF files passwords cracking here](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)
+  * [Office files passwords cracking here](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)
+  * [WiFi passwords cracking here](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)
+  * [RDP passwords cracking here](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
+  * [SSH passwords cracking here](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)
+  * [FTP passwords cracking here](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
+  * [Telnet passwords cracking here](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
+  * [Cameras passwords cracking here](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
+  * [Web interface cracking here](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
 
 
 
@@ -349,7 +349,7 @@ Password leaks are major security breaches where large numbers of usernames, pas
 
   * **Details** : In what is considered the largest known password leak, Yahoo disclosed in 2016 that about 3 billion accounts were compromised in a 2013 breach. The stolen data included names, email addresses, telephone numbers, dates of birth, hashed passwords, and in some cases, encrypted or unencrypted security questions and answers.
   * **Impact** : This breach had a significant impact on Yahoo’s business, affecting its valuation and leading to a reduction in the price Verizon paid to acquire Yahoo.
-  * [**Source** : Yahoo’s 2013 Email Hack Actually Compromised Three Billion Accounts](https://www.reuters.com/article/technology/yahoo-says-all-three-billion-accounts-hacked-in-2013-data-theft-idUSKCN1C82NV/)
+  * [**Source** : Yahoo’s 2013 Email Hack Actually Compromised Three Billion Accounts](<https://www.reuters.com/article/technology/yahoo-says-all-three-billion-accounts-hacked-in-2013-data-theft-idUSKCN1C82NV/>)
 
 
 
@@ -357,7 +357,7 @@ Password leaks are major security breaches where large numbers of usernames, pas
 
   * **Details** : Originally reported in 2012, LinkedIn announced a breach affecting 6.5 million encrypted passwords. However, in 2016, it became clear that a total of 117 million accounts were compromised, with both emails and passwords being sold on dark web markets.
   * **Impact** : LinkedIn had to reset the passwords for all affected accounts and increased their security measures as a result.
-  * [**Source** : LinkedIn Data Breach](https://scrubbed.net/blog/linkedin-data-leak-what-we-can-do-about-it/)
+  * [**Source** : LinkedIn Data Breach](<https://scrubbed.net/blog/linkedin-data-leak-what-we-can-do-about-it/>)
 
 
 
@@ -365,7 +365,7 @@ Password leaks are major security breaches where large numbers of usernames, pas
 
   * **Details** : In October 2013, Adobe reported a security breach that initially appeared to impact 3 million accounts. Further investigations revealed that the breach affected more than 153 million user records. The leaked data included usernames, encrypted passwords, and encrypted payment card numbers.
   * **Impact** : Adobe faced significant criticism for its security practices, particularly for using a single encryption key to encrypt all passwords.
-  * [**Source** : Adobe Breach Impacted At Least 38 Million Users](https://www.bbc.com/news/technology-24740873#:~:text=Adobe%20has%20confirmed%20that%20a,million%20of%20its%20active%20users.)
+  * [**Source** : Adobe Breach Impacted At Least 38 Million Users](<https://www.bbc.com/news/technology-24740873#:~:text=Adobe%20has%20confirmed%20that%20a,million%20of%20its%20active%20users.>)
 
 
 
@@ -373,7 +373,7 @@ Password leaks are major security breaches where large numbers of usernames, pas
 
   * **Details** : The data for approximately 360 million accounts were stolen during a MySpace breach that occurred around 2008 but was only made public in 2016. The leaked data included emails, usernames, and passwords.
   * **Impact** : This massive breach was one of several factors that contributed to the decline of MySpace.
-  * **Source** : [MySpace breach reportedly affects 360 million records](https://www.usatoday.com/story/tech/2016/05/31/360-million-myspace-accounts-breached/85183200/)
+  * **Source** : [MySpace breach reportedly affects 360 million records](<https://www.usatoday.com/story/tech/2016/05/31/360-million-myspace-accounts-breached/85183200/>)
 
 
 
@@ -381,7 +381,7 @@ Password leaks are major security breaches where large numbers of usernames, pas
 
   * **Details** : eBay suffered a cyberattack in late February and early March of 2014, affecting 145 million users. Hackers gained access to a database that included encrypted passwords and other non-financial data.
   * **Impact** : eBay requested all users to change their passwords; however, the company reported no unauthorized access to financial information or fraudulent activity on its main site following the breach.
-  * **Source** : [eBay urges 145 million users to change passwords after cyber attack](https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/)
+  * **Source** : [eBay urges 145 million users to change passwords after cyber attack](<https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/>)
 
 
 
@@ -415,14 +415,14 @@ Social engineering attacks typically follow a step-by-step process:
   1. **Password Monster** :
 
 
-  * **URL** : [Password Monster](https://www.passwordmonster.com/)
+  * **URL** : [Password Monster](<https://www.passwordmonster.com/>)
   * **Description** : This is a tool that evaluates the strength of a password by estimating how long it would take to crack it using different methods. Users can input a password, and the tool will assess its complexity and resilience against common password-cracking techniques, providing insights into the security level of the password.
 
 
   1. **Have I Been Pwned** :
 
 
-  * **URL** : [Have I Been Pwned](https://haveibeenpwned.com/)
+  * **URL** : [Have I Been Pwned](<https://haveibeenpwned.com/>)
   * **Description** : Created by security expert Troy Hunt, this service allows users to check if their personal data has been compromised in any data breaches. By entering an email or password, users can see if their information has appeared in data leaks collected across various breaches, helping them understand their exposure and encouraging better password practices.
 
 
@@ -443,6 +443,6 @@ Stay curious, stay informed, and above all, stay ethical in your cybersecurity e
 
 **1200km@gmail.com**
 
-[View original.](https://medium.com/p/30a216b46790)
+[View original.](<https://medium.com/p/30a216b46790>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

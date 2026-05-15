@@ -13,7 +13,7 @@ From Toolchain Failures → Service Fingerprinting → Authentication Findings �
 
 #### From Toolchain Failures → Service Fingerprinting → Authentication Findings → Share Risk
 
-![](https://cdn-images-1.medium.com/max/800/0*zoac8Nswk63Txu1T.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/0-zoac8Nswk63Txu1T.png)
 
 ### Overview
 
@@ -47,11 +47,11 @@ The key value in the log is not “the attack,” but:
 
 
 #### Promt:
-[code]
+    
+    
     @hexstrike: scan 172.16.59.129 find smb port, enumerate creds and do bruteforce to  passwords with next dictionaries:  ~/Documents/passwords_list.txt ~/Documents/users_list.txt
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*58m_3RUriTgxwZfi7v8_pQ.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-58m_3RUriTgxwZfi7v8_pQ.png)
 
 * * *
 
@@ -75,7 +75,7 @@ The agent recovered correctly by switching to **Nmap service detection** , which
   * `3389/tcp open RDP`
   * Host fingerprint suggests Windows 10 / Server 2019 family
 
-![](https://cdn-images-1.medium.com/max/800/1*5LRXp03c-23FoZw3K2eDjw.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-5LRXp03c-23FoZw3K2eDjw.png)
 
 **Takeaway:** Your lab target is an intentionally “wide-open” Windows surface: SMB + RDP + SSH simultaneously, which is a high-risk posture in any real network.
 
@@ -96,7 +96,7 @@ This looks like a **wrapper/parameter bug** , where legacy enum4linux flags are 
   * Treat this as a HexStrike tool adapter issue, not an enum4linux-ng issue.
   * Use a different enumeration primitive (as you did), or update/patch the wrapper.
 
-![](https://cdn-images-1.medium.com/max/800/1*BTJl_KCgKrvZ7o9Gj3Emgw.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-BTJl_KCgKrvZ7o9Gj3Emgw.png)
 
 * * *
 
@@ -137,7 +137,7 @@ In a real enterprise, this combination is a red flag and typically violates base
 
 ### 5) Hydra Attack
 
-![](https://cdn-images-1.medium.com/max/800/1*GF-wE8qxoVaaevDXbbcgRw.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-GF-wE8qxoVaaevDXbbcgRw.png)
 
 * * *
 
@@ -158,7 +158,7 @@ Several accounts also returned a notable message:
   * those credentials remain usable elsewhere,
   * and still represent password reuse / lateral movement risk.
 
-![](https://cdn-images-1.medium.com/max/800/1*lJ3-KK72SWLpHRNDAvpnSA.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-lJ3-KK72SWLpHRNDAvpnSA.png)
 
 * * *
 
@@ -191,8 +191,9 @@ In real environments, the risk is not “empty vs not empty,” but **R/W on mul
 
 ### Findings summary
 
-![](https://cdn-images-1.medium.com/max/800/1*ThfCkYxlr2PPaUzI0cIAAg.png)
-[code]
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-ThfCkYxlr2PPaUzI0cIAAg.png)
+    
+    
       Security Assessment Report  
       
       1. Introduction  
@@ -303,7 +304,6 @@ In real environments, the risk is not “empty vs not empty,” but **R/W on mul
       
       The security assessment of 172.16.59.129 has identified significant vulnerabilities that require immediate attention. By implementing the recommendations outlined in this report, the overall security of the  
       system can be substantially improved.
-[/code]
 
 * * *
 
@@ -392,8 +392,8 @@ Taken together, the assessment shows a clear chain: **exposure → insecure prot
 
 In short: the workflow did what a real assessment must do — **turn messy tool output into a coherent, actionable security narrative** that maps directly to hardening and monitoring decision
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 5, 2026](https://medium.com/p/2c5f99dcdbf4).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 5, 2026](<https://medium.com/p/2c5f99dcdbf4>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4)
+[Canonical link](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

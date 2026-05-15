@@ -13,13 +13,13 @@ From Service Validation → Dependency Fixes → Findings → Defensive Takeaway
 
 #### From Service Validation → Dependency Fixes → Findings → Defensive Takeaways
 
-![](https://cdn-images-1.medium.com/max/800/0*BFm-ZoQNHk5Kp-pl.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/0-BFm-ZoQNHk5Kp-pl.png)
 
 ### Overview
 
 This guide documents a **fully authorized lab** workflow where an AI-orchestrated toolchain attempted to validate SSH exposure and assess **credential hygiene** on a target host. The value here is not “running tools,” but how the workflow **handles failures** , corrects environment issues (missing resources, permissions), and produces a **defender-usable outcome**.
 
-[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)**here:**
+[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)**here:**
 
 * * *
 
@@ -57,11 +57,11 @@ This guide documents a **fully authorized lab** workflow where an AI-orchestrate
 ### Step-by-step execution flow
 
 #### 1) Promt
-[code]
+    
+    
     @hexstrike: scan 172.16.59.129 find ssh port, do bruteforce for credentials with password dictionaries
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*WTVKVELBsiaU5HwO5IGXgA.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-WTVKVELBsiaU5HwO5IGXgA.png)
 
 **Key point:** The operator provides intent; the agent decides execution order.
 
@@ -69,13 +69,13 @@ This guide documents a **fully authorized lab** workflow where an AI-orchestrate
 
 ### 2) Port scanning
 
-![](https://cdn-images-1.medium.com/max/800/1*PGkBW3RGZzs2h3qqWRKl_Q.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-PGkBW3RGZzs2h3qqWRKl_Q.png)
 
 * * *
 
 ### 3) Custom small lists succeeded (and exposed weak credentials)
 
-![](https://cdn-images-1.medium.com/max/800/1*bUZwzZAWqh-3ZCLoeMHKwA.png)
+![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-bUZwzZAWqh-3ZCLoeMHKwA.png)
 
 * * *
 
@@ -156,8 +156,8 @@ Even though **SSH online authentication can be rate-limited** , weak credentials
 
 
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 4, 2026](https://medium.com/p/a9162f8e253b).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 4, 2026](<https://medium.com/p/a9162f8e253b>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b)
+[Canonical link](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

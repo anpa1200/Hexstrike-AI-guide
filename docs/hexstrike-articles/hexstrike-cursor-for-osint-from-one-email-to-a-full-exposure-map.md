@@ -13,7 +13,7 @@ Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks 
 
 #### Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks like in practice, and how to publish a _real_ report without doxxing yourself or your family.
 
-![](https://cdn-images-1.medium.com/max/800/1*nJTueyo4IxR8Nw8jYLDS-g.png)
+![](/img/hexstrike-articles/hexstrike-cursor-for-osint-from-one-email-to-a-full-exposure-map/1-nJTueyo4IxR8Nw8jYLDS-g.png)
 
 I started OSINT on myself from a single email address. Within a short time, I could correlate a surprising amount of information.
 
@@ -28,7 +28,8 @@ In the examples below, **all sensitive information is masked with**`*****`. I’
 * * *
 
 ### Exposed Information:
-[code]
+    
+    
       
     - ✅ Full name   
     - ✅ ID number - **CRITICAL PII**  
@@ -41,7 +42,6 @@ In the examples below, **all sensitive information is masked with**`*****`. I’
     - ✅ Likely sibling information  
     - ✅ Digital footprint (GitHub, Medium)  
     - ✅ Professional focus and expertise
-[/code]
 
 * * *
 
@@ -199,7 +199,8 @@ A correct AI-assisted OSINT process is not “search everything.” It’s struc
 ### 5) Real report (PUBLIC / REDACTED): Exposure & Correlation Report
 
 Below is a **more detailed** report format that includes **family, ID, phone, address** — but **all masked**.
-[code]
+    
+    
     # Andrey Pautov: Complete Life History & Deep Investigation Report  
       
     **Report Date:** January 2026    
@@ -861,7 +862,6 @@ Below is a **more detailed** report format that includes **family, ID, phone, ad
     ---  
       
     
-[/code]
 
 * * *
 
@@ -958,8 +958,8 @@ Because the profile contains (even if partially discoverable):
 
 OSINT is not “one tool.” It’s disciplined correlation under safety constraints. Cursor + HexStrike is powerful because it can execute repeatable collection steps while maintaining a consistent reasoning and reporting layer — but the operator must enforce ethical boundaries and redaction.
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 11, 2026](https://medium.com/p/ffdfc7ba1b30).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 11, 2026](<https://medium.com/p/ffdfc7ba1b30>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-cursor-for-osint-from-one-email-to-a-full-exposure-map-ffdfc7ba1b30)
+[Canonical link](<https://medium.com/@1200km/hexstrike-cursor-for-osint-from-one-email-to-a-full-exposure-map-ffdfc7ba1b30>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

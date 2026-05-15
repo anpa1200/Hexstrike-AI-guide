@@ -13,7 +13,7 @@ Using Aircrack-ng with HexStrike-AI and Gemini-CLI
 
 #### Using Aircrack-ng with HexStrike-AI and Gemini-CLI
 
-![](https://cdn-images-1.medium.com/max/800/0*Gzu2GZ7sMF5IJg52.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/0-Gzu2GZ7sMF5IJg52.png)
 
 ### Introduction
 
@@ -26,7 +26,7 @@ By combining:
 
 
 
-**Full manual guide for Aircrack-ng here:**[**https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f**](https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f)
+**Full manual guide for Aircrack-ng here:**[**https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f**](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)
 
   * **HexStrike-AI** (local execution and orchestration)
   * **Gemini-CLI** (LLM-driven reasoning via MCP)
@@ -45,12 +45,13 @@ This guide demonstrates how to perform **authorized Wi-Fi penetration testing** 
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
 ### Architecture Overview
-[code]
+    
+    
     User (High-level prompt)  
             ↓  
     Gemini-CLI (Reasoning & decision making)  
@@ -58,7 +59,6 @@ This guide demonstrates how to perform **authorized Wi-Fi penetration testing** 
     HexStrike-AI (Local execution)  
             ↓  
     Aircrack-ng suite (airodump-ng, aireplay-ng, aircrack-ng)
-[/code]
 
 Key principle:
 
@@ -91,7 +91,8 @@ Key principle:
 * * *
 
 ### **Prompt**
-[code]
+    
+    
      >@hexstrike  
     Perform an authorized wireless penetration test against the Wi-Fi network  
     First show me all aviable interfaces:  
@@ -103,9 +104,8 @@ Key principle:
       
     Do it agressive, Keep scans short with time out, stop on success or timeout, and produce a brief report  
     with results and remediation.
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*lAvwkgVq89m2Uzb-bTV14A.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-lAvwkgVq89m2Uzb-bTV14A.png)
 
 * * *
 
@@ -116,7 +116,7 @@ Key principle:
   * HexStrike queried the system for wireless interfaces.
   * **Result:** `wlan0` was identified as the only usable wireless interface (RTL8821AU chipset).
 
-![](https://cdn-images-1.medium.com/max/800/1*BA-PixA3rZED8oQKzThyzQ.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-BA-PixA3rZED8oQKzThyzQ.png)
 
 * * *
 
@@ -126,7 +126,7 @@ Key principle:
   * Warnings appeared about `NetworkManager` and `wpa_supplicant`, but monitor mode was enabled successfully.
   * **Result:** `wlan0` entered monitor mode and was usable for capture/injection.
 
-![](https://cdn-images-1.medium.com/max/800/1*uemVkzoYmBD3zXbt4ojI9Q.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-uemVkzoYmBD3zXbt4ojI9Q.png)
 
 * * *
 
@@ -136,7 +136,7 @@ Key principle:
   * Multiple APs were discovered, including **multiple BSSIDs broadcasting the same ESSID:**`**Andrey**` (typical for mesh / multi-band APs).
   * Encryption observed: **WPA2-PSK**.
 
-![](https://cdn-images-1.medium.com/max/800/1*HShvm8_-v2S3fW4QadzsuQ.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-HShvm8_-v2S3fW4QadzsuQ.png)
 
 * * *
 
@@ -169,7 +169,7 @@ Key principle:
   * `airodump-ng` ran in the background.
   * `aireplay-ng` deauthentication was executed against an active client.
 
-![](https://cdn-images-1.medium.com/max/800/1*4Oxj0b4jN41LpMkuoYqpAw.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-4Oxj0b4jN41LpMkuoYqpAw.png)
 
   * This time, the deauth succeeded.
   * **Result:** A valid **WPA2 handshake was captured**.
@@ -181,7 +181,7 @@ Verification:
   * `aircrack-ng handshake_capture_3-01.cap`
   * Output confirmed: **“WPA (1 handshake)”**
 
-![](https://cdn-images-1.medium.com/max/800/1*1jpmbN-iLA2BybvP-Hw69Q.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-1jpmbN-iLA2BybvP-Hw69Q.png)
 
 * * *
 
@@ -195,11 +195,11 @@ Verification:
 
 
 **Recovered key:**
-[code]
+    
+    
      A0542553383#
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*Tui0PlJVq-ocozToiX6K9g.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-Tui0PlJVq-ocozToiX6K9g.png)
 
 * * *
 
@@ -215,9 +215,9 @@ Verification:
 
 
 ### Recovered password
-[code]
+    
+    
     A0542553383#
-[/code]
 
 * * *
 
@@ -253,16 +253,16 @@ Verification:
   * Logical pivoting
   * Clean reporting
 
-![](https://cdn-images-1.medium.com/max/800/1*tMeUNlwRgYEngnN4-sC76A.png)
+![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-tMeUNlwRgYEngnN4-sC76A.png)
 
 ### This was **not** a single-command crack — it was a **full, adaptive PT flow**.
 
 Andrey Pautov
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 24, 2025](https://medium.com/p/6477c06f6af4).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 24, 2025](<https://medium.com/p/6477c06f6af4>).
 
-[Canonical link](https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4)
+[Canonical link](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

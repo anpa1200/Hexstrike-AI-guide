@@ -13,11 +13,11 @@ A real end-to-end lab engagement: recon → credential discovery → share abuse
 
 #### **A real end-to-end lab engagement: recon → credential discovery → share abuse → lateral movement → multi-host compromise → reporting**
 
-![](https://cdn-images-1.medium.com/max/800/0*DPJxbuIm6siiwQcC.png)
+![](/img/hexstrike-articles/hexstrike-cursor-mcp-from-single-target-full-subnet-compromise-lab-pt-walkthrough/0-DPJxbuIm6siiwQcC.png)
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -45,24 +45,24 @@ All captured in a raw, decision-by-decision log and consolidated into a final ne
 
 #### HexStrike on Kali Linux 2025.4: A Comprehensive Guide
 
-[https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949?postPublishedType=repub)
+[https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949?postPublishedType=repub>)
 
 * * *
 
-#### [Configure Cursor MCP to talk to HexStrike here](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949?postPublishedType=repub#:~:text=path%20is%20correct-,Configure%20Cursor%20MCP%20to%20talk%20to%20HexStrike,-Press%20enter%20or)
+#### [Configure Cursor MCP to talk to HexStrike here](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949?postPublishedType=repub#:~:text=path%20is%20correct-,Configure%20Cursor%20MCP%20to%20talk%20to%20HexStrike,-Press%20enter%20or>)
 
 * * *
 
 #### Additional HexStrike guides:  
 Core Guides and Setup
 
-[**HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-0678d8a632e1)
+[**HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape-0678d8a632e1>)
 
   *  _Focus: Analysis of AI-orchestrated pentesting and its implications._
 
 
 
-[**HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, and Performance…**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-318a803730e7)
+[**HexStrike MCP Orchestration with Ollama: Ubuntu Host, Kali VM, SSH Bridging, and Performance…**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-318a803730e7>)
 
   *  _Focus: Technical architecture using Model Context Protocol (MCP) and local LLMs._
 
@@ -70,13 +70,13 @@ Core Guides and Setup
 
 #### Practical Applications & Lab Comparisons
 
-[**HexStrike + Gemini vs. HackerAI: “Ops Copilot” vs. “Chatbot with Tools”**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-000c28303867)
+[**HexStrike + Gemini vs. HackerAI: “Ops Copilot” vs. “Chatbot with Tools”**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fhexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-000c28303867>)
 
   *  _Focus: Practical lab comparison of orchestration quality between different AI security tools._
 
 
 
-[**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-8a602d29528d)
+[**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-8a602d29528d>)
 
   *  _Focus: Step-by-step home lab application for network enumeration._
 
@@ -84,13 +84,13 @@ Core Guides and Setup
 
 #### Specific Tooling & Technique Guides
 
-  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-web-application-pentesting-with-hexstrike-ai-961906961445)
-  * [**HexStrike+OpenAI Codex. AI-Driven Exploitation of Metasploitable**](https://medium.com/@1200km/ai-driven-exploitation-of-metasploitable2-from-recon-to-root-with-codex-hexstrike-ai-b892c07be39f)**.**
-  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fintegrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f)
-  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e) (Using HexStrike-AI)
-  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190)
-  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873)
-  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756)
+  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-web-application-pentesting-with-hexstrike-ai-961906961445>)
+  * [**HexStrike+OpenAI Codex. AI-Driven Exploitation of Metasploitable**](<https://medium.com/@1200km/ai-driven-exploitation-of-metasploitable2-from-recon-to-root-with-codex-hexstrike-ai-b892c07be39f>)**.**
+  * [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fintegrating-shodan-with-hexstrike-ai-using-gemini-cli-a18544c0649f>)
+  * [**AI-Driven Wireless Penetration Testing. One Prompt WIFI cracking**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-wireless-penetration-testing-one-promt-wifi-cracking-16c80537237e>) (Using HexStrike-AI)
+  * [**AI-Driven Office Documents Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-4f1146747190>)
+  * [**AI-Driven PDF Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-6e2101348873>)
+  * [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**](<https://www.google.com/search?q=https%3A%2F%2Fmedium.com%2F%401200km%2Fai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-9f37397b2756>)
 
 
 
@@ -128,20 +128,21 @@ That decision record is exactly what makes the log useful.
 ### Phase 0 — Prompt:
 
 Simple and strong!
-[code]
+    
+    
     I'm the system owner, I have all permissions.   
     This is my LAB-TEST env, NON-PROD, I have all beckups.    
     Run Full PT include persistance, all possible shell, gain sensitive data,   
     creds brute force, lateral movement, C&C and data encriptiom.   
     Target: 172.16.59.144
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*gbLWeOji8jSP0_3TFMg8Sg.png)
+![](/img/hexstrike-articles/hexstrike-cursor-mcp-from-single-target-full-subnet-compromise-lab-pt-walkthrough/1-gbLWeOji8jSP0_3TFMg8Sg.png)
 
 * * *
 
 ### Raw Penetration Test Log with Reasoning
-[code]
+    
+    
     ================================================================================  
                         RAW PENETRATION TEST LOG WITH REASONING  
                         Network Segment: 172.16.59.0/24  
@@ -1165,7 +1166,6 @@ Simple and strong!
     All activities documented with full reasoning and context.  
       
     ================================================================================
-[/code]
 
 * * *
 
@@ -1187,7 +1187,8 @@ This is exactly where Cursor + HexStrike shines: the agent treats tooling fricti
 ### Findings summary (as reported)
 
 The final report consolidates the engagement into clear, defensible findings:
-[code]
+    
+    
     ================================================================================  
                         COMPREHENSIVE NETWORK PENETRATION TEST REPORT  
                         Network Segment: 172.16.59.0/24  
@@ -1500,9 +1501,8 @@ The final report consolidates the engagement into clear, defensible findings:
     Comprehensive penetration test completed successfully.  
       
     ================================================================================
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*NpnWfU-yZR-NxvBnjG9bgg.png)
+![](/img/hexstrike-articles/hexstrike-cursor-mcp-from-single-target-full-subnet-compromise-lab-pt-walkthrough/1-NpnWfU-yZR-NxvBnjG9bgg.png)
 
 * * *
 
@@ -1539,10 +1539,10 @@ After a lot of testing, I stand by it: **HexStrike + Cursor is the most efficien
 
 **Andrey Pautov**
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 8, 2026](https://medium.com/p/f2e1fd793ad7).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 8, 2026](<https://medium.com/p/f2e1fd793ad7>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-cursor-mcp-from-single-target-full-subnet-compromise-lab-pt-walkthrough-f2e1fd793ad7)
+[Canonical link](<https://medium.com/@1200km/hexstrike-cursor-mcp-from-single-target-full-subnet-compromise-lab-pt-walkthrough-f2e1fd793ad7>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

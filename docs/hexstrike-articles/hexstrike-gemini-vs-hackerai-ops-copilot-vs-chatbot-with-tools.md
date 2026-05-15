@@ -13,7 +13,7 @@ A practical lab comparison: Why orchestration quality beats raw model IQ in real
 
 #### **A practical lab comparison: Why orchestration quality beats raw model IQ in real-world workflows.**
 
-![](https://cdn-images-1.medium.com/max/800/1*-OVxdqqlgwXjJbmbKplryA.png)
+![](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1--OVxdqqlgwXjJbmbKplryA.png)
 
 * * *
 
@@ -26,7 +26,7 @@ A practical lab comparison: Why orchestration quality beats raw model IQ in real
   * **Operational Style:** It behaves more like a **consultant**. It is excellent at summarizing data and explaining _why_ a vulnerability might exist, but as your article notes, it often lacks the “field-operator” grit needed to handle low-level execution failures or complex tool-chaining without human intervention.
   * **Best Use Case:** Rapid “first-pass” vulnerability scanning, automated reporting, and acting as a sounding board for junior testers who need a checklist of what to try next.
 
-![](https://cdn-images-1.medium.com/max/800/1*uvXFrZpuLg42yWV2T8eu1A.png)
+![](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1-uvXFrZpuLg42yWV2T8eu1A.png)
 
 #### I tested **HackerAI agent** on similar objectives and compared it to **HexStrike + Gemini CLI** workflows I’ve already written about:
 
@@ -132,8 +132,8 @@ When evaluating AI assistants, don’t benchmark “Exploit Success.” Benchmar
 
 **HexStrike + Gemini isn’t just a smarter chatbot; it’s a more reliable teammate.**
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 26, 2025](https://medium.com/p/1d799845410b).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 26, 2025](<https://medium.com/p/1d799845410b>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-1d799845410b)
+[Canonical link](<https://medium.com/@1200km/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools-1d799845410b>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

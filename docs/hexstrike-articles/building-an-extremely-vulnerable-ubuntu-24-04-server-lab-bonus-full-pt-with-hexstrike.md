@@ -13,7 +13,7 @@ A Step-by-Step Guide: Hands-on guide to creating an intentionally insecure Ubunt
 
 #### A Step-by-Step Guide: Hands-on guide to creating an intentionally insecure Ubuntu 24.04.3 Server VM with open SSH, FTP, Samba, NFS, Apache/PHP, MariaDB, privilege escalation vectors, vulnerable web apps, and sensitive data leaks
 
-![](https://cdn-images-1.medium.com/max/800/1*BXEZxGFa7d08ft9ktYNq_A.png)
+![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-BXEZxGFa7d08ft9ktYNq_A.png)
 
 * * *
 
@@ -24,10 +24,10 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 * * *
 
 [**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**  
- _HexStrike AI is an AI-powered offensive security framework that merges multi-agent AI with 150+ professional pentesting…_ medium.com](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+ _HexStrike AI is an AI-powered offensive security framework that merges multi-agent AI with 150+ professional pentesting…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 [**Building an Extremely Vulnerable Windows 10 Lab: A Step-by-Step Guide (Bonus:Full PT with…**  
- _Hands-on guide to creating an intentionally insecure Windows 10 VM with open SSH, SMB, RDP, FTP, privilege escalation…_ medium.com](https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c "https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c")[](https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c)
+ _Hands-on guide to creating an intentionally insecure Windows 10 VM with open SSH, SMB, RDP, FTP, privilege escalation…_ medium.com](<https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c> "https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c")[](<https://medium.com/@1200km/building-an-extremely-vulnerable-windows-10-lab-a-step-by-step-guide-bonus-full-pt-with-9290d388744c>)
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 #### **VirtualBox (Recommended for Beginners — Free and Open-Source)**
 
-**Download and install VirtualBox (latest version from <**[**https://www.virtualbox.org/ >**](https://www.virtualbox.org/%3E?referrer=grok.com)**).**
+**Download and install VirtualBox (latest version from <**[**https://www.virtualbox.org/ >**](<https://www.virtualbox.org/%3E?referrer=grok.com>)**).**
 
   * On Ubuntu/Kali Linux: sudo apt update && sudo apt install virtualbox virtualbox-ext-pack
   * On Windows/macOS: Download the installer from the official site and run it.
@@ -51,7 +51,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 #### VMware Alternative (VMware Workstation Player — Free for Personal Use, Better Performance) As of 2025–2026, VMware Workstation Player/Pro is free for personal/non-commercial use.
 
-**Download from <**[**https://www.vmware.com/products/workstation-player.html >**](https://www.vmware.com/products/workstation-player.html%3E?referrer=grok.com)**.**
+**Download from <**[**https://www.vmware.com/products/workstation-player.html >**](<https://www.vmware.com/products/workstation-player.html%3E?referrer=grok.com>)**.**
 
   * On Ubuntu/Kali: Download .bundle, chmod +x VMware-*.bundle, install prerequisites (sudo apt install build-essential linux-headers-$(uname -r)), run sudo ./VMware-*.bundle.
   * Why VMware? Better performance for complex labs.
@@ -62,7 +62,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 #### Step 1: Download the Ubuntu 24.04.3 Server ISO
 
-  1. Go to the official Ubuntu download page: <[https://ubuntu.com/download/server>](https://ubuntu.com/download/server%3E?referrer=grok.com).
+  1. Go to the official Ubuntu download page: <[https://ubuntu.com/download/server>](<https://ubuntu.com/download/server%3E?referrer=grok.com>).
   2. Select Ubuntu 24.04.3 LTS Server (AMD64). Download the ISO (~2GB).
 
 
@@ -82,7 +82,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
   2. Disk: 40GB single file. Customize: Memory 2GB, CPU 2 cores, Network NAT/Bridged.
   3. Finish and power on.
 
-![](https://cdn-images-1.medium.com/max/800/1*-PPf5vehqf7QohBy1n4bBw.png)
+![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1--PPf5vehqf7QohBy1n4bBw.png)
 
 #### Step 3: Install Ubuntu 24.04.3 Server
 
@@ -96,30 +96,30 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
   8. **Update basics:**
 
 
-[code]
+    
+    
      sudo apt update && sudo apt upgrade -y (but avoid security patches for vuln lab).
-[/code]
 
 9\. **Install Guest Additions/Tools:**
 
   * For VirtualBox:
 
 
-[code]
+    
+    
     sudo apt install linux-headers-$(uname -r) build-essential dkms
-[/code]
 
 Insert Guest Additions CD, run installer.
 
   * For VMware:
 
 
-[code]
+    
+    
     sudo apt install -y open-vm-tools open-vm-tools-desktop  
     sudo reboot
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*GsxDbtudG9XFKLfgQ17lGQ.png)
+![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-GsxDbtudG9XFKLfgQ17lGQ.png)
 
 #### Step 4: Configure Basic Networking and Access
 
@@ -128,9 +128,9 @@ Insert Guest Additions CD, run installer.
   3. Enable SSH: Already installed, but ensure password auth:
 
 
-[code]
+    
+    
     sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config && sudo systemctl restart ssh
-[/code]
 
 * * *
 
@@ -145,24 +145,24 @@ Insert Guest Additions CD, run installer.
   * **SSH from host**
 
 
-[code]
+    
+    
      ssh -l <user> <vm-ip>
-[/code]
 
   * → Copy/paste works perfectly in your terminal
   * **scp / rsync**
 
 
-[code]
+    
+    
      scp file.txt user@vm-ip:/path/
-[/code]
 
   * **Install a lightweight GUI (optional)** :
 
 
-[code]
+    
+    
     sudo apt install ubuntu-desktop-minimal
-[/code]
 
 * * *
 
@@ -172,12 +172,13 @@ Insert Guest Additions CD, run installer.
   2. **Copy and paste the enhanced vulnerable lab creator script (provided below) into a file:**
 
 
-[code]
+    
+    
      sudo nano /tmp/vuln-setup.sh
-[/code]
 
 **Bash Script:**
-[code]
+    
+    
      #!/bin/bash  
       
     # ==============================================================================  
@@ -336,31 +337,31 @@ Insert Guest Additions CD, run installer.
     echo "=== SETUP COMPLETE ==="  
     echo "REBOOT NOW: sudo reboot"  
     echo "After reboot, run the verification script below."
-[/code]
 
 **3\. Make executable:**
-[code]
+    
+    
      sudo chmod +x /tmp/vuln-setup.sh
-[/code]
 
 **4\. Run:**
-[code]
+    
+    
       
      sudo /tmp/vuln-setup.sh
-[/code]
 
 **Reboot the system:**
-[code]
+    
+    
      reboot
-[/code]
 
 **Post-Reboot Verification Script:**
-[code]
+    
+    
      nano /tmp/post_reboot.sh
-[/code]
 
 **Script:**
-[code]
+    
+    
      #!/bin/bash  
       
     echo "=== VULNERABLE UBUNTU LAB VERIFICATION ==="  
@@ -393,13 +394,12 @@ Insert Guest Additions CD, run installer.
     echo  
     echo "Lab is fully vulnerable and ready for pentesting!"  
     echo "Take a snapshot now and start attacking from Kali!"
-[/code]
-[code]
+    
+    
     sudo chmod +x /tmp/post_reboot.sh  
     sudo /tmp/post_reboot.sh
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*o9L68FSF08YQRs4gvRpGmg.png)
+![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-o9L68FSF08YQRs4gvRpGmg.png)
 
 * * *
 
@@ -447,8 +447,9 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
 ### Basic Penetration Test Report for this Lab
 
 **This PT was performed with HexStrike-AI + Gemini-CLI in one prompt  
-** * [**HexStrike on Kali Linux 2025.4: A Comprehensive Guide here**](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
-[code]
+** * [**HexStrike on Kali Linux 2025.4: A Comprehensive Guide here**](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
+    
+    
       
       
      ## 1. Executive Summary  
@@ -573,7 +574,6 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
         *   Monitor system logs for suspicious activity.  
       
     This concludes the penetration test report.
-[/code]
 
   1. **Vulnerable Apps** : DVWA for web vulns (SQLi, CSRF, etc.).
 
@@ -581,8 +581,8 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
 
 This lab is ideal for tools like Metasploit, enum4linux, nfs-common. Use only in isolated VMs for ethical learning.
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 6, 2026](https://medium.com/p/90034032775b).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 6, 2026](<https://medium.com/p/90034032775b>).
 
-[Canonical link](https://medium.com/@1200km/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike-90034032775b)
+[Canonical link](<https://medium.com/@1200km/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike-90034032775b>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

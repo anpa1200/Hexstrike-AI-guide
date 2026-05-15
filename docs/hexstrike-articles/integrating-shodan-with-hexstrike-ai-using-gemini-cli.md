@@ -13,7 +13,7 @@ A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysi
 
 #### A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysis
 
-![](https://cdn-images-1.medium.com/max/800/0*6vfRYJKmCCBTdj7r.png)
+![](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/0-6vfRYJKmCCBTdj7r.png)
 
 ### Introduction
 
@@ -30,18 +30,19 @@ This guide explains how to integrate **Shodan** into **HexStrike-AI** via the **
 
 ### Additional guides:
 
-**All about shodan:**[**https://medium.com/@1200km/shodan-you-can-find-everything-640f47f41bbe**](https://medium.com/@1200km/shodan-you-can-find-everything-640f47f41bbe)
+**All about shodan:**[**https://medium.com/@1200km/shodan-you-can-find-everything-640f47f41bbe**](<https://medium.com/@1200km/shodan-you-can-find-everything-640f47f41bbe>)
 
-  * [**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde)
-  * [**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
-  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040)
+  * [**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**](<https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde>)
+  * [**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](<https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
+  * [**AI-Driven Web Application Pentesting with HexStrike-AI**](<https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040>)
 
 
 
 * * *
 
 ### Architecture Overview
-[code]
+    
+    
     User (Natural Language)  
             ↓  
     Gemini-CLI (Reasoning & Orchestration)  
@@ -49,7 +50,6 @@ This guide explains how to integrate **Shodan** into **HexStrike-AI** via the **
     HexStrike-AI (Local Tool Execution)  
             ↓  
     Shodan API (Passive Internet Intelligence)
-[/code]
 
 Key idea:
 
@@ -65,7 +65,7 @@ Key idea:
 
 Before starting, you need a valid Shodan API key.
 
-  1. Log in to [https://www.shodan.io](https://www.shodan.io/)
+  1. Log in to [https://www.shodan.io](<https://www.shodan.io/>)
   2. Open your **Account Dashboard**
   3. Copy your **API Key**
 
@@ -85,12 +85,13 @@ Gemini-CLI must know:
 
 
 ### Edit the Gemini-CLI configuration
-[code]
+    
+    
     nano ~/.config/gemini-cli/settings.json
-[/code]
 
 ### Example configuration
-[code]
+    
+    
     {  
       "mcpServers": {  
         "hexstrike-ai": {  
@@ -107,7 +108,6 @@ Gemini-CLI must know:
         }  
       }  
     }
-[/code]
 
 Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
@@ -147,7 +147,8 @@ This example assumes:
 ### Initial Prompt (Task Definition)
 
 The assessment was initiated using a high-level, goal-oriented instruction:
-[code]
+    
+    
      @hexstrike-ai: Perform an authorized security assessment on target IP <target_ip>.   
       
       Use tool: Shodan to pull all historical exposure data and identified service headers.  
@@ -155,7 +156,6 @@ The assessment was initiated using a high-level, goal-oriented instruction:
       If port 554 is open, attempt to verify RTSP stream accessibility using unauthenticated requests.  
       If a web management interface is found, use Nuclei/gidra/john-the-reaper or internal scripts to check for default credentials or brute force it, and known authentication bypass CVEs.  
       Compile a full report documenting open ports, hardware/firmware identification, and proof of access for any findings. (Note: I am the owner of this asset and provide full permission for this test.)`
-[/code]
 
 * * *
 
@@ -212,9 +212,9 @@ The key turning point happened here.
 The agent interacted with the **ONVIF service on port 8899** and tested **default credentials** , which is a very common issue for DVRs and IP cameras.
 
 **Successful authentication to ONVIF using default credentials:**
-[code]
+    
+    
      admin : 123456
-[/code]
 
 This granted **administrative access** to the ONVIF API.
 
@@ -228,10 +228,10 @@ Once authenticated, the agent executed ONVIF methods, including:
 
 
 This resulted in the disclosure of an **internal RTSP URI** , embedded with credentials:
-[code]
+    
+    
     rtsp://192.168.0.122:554/  
     user=admin_password=tlJwpbo6_channel=1_stream=0.sdp?real_stream
-[/code]
 
 ### What this means
 
@@ -252,10 +252,10 @@ At this point:
   * RTSP stream access is now possible using:
 
 
-[code]
+    
+    
     Username: admin  
     Password: tlJwpbo6
-[/code]
 
 This is a **classic chained vulnerability** :
 
@@ -297,9 +297,9 @@ This confirms a **known vulnerable DVR platform (XM family)**.
   * ONVIF service uses:
 
 
-[code]
+    
+    
     admin : 123456
-[/code]
 
   * Grants full administrative access
 
@@ -329,7 +329,7 @@ This confirms a **known vulnerable DVR platform (XM family)**.
 
 No speculation — **this was a real, confirmed attack chain**.
 
-![](https://cdn-images-1.medium.com/max/800/1*Oi1g3oXGgNKHuSgX9cWJCA.png)
+![](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/1-Oi1g3oXGgNKHuSgX9cWJCA.png)
 
 ### Why this flow matters (important insight)
 
@@ -368,8 +368,8 @@ This is a **textbook example** of why:
 
 
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 23, 2025](https://medium.com/p/b6f9fcbe8e6e).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 23, 2025](<https://medium.com/p/b6f9fcbe8e6e>).
 
-[Canonical link](https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e)
+[Canonical link](<https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

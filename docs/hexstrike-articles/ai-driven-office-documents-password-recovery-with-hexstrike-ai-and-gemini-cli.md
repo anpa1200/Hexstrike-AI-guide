@@ -13,7 +13,7 @@ From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
 #### From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
-![](https://cdn-images-1.medium.com/max/800/0*NEMwBOBGpCmEwBNd.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/0-NEMwBOBGpCmEwBNd.png)
 
 ### Overview
 
@@ -29,7 +29,7 @@ This is a fully authorized, local scenario.
 
 **Full guide how to install and use HexstrikeAI here:**
 
-[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](<https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 **Manual Office file Password cracking. Guide with real life examples here:|  
 **<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>
@@ -50,12 +50,12 @@ This is a fully authorized, local scenario.
   * Encrypted file:  
 `/home/andrey/my_secret_file.txt`
 
-![](https://cdn-images-1.medium.com/max/800/1*kduNgL5-qOphNtjqD8Y5Gw.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-kduNgL5-qOphNtjqD8Y5Gw.png)
 
   * Password Dictionary:  
 `/home/andrey/Documents/passwords_list.txt`
 
-![](https://cdn-images-1.medium.com/max/800/1*lMl1ct5sA5HuWnB6xkYy6g.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
 
 * * *
 
@@ -64,25 +64,25 @@ This is a fully authorized, local scenario.
   * Run the HexstrikeAI server
 
 
-[code]
+    
+    
     hexstrike_server
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*TogAVXnHW6s_p2I_SU9lUw.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TogAVXnHW6s_p2I_SU9lUw.png)
 
   * Run Gemini-CLI
 
 
-[code]
+    
+    
     gemeni-cli
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*KSvr7YDPe9YldkqTmp52rQ.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
 
 #### Promt:
-[code]
+    
+    
     @hexstrike Crack password of /home/andrey/Documents/my_secret_file.txt. use passwords list /home/andrey/Documents/password_list.txt
-[/code]
 
 * * *
 
@@ -99,7 +99,7 @@ You issued one objective:
 
 No manual tool selection, no pre-planned commands.
 
-![](https://cdn-images-1.medium.com/max/800/1*lU5QSvvGyWBxHEsz1IC6xg.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lU5QSvvGyWBxHEsz1IC6xg.png)
 
 #### 2) Tool capability gap identified
 
@@ -119,7 +119,7 @@ The helper utility needed for extraction wasn’t callable directly (**command n
 
 **Pivot:** the AI performed filesystem discovery, located the tool in a non-PATH location, and re-ran it using the full path.
 
-![](https://cdn-images-1.medium.com/max/800/1*PvX9xRmJWkkf2_3NJ9quIQ.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-PvX9xRmJWkkf2_3NJ9quIQ.png)
 
 #### 5) Extraction succeeded (hash/verification artifact produced)
 
@@ -144,7 +144,7 @@ After correcting the wordlist filename, the run completed and returned a valid p
 
   * **Recovered password:** `MyStrongPass`
 
-![](https://cdn-images-1.medium.com/max/800/1*39QwyfsDFB64CHq4YCLJag.png)
+![](/img/hexstrike-articles/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli/1-39QwyfsDFB64CHq4YCLJag.png)
 
 * * *
 
@@ -163,8 +163,8 @@ The key outcome is the closed-loop troubleshooting behavior:
 
 This is what “one prompt success” actually means in practice: the user defines scope and intent once, and the AI handles the messy middle — environment quirks, path mistakes, and execution pivots — until it reaches a verified result.
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 29, 2025](https://medium.com/p/3c8bb7deb82d).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 29, 2025](<https://medium.com/p/3c8bb7deb82d>).
 
-[Canonical link](https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d)
+[Canonical link](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

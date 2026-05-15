@@ -13,33 +13,33 @@ How to wire Ubuntu (Ollama) to Kali (HexStrike) with MCP over SSH, what models a
 
 #### How to wire Ubuntu (Ollama) to Kali (HexStrike) with MCP over SSH, what models actually behaved (Qwen3 8B/14B), and when you should move to GPU or cloud models.
 
-![](https://cdn-images-1.medium.com/max/800/1*FEND4twn4pGNlLPNTCr6zQ.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-FEND4twn4pGNlLPNTCr6zQ.png)
 
 Below is a practical, end-to-end setup that keeps the **LLM on Ubuntu (host)** and runs **HexStrike on Kali (VM)** , then bridges them so your local model can “drive” HexStrike tool calls.
 
 ### Additional guides:
 
 [**AI-Driven Web Application Pentesting with HexStrike-AI**  
- _A Practical, End-to-End Guide to Modern Web Application Penetration Testing Using LLM-Orchestrated Tooling_ medium.com](https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040 "https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040")[](https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040)
+ _A Practical, End-to-End Guide to Modern Web Application Penetration Testing Using LLM-Orchestrated Tooling_ medium.com](<https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040> "https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040")[](<https://medium.com/@1200km/ai-driven-web-application-pentesting-with-hexstrike-ai-67f3dae32040>)
 
 [**AI-Driven Pentesting at Home: Using HexStrike-AI for Full Network Discovery and Exploitation**  
- _How I Used Gemini + HexStrike-AI on Kali Linux to Scan, Enumerate, and Exploit My Own Network_ medium.com](https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde "https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde")[](https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde)
+ _How I Used Gemini + HexStrike-AI on Kali Linux to Scan, Enumerate, and Exploit My Own Network_ medium.com](<https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde> "https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde")[](<https://medium.com/@1200km/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation-00a9e88b3bde>)
 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
- _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+ _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 [**Integrating Shodan with HexStrike-AI Using Gemini-CLI**  
- _A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysis_ medium.com](https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e "https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e")[](https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e)
+ _A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysis_ medium.com](<https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e> "https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e")[](<https://medium.com/@1200km/integrating-shodan-with-hexstrike-ai-using-gemini-cli-b6f9fcbe8e6e>)
 
 [**AI-Driven ZIP Password Recovery with HexStrike-AI and Gemini-CLI**  
- _From Encrypted Archive to Flag Using LLM-Orchestrated Tooling_ medium.com](https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc "https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc")[](https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc)
+ _From Encrypted Archive to Flag Using LLM-Orchestrated Tooling_ medium.com](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc> "https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc")[](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc>)
 
 [**AI-Driven Wireless Penetration Testing. One Promt WIFI cracking**  
- _Using Aircrack-ng with HexStrike-AI and Gemini-CLI_ medium.com](https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4 "https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4")[](https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4)
+ _Using Aircrack-ng with HexStrike-AI and Gemini-CLI_ medium.com](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4> "https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4")[](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -94,8 +94,8 @@ If you want a smooth experience, I strongly recommend trying this architecture o
 
 **Kali Linux (VM)**
 
-  * **hexstrike_server** (local API server, binds to `127.0.0.1:8888` by default) ([Kali Linux](https://www.kali.org/tools/hexstrike-ai/ "hexstrike-ai | Kali Linux Tools"))
-  * **hexstrike_mcp** (MCP bridge/client pointing at `http://127.0.0.1:8888`) ([Kali Linux](https://www.kali.org/tools/hexstrike-ai/ "hexstrike-ai | Kali Linux Tools"))
+  * **hexstrike_server** (local API server, binds to `127.0.0.1:8888` by default) ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
+  * **hexstrike_mcp** (MCP bridge/client pointing at `http://127.0.0.1:8888`) ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
   * SSH enabled (for secure port-forward from Ubuntu to Kali)
 
 
@@ -120,27 +120,27 @@ Latitude 7420 is typically CPU-bound for local LLMs (often Intel i5/i7 + integra
 
 Why: HexStrike can run heavy tools; keeping Kali at 2 vCPU prevents it from stealing cycles from the host LLM.
 
-![](https://cdn-images-1.medium.com/max/800/1*PdA_2FAMUoTEwkHamX9Atg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-PdA_2FAMUoTEwkHamX9Atg.png)
 
 * * *
 
 ### 2) Ubuntu (host): install Ollama + pull a model
 
 #### 2.1 Install Ollama
-[code]
+    
+    
     sudo apt update  
     sudo apt install -y curl  
     curl -fsSL https://ollama.com/install.sh | sh
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*2v6HvBv_itqU1VRD-IyCqQ.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2v6HvBv_itqU1VRD-IyCqQ.png)
 
 Verify:
-[code]
+    
+    
     ollama --version
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*sBh84Ho6RiAjAkRfuSHWEg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-sBh84Ho6RiAjAkRfuSHWEg.png)
 
 #### 2.2 Pull a laptop-friendly model
 
@@ -154,32 +154,32 @@ Pick one primary model to start (faster UX):
 
 
 Example:
-[code]
+    
+    
     ollama pull qwen3:14b  
     # or smaller:  
     ollama pull qwen3:8b
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*UTLS3B91WoZ4yTr6AbSK3A.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-UTLS3B91WoZ4yTr6AbSK3A.png)
 
 Run a quick test:
-[code]
+    
+    
     ollama run qwen3:14b "Explain what nmap -sV does in one paragraph."
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*Y8g7V1hslZGKDY93iJitDw.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-Y8g7V1hslZGKDY93iJitDw.png)
 
 #### 2.3 Laptop optimization (recommended defaults)
 
-Ollama supports environment variables to control behavior (parallelism, keep-alive, etc.). [אולמה](https://docs.ollama.com/faq?utm_source=chatgpt.com)  
+Ollama supports environment variables to control behavior (parallelism, keep-alive, etc.). [אולמה](<https://docs.ollama.com/faq?utm_source=chatgpt.com>)  
 On a 7420-class CPU, you typically want **low parallelism** and **only one model loaded** :
-[code]
+    
+    
     export OLLAMA_NUM_PARALLEL=1  
     export OLLAMA_MAX_LOADED_MODELS=1  
     export OLLAMA_KEEP_ALIVE=5m  
     # If you ever need a non-default bind:  
     # export OLLAMA_HOST=127.0.0.1:11434
-[/code]
 
 You can place these in `~/.bashrc` or your systemd service override, depending on how you run Ollama.
 
@@ -187,35 +187,35 @@ You can place these in `~/.bashrc` or your systemd service override, depending o
 
 ### 3) Kali VM: install and start HexStrike
 
-HexStrike is packaged in Kali as `hexstrike-ai` with binaries `hexstrike_server` and `hexstrike_mcp`. ([Kali Linux](https://www.kali.org/tools/hexstrike-ai/ "hexstrike-ai | Kali Linux Tools"))
+HexStrike is packaged in Kali as `hexstrike-ai` with binaries `hexstrike_server` and `hexstrike_mcp`. ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
 
 #### 3.1 Install
-[code]
+    
+    
     sudo apt update  
     sudo apt install -y hexstrike-ai openssh-server python3-venv python3-pip  
     sudo systemctl enable --now ssh
-[/code]
 
 Confirm tools exist:
-[code]
+    
+    
     hexstrike_mcp -h  
     hexstrike_server -h
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*KJZnnlLp2poewZqk4d3aPw.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-KJZnnlLp2poewZqk4d3aPw.png)
 
-(These flags and defaults are documented in Kali’s package page.) ([Kali Linux](https://www.kali.org/tools/hexstrike-ai/ "hexstrike-ai | Kali Linux Tools"))
+(These flags and defaults are documented in Kali’s package page.) ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
 
 #### 3.2 Start HexStrike API server (binds to localhost on Kali)
 
 Run in a dedicated terminal (or `tmux`):
-[code]
+    
+    
     hexstrike_server --port 8888
-[/code]
 
-You should see it start on `127.0.0.1:8888`. ([Kali Linux](https://www.kali.org/tools/hexstrike-ai/ "hexstrike-ai | Kali Linux Tools"))
+You should see it start on `127.0.0.1:8888`. ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
 
-![](https://cdn-images-1.medium.com/max/800/1*LVV55RZI-QcrrVU_la9fJg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-LVV55RZI-QcrrVU_la9fJg.png)
 
 * * *
 
@@ -231,27 +231,27 @@ Use **two adapters** (VirtualBox/VMware both support this):
 
 
 Inside Kali:
-[code]
+    
+    
     ip a
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*w6LebpT1UBDVkAuwWuSPfg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-w6LebpT1UBDVkAuwWuSPfg.png)
 
 Note the **host-only** IP (example: `172.16.59.132`).
 
 #### 4.2 Enable SSH on Kali
-[code]
+    
+    
     sudo apt update  
     sudo apt install -y openssh-server  
     sudo systemctl enable --now ssh
-[/code]
 
 From Ubuntu, confirm SSH works:
-[code]
+    
+    
     ssh andrey@172.16.59.132
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*2Qj7uyDh8SLZndzkTN05zg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2Qj7uyDh8SLZndzkTN05zg.png)
 
 * * *
 
@@ -259,28 +259,28 @@ From Ubuntu, confirm SSH works:
 
 * * *
 
-`mcphost` is a CLI host that supports **non-interactive one-shot prompts** and **Ollama models**. [GitHub+1](https://github.com/mark3labs/mcphost)
+`mcphost` is a CLI host that supports **non-interactive one-shot prompts** and **Ollama models**. [GitHub+1](<https://github.com/mark3labs/mcphost>)
 
 #### 5.1 Install Go + mcphost
 
-`mcphost` requires Go (1.23+). [GitHub](https://github.com/mark3labs/mcphost)
+`mcphost` requires Go (1.23+). [GitHub](<https://github.com/mark3labs/mcphost>)
 
 Ubuntu:
-[code]
+    
+    
     sudo apt update  
     sudo apt install -y golang-go  
     go install github.com/mark3labs/mcphost@latest
-[/code]
 
-Installation command is documented by the project. [GitHub](https://github.com/mark3labs/mcphost)
+Installation command is documented by the project. [GitHub](<https://github.com/mark3labs/mcphost>)
 
 Ensure it’s in PATH:
-[code]
+    
+    
     export PATH="$PATH:$(go env GOPATH)/bin"  
     mcphost -h
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*-zp6omdM2HI_v9Y6cHQeeA.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1--zp6omdM2HI_v9Y6cHQeeA.png)
 
 * * *
 
@@ -289,38 +289,39 @@ Ensure it’s in PATH:
 #### 6.1 Set up SSH keys (Ubuntu → Kali)
 
 On Ubuntu:
-[code]
+    
+    
     ssh-keygen -t ed25519 -C "hexstrike-kali" -f ~/.ssh/hexstrike_kali  
     ssh-copy-id -i ~/.ssh/hexstrike_kali.pub andrey@172.16.59.132
-[/code]
 
 Test:
-[code]
+    
+    
     ssh -i ~/.ssh/hexstrike_kali andrey@172.16.59.132 "echo ok"
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*WGcR15hfphnOYHTo7pXrSA.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-WGcR15hfphnOYHTo7pXrSA.png)
 
 ### 6.2 Disable MOTD/banner output for this Kali user (important)
 
 MCP stdio can break if the remote shell prints banners/MOTD before the protocol starts.
 
 On Kali (as the andrey user):
-[code]
+    
+    
     touch ~/.hushlogin
-[/code]
 
 * * *
 
 ### 7) Create the mcphost config to run HexStrike MCP remotely via SSH
 
-`mcphost` reads `~/.mcphost.yml` (preferred) and supports `mcpServers` with `type: local` commands, plus optional tool allow/deny lists. [GitHub+1](https://github.com/mark3labs/mcphost)
+`mcphost` reads `~/.mcphost.yml` (preferred) and supports `mcpServers` with `type: local` commands, plus optional tool allow/deny lists. [GitHub+1](<https://github.com/mark3labs/mcphost>)
 
 On **Ubuntu** , create `~/.mcphost.yml`:
-[code]
+    
+    
     nano ~/.mcphost.yml
-[/code]
-[code]
+    
+    
     mcpServers:  
       hexstrike:  
         type: "local"  
@@ -340,48 +341,47 @@ On **Ubuntu** , create `~/.mcphost.yml`:
           - "http://127.0.0.1:8888"  
           - "--timeout"  
           - "300"
-[/code]
-[code]
+    
+    
     # Optional default model (you can also pass -m each time)  
     model: "ollama:qwen3:14b"
-[/code]
 
 Why this works:
 
-  * `hexstrike_mcp` defaults to `http://127.0.0.1:8888` and supports `--timeout`. [Kali Linux](https://www.kali.org/tools/hexstrike-ai/)
-  * HexStrike lists common MCP tool names like `nmap_scan()`, `nuclei_scan()`, etc. [GitHub](https://github.com/0x4m4/hexstrike-ai)
-  * `mcphost` supports Ollama models and can run in non-interactive mode (`-p ... --quiet`). [GitHub+1](https://github.com/mark3labs/mcphost)
+  * `hexstrike_mcp` defaults to `http://127.0.0.1:8888` and supports `--timeout`. [Kali Linux](<https://www.kali.org/tools/hexstrike-ai/>)
+  * HexStrike lists common MCP tool names like `nmap_scan()`, `nuclei_scan()`, etc. [GitHub](<https://github.com/0x4m4/hexstrike-ai>)
+  * `mcphost` supports Ollama models and can run in non-interactive mode (`-p ... --quiet`). [GitHub+1](<https://github.com/mark3labs/mcphost>)
 
 
 
 #### 7.1 Test it:
-[code]
+    
+    
     mcphost --debug -m ollama:qwen3:8b  
     /servers  
     /tools
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*L7hFrkmDBij7g2FTP-iI4g.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-L7hFrkmDBij7g2FTP-iI4g.png)
 
 * * *
 
 ### 8) “Like ollama run …” — one-liner usage from Ubuntu terminal
 
 #### 8.1 Plain LLM (no tools), mcphost one-liner
-[code]
+    
+    
     mcphost --debug -m ollama:qwen3:8b -p '@hexstrike list all available tools'
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*9kjK-2jyPOUbxIDOSi36mg.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-9kjK-2jyPOUbxIDOSi36mg.png)
 
 #### 8.2 Tool-using prompt (HexStrike via MCP)
 
 Give the model a prompt that clearly authorizes scope and requests HexStrike tools: Simplest and fastest function
-[code]
+    
+    
     mcphost --debug -m ollama:qwen3:14b -p '@hexstrike: You must call exactly one tool: hexstrike__nmap_scan. Scan network 192.168.1.0/24. Use minimal flags for speed (no scripts). After the tool returns, output a 2-column table: IP | Open Ports. Do not call any other tools.'
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*aIvIkyETWgXm6Jf3SmruZQ.png)
+![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-aIvIkyETWgXm6Jf3SmruZQ.png)
 
 * * *
 
@@ -389,17 +389,17 @@ Give the model a prompt that clearly authorizes scope and requests HexStrike too
 
 #### 9.1 Do not expose HexStrike API on the network
 
-Keep `hexstrike_server` on loopback (`127.0.0.1`). Kali package indicates it starts there by default. [Kali Linux](https://www.kali.org/tools/hexstrike-ai/)  
+Keep `hexstrike_server` on loopback (`127.0.0.1`). Kali package indicates it starts there by default. [Kali Linux](<https://www.kali.org/tools/hexstrike-ai/>)  
 You are reaching it via SSH-spawned `hexstrike_mcp`, so no port-forwarding is needed.
 
 #### 9.2 Use tool filtering once you know tool names
 
-`mcphost` supports `allowedTools` / `excludedTools` per server. [GitHub+1](https://github.com/mark3labs/mcphost)  
+`mcphost` supports `allowedTools` / `excludedTools` per server. [GitHub+1](<https://github.com/mark3labs/mcphost>)  
 After you’ve listed tools once, you can restrict what the LLM may invoke.
 
 #### 9.3 Stay current: there has been at least one published HexStrike security advisory
 
-There are public advisories describing command-injection risk paths in HexStrike components (example: GHSA / CVE listings). Use isolation (VM), least privilege, and do not expose the API. [nvd.nist.gov+1](https://nvd.nist.gov/vuln/detail/CVE-2025-35028?utm_source=chatgpt.com)
+There are public advisories describing command-injection risk paths in HexStrike components (example: GHSA / CVE listings). Use isolation (VM), least privilege, and do not expose the API. [nvd.nist.gov+1](<https://nvd.nist.gov/vuln/detail/CVE-2025-35028?utm_source=chatgpt.com>)
 
 * * *
 
@@ -413,7 +413,7 @@ If you want this architecture to feel smooth and productive, you realistically n
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -423,17 +423,17 @@ If you’re interested in **Offensive security,** **AI security, real-world atta
 
 Stay connected:
 
-→ **Subscribe on Medium:** [medium.com/@1200km](https://medium.com/@1200km)  
-→ **Connect on LinkedIn:** [andrey-pautov](https://www.linkedin.com/in/andrey-pautov/)  
-→ **GitHub — tools & labs:** [github.com/anpa1200](https://github.com/anpa1200)  
-→ **Contact:** [1200km@gmail.com](mailto:1200km@gmail.com)
+→ **Subscribe on Medium:** [medium.com/@1200km](<https://medium.com/@1200km>)  
+→ **Connect on LinkedIn:** [andrey-pautov](<https://www.linkedin.com/in/andrey-pautov/>)  
+→ **GitHub — tools & labs:** [github.com/anpa1200](<https://github.com/anpa1200>)  
+→ **Contact:** [1200km@gmail.com](<mailto:1200km@gmail.com>)
 
 * * *
 
 #### Andrey Pautov
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 31, 2025](https://medium.com/p/f049ab140596).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 31, 2025](<https://medium.com/p/f049ab140596>).
 
-[Canonical link](https://medium.com/@1200km/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-f049ab140596)
+[Canonical link](<https://medium.com/@1200km/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance-f049ab140596>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

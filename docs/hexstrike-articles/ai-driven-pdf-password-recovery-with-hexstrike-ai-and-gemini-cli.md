@@ -13,7 +13,7 @@ From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
 #### From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
-![](https://cdn-images-1.medium.com/max/800/0*NEMwBOBGpCmEwBNd.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/0-NEMwBOBGpCmEwBNd.png)
 
 ### Overview
 
@@ -29,7 +29,7 @@ This is a fully authorized, local scenario.
 
 **Full guide how to install and use HexstrikeAI here:**
 
-[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)
+[**HexStrike on Kali Linux 2025.4: A Comprehensive Guide**](<https://medium.com/@1200km/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949>)
 
 **Manual PDF file Password cracking. Guide with real life examples here:|  
 **<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>
@@ -50,12 +50,12 @@ This is a fully authorized, local scenario.
   * Encrypted PDF:  
 `/home/andrey/secret.pdf`
 
-![](https://cdn-images-1.medium.com/max/800/1*XQddQOCsLdZJttqMFUzdwg.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XQddQOCsLdZJttqMFUzdwg.png)
 
   * Password Dictionary:  
 `/home/andrey/Documents/passwords_list.txt`
 
-![](https://cdn-images-1.medium.com/max/800/1*lMl1ct5sA5HuWnB6xkYy6g.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
 
 * * *
 
@@ -64,25 +64,25 @@ This is a fully authorized, local scenario.
   * Run the HexstrikeAI server
 
 
-[code]
+    
+    
     hexstrike_server
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*TogAVXnHW6s_p2I_SU9lUw.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TogAVXnHW6s_p2I_SU9lUw.png)
 
   * Run Gemini-CLI
 
 
-[code]
+    
+    
     gemeni-cli
-[/code]
 
-![](https://cdn-images-1.medium.com/max/800/1*KSvr7YDPe9YldkqTmp52rQ.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
 
 #### Promt:
-[code]
+    
+    
     @hexstrike Crack password of ~/Documents/enc_secret.pdf. use passwords list ~/Documents/password_list.txt
-[/code]
 
 * * *
 
@@ -99,7 +99,7 @@ You issued one objective:
 
 No manual tool selection, no pre-planned commands.
 
-![](https://cdn-images-1.medium.com/max/800/1*mLHP1zLmjFUncRQ8A9F7Eg.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-mLHP1zLmjFUncRQ8A9F7Eg.png)
 
 #### 2) Tool capability gap identified
 
@@ -119,7 +119,7 @@ The helper utility needed for extraction wasn’t callable directly (**command n
 
 **Pivot:** the AI performed filesystem discovery, located the tool in a non-PATH location, and re-ran it using the full path.
 
-![](https://cdn-images-1.medium.com/max/800/1*HvPSDZgdwCKE4Ny2lOmWNw.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-HvPSDZgdwCKE4Ny2lOmWNw.png)
 
 #### 5) Extraction succeeded (hash/verification artifact produced)
 
@@ -144,7 +144,7 @@ After correcting the wordlist filename, the run completed and returned a valid p
 
   * **Recovered password:** `MyStrongPass`
 
-![](https://cdn-images-1.medium.com/max/800/1*ytS5p4_dOzbiZ5ewyHMohg.png)
+![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ytS5p4_dOzbiZ5ewyHMohg.png)
 
 * * *
 
@@ -167,8 +167,8 @@ The key takeaway is not the specific PDF outcome — it is the **closed-loop exe
 
 That is what “one prompt success” really means here: the user didn’t babysit the workflow. The AI treated errors as telemetry, not blockers, and completed the task by dynamically chaining tools, correcting assumptions, and converging on a verified result.
 
-By [Andrey Pautov](https://medium.com/@1200km) on [December 29, 2025](https://medium.com/p/cfa7eb0fae91).
+By [Andrey Pautov](<https://medium.com/@1200km>) on [December 29, 2025](<https://medium.com/p/cfa7eb0fae91>).
 
-[Canonical link](https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91)
+[Canonical link](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91>)
 
-Exported from [Medium](https://medium.com) on May 15, 2026.
+Exported from [Medium](<https://medium.com>) on May 15, 2026.
