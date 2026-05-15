@@ -162,8 +162,8 @@ export default function Home() {
 
           <p className={styles.heroSubtitle}>
             Bridge large language models to real-world security tools via MCP.
-            Write a goal in plain language — HexStrike plans, executes, recovers,
-            and reports autonomously.
+            Write a scoped objective — HexStrike assists with tool selection, execution,
+            troubleshooting, evidence collection, and reporting.
           </p>
 
           {/* Terminal */}
@@ -335,7 +335,7 @@ export default function Home() {
           <p className={styles.sectionLabel}>How It Works</p>
           <h2 className={styles.sectionTitle}>Four steps, one prompt</h2>
           <p className={styles.sectionSubtitle}>
-            Write your objective. HexStrike does the rest.
+            Write a scoped objective. HexStrike assists with tool selection, execution, and reporting.
           </p>
           <div className={styles.steps}>
             {STEPS.map((s) => (

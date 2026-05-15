@@ -249,8 +249,8 @@ If you are on a headless box / SSH session and browser login is awkward, use dev
 On the machine running Codex (Ubuntu host):
 
   * You have SSH access to Kali:
-  * User: `andrey`
-  * Host: `172.16.59.132`
+  * User: `<your_user>`
+  * Host: `<kali-ip>`
   * Key: `~/.ssh/<your_key>`
 
 
@@ -332,7 +332,7 @@ Useful Codex commands (also shown in your screenshot):
 Practical first test (safe, non-destructive):
     
     
-    › @hexstrike Do full pentest with report to my own lab 172.16.59.129
+    › @hexstrike Do full pentest with report to my own lab <target-ip>
 
 ![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-p-ZinESQxzGfzx-fSgOAXg.png)
 
@@ -490,7 +490,7 @@ The goal is to let the **IntelligentDecisionEngine** identify the most vulnerabl
 
     
     
-     > "Perform an intensive service discovery on 172.16.59.128.   
+     > "Perform an intensive service discovery on <target-ip>.   
     Identify all open ports, fingerprint their versions,   
     and categorize each service by its 'Exploitation Confidence'   
     (High/Medium/Low) based on known vulnerabilities."
@@ -510,7 +510,7 @@ HexStrike excels at finding “chainable” flaws that manual testers might miss
 **HexStrike Strategy:** Direct the AI to look for specific “low-hanging fruit” common to Metasploitable, such as the `vsftpd 2.3.4` backdoor.
 
   * **Actionable Prompt:**
-  * “Analyze the FTP (port 21) and Samba (ports 139/445) services on **172.16.59.128**. Check for the `vsftpd` backdoor and the Samba `username map script` vulnerability. If confirmed, show me the plan to gain a root shell."
+  * “Analyze the FTP (port 21) and Samba (ports 139/445) services on **<target-ip>**. Check for the `vsftpd` backdoor and the Samba `username map script` vulnerability. If confirmed, show me the plan to gain a root shell."
   * **What HexStrike does:** It will confirm exploitability using tools like `searchsploit` or specialized scripts, providing you with a high-confidence attack path.
 
 ![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-vW9EPQDlODRWybqv8soy5w.png)
@@ -524,7 +524,7 @@ In this phase, HexStrike translates your intent into precise, technical executio
 **HexStrike Strategy:** Use the AI to automate the complex configuration of Metasploit modules.
 
   * **Actionable Prompt:**
-  * “Exploit the Samba vulnerability on **172.16.59.128**. Use a reverse shell payload targeting my local IP on port 4444. Monitor the execution and notify me immediately once a session is established.”
+  * “Exploit the Samba vulnerability on **<target-ip>**. Use a reverse shell payload targeting my local IP on port 4444. Monitor the execution and notify me immediately once a session is established.”
 
 ![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-a9GE2oK_iFVIiv77Udwubw.png)
 

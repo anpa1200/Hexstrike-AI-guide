@@ -5,7 +5,25 @@ sidebar_position: 100
 
 # Changelog
 
-## May 2026 — v2.1 (Current)
+## May 2026 — v2.2 (Current)
+
+**Technical accuracy**
+- Added exact HexStrike Kali package version to installation version table: `0.0~git20260306.8333779`
+- Gemini CLI and Ollama table entries clarified: `0.1.x (latest 0.1 at test time)` / `0.3.x (latest 0.3 at test time)`
+- Remaining personal lab IPs (`172.16.59.128`, `172.16.59.129`, `172.16.59.132`) and username (`andrey`) fully replaced with `<target-ip>` / `<your_user>@<kali-ip>` placeholders across installation and gemini pages
+- Web & Cloud: second HexStrike MCP config block corrected to port 8889 — both blocks now consistent (Burp Suite on 8888, HexStrike on 8889)
+
+**Framing**
+- AD page subtitle "Fully Automated AD Discovery and Exploitation" → "AI-Assisted AD Discovery and Exploitation … Lab walkthrough on GOAD-Mini"
+- ADCS: remaining `### The One-Prompt Approach` section renamed to `### Single-Prompt Initiation`; `### Cursor + Hexstrike. Fully Automated…` heading corrected to `(Lab)` variant
+- ADCS: "AI determines next steps" → "AI selects the next tool based on prior output"
+- Password disclaimer title updated from "Passwords Cracking: Full Guide with Real-Life Examples" to "AI-Assisted Password Security Auditing"
+- Password page TOC labels renamed to match current framing (Authorized Audit Methods, Credential Exposure Review, Defensive Hardening Resources, etc.)
+- Homepage subtitle updated: "HexStrike does the rest" → "HexStrike assists with tool selection, execution, and reporting"
+
+---
+
+## May 2026 — v2.1
 
 **Technical accuracy**
 - Fixed OpenAI Codex version in Tested Environment table: `0.1.x` → `0.77.0` (installation page)

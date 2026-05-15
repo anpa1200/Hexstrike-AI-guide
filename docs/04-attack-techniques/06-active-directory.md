@@ -10,13 +10,13 @@ Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Result
 
 # AI-Driven Black Box Active Directory Penetration Testing
 
-Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump. 
+AI-Assisted AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. Lab walkthrough on GOAD-Mini. 
 
 * * *
 
 ### AI-Driven Black Box Active Directory Penetration Testing
 
-#### Fully Automated AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. From IP to Full dump.
+#### AI-Assisted AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. Lab walkthrough on GOAD-Mini.
 
 ![](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
 

@@ -14,7 +14,7 @@ Single-Prompt Lab Demonstration — GOAD-Mini Environment
 
 * * *
 
-### Cursor + Hexstrike. Fully Automated ADCS ESC8 Attack
+### Cursor + HexStrike. ADCS ESC8 Attack Chain (Lab)
 
 #### Single-Prompt ADCS ESC8 Attack Chain
 
@@ -42,7 +42,7 @@ Traditional penetration testing requires manual intervention at each step: runni
   2. **Blackbox Approach:** Starting with zero knowledge (only IP address)
   3. **Automatic Troubleshooting:** Handles errors and adapts automatically
   4. **Tool Orchestration:** Coordinates multiple security tools seamlessly
-  5. **Intelligent Decision Making:** AI determines next steps based on results
+  5. **Contextual Sequencing:** AI selects the next tool based on prior output
 
 
 
@@ -102,7 +102,7 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 * * *
 
-### The One-Prompt Approach
+### Single-Prompt Initiation
 
 #### The Prompt
     

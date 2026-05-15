@@ -32,15 +32,15 @@ The information provided in this article, “Passwords Cracking: Full Guide with
 ### Table of contents:
 
   * [**Introduction**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a>)
-  * [**Overview of Password Security**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a>)
-  * [**Basic Cracking Methods**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#b920>)
-  * [**Brute Force Attacks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6d83>)
+  * [**Password Security Fundamentals**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#288a>)
+  * [**Authorized Audit Methods**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#b920>)
+  * [**Brute-Force Testing**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6d83>)
   * [**Dictionary Attacks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d110>)
-  * [**Default passwords**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#fe57>)
-  * [**Rainbow tables**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6fd8>)
-  * [**Password leaks**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d8c7>)
-  * [**Social engineering**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#220a>)
-  * [**Useful links**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#3234>)
+  * [**Default Credential Risk**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#fe57>)
+  * [**Hash Cracking Techniques**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6fd8>)
+  * [**Credential Exposure Review**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#d8c7>)
+  * [**Social Engineering Risk**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#220a>)
+  * [**Defensive Hardening Resources**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#3234>)
   * [**Conclusion**](<https://medium.com/@1200km/passwords-cracking-c1bacbd592cd#6448>)
 
 

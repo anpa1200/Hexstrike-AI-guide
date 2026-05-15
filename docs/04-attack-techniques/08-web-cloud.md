@@ -162,7 +162,7 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
           "args": [  
             "/path/to/hexstrike-ai/hexstrike_mcp.py",  
             "--server",  
-            "http://127.0.0.1:8888"  
+            "http://127.0.0.1:8889"  
           ],  
           "description": "HexStrike AI v6.0 - Advanced Cybersecurity Automation Platform",  
           "timeout": 300,  
