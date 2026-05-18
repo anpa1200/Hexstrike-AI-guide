@@ -93,8 +93,8 @@ const config = {
       navbar: {
         title: 'HexStrike AI',
         logo: {
-          alt: 'HexStrike AI Logo',
-          src: 'img/logo.svg',
+          alt: '1200km',
+          src: 'img/logo.png',
         },
         items: [
           {
