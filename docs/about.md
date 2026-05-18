@@ -32,7 +32,7 @@ If this research saved you time, helped you pass a certification, or gave you id
 
 Running lab infrastructure, maintaining tools, and publishing detailed research takes real time and money.
 
-**[☕ Buy me a coffee — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)**
+**[Support this project — Keep the lab running](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)**
 
 Your support directly funds:
 - New vulnerable lab builds (AD, cloud, IoT)

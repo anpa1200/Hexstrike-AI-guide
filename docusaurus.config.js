@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'HexStrike AI',
   tagline: 'AI-Driven Penetration Testing & Security Research',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -80,7 +80,7 @@ const config = {
     ({
       announcementBar: {
         id: 'authorized_labs_only',
-        content: '⚠️ All techniques in this guide are for <strong>authorized lab environments only</strong>. Never test against systems you do not own or have explicit written permission to test.',
+        content: 'All techniques in this guide are for <strong>authorized lab environments only</strong>. Never test against systems you do not own or have explicit written permission to test.',
         backgroundColor: '#1e293b',
         textColor: '#f8b400',
         isCloseable: true,
@@ -143,7 +143,7 @@ const config = {
               { label: 'Medium', href: 'https://medium.com/@1200km' },
               { label: 'LinkedIn', href: 'https://linkedin.com/in/andrey-pautov' },
               { label: 'GitHub', href: 'https://github.com/anpa1200' },
-              { label: '☕ Buy Me a Coffee', href: 'https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD' },
+              { label: 'Support This Project', href: 'https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD' },
             ],
           },
         ],

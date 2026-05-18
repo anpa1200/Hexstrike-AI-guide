@@ -5,32 +5,26 @@ import styles from './index.module.css';
 
 const FEATURES = [
   {
-    icon: '🧠',
-    title: 'Autonomous Orchestrator',
-    desc: 'HexStrike is not a scanner — it\'s an AI operator. It maintains context, reasons about findings, recovers from failures, and chains tools into multi-stage attack paths without human input.',
+    title: 'AI-Assisted Orchestration',
+    desc: 'HexStrike helps operators select tools, preserve context, troubleshoot failures, collect evidence, and turn lab results into structured reports.',
   },
   {
-    icon: '🔗',
     title: '150+ Security Tools',
     desc: 'Nmap, Metasploit, Burp Suite, Hydra, SQLMap, Aircrack-ng, Hashcat, Ghidra, CrackMapExec, Shodan, theHarvester — all orchestrated by natural language prompts.',
   },
   {
-    icon: '🤖',
     title: 'Multi-LLM Support',
     desc: 'Works with Gemini CLI, OpenAI Codex, Cursor (MCP), and local Ollama models. Pick the right engine for the engagement — cloud speed or air-gapped privacy.',
   },
   {
-    icon: '⚡',
-    title: 'Full Kill Chain Coverage',
-    desc: 'Recon → Enumeration → Exploitation → Lateral Movement → Reporting. A single natural-language goal drives the entire engagement, phase by phase.',
+    title: 'Assessment Workflow Coverage',
+    desc: 'Recon, enumeration, validation, evidence collection, remediation notes, and reporting are organized into repeatable, approval-gated lab workflows.',
   },
   {
-    icon: '🛡️',
     title: 'Real Error Recovery',
-    desc: 'When tools fail, HexStrike diagnoses the problem, adjusts the approach, and retries — exactly like a skilled human operator would.',
+    desc: 'When tools fail, HexStrike helps diagnose the problem, compare alternatives, and document the recovery path for review.',
   },
   {
-    icon: '📋',
     title: 'Structured Reporting',
     desc: 'Produces executive summaries, technical findings with CVSS scores, evidence bundles, and prioritized remediation recommendations automatically.',
   },
@@ -39,7 +33,6 @@ const FEATURES = [
 const SECTIONS = [
   {
     num: '01',
-    emoji: '🚀',
     title: 'Getting Started',
     desc: 'What HexStrike is, installation on Kali Linux, and how it compares to HackerAI and other AI security tools.',
     to: '/docs/getting-started/overview',
@@ -51,7 +44,6 @@ const SECTIONS = [
   },
   {
     num: '02',
-    emoji: '🤖',
     title: 'LLM Integrations',
     desc: 'Connect HexStrike to Gemini CLI, OpenAI Codex, Cursor MCP, or local Ollama models for air-gapped labs.',
     to: '/docs/llm-integrations/overview',
@@ -64,7 +56,6 @@ const SECTIONS = [
   },
   {
     num: '03',
-    emoji: '🔍',
     title: 'Recon & OSINT',
     desc: 'Passive intelligence with Shodan integration and email-to-full-exposure-map OSINT workflows.',
     to: '/docs/recon-osint/shodan',
@@ -75,7 +66,6 @@ const SECTIONS = [
   },
   {
     num: '04',
-    emoji: '⚔️',
     title: 'Attack Techniques',
     desc: 'Network, web, wireless, SSH, SMB, Active Directory, ADCS ESC8, and combined web+cloud attack walkthroughs.',
     to: '/docs/attack-techniques/network-discovery',
@@ -89,9 +79,8 @@ const SECTIONS = [
   },
   {
     num: '05',
-    emoji: '🔑',
     title: 'Password Recovery',
-    desc: 'AI-orchestrated recovery for ZIP, PDF, Office documents. Brute force, wordlists, modern cracking methods.',
+    desc: 'Authorized recovery labs and credential-strength audits for ZIP, PDF, Office documents, WiFi, SSH, and exposed credentials.',
     to: '/docs/password-recovery/modern-cracking',
     links: [
       { label: 'Overview', to: '/docs/password-recovery/modern-cracking' },
@@ -102,12 +91,11 @@ const SECTIONS = [
   },
   {
     num: '06',
-    emoji: '📋',
     title: 'Full PT Walkthroughs',
-    desc: 'End-to-end lab engagements: full subnet compromise, black-box Active Directory, web+cloud — all AI-driven.',
+    desc: 'End-to-end lab engagements: subnet assessment, black-box Active Directory validation, and web+cloud evidence workflows.',
     to: '/docs/full-pt-walkthroughs/full-pt-guide',
     links: [
-      { label: 'Full PT Guide', to: '/docs/full-pt-walkthroughs/full-pt-guide' },
+      { label: 'Assessment Guide', to: '/docs/full-pt-walkthroughs/full-pt-guide' },
       { label: 'Lab Setup', to: '/docs/full-pt-walkthroughs/lab-setup' },
       { label: 'Full Subnet', to: '/docs/full-pt-walkthroughs/full-subnet' },
       { label: 'Black-Box AD', to: '/docs/full-pt-walkthroughs/black-box-ad' },
@@ -119,17 +107,17 @@ const STEPS = [
   {
     n: '1',
     title: 'Write a Goal',
-    desc: 'Describe your objective in plain language — "Scan this subnet and find exploitable services" or "Crack this PDF password."',
+    desc: 'Describe your objective in plain language — "Assess this subnet and summarize risk" or "Recover this PDF I own."',
   },
   {
     n: '2',
     title: 'HexStrike Plans',
-    desc: 'The LLM reasons about the goal, selects the right tools, sequences the attack chain, and handles dependencies automatically.',
+    desc: 'The LLM proposes tools and sequencing for operator review, then helps keep results and evidence organized.',
   },
   {
     n: '3',
     title: 'Tools Execute',
-    desc: 'HexStrike fires the tools, parses results, recovers from errors, and feeds findings back into the LLM for the next decision.',
+    desc: 'HexStrike executes approved tool calls, parses results, and feeds findings back into the workflow for the next reviewed step.',
   },
   {
     n: '4',
@@ -144,9 +132,9 @@ export default function Home() {
   return (
     <Layout
       title="AI-Powered Penetration Testing Orchestrator"
-      description="HexStrike AI — bridge LLMs to 150+ security tools via MCP. Autonomous penetration testing with Gemini, OpenAI, Cursor, and Ollama."
+      description="HexStrike AI — bridge LLMs to 150+ security tools via MCP for authorized lab assessment, evidence collection, troubleshooting, and reporting."
     >
-      {/* ── HERO ─────────────────────────────────────────────────────── */}
+      {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.badge}>
@@ -175,7 +163,7 @@ export default function Home() {
               <span className={styles.terminalTitle}>hexstrike — kali@lab</span>
             </div>
             <div className={styles.terminalLine}>
-              <span className={styles.terminalPrompt}>❯ </span>
+              <span className={styles.terminalPrompt}>$ </span>
               <span className={styles.terminalCmd}>gemini --mcp hexstrike</span>
             </div>
             <div className={styles.terminalLine}>
@@ -185,11 +173,11 @@ export default function Home() {
             </div>
             <div className={styles.terminalLine}>&nbsp;</div>
             <div className={styles.terminalLine}>
-              <span className={styles.terminalPrompt}>❯ </span>
+              <span className={styles.terminalPrompt}>$ </span>
               <span className={styles.terminalCmd}>
-                Scan 192.168.1.0/24, find all services,
+                Assess 192.168.1.0/24, find all services,
                 <br />
-                &nbsp;&nbsp;exploit the highest-risk vulnerabilities, get root.
+                &nbsp;&nbsp;prioritize findings, collect evidence.
               </span>
             </div>
             <div className={styles.terminalLine}>
@@ -204,12 +192,12 @@ export default function Home() {
             </div>
             <div className={styles.terminalLine}>
               <span className={styles.terminalWarn}>
-                [!] SSH auth failed — retrying with credential list...
+                [!] SSH auth failed — recording credential-risk evidence...
               </span>
             </div>
             <div className={styles.terminalLine}>
               <span className={styles.terminalSuccess}>
-                [✓] root@192.168.1.42 — shell obtained
+                [OK] report.md — evidence and remediation drafted
               </span>
               <span className={styles.cursor} />
             </div>
@@ -218,13 +206,13 @@ export default function Home() {
           {/* CTAs */}
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/full-pt-walkthroughs/full-pt-guide">
-              ▶ Full PT Guide
+              Assessment Guide
             </Link>
             <Link className={styles.btnSecondary} to="/docs/getting-started/installation">
-              📦 Installation
+              Installation
             </Link>
             <Link className={styles.btnSecondary} to="/docs/">
-              📖 All Docs
+              All Docs
             </Link>
           </div>
 
@@ -233,7 +221,7 @@ export default function Home() {
             {[
               { num: '150+', label: 'Security Tools' },
               { num: '21',   label: 'Guides' },
-              { num: '6',    label: 'LLM Clients' },
+              { num: '4',    label: 'LLM Clients' },
               { num: '6',    label: 'Attack Phases' },
             ].map((s) => (
               <div key={s.label} className={styles.statItem}>
@@ -245,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── AUTHOR ───────────────────────────────────────────────────── */}
+      {/* AUTHOR */}
       <section className={styles.authorSection}>
         <div className="container">
           <div className={styles.authorCard}>
@@ -267,7 +255,7 @@ export default function Home() {
             <div className={styles.authorDonate}>
               <p className={styles.donateText}>If this research saves you time or helps your work —</p>
               <a href="https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD" target="_blank" rel="noopener noreferrer" className={styles.donateBtn}>
-                ☕ Buy Me a Coffee
+                Support This Project
               </a>
               <p className={styles.donateNote}>Keep the lab running</p>
             </div>
@@ -275,19 +263,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHY HEXSTRIKE ────────────────────────────────────────────── */}
+      {/* WHY HEXSTRIKE */}
       <section className={styles.whySection}>
         <div className="container">
           <p className={styles.sectionLabel}>Why HexStrike</p>
-          <h2 className={styles.sectionTitle}>Not a scanner. An operator.</h2>
+          <h2 className={styles.sectionTitle}>Not a scanner. An orchestration layer.</h2>
           <p className={styles.sectionSubtitle}>
-            Traditional tools execute one command at a time. HexStrike reasons about the
-            entire engagement, adapts to failures, and drives the attack chain to completion.
+            Traditional tools execute one command at a time. HexStrike helps coordinate
+            approved tool execution, troubleshooting, evidence collection, and reporting.
           </p>
           <div className={styles.featureGrid}>
             {FEATURES.map((f) => (
               <div key={f.title} className={styles.featureCard}>
-                <span className={styles.featureIcon}>{f.icon}</span>
                 <h3>{f.title}</h3>
                 <p>{f.desc}</p>
               </div>
@@ -296,20 +283,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── DOCUMENTATION SECTIONS ───────────────────────────────────── */}
+      {/* DOCUMENTATION SECTIONS */}
       <section className={styles.sectionsArea}>
         <div className="container">
           <p className={styles.sectionLabel}>Documentation</p>
           <h2 className={styles.sectionTitle}>Everything you need</h2>
           <p className={styles.sectionSubtitle}>
-            From first installation to full Active Directory compromise —
-            every step covered with real lab walkthroughs.
+            From first installation to controlled lab validation —
+            each workflow is documented with practical examples and evidence.
           </p>
           <div className={styles.sectionsGrid}>
             {SECTIONS.map((s) => (
               <Link key={s.num} className={styles.sectionCard} to={s.to}>
                 <div className={styles.sectionCardTop}>
-                  <span className={styles.sectionCardEmoji}>{s.emoji}</span>
                   <div>
                     <div className={styles.sectionCardNum}>{s.num}</div>
                     <h3>{s.title}</h3>
@@ -329,7 +315,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ─────────────────────────────────────────────── */}
+      {/* HOW IT WORKS */}
       <section className={styles.howSection}>
         <div className="container">
           <p className={styles.sectionLabel}>How It Works</p>
@@ -349,17 +335,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA BANNER ───────────────────────────────────────────────── */}
+      {/* CTA BANNER */}
       <section className={styles.ctaBanner}>
         <div className="container">
-          <h2>Ready to start your first AI-driven pentest?</h2>
-          <p>Follow the complete guide — from installation to full lab compromise.</p>
+          <h2>Ready to start your first AI-assisted lab assessment?</h2>
+          <p>Follow the complete guide — from installation to scoped evidence collection and reporting.</p>
           <div className={styles.ctaRow}>
             <Link className={styles.btnPrimary} to="/docs/getting-started/installation">
-              ▶ Get Started
+              Get Started
             </Link>
             <Link className={styles.btnSecondary} to="/docs/full-pt-walkthroughs/full-pt-guide">
-              📋 Full PT Guide
+              Assessment Guide
             </Link>
           </div>
         </div>

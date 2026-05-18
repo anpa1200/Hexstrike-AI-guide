@@ -61,6 +61,6 @@ All techniques are demonstrated in authorized lab environments.
 | GitHub | [github.com/anpa1200](https://github.com/anpa1200) |
 | Contact | [1200km@gmail.com](mailto:1200km@gmail.com) |
 
-If this research is useful to you — **[buy me a coffee ☕](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)** to keep the lab running.
+If this research is useful to you — **[support this project](https://www.paypal.com/donate/?business=W3XDKS7J9XTCG&no_recurring=0&item_name=Buy+me+a+coffee+%28PayPal%29+%E2%80%94+Keep+the+lab+running&currency_code=USD)** to keep the lab running.
 
 → [Full author page & support](/docs/about)
