@@ -116,7 +116,7 @@ const config = {
           },
           {
             href: 'https://anpa1200.github.io/',
-            label: 'All Projects',
+            label: 'Main Page',
             position: 'right',
             className: 'navbar-portfolio-btn',
           },
