@@ -19,7 +19,7 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: 'https://anpa1200.github.io',
+  url: 'https://1200km.com',
   baseUrl: '/Hexstrike-AI-guide/',
 
   organizationName: 'anpa1200',
@@ -135,7 +135,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://anpa1200.github.io/',
+            href: 'https://1200km.com/',
             label: 'Main Page',
             position: 'right',
             className: 'navbar-portfolio-btn',
