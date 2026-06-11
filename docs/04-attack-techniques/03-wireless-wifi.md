@@ -21,7 +21,7 @@ Using Aircrack-ng with HexStrike-AI and Gemini-CLI
 
 #### Using Aircrack-ng with HexStrike-AI and Gemini-CLI
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/0-Gzu2GZ7sMF5IJg52.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — Using Aircrack-ng with HexStrike-AI and Gemini-CLI](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/0-Gzu2GZ7sMF5IJg52.png)
 
 ### Introduction
 
@@ -113,7 +113,7 @@ Key principle:
     Do it agressive, Keep scans short with time out, stop on success or timeout, and produce a brief report  
     with results and remediation.
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-lAvwkgVq89m2Uzb-bTV14A.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — Prompt](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-lAvwkgVq89m2Uzb-bTV14A.png)
 
 * * *
 
@@ -124,7 +124,7 @@ Key principle:
   * HexStrike queried the system for wireless interfaces.
   * **Result:** `wlan0` was identified as the only usable wireless interface (RTL8821AU chipset).
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-BA-PixA3rZED8oQKzThyzQ.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 1\. Interface discovery](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-BA-PixA3rZED8oQKzThyzQ.png)
 
 * * *
 
@@ -134,7 +134,7 @@ Key principle:
   * Warnings appeared about `NetworkManager` and `wpa_supplicant`, but monitor mode was enabled successfully.
   * **Result:** `wlan0` entered monitor mode and was usable for capture/injection.
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-uemVkzoYmBD3zXbt4ojI9Q.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 2\. Monitor mode enablement](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-uemVkzoYmBD3zXbt4ojI9Q.png)
 
 * * *
 
@@ -144,7 +144,7 @@ Key principle:
   * Multiple APs were discovered, including **multiple BSSIDs broadcasting the same ESSID:**`**Andrey**` (typical for mesh / multi-band APs).
   * Encryption observed: **WPA2-PSK**.
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-HShvm8_-v2S3fW4QadzsuQ.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 3\. Initial wireless scan](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-HShvm8_-v2S3fW4QadzsuQ.png)
 
 * * *
 
@@ -177,7 +177,7 @@ Key principle:
   * `airodump-ng` ran in the background.
   * `aireplay-ng` deauthentication was executed against an active client.
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-4Oxj0b4jN41LpMkuoYqpAw.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 6\. Handshake capture](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-4Oxj0b4jN41LpMkuoYqpAw.png)
 
   * This time, the deauth succeeded.
   * **Result:** A valid **WPA2 handshake was captured**.
@@ -189,7 +189,7 @@ Verification:
   * `aircrack-ng handshake_capture_3-01.cap`
   * Output confirmed: **“WPA (1 handshake)”**
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-1jpmbN-iLA2BybvP-Hw69Q.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 6\. Handshake capture (view 2)](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-1jpmbN-iLA2BybvP-Hw69Q.png)
 
 * * *
 
@@ -207,7 +207,7 @@ Verification:
     
      A0542553383#
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-Tui0PlJVq-ocozToiX6K9g.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — 7\. Offline cracking](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-Tui0PlJVq-ocozToiX6K9g.png)
 
 * * *
 
@@ -261,7 +261,7 @@ Verification:
   * Logical pivoting
   * Clean reporting
 
-![](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-tMeUNlwRgYEngnN4-sC76A.png)
+![AI driven wireless penetration testing one promt Wi-Fi cracking — Key technical observations](/img/hexstrike-articles/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking/1-tMeUNlwRgYEngnN4-sC76A.png)
 
 ### This was **not** a single-command crack — it was a **full, adaptive PT flow**.
 

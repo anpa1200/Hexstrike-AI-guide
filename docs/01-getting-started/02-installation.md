@@ -139,11 +139,11 @@ HexStrike is packaged in Kali 2025.4, so installation is straightforward. Update
     sudo apt update  
     sudo apt install hexstrike-ai
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-9-QmXpnALbdVDLB_hGXQaw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Installation Instructions](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-9-QmXpnALbdVDLB_hGXQaw.png)
 
 This will pull in all required dependencies (Python3, `python3-mcp`, `requests`, etc.) automatically. If a dependency fails, you can try installing missing Python libraries manually or use pip inside a virtualenv (the GitHub repo also provides a `requirements.txt` and demo scripts).
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-l23WMEIE4xiyadfaoh1ZEQ.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Installation Instructions (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-l23WMEIE4xiyadfaoh1ZEQ.png)
 
 **Browser Agent (optional):** To use HexStrike’s advanced headless-browser module, install Chrome or Chromium and its WebDriver. For example:
 
@@ -154,7 +154,7 @@ This will pull in all required dependencies (Python3, `python3-mcp`, `requests`,
 
 to verify availability. Also, ensure essential tools are installed: run commands like `which nmap gobuster nuclei`. If any are missing, install them via `apt` (e.g., `sudo apt install nmap gobuster nuclei`). HexStrike will warn of “Security Tools Not Found” if required tools aren’t in your PATH.
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-zXA5gMrUB4RhuxIIMDAG1A.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Installation Instructions (view 3)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-zXA5gMrUB4RhuxIIMDAG1A.png)
 
 * * *
 
@@ -173,20 +173,20 @@ Once installed, launch the HexStrike server. In Kali, you can run the provided P
     
      hexstrike_server --port 8090
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-b8i-prJb8660_i1NmgN7LA.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Starting HexStrike Server](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-b8i-prJb8660_i1NmgN7LA.png)
 
 A successful start will print info like “Server starting on 127.0.0.1:8888”. For the first-time setup, you may append `--debug` to get verbose logging. After starting, you can verify the server is up by checking its health endpoint:
     
     
     curl http://localhost:8888/health
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-VMHJAFtlsXUb9PSlYIpRuw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Starting HexStrike Server (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-VMHJAFtlsXUb9PSlYIpRuw.png)
 
 * * *
 
 ### Connecting to Codex (OpenAI API)
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-1KtMBHg7ApS_b5Ih.jpeg)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Codex (OpenAI API)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-1KtMBHg7ApS_b5Ih.jpeg)
 
 HexStrike itself does not bundle an LLM; you connect it to an external model via the MCP interface. To use **OpenAI’s ChatGPT** , obtain an API key from OpenAI and set it in your environment. For example:
     
@@ -198,7 +198,7 @@ You can find/create your OpenAI API Key here:
     
     https://platform.openai.com/api-keys
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-L4ngx1RnfNGqwxR8uHzaTQ.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Codex (OpenAI API) (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-L4ngx1RnfNGqwxR8uHzaTQ.png)
 
 HexStrike (or any LLM client you use) will use this key to call the ChatGPT API. You may need to install the OpenAI Python library (`pip install openai`If you plan to write custom scripts or use an LLM shell. With the key set, HexStrike can issue ChatCompletion requests to OpenAI’s servers. (Ensure your Kali VM has internet access; check firewall/proxy settings if needed.)
 
@@ -216,7 +216,7 @@ Verify:
     node -v  
     npm -v
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-spf41MjRaPcLPqls4gXk4Q.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Install prerequisites (Node.js + npm)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-spf41MjRaPcLPqls4gXk4Q.png)
 
 #### Install Codex CLI (global)
 
@@ -230,7 +230,7 @@ Verify installation:
     
     codex --version
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-OPnD_YzKvUQyzv4P8jeLEw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Install Codex CLI (global)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-OPnD_YzKvUQyzv4P8jeLEw.png)
 
 #### First run (and sign-in)
 
@@ -239,7 +239,7 @@ Start Codex:
     
     codex
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-KDE_zIijv-sMOxHIW0Bp_g.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — First run (and sign-in)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-KDE_zIijv-sMOxHIW0Bp_g.png)
 
 **OpenAI Codex (v0.77.0)**
 
@@ -252,7 +252,7 @@ If you are on a headless box / SSH session and browser login is awkward, use dev
     
     codex login --device-auth
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-tzHK3BwTsfrVyDrDsQGsWQ.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — First run (and sign-in) (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-tzHK3BwTsfrVyDrDsQGsWQ.png)
 
 #### Add HexStrike as an MCP server in Codex (SSH → MCP STDIO)
 
@@ -317,7 +317,7 @@ Inside the Codex UI, run:
     
     /mcp
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-Y29vz5e7sFUWpiHjEnWYXQ.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Verify MCP is enabled inside Codex](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-Y29vz5e7sFUWpiHjEnWYXQ.png)
 
 MCP Tools → `hexstrike`
 
@@ -346,13 +346,13 @@ Practical first test (safe, non-destructive):
     
     › @hexstrike Do full pentest with report to my own lab <target-ip>
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-p-ZinESQxzGfzx-fSgOAXg.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Using HexStrike tools from Codex](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-p-ZinESQxzGfzx-fSgOAXg.png)
 
 * * *
 
 ### Connecting to Google Gemini
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-wUYpdgCXk2xGCpa4.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Google Gemini](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-wUYpdgCXk2xGCpa4.png)
 
 For Google’s Gemini (via the Google GenAI API), the setup is similar. You’ll need a Google Cloud project with the Gemini API enabled and an API key. Then set:
     
@@ -387,7 +387,7 @@ Alternatively, you can use **gemini-cli** , Google’s open-source LLM CLI. In K
     
     sudo apt install gemini-cli
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-W20ikvwVkfjhYb04NL4sTg.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Google Gemini (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-W20ikvwVkfjhYb04NL4sTg.png)
 
 This provides a `gemini` command. To integrate HexStrike, edit the Gemini settings file (`~/.gemini/settings.json`) and add an MCP server entry. For example:
 
@@ -416,7 +416,7 @@ This tells Gemini CLI to launch the HexStrike MCP client (via `hexstrike_mcp.py`
     
      gemini-cli "Say hello"
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-QM4eIoKdaJzDWg7IH1uaiA.png)![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-lNd6J7vcUn5dqud8f-6JUg.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Google Gemini (view 3)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-QM4eIoKdaJzDWg7IH1uaiA.png)![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Connecting to Google Gemini (view 4)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-lNd6J7vcUn5dqud8f-6JUg.png)
 
 Other Configuration Files
 
@@ -428,7 +428,7 @@ HexStrike doesn’t have a heavy config file by default — most settings are vi
 
 * * *
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-uSyCz0iZLRSSUQA6.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Configure Cursor MCP to talk to HexStrike](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/0-uSyCz0iZLRSSUQA6.png)
 
 **HexStrike + Cursor (MCP): From Single Target → Full Subnet Compromise (Lab PT Walkthrough**)
 
@@ -467,7 +467,7 @@ This mirrors the working MCP pattern used with other LLM clients (same `hexstrik
 
 **Or in a GUI:**
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-UMEPqpkQkAg4_K8ju1U_EQ.png)![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-HGSKEeb5u6_w5x_k9JU6Gw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Minimal mcp.json for HexStrike](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-UMEPqpkQkAg4_K8ju1U_EQ.png)![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Minimal mcp.json for HexStrike (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-HGSKEeb5u6_w5x_k9JU6Gw.png)
 
 * * *
 
@@ -481,7 +481,7 @@ You should now be able to reference the MCP tool namespace (your naming may show
   * confirm the JSON is valid
   * confirm the `hexstrike_mcp.py` path is correct
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-Px3oIaX6KB5BtO5nxOfzeA.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Validate the connection inside Cursor](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-Px3oIaX6KB5BtO5nxOfzeA.png)
 
 * * *
 
@@ -489,7 +489,7 @@ You should now be able to reference the MCP tool namespace (your naming may show
 
 For this guide, I run MetasploitableVM:
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-FbEXfbZ436LN5bUOcMw-sg.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — HexStrike real use light example. A Full-Lifecycle Pentesting Guide…](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-FbEXfbZ436LN5bUOcMw-sg.png)
 
 #### Phase 1: Reconnaissance (Attack Surface Mapping)
 
@@ -507,11 +507,11 @@ The goal is to let the **IntelligentDecisionEngine** identify the most vulnerabl
     and categorize each service by its 'Exploitation Confidence'   
     (High/Medium/Low) based on known vulnerabilities."
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-4VrS7Sde8Ec9dLX_yc5UoA.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Phase 1: Reconnaissance (Attack Surface Mapping)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-4VrS7Sde8Ec9dLX_yc5UoA.png)
 
   * **What HexStrike does:** It will autonomously run `nmap -sV` and use its **CVEIntelligenceManager** to cross-reference every version it finds against real-time vulnerability data.
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-IDdWLqrPJDICmEEgXct1vw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Phase 1: Reconnaissance (Attack Surface Mapping) (view 2)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-IDdWLqrPJDICmEEgXct1vw.png)
 
 * * *
 
@@ -525,7 +525,7 @@ HexStrike excels at finding “chainable” flaws that manual testers might miss
   * “Analyze the FTP (port 21) and Samba (ports 139/445) services on **<target-ip>**. Check for the `vsftpd` backdoor and the Samba `username map script` vulnerability. If confirmed, show me the plan to gain a root shell."
   * **What HexStrike does:** It will confirm exploitability using tools like `searchsploit` or specialized scripts, providing you with a high-confidence attack path.
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-vW9EPQDlODRWybqv8soy5w.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Phase 2: Vulnerability Discovery (The “Hit List”)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-vW9EPQDlODRWybqv8soy5w.png)
 
 * * *
 
@@ -538,7 +538,7 @@ In this phase, HexStrike translates your intent into precise, technical executio
   * **Actionable Prompt:**
   * “Exploit the Samba vulnerability on **<target-ip>**. Use a reverse shell payload targeting my local IP on port 4444. Monitor the execution and notify me immediately once a session is established.”
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-a9GE2oK_iFVIiv77Udwubw.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Phase 3: Exploitation (Gaining Access)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-a9GE2oK_iFVIiv77Udwubw.png)
 
   * **What HexStrike does:** It manages the RPC API for Metasploit, setting all required options (RHOST, LHOST, Payload) and executing the exploit autonomously.
 
@@ -556,7 +556,7 @@ Once you have access, use HexStrike to pillage the target for credentials and se
   * “Now that we have a shell, dump the `/etc/shadow` file and use the **AIExploitGenerator** to attempt to crack the hashes for the 'root' and 'msfadmin' users. Also, search the filesystem for any `.php` or `.inc` files containing database credentials."
   * **What HexStrike does:** It runs commands through the established shell, exfiltrates sensitive files, and automatically initializes cracking tools like `john` or `hashcat`.
 
-![](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-h1b-Lo_1GbW980jiUJPNuQ.png)
+![HexStrike AI install configure and run MCP with Gemini OpenAI Cursor Llama — Phase 4: Post-Exploitation (Living off the Land)](/img/hexstrike-articles/hexstrike-ai-install-configure-and-run-mcp-with-gemini-openai-cursor-llama/1-h1b-Lo_1GbW980jiUJPNuQ.png)
 
 * * *
 

@@ -14,7 +14,7 @@ A practical lab comparison: Why orchestration quality beats raw model IQ in real
 
 #### **A practical lab comparison: Why orchestration quality beats raw model IQ in real-world workflows.**
 
-![](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1--OVxdqqlgwXjJbmbKplryA.png)
+![HexStrike Gemini vs hackerai ops copilot vs chatbot with tools — A practical lab comparison: Why orchestration quality beats raw model IQ in rea…](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1--OVxdqqlgwXjJbmbKplryA.png)
 
 * * *
 
@@ -27,7 +27,7 @@ A practical lab comparison: Why orchestration quality beats raw model IQ in real
   * **Operational Style:** It behaves more like a **consultant**. It is excellent at summarizing data and explaining _why_ a vulnerability might exist, but as your article notes, it often lacks the “field-operator” grit needed to handle low-level execution failures or complex tool-chaining without human intervention.
   * **Best Use Case:** Rapid “first-pass” vulnerability scanning, automated reporting, and acting as a sounding board for junior testers who need a checklist of what to try next.
 
-![](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1-uvXFrZpuLg42yWV2T8eu1A.png)
+![HexStrike Gemini vs hackerai ops copilot vs chatbot with tools — What is HackerAI?](/img/hexstrike-articles/hexstrike-gemini-vs-hackerai-ops-copilot-vs-chatbot-with-tools/1-uvXFrZpuLg42yWV2T8eu1A.png)
 
 #### I tested **HackerAI agent** on similar objectives and compared it to **HexStrike + Gemini CLI** workflows I’ve already written about:
 

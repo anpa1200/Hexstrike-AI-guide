@@ -18,7 +18,7 @@ A Practical, End-to-End Guide to Modern Web Application Penetration Testing Usin
 
 #### A Practical, End-to-End Guide to Modern Web Application Penetration Testing Using LLM-Orchestrated Tooling
 
-![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/0-QlOq59ynEM_6OY_w.png)
+![AI driven web application pentesting with HexStrike AI — A Practical, End-to-End Guide to Modern Web Application Penetration Testing Using LLM-O…](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/0-QlOq59ynEM_6OY_w.png)
 
 ### Introduction
 
@@ -104,13 +104,13 @@ Think of it as:
   * Gemini CLI (or ChatGPT MCP)
   * Browser access enabled (for manual validation)
 
-![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-03du2o2ZgcpRITFnmeDeMw.png)
+![AI driven web application pentesting with HexStrike AI — Environment](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-03du2o2ZgcpRITFnmeDeMw.png)
 
 #### Target
 
 OWASPBWA_VM: [google-gruyere.appspot.com/](<https://google-gruyere.appspot.com/>)
 
-![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-GzcmF2-nkUO0FzT-4CvlfA.png)![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-T4VB80H_LeVkS7ipIp7ASA.png)
+![AI driven web application pentesting with HexStrike AI — Target](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-GzcmF2-nkUO0FzT-4CvlfA.png)![AI driven web application pentesting with HexStrike AI — Target (view 2)](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-T4VB80H_LeVkS7ipIp7ASA.png)
     
     
     http://192.168.1.242/1142014131/
@@ -137,7 +137,7 @@ Gruyere contains **deliberate vulnerabilities** , including:
         - Check for insecure storage or leakage in user content  
         - Report findings with POCs and mitigation tips
 
-![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ol8xa3_xvWcXPM8HnyUhkA.png)
+![AI driven web application pentesting with HexStrike AI — Prompt](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ol8xa3_xvWcXPM8HnyUhkA.png)
 
 * * *
 
@@ -363,7 +363,7 @@ Users could:
       The web application is vulnerable to several high-severity vulnerabilities that could be exploited by an attacker to compromise the application and its data. It is recommended that the identified  
       vulnerabilities be remediated as soon as possible.
 
-![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ay58IPOKh9C-J1Hpb43g3g.png)![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-lrC-m4N5McfgQXj8xpIjhA.png)![](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ZeJvlrCaOAT1hr401Iq0Ng.png)
+![AI driven web application pentesting with HexStrike AI — Step 7: Exploitation Summary](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ay58IPOKh9C-J1Hpb43g3g.png)![AI driven web application pentesting with HexStrike AI — Step 7: Exploitation Summary (view 2)](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-lrC-m4N5McfgQXj8xpIjhA.png)![AI driven web application pentesting with HexStrike AI — Step 7: Exploitation Summary (view 3)](/img/hexstrike-articles/ai-driven-web-application-pentesting-with-hexstrike-ai/1-ZeJvlrCaOAT1hr401Iq0Ng.png)
 
 * * *
 

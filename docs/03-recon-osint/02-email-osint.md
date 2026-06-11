@@ -18,7 +18,7 @@ Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks 
 
 #### Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks like in practice, and how to publish a _real_ report without doxxing yourself or your family.
 
-![](/img/hexstrike-articles/hexstrike-cursor-for-osint-from-one-email-to-a-full-exposure-map/1-nJTueyo4IxR8Nw8jYLDS-g.png)
+![HexStrike Cursor for OSINT from one email to a full exposure map — Why OSINT is harder than “hack the box,” what an AI-assisted workflow looks l…](/img/hexstrike-articles/hexstrike-cursor-for-osint-from-one-email-to-a-full-exposure-map/1-nJTueyo4IxR8Nw8jYLDS-g.png)
 
 I started OSINT on myself from a single email address. Within a short time, I could correlate a surprising amount of information.
 

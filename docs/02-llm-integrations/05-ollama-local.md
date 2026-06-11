@@ -19,7 +19,7 @@ How to wire Ubuntu (Ollama) to Kali (HexStrike) with MCP over SSH, what models a
 
 #### How to wire Ubuntu (Ollama) to Kali (HexStrike) with MCP over SSH, what models actually behaved (Qwen3 8B/14B), and when you should move to GPU or cloud models.
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-FEND4twn4pGNlLPNTCr6zQ.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — How to wire Ubuntu (Ollama) to Kali (HexStrike) with…](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-FEND4twn4pGNlLPNTCr6zQ.png)
 
 Below is a practical, end-to-end setup that keeps the **LLM on Ubuntu (host)** and runs **HexStrike on Kali (VM)** , then bridges them so your local model can “drive” HexStrike tool calls.
 
@@ -126,7 +126,7 @@ Latitude 7420 is typically CPU-bound for local LLMs (often Intel i5/i7 + integra
 
 Why: HexStrike can run heavy tools; keeping Kali at 2 vCPU prevents it from stealing cycles from the host LLM.
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-PdA_2FAMUoTEwkHamX9Atg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 1) VM tuning for Dell Latitude 7420 (performance-firs…](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-PdA_2FAMUoTEwkHamX9Atg.png)
 
 * * *
 
@@ -139,14 +139,14 @@ Why: HexStrike can run heavy tools; keeping Kali at 2 vCPU prevents it from stea
     sudo apt install -y curl  
     curl -fsSL https://ollama.com/install.sh | sh
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2v6HvBv_itqU1VRD-IyCqQ.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 2.1 Install Ollama](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2v6HvBv_itqU1VRD-IyCqQ.png)
 
 Verify:
     
     
     ollama --version
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-sBh84Ho6RiAjAkRfuSHWEg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 2.1 Install Ollama (view 2)](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-sBh84Ho6RiAjAkRfuSHWEg.png)
 
 #### 2.2 Pull a laptop-friendly model
 
@@ -166,14 +166,14 @@ Example:
     # or smaller:  
     ollama pull qwen3:8b
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-UTLS3B91WoZ4yTr6AbSK3A.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 2.2 Pull a laptop-friendly model](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-UTLS3B91WoZ4yTr6AbSK3A.png)
 
 Run a quick test:
     
     
     ollama run qwen3:14b "Explain what nmap -sV does in one paragraph."
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-Y8g7V1hslZGKDY93iJitDw.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 2.2 Pull a laptop-friendly model (view 2)](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-Y8g7V1hslZGKDY93iJitDw.png)
 
 #### 2.3 Laptop optimization (recommended defaults)
 
@@ -208,7 +208,7 @@ Confirm tools exist:
     hexstrike_mcp -h  
     hexstrike_server -h
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-KJZnnlLp2poewZqk4d3aPw.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 3.1 Install](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-KJZnnlLp2poewZqk4d3aPw.png)
 
 (These flags and defaults are documented in Kali’s package page.) ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
 
@@ -221,7 +221,7 @@ Run in a dedicated terminal (or `tmux`):
 
 You should see it start on `127.0.0.1:8888`. ([Kali Linux](<https://www.kali.org/tools/hexstrike-ai/> "hexstrike-ai | Kali Linux Tools"))
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-LVV55RZI-QcrrVU_la9fJg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 3.2 Start HexStrike API server (binds to localhost on…](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-LVV55RZI-QcrrVU_la9fJg.png)
 
 * * *
 
@@ -241,7 +241,7 @@ Inside Kali:
     
     ip a
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-w6LebpT1UBDVkAuwWuSPfg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 4.1 VM networking recommendation](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-w6LebpT1UBDVkAuwWuSPfg.png)
 
 Note the **host-only** IP (example: `172.16.59.132`).
 
@@ -257,7 +257,7 @@ From Ubuntu, confirm SSH works:
     
     ssh <your_user>@<kali-ip>
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2Qj7uyDh8SLZndzkTN05zg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 4.2 Enable SSH on Kali](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-2Qj7uyDh8SLZndzkTN05zg.png)
 
 * * *
 
@@ -286,7 +286,7 @@ Ensure it’s in PATH:
     export PATH="$PATH:$(go env GOPATH)/bin"  
     mcphost -h
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1--zp6omdM2HI_v9Y6cHQeeA.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 5.1 Install Go + mcphost](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1--zp6omdM2HI_v9Y6cHQeeA.png)
 
 * * *
 
@@ -305,7 +305,7 @@ Test:
     
     ssh -i ~/.ssh/<your_key> <your_user>@<kali-ip> "echo ok"
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-WGcR15hfphnOYHTo7pXrSA.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 6.1 Set up SSH keys (Ubuntu → Kali)](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-WGcR15hfphnOYHTo7pXrSA.png)
 
 ### 6.2 Disable MOTD/banner output for this Kali user (important)
 
@@ -367,7 +367,7 @@ Why this works:
     /servers  
     /tools
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-L7hFrkmDBij7g2FTP-iI4g.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 7.1 Test it:](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-L7hFrkmDBij7g2FTP-iI4g.png)
 
 * * *
 
@@ -378,7 +378,7 @@ Why this works:
     
     mcphost --debug -m ollama:qwen3:8b -p '@hexstrike list all available tools'
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-9kjK-2jyPOUbxIDOSi36mg.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 8.1 Plain LLM (no tools), mcphost one-liner](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-9kjK-2jyPOUbxIDOSi36mg.png)
 
 #### 8.2 Tool-using prompt (HexStrike via MCP)
 
@@ -387,7 +387,7 @@ Give the model a prompt that clearly authorizes scope and requests HexStrike too
     
     mcphost --debug -m ollama:qwen3:14b -p '@hexstrike: You must call exactly one tool: hexstrike__nmap_scan. Scan network 192.168.1.0/24. Use minimal flags for speed (no scripts). After the tool returns, output a 2-column table: IP | Open Ports. Do not call any other tools.'
 
-![](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-aIvIkyETWgXm6Jf3SmruZQ.png)
+![HexStrike MCP orchestration with Ollama Ubuntu host Kali VM SSH bridging and performance — 8.2 Tool-using prompt (HexStrike via MCP)](/img/hexstrike-articles/hexstrike-mcp-orchestration-with-ollama-ubuntu-host-kali-vm-ssh-bridging-and-performance/1-aIvIkyETWgXm6Jf3SmruZQ.png)
 
 * * *
 

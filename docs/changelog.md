@@ -5,7 +5,24 @@ sidebar_position: 100
 
 # Changelog
 
-## May 2026 — v2.2 (Current)
+## May 2026 — v2.3 (Current)
+
+**Content synchronization**
+- Homepage counters corrected to 4 documented LLM clients
+- Homepage "operator", "kill chain", and "full compromise" wording replaced with AI-assisted orchestration, evidence collection, troubleshooting, and reporting language
+- Full PT guide source renamed to "Controlled Lab Assessment Workflow with HexStrike AI" and updated with authorization gates and reviewed validation templates
+- Known Limitations moved near the top of Full PT and Web & Cloud pages
+- Active Directory pages reframed as GOAD-Mini lab observations with operator oversight and Known Limitations near the top
+- ADCS page renamed to "AI-Assisted ADCS ESC8 Lab Validation" and reframed as controlled lab validation
+- Password overview link labels updated from "password cracking" wording to audit/recovery/resilience wording
+
+**Redaction**
+- Remaining AD credentials and krbtgt/hash values redacted in both AD source pages
+- Remaining exact lab credentials and ADCS artifact filenames redacted from Cursor MCP, full-subnet, lab-setup, Shodan, and ADCS pages
+
+---
+
+## May 2026 — v2.2
 
 **Technical accuracy**
 - Added exact HexStrike Kali package version to installation version table: `0.0~git20260306.8333779`

@@ -18,7 +18,7 @@ A Step-by-Step Guide: Hands-on guide to creating an intentionally insecure Ubunt
 
 #### A Step-by-Step Guide: Hands-on guide to creating an intentionally insecure Ubuntu 24.04.3 Server VM with open SSH, FTP, Samba, NFS, Apache/PHP, MariaDB, privilege escalation vectors, vulnerable web apps, and sensitive data leaks
 
-![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-BXEZxGFa7d08ft9ktYNq_A.png)
+![Building an extremely vulnerable Ubuntu 24 04 server lab bonus full PT with HexStrike — A Step-by-Step Guide: Hands-on guide to creating an inte…](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-BXEZxGFa7d08ft9ktYNq_A.png)
 
 * * *
 
@@ -87,7 +87,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
   2. Disk: 40GB single file. Customize: Memory 2GB, CPU 2 cores, Network NAT/Bridged.
   3. Finish and power on.
 
-![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1--PPf5vehqf7QohBy1n4bBw.png)
+![Building an extremely vulnerable Ubuntu 24 04 server lab bonus full PT with HexStrike — In VMware:](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1--PPf5vehqf7QohBy1n4bBw.png)
 
 #### Step 3: Install Ubuntu 24.04.3 Server
 
@@ -124,7 +124,7 @@ Insert Guest Additions CD, run installer.
     sudo apt install -y open-vm-tools open-vm-tools-desktop  
     sudo reboot
 
-![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-GsxDbtudG9XFKLfgQ17lGQ.png)
+![Building an extremely vulnerable Ubuntu 24 04 server lab bonus full PT with HexStrike — Step 3: Install Ubuntu 24.04.3 Server](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-GsxDbtudG9XFKLfgQ17lGQ.png)
 
 #### Step 4: Configure Basic Networking and Access
 
@@ -305,7 +305,7 @@ Insert Guest Additions CD, run installer.
     useradd -m -s /bin/bash -p '$(openssl passwd -1 password123)' guest_user  
     useradd -m -s /bin/bash -p '$(openssl passwd -1 123456)' ftp_user  
     useradd -m -s /bin/bash -p '$(openssl passwd -1 password123)' web_admin  
-    useradd -m -s /bin/bash -p '$(openssl passwd -1 C0mplex_77!_HArd_To_Gu3ss)' it_admin  
+    useradd -m -s /bin/bash -p '$(openssl passwd -1 <redacted>)' it_admin  
       
     echo "ftp_user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers  
     echo "guest_user ALL=(ALL) NOPASSWD: /bin/bash" >> /etc/sudoers  
@@ -326,11 +326,11 @@ Insert Guest Additions CD, run installer.
     # 7. Sensitive data  
     mkdir -p /secrets /database  
     cat > /secrets/passwords.txt <<EOF  
-    it_admin:C0mplex_77!_HArd_To_Gu3ss  
-    ftp_user:123456  
-    web_admin:password123  
-    guest_user:password123  
-    root:password  
+    it_admin:<redacted>  
+    ftp_user:<redacted>  
+    web_admin:<redacted>123  
+    guest_user:<redacted>  
+    root:<redacted>  
     EOF  
     cat > /secrets/credit_cards.csv <<EOF  
     Name,CardNumber,Expiry  
@@ -404,7 +404,7 @@ Insert Guest Additions CD, run installer.
     sudo chmod +x /tmp/post_reboot.sh  
     sudo /tmp/post_reboot.sh
 
-![](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-o9L68FSF08YQRs4gvRpGmg.png)
+![Building an extremely vulnerable Ubuntu 24 04 server lab bonus full PT with HexStrike — Step 5: Introduce Vulnerabilities Using Bash Script](/img/hexstrike-articles/building-an-extremely-vulnerable-ubuntu-24-04-server-lab-bonus-full-pt-with-hexstrike/1-o9L68FSF08YQRs4gvRpGmg.png)
 
 * * *
 
@@ -510,30 +510,30 @@ Explanation of Introduced Vulnerabilities The script creates a highly exploitabl
     *   **Proof:**  
         *   Contents of `/tmp/nfs_root/secrets/passwords.txt`:  
             ```  
-            it_admin:C0mplex_77!_HArd_To_Gu3ss  
-            ftp_user:123456  
-            web_admin:password123  
-            guest_user:password123  
-            root:password  
+            it_admin:<redacted>  
+            ftp_user:<redacted>  
+            web_admin:<redacted>123  
+            guest_user:<redacted>  
+            root:<redacted>  
             ```  
       
     ### 4.3. High: phpMyAdmin Access with Root Credentials  
-    *   **Description:** The phpMyAdmin web interface was accessible on port 80, and the discovered `root:password` credentials allowed successful login.  
-    *   **Exploit:** The `root:password` credentials were used to log into the phpMyAdmin interface. This allowed for arbitrary SQL query execution, including `SELECT INTO OUTFILE` to write files to the web server's document root.  
+    *   **Description:** The phpMyAdmin web interface was accessible on port 80, and the discovered `root:<redacted>` credentials allowed successful login.  
+    *   **Exploit:** The `root:<redacted>` credentials were used to log into the phpMyAdmin interface. This allowed for arbitrary SQL query execution, including `SELECT INTO OUTFILE` to write files to the web server's document root.  
     *   **Impact:** Full administrative control over the MySQL database, including data manipulation, schema modification, and potential for further system compromise through SQL injection or file write vulnerabilities.  
     *   **Proof:**  
-        *   Successful login to phpMyAdmin using `root:password`.  
+        *   Successful login to phpMyAdmin using `root:<redacted>`.  
         *   Successful upload and execution of `test.php` via `SELECT INTO OUTFILE` to `/var/www/html/test.php`.  
       
     ## 5. Sensitive Files and Credentials Found  
       
     *   **`/etc/shadow`:** Contains hashed passwords for all users on the system. The hash for user `andrey` was extracted: `andrey:$y$j9T$9WBQ0H4N9M0/BG4OjPGZF/$OLzBJRQBeNiqCWIDtWr9abtMkyorDYUrIH5pzG5fqf5`.  
     *   **`/secrets/passwords.txt`:** Contains plaintext credentials:  
-        *   `it_admin:C0mplex_77!_HArd_To_Gu3ss`  
-        *   `ftp_user:123456`  
-        *   `web_admin:password123`  
-        *   `guest_user:password123`  
-        *   `root:password`  
+        *   `it_admin:<redacted>`  
+        *   `ftp_user:<redacted>`  
+        *   `web_admin:<redacted>123`  
+        *   `guest_user:<redacted>`  
+        *   `root:<redacted>`  
       
     ## 6. Tools Used  
       

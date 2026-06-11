@@ -18,7 +18,7 @@ From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
 #### From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/0-NEMwBOBGpCmEwBNd.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — From Encrypted Document to Readable Content Using LLM-Orchestrated Tooling](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/0-NEMwBOBGpCmEwBNd.png)
 
 ### Overview
 
@@ -55,12 +55,12 @@ This is a fully authorized, local scenario.
   * Encrypted PDF:  
 `/path/to/secret.pdf`
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XQddQOCsLdZJttqMFUzdwg.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — Inputs](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XQddQOCsLdZJttqMFUzdwg.png)
 
   * Password Dictionary:  
 `/path/to/wordlist.txt`
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — Inputs (view 2)](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-lMl1ct5sA5HuWnB6xkYy6g.png)
 
 * * *
 
@@ -73,7 +73,7 @@ This is a fully authorized, local scenario.
     
     hexstrike_server
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TogAVXnHW6s_p2I_SU9lUw.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — Step-by-Step Execution Flow](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TogAVXnHW6s_p2I_SU9lUw.png)
 
   * Run Gemini-CLI
 
@@ -82,7 +82,7 @@ This is a fully authorized, local scenario.
     
     gemeni-cli
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — Step-by-Step Execution Flow (view 2)](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-KSvr7YDPe9YldkqTmp52rQ.png)
 
 #### Prompt:
     
@@ -104,7 +104,7 @@ You issued one objective:
 
 No manual tool selection, no pre-planned commands.
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-mLHP1zLmjFUncRQ8A9F7Eg.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — 1) Task initiation (single high-level prompt)](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-mLHP1zLmjFUncRQ8A9F7Eg.png)
 
 #### 2) Tool capability gap identified
 
@@ -124,7 +124,7 @@ The helper utility needed for extraction wasn’t callable directly (**command n
 
 **Pivot:** the AI performed filesystem discovery, located the tool in a non-PATH location, and re-ran it using the full path.
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-HvPSDZgdwCKE4Ny2lOmWNw.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — 4) Second failure: dependency not in PATH](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-HvPSDZgdwCKE4Ny2lOmWNw.png)
 
 #### 5) Extraction succeeded (hash/verification artifact produced)
 
@@ -149,7 +149,7 @@ After correcting the wordlist filename, the run completed and returned a valid p
 
   * **Recovered password:** `MyStrongPass`
 
-![](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ytS5p4_dOzbiZ5ewyHMohg.png)
+![AI driven PDF password recovery with HexStrike AI and Gemini CLI — 7) Success: password recovered](/img/hexstrike-articles/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ytS5p4_dOzbiZ5ewyHMohg.png)
 
 * * *
 

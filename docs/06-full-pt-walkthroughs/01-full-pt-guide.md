@@ -1,5 +1,5 @@
 ---
-title: "Full Penetration Test with HexStrike AI — Complete Guide"
+title: "Controlled Lab Assessment Workflow with HexStrike AI"
 sidebar_position: 1
 ---
 
@@ -7,11 +7,19 @@ sidebar_position: 1
 Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
 :::
 
-# Full Penetration Test with HexStrike AI
+# Controlled Lab Assessment Workflow with HexStrike AI
 
-This guide walks through a complete, end-to-end penetration test using HexStrike AI as the execution orchestrator. Every phase is AI-driven — you write goals in natural language, HexStrike plans and executes the tool chain, recovers from failures, and chains findings into attack paths autonomously.
+This guide walks through a controlled, end-to-end lab assessment using HexStrike AI as an orchestration layer for approved tool execution, troubleshooting, evidence collection, and reporting. Each phase should be scoped, reviewed, and documented before moving to the next step.
 
 All techniques demonstrated here are covered in detail in the linked articles, all performed in authorized lab environments.
+
+---
+
+## Known Limitations
+
+:::caution
+This workflow is a documentation template for authorized labs and scoped engagements. It does not guarantee exploitation success, autonomous reliability, or production suitability. Tool output, credentials, network policy, endpoint controls, and operator approvals determine what can be validated.
+:::
 
 ---
 
@@ -28,6 +36,8 @@ All techniques demonstrated here are covered in detail in the linked articles, a
 
 ## Phase 1 — Reconnaissance & OSINT
 
+**Authorization gate:** confirm scope, allowed sources, timing, and evidence-handling rules before collection.
+
 **Goal:** Build a complete picture of the target before touching the network.
 
 ### External / Passive Recon
@@ -36,7 +46,8 @@ Use Shodan and OSINT tools to enumerate internet-facing assets, open ports, expo
 
 **Prompt (Gemini CLI):**
 ```
-Search Shodan for all assets belonging to target.com.
+Authorized lab assessment for target.com.
+Search approved OSINT sources for in-scope assets.
 List open ports, service banners, CVE matches, and geolocation.
 Summarize the attack surface.
 ```
@@ -50,6 +61,7 @@ Discover all live hosts, open ports, OS fingerprints, and running services on th
 
 **Prompt:**
 ```
+Authorized lab assessment.
 Scan 192.168.1.0/24 for live hosts.
 For each host found, enumerate all open ports and service versions.
 Identify potential attack vectors and prioritize by risk.
@@ -63,6 +75,8 @@ Identify potential attack vectors and prioritize by risk.
 
 **Goal:** Deep-dive into discovered services to find exploitable weaknesses.
 
+**Authorization gate:** confirm active probing is allowed for each host and service before enumeration.
+
 ### Web Services
 
 For every HTTP/HTTPS service found, map the full attack surface: directories, parameters, authentication mechanisms, and technology stack.
@@ -70,8 +84,9 @@ For every HTTP/HTTPS service found, map the full attack surface: directories, pa
 **Prompt:**
 ```
 Target: http://192.168.1.50
-Perform full web recon: directory brute force, technology fingerprinting,
-authentication analysis, identify injection points and misconfigurations.
+Perform approved web recon: directory discovery, technology fingerprinting,
+authentication analysis, and misconfiguration review.
+Collect evidence and flag any high-impact tests for operator approval.
 ```
 
 - Full guide: [Web Application Pentesting](/docs/attack-techniques/web-application)
@@ -81,7 +96,7 @@ authentication analysis, identify injection points and misconfigurations.
 ```
 Target: 192.168.1.50
 Enumerate SMB shares, check for null sessions, list accessible files,
-and test default credentials.
+and document authentication posture using only approved test accounts.
 ```
 
 - Full guide: [SMB Brute-Force](/docs/attack-techniques/smb-brute-force)
@@ -90,7 +105,7 @@ and test default credentials.
 
 ```
 Target: 192.168.1.50:22
-Check SSH version, test known weak credentials,
+Check SSH version, review approved authentication checks,
 validate key-based auth configuration.
 ```
 
@@ -100,8 +115,8 @@ validate key-based auth configuration.
 
 ```
 Monitor mode on wlan0.
-Capture WPA2 handshakes from all visible networks.
-Attempt cracking with rockyou.txt wordlist.
+List visible in-scope lab networks.
+Capture WPA2 handshakes only for approved SSIDs and document evidence.
 ```
 
 - Full guide: [Wireless / WiFi Cracking](/docs/attack-techniques/wireless-wifi)
@@ -121,16 +136,18 @@ Identify Kerberoastable accounts and privilege escalation paths.
 
 ## Phase 3 — Exploitation
 
-**Goal:** Gain initial access and demonstrate real impact.
+**Goal:** Validate confirmed findings in a controlled way and demonstrate impact with the least intrusive proof.
+
+**Authorization gate:** obtain explicit approval for each exploit attempt, payload, credential test, or lateral movement step.
 
 ### Network Exploitation (Metasploitable lab)
 
 **Prompt (OpenAI Codex or Cursor):**
 ```
 You have scan results for 192.168.1.100.
-Select the highest-probability exploits for each open service.
-Attempt exploitation in sequence. For each success, capture proof
-(hostname, whoami, network interfaces). Continue until root is obtained.
+Identify the highest-risk confirmed findings.
+For each proposed validation step, explain impact, prerequisites, and rollback.
+Wait for approval before execution and capture minimal proof.
 ```
 
 - Full walkthrough with Metasploitable: [OpenAI Codex Integration](/docs/llm-integrations/openai-codex)
@@ -140,9 +157,9 @@ Attempt exploitation in sequence. For each success, capture proof
 
 ```
 Using the attack surface map from Phase 2,
-exploit the highest-severity findings.
+propose validation steps for the highest-severity findings.
 Test for SQLi, XSS, CSRF, auth bypass, and IDOR.
-Demonstrate impact with PoC for each confirmed vulnerability.
+Demonstrate impact with safe PoC evidence for each confirmed vulnerability.
 ```
 
 - Full guide: [Web Application Pentesting](/docs/attack-techniques/web-application)
@@ -152,17 +169,17 @@ Demonstrate impact with PoC for each confirmed vulnerability.
 
 ```
 Domain: lab.local
-Use enumeration results to exploit the attack path with highest impact.
-Goal: Domain Admin. Document every step.
+Use enumeration results to propose the highest-impact AD validation path.
+Document prerequisites, expected evidence, and required approvals.
 ```
 
-Full autonomous black-box walkthrough: [Black-Box AD PT Walkthrough](/docs/full-pt-walkthroughs/black-box-ad)
+Black-box AD lab walkthrough: [Black-Box AD PT Walkthrough](/docs/full-pt-walkthroughs/black-box-ad)
 
-ESC8 single-prompt domain compromise:
+ESC8 lab validation:
 ```
-Perform a complete ADCS ESC8 attack against lab.local.
+Assess ADCS ESC8 exposure in lab.local.
 Start from enumeration, identify vulnerable templates,
-request and abuse the certificate, obtain DA.
+and propose safe validation steps with evidence and remediation.
 ```
 Guide: [ADCS ESC8](/docs/attack-techniques/adcs-esc8)
 
@@ -188,23 +205,25 @@ For encrypted files found during the engagement:
 
 ## Phase 5 — Post-Exploitation & Lateral Movement
 
-Once initial access is obtained, HexStrike continues the chain:
+If initial access is obtained in an authorized lab, keep post-exploitation bounded to the approved objective:
+
+**Authorization gate:** confirm host-level scope, allowed evidence, credential-handling rules, and explicit stop conditions.
 
 **Prompt:**
 ```
 I have a shell on 192.168.1.50 as www-data.
 Enumerate the host: running processes, sudo rights, SUID binaries,
 cron jobs, readable sensitive files, network connections.
-Find a privilege escalation path to root.
-After root, dump credentials and pivot to other hosts.
+Identify privilege escalation risk and collect minimal evidence.
+Do not dump credentials or pivot unless separately approved.
 ```
 
-HexStrike will:
+HexStrike can assist with:
 1. Run `sudo -l`, `find / -perm -4000`, `cat /etc/crontab`
 2. Identify the escalation vector (kernel exploit, sudo misconfiguration, SUID binary)
-3. Execute the escalation
-4. Dump `/etc/shadow`, SSH keys, credentials files
-5. Use found credentials against other hosts on the subnet
+3. Propose validation steps and rollback notes
+4. Capture minimal proof for the report
+5. Document remediation and detection opportunities
 
 ---
 
@@ -225,29 +244,29 @@ Generate a penetration test report including:
 
 ## Full Engagement Example Prompts
 
-### Single-prompt full network PT (Gemini CLI):
+### Scoped network assessment template (Gemini CLI):
 ```
 Target network: 192.168.1.0/24
 Authorized penetration test.
-Goal: compromise as many hosts as possible and document findings.
-Start with discovery, enumerate services, exploit vulnerabilities,
-escalate privileges, and produce a final report.
+Goal: discover hosts, enumerate services, prioritize findings, and document evidence.
+Propose any exploit validation or privilege escalation step for explicit approval
+before execution, then produce a final report.
 ```
 
-### Single-prompt black-box AD engagement (Cursor MCP):
+### Black-box AD lab assessment template (Cursor MCP):
 ```
 IP: 192.168.10.5 — believed to be a Windows domain environment.
 Authorized engagement.
 Enumerate the environment, identify the domain, find attack paths,
-compromise a domain admin account. Document everything.
+and propose validation steps with evidence and remediation guidance.
 ```
 
-### One-prompt web + cloud PT (Cursor + HexStrike + Burp MCP):
+### Web + cloud assessment template (Cursor + HexStrike + Burp MCP):
 ```
 Target: https://app.target.lab (AWS-hosted)
 Authorized.
 Map the web attack surface and cloud configuration.
-Find and exploit vulnerabilities across both layers.
+Find and safely validate vulnerabilities across both layers.
 Produce actionable findings with PoCs.
 ```
 

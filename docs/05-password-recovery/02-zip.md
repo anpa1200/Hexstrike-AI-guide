@@ -18,7 +18,7 @@ From Encrypted Archive to Flag Using LLM-Orchestrated Tooling
 
 #### **From Encrypted Archive to Flag Using LLM-Orchestrated Tooling**
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/0-ugjfFZjFfBwT__hh.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — From Encrypted Archive to Flag Using LLM-Orchestrated Tooling](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/0-ugjfFZjFfBwT__hh.png)
 
 #### Overview
 
@@ -72,7 +72,7 @@ The user provides a **single high-level prompt** :
     
     Open encrypted zip file and find the flag using the provided password list.
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ANUdip5C59veqsAwPgXw1A.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — 1\. Task initiation (LLM-driven)](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-ANUdip5C59veqsAwPgXw1A.png)
 
 No commands.  
 No tool selection.  
@@ -88,7 +88,7 @@ HexStrike-AI:
   * Locates `zip2john` automatically
   * Verifies tool availability on the system
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-0gFo7D_MsfBgaWqvMS00aA.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — 2\. Tool discovery & preparation](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-0gFo7D_MsfBgaWqvMS00aA.png)
 
 **Key point:**  
 The AI does _environment discovery_ before acting.
@@ -132,7 +132,7 @@ HexStrike-AI selects the correct cracking strategy:
     
      Password found: Israel123
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TRaSGxPOQBkXbiPg-xGREA.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — 4\. Offline password cracking](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-TRaSGxPOQBkXbiPg-xGREA.png)
 
 ### 5\. First extraction attempt (failure handling)
 
@@ -168,7 +168,7 @@ HexStrike-AI:
 
 Extraction succeeds.
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-8vRwcwtg6s_rZg_nplK6kw.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — 6\. Adaptive pivot (tool switching)](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-8vRwcwtg6s_rZg_nplK6kw.png)
 
 * * *
 
@@ -181,7 +181,7 @@ Final step:
 
 **Flag recovered**
 
-![](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XqUL-oAX4gre4MnjbaOb7Q.png)
+![AI driven ZIP password recovery with HexStrike AI and Gemini CLI — 7\. Flag retrieval](/img/hexstrike-articles/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli/1-XqUL-oAX4gre4MnjbaOb7Q.png)
     
     
      Your Flag

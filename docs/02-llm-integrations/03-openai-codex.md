@@ -19,7 +19,7 @@ How I Used an LLM-Orchestrated Toolchain to Enumerate and Exploit a Deliberately
 
 #### How I Used an LLM-Orchestrated Toolchain to Enumerate and Exploit a Deliberately Vulnerable Host (With Real Proofs)
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-ryG5h9VfySviXapLEyOSvg.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — How I Used an LLM-Orchestrated Toolchain to Enumerate and Exploit a Deliberate…](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-ryG5h9VfySviXapLEyOSvg.png)
 
 ### Introduction
 
@@ -119,7 +119,7 @@ This assessment was conducted under explicit authorization.
   * **Environment:** private home lab (Metasploitable2 VM)
   * **Attacker:** Kali Linux environment with Codex CLI + HexStrike MCP
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-2tkO21QPoKIaAHV2GLTiXg.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — Scope](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-2tkO21QPoKIaAHV2GLTiXg.png)
 
 * * *
 
@@ -140,7 +140,7 @@ Example prompt structure (adapt it to your CLI):
 Key lesson:  
 **If you want HexStrike to run tools, explicitly require tool execution and proof artifacts.**
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-eABegFDYfVOV0X7OTkDnxA.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — The Prompt That Started Everything](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-eABegFDYfVOV0X7OTkDnxA.png)
 
 * * *
 
@@ -191,7 +191,7 @@ The target exposed multiple legacy services typical of Metasploitable2:
   * **X11 (6000)**
   * **AJP (8009)**
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-M-KtDpNJKOmzKguYuZsk3A.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — Confirmed exposed services (high-level)](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-M-KtDpNJKOmzKguYuZsk3A.png)
 
 #### Host identity confirmation
 
@@ -225,13 +225,13 @@ Rather than listing every CVE possible for every old service, the workflow focus
   * minimal risk of destabilizing the host
   * clear PoC output validation
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-i537IaV4nzH-Yl0WAUFAbA.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — Phase 3: Vulnerability Discovery (What Stood Out Immediately)](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-i537IaV4nzH-Yl0WAUFAbA.png)
 
 * * *
 
 ### Phase 4: Exploitation (With Proofs)
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-Cwm_odt5ix6oogYUhn6w-Q.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — Phase 4: Exploitation (With Proofs)](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-Cwm_odt5ix6oogYUhn6w-Q.png)
 
 #### Exploit #1 — vsftpd 2.3.4 backdoor (CVE-2011–2523) → Root
 
@@ -304,7 +304,7 @@ The first Metasploit run produced unstable command shell behavior (sessions clos
 
 **Impact:** Unauthenticated Remote Code Execution → **root**.
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-4DkOtawu-LswnG3baLupuA.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — Step B — Connect to bind shell and capture proof](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-4DkOtawu-LswnG3baLupuA.png)
 
 * * *
 
@@ -317,7 +317,7 @@ The first Metasploit run produced unstable command shell behavior (sessions clos
   * vsftpd backdoor (TCP/6200)
   * Samba usermap_script (bind shell on TCP/4446)
 
-![](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-upLkdxiWzfTbKmUNw6A5rg.png)
+![HexStrike OpenAI Codex AI driven exploitation of Metasploitable — What was validated](/img/hexstrike-articles/hexstrike-openai-codex-ai-driven-exploitation-of-metasploitable/1-upLkdxiWzfTbKmUNw6A5rg.png)
 
 #### What was intentionally not done
 

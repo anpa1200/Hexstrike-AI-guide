@@ -20,7 +20,7 @@ How I Used Gemini + HexStrike-AI on Kali Linux to Scan, Enumerate, and Exploit M
 
 v1.2
 
-![](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/0-JfasEdDK1I_Sb2sl.png)
+![AI driven pentesting at home using HexStrike AI for full network discovery and exploitation — How I Used Gemini + HexStrike-AI on Kali Linux to…](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/0-JfasEdDK1I_Sb2sl.png)
 
 * * *
 
@@ -163,7 +163,7 @@ Here is the **exact prompt** I used inside `gemini-cli`:
     5. Safe exploitation of critical issues  
     6. Documentation & remediation
 
-![](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/1-LRsVl91h4Ak6riwqGZJuQQ.png)
+![AI driven pentesting at home using HexStrike AI for full network discovery and exploitation — The Prompt That Started Everything](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/1-LRsVl91h4Ak6riwqGZJuQQ.png)
 
 This is the **key lesson** :
 
@@ -330,7 +330,7 @@ Disable legacy services
 
   * Secure admin panels (Pi-hole, web UIs)
 
-![](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/1-VRuWGcHV9ReEuWNn2w4PGQ.png)
+![AI driven pentesting at home using HexStrike AI for full network discovery and exploitation — Low](/img/hexstrike-articles/ai-driven-pentesting-at-home-using-hexstrike-ai-for-full-network-discovery-and-exploitation/1-VRuWGcHV9ReEuWNn2w4PGQ.png)
 
 * * *
 

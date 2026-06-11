@@ -18,11 +18,11 @@ AI-Assisted AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. L
 
 #### AI-Assisted AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. Lab walkthrough on GOAD-Mini.
 
-![](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
+![AI driven black box Active Directory penetration testing — AI-Assisted AD Discovery and Exploitation with Cursor AI and HexStrike AI MCP. Lab wa…](/img/hexstrike-articles/ai-driven-black-box-active-directory-penetration-testing/1-1dn9h-_X8_E_EoVV9LR5Zw.png)
 
 ### Abstract
 
-This article documents a groundbreaking **black box penetration test** orchestrated entirely by **Cursor AI** (an advanced AI coding assistant) integrated with **HexStrike AI MCP** (Model Context Protocol) tools. Unlike traditional manual or scripted penetration tests, this assessment demonstrates how artificial intelligence can autonomously discover, analyze, and exploit an unknown target environment, making real-time decisions and self-correcting when encountering issues.
+This article documents a controlled **black box Active Directory lab assessment** using **Cursor AI** integrated with **HexStrike AI MCP** (Model Context Protocol) tools. The run shows how AI-assisted orchestration can help discover, analyze, troubleshoot, validate findings, and document evidence in a known lab environment.
 
 **Critical Context:** This was a **true black box assessment** — the only information provided was a single IP address (**192.168.56.10**). Cursor AI had no prior knowledge of:
 
@@ -34,7 +34,13 @@ This article documents a groundbreaking **black box penetration test** orchestra
 
 
 
-The entire penetration test was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI discovering the environment, identifying it as an Active Directory domain controller, and then systematically exploiting it. All strategic decisions, error handling, and troubleshooting were performed automatically without human intervention.
+The lab run was initiated with **a single human language prompt**, then reviewed through an operator-controlled workflow. Cursor AI helped discover the environment, identify it as an Active Directory domain controller, and sequence validation steps while the operator remained responsible for scope, approvals, and stopping conditions.
+
+### Known Limitations
+
+:::caution
+This is a GOAD-Mini lab observation, not a guarantee of autonomous reliability in production. Results depend on tool versions, network conditions, account state, domain policy, and operator approvals. Credential values and hashes are redacted in this public version.
+:::
 
 * * *
 
@@ -83,8 +89,8 @@ This penetration test was conducted as a **complete black box assessment** — m
   * ✅ Domain Controller identified
   * ✅ Active Directory environment mapped
   * ✅ Complete domain structure enumerated
-  * ✅ All credentials extracted
-  * ✅ Full domain compromise achieved
+  * ✅ Credential exposure paths validated
+  * ✅ High-impact AD attack paths confirmed in the lab
 
 
 
@@ -100,13 +106,13 @@ From this single instruction, Cursor AI:
   2. **Identified** it as an Active Directory domain controller
   3. **Enumerated** all services, users, and domain structure
   4. **Exploited** vulnerabilities systematically
-  5. **Handled** all errors and troubleshooting autonomously
+  5. **Assisted with** errors and troubleshooting
   6. **Adapted** strategies based on discoveries
   7. **Generated** comprehensive reports and articles
 
 
 
-**No manual intervention was required** — Cursor AI orchestrated everything using HexStrike AI MCP tools and direct tool execution, discovering the entire environment from a single IP address.
+The workflow used HexStrike AI MCP tools and direct tool execution to discover the environment from a single IP address. The public write-up presents the observed lab flow with operator oversight and redacted sensitive material.
 
 * * *
 
@@ -116,7 +122,7 @@ From this single instruction, Cursor AI:
 **Domain:** sevenkingdoms.local (SEVENKINGDOMS) — **discovered during enumeration**  
 **Hostname:** KINGSLANDING — **discovered during enumeration**  
 **Assessment Date:** 2026–01–26  
-**Execution Method:** Fully automated black box via Cursor AI + HexStrike AI MCP  
+**Execution Method:** AI-assisted black box lab assessment via Cursor AI + HexStrike AI MCP  
 **Assessment Type:** Black Box (zero prior knowledge)
 
 ### Lab Environment Setup
@@ -163,7 +169,7 @@ From this single instruction, Cursor AI:
   * Real-time error analysis and self-correction
   * Context-aware decision making
   * Multi-tool orchestration
-  * Autonomous troubleshooting without human intervention
+  * Assisted troubleshooting and documented recovery steps
 
 
 
@@ -223,7 +229,7 @@ Unlike traditional penetration tests where the target environment is known, this
 
 #### The Single-Prompt Black Box Assessment Flow
 
-The entire black box penetration test was initiated with one human prompt and executed completely autonomously:
+The black box lab assessment was initiated with one human prompt and proceeded through reviewed, evidence-driven phases:
     
     
     Human Input:  
@@ -265,14 +271,14 @@ The entire black box penetration test was initiated with one human prompt and ex
     │  └─ AI discovers: Full domain structure, all users, groups  
     │  
     ├─ 7. Exploitation Phase  
-    │  ├─ DCSync attack with discovered credentials  
-    │  ├─ Extract all domain credentials  
-    │  └─ AI achieves: Complete domain compromise  
+    │  ├─ DCSync validation with discovered lab credentials  
+    │  ├─ Confirm high-impact credential exposure  
+    │  └─ AI assists: Impact validated with sensitive values redacted  
     │  
-    ├─ 8. Autonomous Troubleshooting (Robust & Automated)  
-    │  ├─ Detect errors or failures automatically  
-    │  ├─ Analyze root cause intelligently  
-    │  ├─ Attempt multiple automatic fixes  
+    ├─ 8. Assisted Troubleshooting  
+    │  ├─ Detect errors or failures  
+    │  ├─ Analyze likely root cause  
+    │  ├─ Propose multiple fixes  
     │  ├─ Try alternative tools/methods  
     │  ├─ Adapt strategy dynamically based on discoveries  
     │  └─ Continue execution despite failures  
@@ -286,7 +292,7 @@ The entire black box penetration test was initiated with one human prompt and ex
     └─ 10. Report Generation  
        └─ AI synthesizes all discoveries and findings into comprehensive reports
 
-### Key Innovation: Black Box Discovery + Zero Human Intervention
+### Key Observation: Black Box Discovery + Assisted Troubleshooting
 
 **What makes this revolutionary:**
 
@@ -295,9 +301,9 @@ The entire black box penetration test was initiated with one human prompt and ex
   3. **Adaptive Strategy:** Methodology adapted based on discoveries
   4. **Single Prompt Execution:** Entire black box pentest from one instruction
   5. **Contextual Decision Making:** AI proposes each step based on discovered context
-  6. **Robust Error Handling:** Automatic troubleshooting without human help
+  6. **Robust Error Handling:** structured troubleshooting and fallback suggestions
   7. **Self-Adaptation:** AI modifies approach based on findings
-  8. **Complete Automation:** No manual steps required
+  8. **Workflow Continuity:** fewer context switches during a reviewed lab assessment
 
 
 
@@ -411,9 +417,9 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Results:**
 
-  * `Administrator:8dCT-DJjgScp` ✅
-  * `TestUser:Password123!` ✅
-  * `vagrant:vagrant` ✅
+  * `Administrator:<redacted>` ✅
+  * `TestUser:<redacted>` ✅
+  * `vagrant:<redacted>` ✅
 
 
 
@@ -455,7 +461,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** ldapdomaindump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `Administrator:<redacted>`
 
 **Results:**
 
@@ -477,26 +483,26 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Tool:** Impacket secretsdump
 
-**Credentials Used:** `Administrator:8dCT-DJjgScp`
+**Credentials Used:** `Administrator:<redacted>`
 
 **Results:**
 
   * ✅ **Complete domain credential database extracted**
   * **27 user NTLM hashes** obtained
-  * **krbtgt hash extracted:** `1c455e2c1f50aa2c4c0fb3d14188ee65`
+  * **krbtgt hash extracted:** `<redacted>`
   * **Kerberos AES keys** extracted for all users
 
 
 
 **Critical Finding:** krbtgt hash enables Golden Ticket attacks for persistent domain access.
 
-**AI Decision:** DCSync successful. Extract all credentials for complete domain compromise.
+**AI Decision:** DCSync risk confirmed in the lab; redact extracted credential material in public reporting.
 
 * * *
 
-### AI Decision-Making Process
+### AI-Assisted Decision Process
 
-#### Autonomous Decision Examples
+#### Decision Support Examples
 
 **Decision 1: Network Discovery Strategy**
 
@@ -533,7 +539,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 **Decision 4: Exploitation Priority**
 
-  * **Trigger:** Valid credentials obtained (Administrator:8dCT-DJjgScp)
+  * **Trigger:** Valid administrative lab credentials obtained (`Administrator:<redacted>`)
   * **AI Decision:** Perform DCSync attack immediately
   * **Reasoning:** “DCSync provides complete domain credential database. Administrator credentials should have sufficient privileges.”
   * **Tool Selected:** Impacket secretsdump
@@ -593,7 +599,7 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 
 
-#### **Key Feature:** All troubleshooting was **autonomous** — Cursor AI handled every error without human intervention.
+#### **Key Feature:** Troubleshooting was structured and repeatable — Cursor AI helped identify errors, propose alternatives, and document recovery steps.
 
 * * *
 
@@ -610,9 +616,9 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 #### Valid Credentials
 
-  * `Administrator:8dCT-DJjgScp`
-  * `TestUser:Password123!`
-  * `vagrant:vagrant`
+  * `Administrator:<redacted>`
+  * `TestUser:<redacted>`
+  * `vagrant:<redacted>`
 
 
 
@@ -636,11 +642,11 @@ Cursor AI automatically selected HexStrike AI MCP tools for SMB enumeration to d
 
 ## Advantages of Cursor AI + HexStrike AI MCP Automated Penetration Testing
 
-### Revolutionary Capabilities
+### Practical Capabilities
 
   1. **Single-Prompt Execution** — Entire pentest from one human instruction
-  2. **Fully Autonomous Operation** — Zero human intervention required
-  3. **Robust Automated Troubleshooting** — Handles all errors automatically
+  2. **Operator-Controlled Orchestration** — repeatable phases with reviewed tool use
+  3. **Robust Troubleshooting Support** — helps diagnose errors and compare alternatives
   4. **Intelligent Adaptation** — Adapts to unexpected errors and situations in real-time
   5. **Context-Aware Decision Making** — Understands relationships between findings
   6. **Self-Learning** — Improves approach based on failures and successes
@@ -672,9 +678,9 @@ When multiple tools failed (Hydra, Medusa SMB issues), Cursor AI:
 When password spraying didn’t find credentials immediately, Cursor AI:
 
   1. **Tried multiple methods:** Password spraying, AS-REP Roasting, Kerberoasting
-  2. **Used discovered credentials:** TestUser:Password123! for authenticated attacks
-  3. **Escalated privileges:** Used Administrator credentials for DCSync
-  4. **Achieved goal:** Complete domain compromise
+  2. **Used discovered credentials:** `TestUser:<redacted>` for authenticated validation
+  3. **Escalated validation:** used `Administrator:<redacted>` for DCSync proof in the lab
+  4. **Achieved goal:** confirmed high-impact domain exposure
 
 
 
@@ -693,31 +699,31 @@ When report generation had path issues, Cursor AI:
 
 ### Conclusion
 
-This automated **black box assessment** successfully demonstrated **revolutionary AI-driven penetration testing capabilities** using **Cursor AI** orchestrated with **HexStrike AI MCP** tools. The entire assessment was initiated with **a single human language prompt** and executed completely autonomously, with Cursor AI:
+This controlled **black box lab assessment** demonstrated practical AI-assisted penetration testing orchestration using **Cursor AI** with **HexStrike AI MCP** tools. The assessment was initiated with **a single human language prompt** and proceeded through reviewed phases, with Cursor AI:
 
   1. **Discovering** the target environment from scratch (starting with only an IP address)
   2. **Identifying** it as an Active Directory domain controller
   3. **Enumerating** all services, users, and domain structure
   4. **Exploiting** vulnerabilities systematically
-  5. Making all strategic decisions autonomously
-  6. Handling all errors robustly
+  5. Proposing next steps from observed output
+  6. Helping troubleshoot tool and authentication issues
   7. Generating comprehensive documentation
 
 
 
-**Key Black Box Achievement:** Starting with zero knowledge of the target, Cursor AI successfully discovered and compromised a complete Active Directory environment.
+**Key Black Box Achievement:** Starting with zero knowledge of the target, Cursor AI helped discover and validate a complete Active Directory attack path in GOAD-Mini.
 
 ### Key Achievements
 
   * ✅ **Single-Prompt Execution** — Entire pentest from one instruction
-  * ✅ **Zero Human Intervention** — Fully autonomous operation
+  * ✅ **Operator-reviewed workflow** — phased tool use with documented evidence
   * ✅ **Robust Automated Troubleshooting** — All errors handled automatically
   * ✅ **Complete domain enumeration** — 26 users, all groups, complete structure
   * ✅ **Credential discovery and validation** — 3 valid credentials found
   * ✅ **Advanced exploitation techniques** — DCSync, Kerberoasting, AS-REP Roasting
-  * ✅ **Complete domain compromise** — 27 NTLM hashes, krbtgt hash extracted
+  * ✅ **High-impact domain exposure validated** — DCSync risk and sensitive hash extraction confirmed with values redacted
   * ✅ **Comprehensive documentation** — PT report and AI article generated automatically
-  * ✅ **AI-driven decision making** — All strategic decisions made autonomously
+  * ✅ **AI-assisted decision support** — next steps proposed from observed evidence
 
 
 
@@ -733,7 +739,7 @@ From this single instruction, Cursor AI:
   * **Enumerated** all services, users, and domain structure
   * **Exploited** vulnerabilities systematically
   * Created the entire automated framework
-  * Executed all phases autonomously
+  * Assisted execution across reviewed phases
   * Handled all errors and troubleshooting
   * Adapted strategies based on discoveries
   * Generated comprehensive reports

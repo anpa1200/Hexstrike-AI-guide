@@ -47,22 +47,22 @@ The information provided in this article, “AI-Assisted Password Security Audit
 
 #### **Real-World Audit Examples**
 
-  * Manual [Zip files password cracking here](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)  
-**One prompt**[**AI Zip files password cracking here**](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc>)
-  * Manual [PDF files password cracking here](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)   
-**One prompt**[**AI PDF files password cracking here**](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91>)
-  * Manual [Office files password cracking here](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)  
-[**One prompt AI Office files password cracking here**](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d>)
-  * Manual [WiFi password cracking here](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)  
-[**One prompt AI WiFi password cracking here**](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
-  * [**One prompt AI SMB credentials enumerating and pass cracking**](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4>)**here**
-  * [RDP passwords cracking here](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
-  * [SSH password cracking here](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)  
-[**One prompt AI SSH password cracking here**](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b>)
-  * [FTP passwords cracking here](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
-  * [Telnet password cracking here](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
-  * Security [Camera password cracking here](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
-  * [Web interface cracking here](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
+  * [ZIP password audit example](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)  
+  * [AI-assisted ZIP recovery lab](<https://medium.com/@1200km/ai-driven-zip-password-recovery-with-hexstrike-ai-and-gemini-cli-b8fc5c475ebc>)
+  * [PDF password recovery lab](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)   
+  * [AI-assisted PDF recovery lab](<https://medium.com/@1200km/ai-driven-pdf-password-recovery-with-hexstrike-ai-and-gemini-cli-cfa7eb0fae91>)
+  * [Office document recovery lab](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)  
+  * [AI-assisted Office document recovery lab](<https://medium.com/@1200km/ai-driven-office-documents-password-recovery-with-hexstrike-ai-and-gemini-cli-3c8bb7deb82d>)
+  * [WiFi credential-strength audit](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)  
+  * [AI-assisted WiFi credential-strength audit](<https://medium.com/@1200km/ai-driven-wireless-penetration-testing-one-promt-wifi-cracking-6477c06f6af4>)
+  * [SMB credential-hygiene validation](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force-2c5f99dcdbf4>)
+  * [RDP credential-resilience test](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
+  * [SSH credential-resilience test](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)  
+  * [AI-assisted SSH credential-resilience test](<https://medium.com/@1200km/hexstrike-gemini-ai-assisted-ssh-credential-brute-force-a9162f8e253b>)
+  * [FTP credential exposure review](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
+  * [Telnet credential exposure review](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
+  * [Security camera credential audit](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
+  * [Web interface credential audit](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
 
 
 
@@ -98,32 +98,32 @@ During an authorized password security audit, hashes may be encountered in the f
 
 
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-JK4cWEE0W83N1Ks9.png)
+![Hexstrikeai Gemini modern passwords cracking — The Why and Where of Password Hashing](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-JK4cWEE0W83N1Ks9.png)
 
   * **Operating System Authentication** : Systems like Linux and Windows store user password hashes locally. For example, Linux stores these hashes in the `/etc/shadow` file, which is accessible only by privileged users.
 
 
 
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-71F_FLnXWliBfJzE.png)
+![Hexstrikeai Gemini modern passwords cracking — The Why and Where of Password Hashing (view 2)](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-71F_FLnXWliBfJzE.png)
 
   * Here is my own shadow file:
 
 
 
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-dBJpu_yqu23eh-q9.png)
+![Hexstrikeai Gemini modern passwords cracking — The Why and Where of Password Hashing (view 3)](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-dBJpu_yqu23eh-q9.png)
 
   * **Network Authentication Servers** : Technologies like RADIUS and LDAP, which are used for managing network authentication, store password hashes to verify user credentials during the authentication process.
 
 
 
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-jMTEyP8FzSAmP0O3.jpg)
+![Hexstrikeai Gemini modern passwords cracking — The Why and Where of Password Hashing (view 4)](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-jMTEyP8FzSAmP0O3.jpg)
 
   * **Authorized penetration test evidence** : During a scoped engagement, extracted hashes are handled as sensitive evidence — encrypted, access-controlled, and destroyed after the engagement per the rules of engagement.
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-YFj3MGZqXCX9DX63.png)
+![Hexstrikeai Gemini modern passwords cracking — The Why and Where of Password Hashing (view 5)](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0-YFj3MGZqXCX9DX63.png)
 
 ### Importance of Understanding Cracking Techniques
 
@@ -176,7 +176,7 @@ A brute force attack is one of the simplest yet most aggressive methods to crack
 In a brute force attack, an attacker uses software that continuously inputs passwords into a system until it achieves success. The process starts with the shortest possible password and typically uses a predetermined sequence to attempt every possible combination of characters from the defined character set (letters, numbers, symbols).
 
 
-![](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0--S9oChJMgVfEEVS1.jpg)
+![Hexstrikeai Gemini modern passwords cracking — How It Works](/img/hexstrike-articles/hexstrikeai-gemini-modern-passwords-cracking/0--S9oChJMgVfEEVS1.jpg)
 
 ### Character Sets and Complexity
 
@@ -295,16 +295,16 @@ Manufacturers often use simple and widely known default passwords for the sake o
 
 ### Audit Examples
 
-  * [Zip files passwords cracking here](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)
-  * [PDF files passwords cracking here](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)
-  * [Office files passwords cracking here](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)
-  * [WiFi passwords cracking here](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)
-  * [RDP passwords cracking here](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
-  * [SSH passwords cracking here](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)
-  * [FTP passwords cracking here](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
-  * [Telnet passwords cracking here](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
-  * [Cameras passwords cracking here](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
-  * [Web interface cracking here](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
+  * [ZIP password audit example](<https://medium.com/@1200km/zip-file-password-cracking-guide-with-real-life-examples-4e8705d51897>)
+  * [PDF password recovery lab](<https://medium.com/@1200km/pdf-file-password-cracking-guide-with-real-life-examples-901ee411a6f4>)
+  * [Office document recovery lab](<https://medium.com/@1200km/office-file-doc-docx-ppt-password-cracking-guide-with-real-life-examples-f8e356144ca4>)
+  * [WiFi credential-strength audit](<https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f>)
+  * [RDP credential-resilience test](<https://medium.com/@1200km/accessing-remote-desktops-a-beginners-guide-to-rdp-cracking-with-crowbar-and-ppg-tools-5f50027115b7>)
+  * [SSH credential-resilience test](<https://medium.com/@1200km/cracking-ssh-with-metasploit-a-step-by-step-guide-to-exploiting-weak-credentials-3ec6ef4cee5b>)
+  * [FTP credential exposure review](<https://medium.com/@1200km/exploiting-ftp-vulnerabilities-for-effective-penetration-testing-a2810df78602>)
+  * [Telnet credential exposure review](<https://medium.com/@1200km/cracking-telnet-exploring-weaknesses-and-exploitation-techniques-af5d743abb09>)
+  * [Camera credential audit](<https://medium.com/@1200km/cracking-rtsp-security-a-comprehensive-guide-to-using-the-rtsp-brute-force-tool-ad1c29b9e5ee>)
+  * [Web interface credential audit](<https://medium.com/@1200km/cracking-web-interfaces-with-burp-suite-a-comprehensive-tutorial-33087bb286b0>)
 
 
 

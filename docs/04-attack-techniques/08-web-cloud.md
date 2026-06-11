@@ -15,13 +15,19 @@ Kali Linux 2025.4 · HexStrike AI (Kali package 2025.4 repo) · May 2026. Result
 
 A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full Attack Surface Coverage (Recon → Exploit → Report). 
 
+### Known Limitations
+
+:::caution
+This page documents a lab workflow. Results depend on application design, cloud permissions, MCP connectivity, Burp configuration, rate limits, and operator approval. Treat AI output as recommendations to review, not as an authority to execute high-impact actions automatically.
+:::
+
 * * *
 
 ### AI-Assisted Web and Cloud Penetration Testing with Cursor + MCP HexStrike and Burp Suite MCP.
 
 #### A Complete Guide to Modern AI-Powered Security Testing. From One Prompt to Full Attack Surface Coverage (Recon → Exploit → Report).
 
-![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-A1OtUodkuog3T-EllA0oRw.png)
+![AI assisted web and cloud penetration testing with Cursor MCP HexStrike and Burp suite MCP — A Complete Guide to Modern AI-Powered Security Test…](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-A1OtUodkuog3T-EllA0oRw.png)
 
 * * *
 
@@ -152,7 +158,7 @@ Model Context Protocol is a standardized way for AI assistants to interact with 
   * **History Management:** Track all HTTP interactions
   * **Repeater/Intruder:** Manual testing and fuzzing capabilities
 
-![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-urfIlqtk0dlWhvSJIY8M5w.png)![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-d4s68TfVGGopNxO19-bDEA.png)
+![AI assisted web and cloud penetration testing with Cursor MCP HexStrike and Burp suite MCP — Burp Suite MCP Configuration](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-urfIlqtk0dlWhvSJIY8M5w.png)![AI assisted web and cloud penetration testing with Cursor MCP HexStrike and Burp suite MCP — Burp Suite MCP Configuration (view 2)](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-d4s68TfVGGopNxO19-bDEA.png)
     
     
     {  
@@ -233,7 +239,7 @@ The AI (Cursor) acts as the orchestrator, making intelligent decisions about whi
     # Test MCP connection  
     # In Cursor, check available tools via MCP
 
-![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-bYkl0wHKC98CjkJFp3u6_Q.png)
+![AI assisted web and cloud penetration testing with Cursor MCP HexStrike and Burp suite MCP — Step 2: Configure HexStrike MCP](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-bYkl0wHKC98CjkJFp3u6_Q.png)
 
 #### Step 3: Configure Burp Suite MCP
 
@@ -264,7 +270,7 @@ Once both MCP servers are configured, Cursor AI should have access to:
   * **From HexStrike:** 150+ security tools (nmap, sqlmap, nuclei, etc.)
   * **From Burp:** HTTP proxy, scanner, repeater, intruder capabilities You can verify by asking Cursor to list available tools or by attempting to use a tool. — -
 
-![](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-swhB2jBeqw-uxeQSZkHK6A.png)
+![AI assisted web and cloud penetration testing with Cursor MCP HexStrike and Burp suite MCP — Step 4: Verify Integration](/img/hexstrike-articles/ai-assisted-web-and-cloud-penetration-testing-with-cursor-mcp-hexstrike-and-burp-suite-mcp/1-swhB2jBeqw-uxeQSZkHK6A.png)
 
 * * *
 

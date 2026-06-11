@@ -18,7 +18,7 @@ A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysi
 
 #### A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysis
 
-![](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/0-6vfRYJKmCCBTdj7r.png)
+![Integrating Shodan with HexStrike AI using Gemini CLI — A Practical Guide to AI-Driven External Reconnaissance and Vulnerability Analysis](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/0-6vfRYJKmCCBTdj7r.png)
 
 ### Introduction
 
@@ -236,13 +236,13 @@ This resulted in the disclosure of an **internal RTSP URI** , embedded with cred
     
     
     rtsp://192.168.0.122:554/  
-    user=admin_password=tlJwpbo6_channel=1_stream=0.sdp?real_stream
+    user=admin_password=<redacted>_channel=1_stream=0.sdp?real_stream
 
 ### What this means
 
   * The device **leaked a valid RTSP username and password**
   * Credentials were **different from the default ONVIF password**
-  * The password `tlJwpbo6` is a **real, working credential**
+  * The password `<redacted>` is a **real, working credential**
   * This is a **high-impact information disclosure**
 
 
@@ -260,7 +260,7 @@ At this point:
     
     
     Username: admin  
-    Password: tlJwpbo6
+    Password: <redacted>
 
 This is a **classic chained vulnerability** :
 
@@ -334,7 +334,7 @@ This confirms a **known vulnerable DVR platform (XM family)**.
 
 No speculation — **this was a real, confirmed attack chain**.
 
-![](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/1-Oi1g3oXGgNKHuSgX9cWJCA.png)
+![Integrating Shodan with HexStrike AI using Gemini CLI — Proof of Access (Validated)](/img/hexstrike-articles/integrating-shodan-with-hexstrike-ai-using-gemini-cli/1-Oi1g3oXGgNKHuSgX9cWJCA.png)
 
 ### Why this flow matters (important insight)
 

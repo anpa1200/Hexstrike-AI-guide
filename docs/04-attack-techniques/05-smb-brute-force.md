@@ -22,7 +22,7 @@ From Toolchain Failures → Service Fingerprinting → Authentication Findings �
 
 #### From Toolchain Failures → Service Fingerprinting → Authentication Findings → Share Risk
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/0-zoac8Nswk63Txu1T.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — From Toolchain Failures → Service Fingerprinting → Authentication Findings →…](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/0-zoac8Nswk63Txu1T.png)
 
 ### Overview
 
@@ -60,7 +60,7 @@ The key value in the log is not “the attack,” but:
     
     @hexstrike: scan 172.16.59.129 find smb port, enumerate creds and do bruteforce to  passwords with next dictionaries:  ~/Documents/passwords_list.txt ~/Documents/users_list.txt
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-58m_3RUriTgxwZfi7v8_pQ.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — Prompt:](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-58m_3RUriTgxwZfi7v8_pQ.png)
 
 * * *
 
@@ -84,7 +84,7 @@ The agent recovered correctly by switching to **Nmap service detection** , which
   * `3389/tcp open RDP`
   * Host fingerprint suggests Windows 10 / Server 2019 family
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-5LRXp03c-23FoZw3K2eDjw.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — 1) Fast scan failed → fallback to a full Nmap fingerprint](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-5LRXp03c-23FoZw3K2eDjw.png)
 
 **Takeaway:** Your lab target is an intentionally “wide-open” Windows surface: SMB + RDP + SSH simultaneously, which is a high-risk posture in any real network.
 
@@ -105,7 +105,7 @@ This looks like a **wrapper/parameter bug** , where legacy enum4linux flags are 
   * Treat this as a HexStrike tool adapter issue, not an enum4linux-ng issue.
   * Use a different enumeration primitive (as you did), or update/patch the wrapper.
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-BTJl_KCgKrvZ7o9Gj3Emgw.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — 2) SMB enumeration tooling mismatch (enum4linux-ng wrapper issue)](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-BTJl_KCgKrvZ7o9Gj3Emgw.png)
 
 * * *
 
@@ -146,7 +146,7 @@ In a real enterprise, this combination is a red flag and typically violates base
 
 ### 5) Hydra Attack
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-GF-wE8qxoVaaevDXbbcgRw.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — 5) Hydra Attack](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-GF-wE8qxoVaaevDXbbcgRw.png)
 
 * * *
 
@@ -167,7 +167,7 @@ Several accounts also returned a notable message:
   * those credentials remain usable elsewhere,
   * and still represent password reuse / lateral movement risk.
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-lJ3-KK72SWLpHRNDAvpnSA.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — 6) Credential hygiene test succeeded (but reveals systemic weakness)](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-lJ3-KK72SWLpHRNDAvpnSA.png)
 
 * * *
 
@@ -200,7 +200,7 @@ In real environments, the risk is not “empty vs not empty,” but **R/W on mul
 
 ### Findings summary
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-ThfCkYxlr2PPaUzI0cIAAg.png)
+![HexStrike Gemini AI assisted SMB exposure credential brute force — Findings summary](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-smb-exposure-credential-brute-force/1-ThfCkYxlr2PPaUzI0cIAAg.png)
     
     
       Security Assessment Report  

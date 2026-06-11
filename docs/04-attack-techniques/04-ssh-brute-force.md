@@ -22,7 +22,7 @@ From Service Validation → Dependency Fixes → Findings → Defensive Takeaway
 
 #### From Service Validation → Dependency Fixes → Findings → Defensive Takeaways
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/0-BFm-ZoQNHk5Kp-pl.png)
+![HexStrike Gemini AI assisted SSH credential brute force — From Service Validation → Dependency Fixes → Findings → Defensive Takeaways](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/0-BFm-ZoQNHk5Kp-pl.png)
 
 ### Overview
 
@@ -70,7 +70,7 @@ This guide documents a **fully authorized lab** workflow where an AI-orchestrate
     
     @hexstrike: scan 172.16.59.129 find ssh port, do bruteforce for credentials with password dictionaries
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-WTVKVELBsiaU5HwO5IGXgA.png)
+![HexStrike Gemini AI assisted SSH credential brute force — 1) Prompt](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-WTVKVELBsiaU5HwO5IGXgA.png)
 
 **Key point:** The operator provides intent; the agent decides execution order.
 
@@ -78,13 +78,13 @@ This guide documents a **fully authorized lab** workflow where an AI-orchestrate
 
 ### 2) Port scanning
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-PGkBW3RGZzs2h3qqWRKl_Q.png)
+![HexStrike Gemini AI assisted SSH credential brute force — 2) Port scanning](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-PGkBW3RGZzs2h3qqWRKl_Q.png)
 
 * * *
 
 ### 3) Custom small lists succeeded (and exposed weak credentials)
 
-![](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-bUZwzZAWqh-3ZCLoeMHKwA.png)
+![HexStrike Gemini AI assisted SSH credential brute force — 3) Custom small lists succeeded (and exposed weak credentials)](/img/hexstrike-articles/hexstrike-gemini-ai-assisted-ssh-credential-brute-force/1-bUZwzZAWqh-3ZCLoeMHKwA.png)
 
 * * *
 
