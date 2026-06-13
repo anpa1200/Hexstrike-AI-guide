@@ -105,8 +105,13 @@ const config = {
         textColor: '#f8b400',
         isCloseable: true,
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'HexStrike AI, AI penetration testing, autonomous pentesting, MCP hacking, Cursor AI security, LLM attack chains, AI red team, pentesting automation, offensive AI, Andrey Pautov',
+        },
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
