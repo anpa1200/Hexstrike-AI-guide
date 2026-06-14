@@ -57,19 +57,7 @@ const config = {
           editUrl:
             'https://github.com/anpa1200/Hexstrike-AI-guide/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/anpa1200/Hexstrike-AI-guide/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         gtag: {trackingID: 'G-TMTG21RVHM', anonymizeIP: true},
         theme: {
           customCss: './src/css/custom.css',
