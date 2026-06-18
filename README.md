@@ -39,3 +39,13 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## 1200km Ecosystem
+
+This project is part of the 1200km security research ecosystem. Use [AdversaryGraph](https://1200km.com/adversarygraph/) for CTI-to-detection workflows, ATT&CK/ATLAS mapping, actor relevance, IOC enrichment, and analyst-ready reporting.
+
+- [AdversaryGraph project hub](https://1200km.com/adversarygraph/)
+- [AdversaryGraph documentation](https://1200km.com/adversarygraph-docs/)
+- [Live ATT&CK/ATLAS workspace](https://1200km.com/threat-matrix/)
+- [1200km security research ecosystem](https://1200km.com/)
+
