@@ -1,5 +1,6 @@
 ---
 title: "Cursor MCP Integration"
+description: "Configure Cursor as a HexStrike MCP client and follow a controlled multi-host lab workflow for discovery, validation, evidence capture, and reporting."
 date: 2026-01-08
 sidebar_position: 4
 ---

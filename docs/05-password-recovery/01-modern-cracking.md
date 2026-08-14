@@ -1,5 +1,6 @@
 ---
 title: "AI-Assisted Password Security Auditing"
+description: "Audit password resilience in controlled environments with Gemini and HexStrike, covering hash workflows, recovery limits, evidence, and hardening."
 sidebar_position: 1
 ---
 

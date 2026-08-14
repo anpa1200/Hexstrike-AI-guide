@@ -1,5 +1,6 @@
 ---
 title: "SSH Credential Brute-Force"
+description: "Assess SSH exposure in an authorized lab with Gemini and HexStrike, covering service validation, credential-risk checks, evidence, and remediation guidance."
 date: 2026-01-04
 sidebar_position: 4
 ---

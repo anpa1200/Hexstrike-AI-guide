@@ -1,5 +1,6 @@
 ---
 title: "HexStrike vs. HackerAI"
+description: "Compare HexStrike with HackerAI across orchestration, tool execution, context handling, evidence capture, limitations, and safe use in authorized labs."
 date: 2025-12-26
 sidebar_position: 3
 ---

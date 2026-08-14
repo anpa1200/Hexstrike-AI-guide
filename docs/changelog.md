@@ -1,5 +1,6 @@
 ---
 title: "Changelog"
+description: "Track HexStrike guide updates, including content synchronization, safety framing, redactions, technical corrections, navigation, and release history."
 sidebar_position: 100
 ---
 

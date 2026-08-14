@@ -1,7 +1,11 @@
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
+import {useTitleFormatter} from '@docusaurus/theme-common/internal';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+
+const HOME_TITLE = 'AI-Powered Penetration Testing Orchestrator';
+const HOME_DESCRIPTION = 'HexStrike AI — bridge LLMs to 150+ security tools via MCP for authorized lab assessment, evidence collection, troubleshooting, and reporting.';
 
 const FEATURES = [
   {
@@ -126,14 +130,34 @@ const STEPS = [
   },
 ];
 
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {'@type': 'ListItem', position: 1, name: '1200km', item: 'https://1200km.com/'},
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'HexStrike AI Guide',
+      item: 'https://1200km.com/Hexstrike-AI-guide/',
+    },
+  ],
+};
+
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const titleFormatter = useTitleFormatter();
+  const formattedTitle = titleFormatter.format(HOME_TITLE);
 
   return (
     <Layout
-      title="AI-Powered Penetration Testing Orchestrator"
-      description="HexStrike AI — bridge LLMs to 150+ security tools via MCP for authorized lab assessment, evidence collection, troubleshooting, and reporting."
+      title={HOME_TITLE}
+      description={HOME_DESCRIPTION}
     >
+      <Head>
+        <meta name="twitter:title" content={formattedTitle} />
+        <meta name="twitter:description" content={HOME_DESCRIPTION} />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbStructuredData)}</script>
+      </Head>
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>

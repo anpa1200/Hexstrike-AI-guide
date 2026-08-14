@@ -1,5 +1,6 @@
 ---
 title: "Network Discovery & Exploitation"
+description: "Follow an authorized home-lab workflow for host discovery, service enumeration, controlled validation, evidence collection, and remediation planning."
 date: 2025-12-21
 sidebar_position: 1
 ---

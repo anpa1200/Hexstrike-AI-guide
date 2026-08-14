@@ -1,5 +1,6 @@
 ---
 title: "Web Application Pentesting"
+description: "Use HexStrike to coordinate an authorized web-application assessment from reconnaissance through validation, evidence capture, and defensive reporting."
 date: 2025-12-22
 sidebar_position: 2
 ---

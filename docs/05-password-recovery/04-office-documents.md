@@ -1,5 +1,6 @@
 ---
 title: "Office Documents Password Recovery"
+description: "Recover access to owned Office documents with Gemini and HexStrike through a controlled process for format checks, evidence, limits, and remediation."
 date: 2025-12-29
 sidebar_position: 4
 ---

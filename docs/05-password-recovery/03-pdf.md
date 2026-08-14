@@ -1,5 +1,6 @@
 ---
 title: "PDF Password Recovery"
+description: "Recover access to an owned PDF with Gemini and HexStrike through a controlled workflow covering format checks, tool recovery, evidence, and limitations."
 date: 2025-12-29
 sidebar_position: 3
 ---

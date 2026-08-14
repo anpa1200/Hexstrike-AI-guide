@@ -5,12 +5,29 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import {execFileSync} from 'node:child_process';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+function gitLastModifiedDate(relativePath) {
+  try {
+    const value = execFileSync('git', ['log', '-1', '--format=%cs', '--', relativePath], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    }).trim();
+    return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : undefined;
+  } catch {
+    // A shallow export or a non-Git build must not invent a timestamp.
+    return undefined;
+  }
+}
+
+const homepageLastmod = gitLastModifiedDate('src/pages/index.js');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'HexStrike AI',
+  title: '1200km',
+  titleDelimiter: '|',
   tagline: 'AI-Driven Penetration Testing & Security Research',
   favicon: 'img/logo.png',
 
@@ -52,12 +69,26 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/anpa1200/Hexstrike-AI-guide/tree/main/',
         },
         blog: false,
+        sitemap: {
+          lastmod: 'date',
+          createSitemapItems: async ({defaultCreateSitemapItems, ...params}) => {
+            const items = await defaultCreateSitemapItems(params);
+            return items.map((item) => {
+              const pathname = new URL(item.url).pathname.replace(/\/+$/, '');
+              const isHomepage = pathname === '/Hexstrike-AI-guide';
+              return isHomepage && homepageLastmod
+                ? {...item, lastmod: item.lastmod || homepageLastmod}
+                : item;
+            });
+          },
+        },
         gtag: {trackingID: 'G-TMTG21RVHM', anonymizeIP: true},
         theme: {
           customCss: './src/css/custom.css',
@@ -76,8 +107,12 @@ const config = {
         textColor: '#f8b400',
         isCloseable: true,
       },
-      image: 'img/logo.png',
+      image: 'img/hexstrike-articles/hexstrike-ai-a-force-multiplier-for-red-teams-and-a-dangerous-shift-in-the-threat-landscape/0-3aT5ccS08ZmUK0Y6.png',
       metadata: [
+        {
+          property: 'og:site_name',
+          content: '1200km — Andrey Pautov Security Research',
+        },
         {
           name: 'keywords',
           content: 'HexStrike AI, AI penetration testing, autonomous pentesting, MCP hacking, Cursor AI security, LLM attack chains, AI red team, pentesting automation, offensive AI, Andrey Pautov',
@@ -102,7 +137,7 @@ const config = {
           {to: '/docs/about', label: 'About', position: 'left'},
           {
             href: 'https://github.com/anpa1200/Hexstrike-AI-guide',
-            label: 'GitHub',
+            label: "Guide source (site owner's repo)",
             position: 'right',
           },
           {

@@ -1,5 +1,6 @@
 ---
 title: "ZIP Password Recovery"
+description: "Recover access to an owned ZIP archive with Gemini and HexStrike in a controlled workflow that documents failures, evidence, limits, and safer practices."
 date: 2025-12-25
 sidebar_position: 2
 ---

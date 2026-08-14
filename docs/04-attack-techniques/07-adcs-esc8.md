@@ -1,5 +1,6 @@
 ---
 title: "AI-Assisted ADCS ESC8 Lab Validation in GOAD-Mini"
+description: "Validate ADCS ESC8 conditions in a controlled GOAD-Mini lab with Cursor and HexStrike, preserving evidence, limitations, and remediation guidance."
 date: 2026-01-29
 sidebar_position: 7
 ---

@@ -1,5 +1,6 @@
 ---
 title: "SMB Exposure & Credential Brute-Force"
+description: "Assess SMB exposure in an authorized lab with Gemini and HexStrike, from service fingerprinting and authentication checks to share-risk remediation."
 date: 2026-01-05
 sidebar_position: 5
 ---

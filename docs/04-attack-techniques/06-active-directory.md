@@ -1,5 +1,6 @@
 ---
 title: "Active Directory Penetration Testing"
+description: "Review a controlled GOAD-Mini workflow for Active Directory discovery, validation, evidence collection, attack-path analysis, and defensive remediation."
 date: 2026-01-27
 sidebar_position: 6
 ---

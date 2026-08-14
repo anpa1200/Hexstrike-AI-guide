@@ -1,5 +1,6 @@
 ---
 title: "OpenAI Codex Integration"
+description: "Connect OpenAI Codex to HexStrike for authorized Metasploitable assessment, structured tool orchestration, evidence capture, validation, and reporting."
 date: 2026-01-03
 sidebar_position: 3
 ---
