@@ -1,5 +1,6 @@
 ---
 title: "About the Author"
+description: "Meet Andrey Pautov, the CTI and security researcher behind this HexStrike field guide, and find his research profiles, projects, and support links."
 sidebar_position: 2
 ---
 

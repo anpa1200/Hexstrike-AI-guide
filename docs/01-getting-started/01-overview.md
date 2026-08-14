@@ -1,5 +1,6 @@
 ---
-title: "HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape"
+title: "HexStrike-AI: A Force Multiplier for Red Teams — and a Dangerous Shift in the Threat Landscape"
+description: "Understand how AI-assisted security orchestration changes red-team workflows, lowers operational barriers, and creates new defensive risks in authorized labs."
 date: 2025-12-25
 sidebar_position: 1
 ---

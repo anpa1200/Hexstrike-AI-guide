@@ -1,5 +1,6 @@
 ---
 title: "Gemini CLI Integration"
+description: "Connect Gemini CLI to HexStrike through MCP, verify the server and tool catalog, handle common setup failures, and run controlled security-lab workflows."
 date: 2025-12-18
 sidebar_position: 2
 ---
@@ -408,7 +409,7 @@ This tells Gemini CLI to launch the HexStrike MCP client (via `hexstrike_mcp.py`
 
 Other Configuration Files
 
-HexStrike doesn’t have a heavy config file by default — most settings are via command-line arguments or environment variables. However, you should ensure that any LLM clients (ChatGPT GUIs, VS Code extensions, etc.) trust the HexStrike server. For example, if using VS Code’s LLM features or Anthropic’s Claude Desktop, you’d add `hexstrike-ai` under their MCP server settings (as shown in the GitHub README) [github.com](<https://github.com/0x4m4/hexstrike-ai#:~:text=match%20at%20L466%20Edit%20%60>). In all cases, the key is pointing the LLM’s MCP client to `http://<your-kali-ip>:8888` and setting any API keys needed.
+HexStrike doesn’t have a heavy config file by default — most settings are via command-line arguments or environment variables. However, you should ensure that any LLM clients (ChatGPT GUIs, VS Code extensions, etc.) trust the HexStrike server. For example, if using VS Code’s LLM features or Anthropic’s Claude Desktop, you’d add `hexstrike-ai` under their MCP server settings (as shown in the upstream README) [HexStrike AI (upstream project)](<https://github.com/0x4m4/hexstrike-ai#:~:text=match%20at%20L466%20Edit%20%60>). In all cases, the key is pointing the LLM’s MCP client to `http://<your-kali-ip>:8888` and setting any API keys needed.
 
 * * *
 

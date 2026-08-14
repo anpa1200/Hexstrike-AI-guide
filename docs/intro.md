@@ -1,5 +1,6 @@
 ---
 title: HexStrike AI — Documentation
+description: "Explore practical HexStrike guidance for MCP setup, LLM integrations, reconnaissance, controlled attack labs, password recovery, and reporting."
 sidebar_position: 1
 slug: /
 ---
@@ -26,6 +27,8 @@ Unlike a scanner or a chatbot with tools, HexStrike **maintains context across a
 ---
 
 ## Quick Start
+
+The source-install option below uses the [HexStrike AI (upstream project)](https://github.com/0x4m4/hexstrike-ai), maintained by its upstream authors.
 
 ```bash
 # Option 1: Kali package (recommended — Kali 2025.4+)

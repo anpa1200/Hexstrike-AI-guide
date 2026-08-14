@@ -1,5 +1,6 @@
 ---
 title: "Ollama Local Integration"
+description: "Run HexStrike with local Ollama models across an Ubuntu host and Kali VM, including SSH bridging, model selection, performance limits, and recovery."
 date: 2025-12-31
 sidebar_position: 5
 ---
@@ -355,7 +356,7 @@ On **Ubuntu** , create `~/.mcphost.yml`:
 Why this works:
 
   * `hexstrike_mcp` defaults to `http://127.0.0.1:8888` and supports `--timeout`. [Kali Linux](<https://www.kali.org/tools/hexstrike-ai/>)
-  * HexStrike lists common MCP tool names like `nmap_scan()`, `nuclei_scan()`, etc. [GitHub](<https://github.com/0x4m4/hexstrike-ai>)
+  * HexStrike lists common MCP tool names like `nmap_scan()`, `nuclei_scan()`, etc. [HexStrike AI (upstream project)](<https://github.com/0x4m4/hexstrike-ai>)
   * `mcphost` supports Ollama models and can run in non-interactive mode (`-p ... --quiet`). [GitHub+1](<https://github.com/mark3labs/mcphost>)
 
 

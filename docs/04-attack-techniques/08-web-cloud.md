@@ -1,5 +1,6 @@
 ---
 title: "Web & Cloud Penetration Testing"
+description: "Coordinate authorized web and cloud testing with Cursor, HexStrike, and Burp Suite MCP while preserving scope, approvals, evidence, and limitations."
 date: 2026-01-31
 sidebar_position: 8
 ---

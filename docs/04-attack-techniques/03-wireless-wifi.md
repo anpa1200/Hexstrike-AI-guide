@@ -1,5 +1,6 @@
 ---
 title: "Wireless / WiFi Cracking"
+description: "Examine an authorized wireless-security lab using Gemini, HexStrike, and Aircrack-ng, with scope controls, evidence handling, and defensive takeaways."
 date: 2025-12-24
 sidebar_position: 3
 ---

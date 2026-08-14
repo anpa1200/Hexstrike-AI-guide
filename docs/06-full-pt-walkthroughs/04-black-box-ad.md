@@ -1,5 +1,6 @@
 ---
 title: "Black-Box Active Directory PT Walkthrough"
+description: "Study a black-box Active Directory lab workflow for scoped discovery, reviewed validation, attack-path evidence, remediation, and reporting."
 date: 2026-01-27
 sidebar_position: 4
 ---

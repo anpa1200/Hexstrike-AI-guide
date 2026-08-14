@@ -1,5 +1,6 @@
 ---
 title: "Integrating Shodan with HexStrike-AI Using Gemini-CLI"
+description: "Use Gemini and HexStrike to organize Shodan reconnaissance, validate external exposure, preserve evidence, and turn findings into defensive priorities."
 date: 2025-12-23
 sidebar_position: 1
 ---

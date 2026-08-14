@@ -1,5 +1,6 @@
 ---
 title: LLM Integrations Overview
+description: "Choose among Gemini CLI, OpenAI Codex, Cursor MCP, and local Ollama clients for HexStrike workflows based on privacy, cost, control, and lab needs."
 sidebar_position: 1
 ---
 

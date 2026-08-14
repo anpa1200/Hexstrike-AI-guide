@@ -1,5 +1,6 @@
 ---
 title: "Full Subnet Compromise Walkthrough"
+description: "Follow a controlled subnet-assessment lab from discovery and credential validation to multi-host evidence, risk analysis, cleanup, and reporting."
 date: 2026-01-08
 sidebar_position: 3
 ---

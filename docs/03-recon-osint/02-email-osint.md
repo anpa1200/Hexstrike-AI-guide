@@ -1,5 +1,6 @@
 ---
 title: "OSINT: From One Email to a Full Exposure Map"
+description: "Build a privacy-conscious exposure map from an email address using Cursor and HexStrike, with evidence boundaries, validation steps, and safe reporting."
 date: 2026-01-11
 sidebar_position: 2
 ---

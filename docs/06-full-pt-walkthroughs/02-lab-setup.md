@@ -1,5 +1,6 @@
 ---
 title: "Lab Setup: Vulnerable Ubuntu 24.04 Server"
+description: "Build a deliberately vulnerable Ubuntu 24.04 lab for authorized HexStrike practice, with isolated networking, services, controls, and reset guidance."
 date: 2026-01-06
 sidebar_position: 2
 ---

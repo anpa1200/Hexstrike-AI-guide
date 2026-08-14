@@ -1,5 +1,6 @@
 ---
 title: "Controlled Lab Assessment Workflow with HexStrike AI"
+description: "Plan and document an authorized lab assessment with HexStrike, from scope and discovery through reviewed validation, evidence capture, and reporting."
 sidebar_position: 1
 ---
 
