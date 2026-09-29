@@ -47,7 +47,7 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 #### **VirtualBox (Recommended for Beginners — Free and Open-Source)**
 
-**Download and install VirtualBox (latest version from <**[**https://www.virtualbox.org/ >**](<https://www.virtualbox.org/%3E?referrer=grok.com>)**).**
+Download and install VirtualBox from the [official VirtualBox downloads page](https://www.virtualbox.org/wiki/Downloads).
 
   * On Ubuntu/Kali Linux: sudo apt update && sudo apt install virtualbox virtualbox-ext-pack
   * On Windows/macOS: Download the installer from the official site and run it.
@@ -55,9 +55,9 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 
 
-#### VMware Alternative (VMware Workstation Player — Free for Personal Use, Better Performance) As of 2025–2026, VMware Workstation Player/Pro is free for personal/non-commercial use.
+#### VMware Workstation Pro alternative
 
-**Download from <**[**https://www.vmware.com/products/workstation-player.html >**](<https://www.vmware.com/products/workstation-player.html%3E?referrer=grok.com>)**.**
+Use the [official VMware Workstation Pro page](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) for the current download. Workstation Player is no longer a current download; check [VMware's product FAQ](https://www.vmware.com/docs/desktop-hypervisor-faqs) for availability and licensing.
 
   * On Ubuntu/Kali: Download .bundle, chmod +x VMware-*.bundle, install prerequisites (sudo apt install build-essential linux-headers-$(uname -r)), run sudo ./VMware-*.bundle.
   * Why VMware? Better performance for complex labs.
@@ -66,10 +66,10 @@ We’ll use VirtualBox or VMware as the hypervisor, download a legitimate Ubuntu
 
 * * *
 
-#### Step 1: Download the Ubuntu 24.04.3 Server ISO
+#### Step 1: Download an Ubuntu 24.04 LTS Server ISO
 
-  1. Go to the official Ubuntu download page: <[https://ubuntu.com/download/server>](<https://ubuntu.com/download/server%3E?referrer=grok.com>).
-  2. Select Ubuntu 24.04.3 LTS Server (AMD64). Download the ISO (~2GB).
+  1. Go to the [official Ubuntu Server download page](https://ubuntu.com/download/server).
+  2. Select a currently available Ubuntu 24.04 LTS Server AMD64 ISO under previous LTS releases; point-release numbers and download sizes change.
 
 
 
