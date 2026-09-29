@@ -281,7 +281,9 @@ Once both MCP servers are configured, Cursor AI should have access to:
 
 **User Prompt:**
 
-> “Perform a blackbox penetration test on [http://34.121.191.196](<http://34.121.191.196/>)"
+> “Perform a blackbox penetration test on `hxxp://34[.]121[.]191[.]196`"
+
+This is a historical lab address, not a target for readers. Replace it with an isolated host you control before running any example commands.
 
 That’s it. One entry point. No additional information. Let’s see how the AI reasons through this challenge.
 
@@ -541,7 +543,7 @@ That’s it. One entry point. No additional information. Let’s see how the AI 
 
 **AI Reasoning:**
 
-> “I want to access the GCP metadata service to get a service account token. The metadata service is at <http://169.254.169.254/>. I need to:
+> “I want to access the GCP metadata service to get a service account token. The metadata service is at `169.254.169.254` (link-local). I need to:
 
   * Make an HTTP request with the Metadata-Flavor: Google header
   * Parse the JSON response to extract the access_token
