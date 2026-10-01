@@ -1,0 +1,395 @@
+{
+  "prefix": "/Hexstrike-AI-guide/",
+  "pages": {
+    "/Hexstrike-AI-guide/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 622,
+      "title": "AI-Powered Penetration Testing Orchestrator | 1200km",
+      "description": "HexStrike AI — bridge LLMs to 150+ security tools via MCP for authorized lab assessment, evidence collection, troubleshooting, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 334,
+      "title": "HexStrike AI — Documentation | 1200km",
+      "description": "Explore practical HexStrike guidance for MCP setup, LLM integrations, reconnaissance, controlled attack labs, password recovery, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/about": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 287,
+      "title": "About the Author — HexStrike Guide | 1200km",
+      "description": "Meet Andrey Pautov, the CTI and security researcher behind this HexStrike field guide, and find his research profiles, projects, and support links."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/active-directory": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 2925,
+      "title": "Active Directory Testing — HexStrike Lab | 1200km",
+      "description": "Review a controlled GOAD-Mini workflow for Active Directory discovery, validation, evidence collection, attack-path analysis, and defensive remediation."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/network-discovery": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1134,
+      "title": "Network Discovery & Exploitation | 1200km",
+      "description": "Follow an authorized home-lab workflow for host discovery, service enumeration, controlled validation, evidence collection, and remediation planning."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/web-application": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1769,
+      "title": "Web Application Pentesting | 1200km",
+      "description": "Use HexStrike to coordinate an authorized web-application assessment from reconnaissance through validation, evidence capture, and defensive reporting.",
+      "howTo": {
+        "@type": "HowTo",
+        "@id": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#howto",
+        "name": "Web Application Pentesting | 1200km",
+        "mainEntityOfPage": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Step 1: Application Discovery",
+            "text": "Step 1: Application Discovery",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-1-application-discovery"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 2: Attack Surface Mapping",
+            "text": "Step 2: Attack Surface Mapping",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-2-attack-surface-mapping"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 3: Authentication & Session Analysis",
+            "text": "Step 3: Authentication & Session Analysis",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-3-authentication--session-analysis"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 4: XSS Testing (Reflected & Stored)",
+            "text": "Step 4: XSS Testing (Reflected & Stored)",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-4-xss-testing-reflected--stored"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 5: CSRF Testing",
+            "text": "Step 5: CSRF Testing",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-5-csrf-testing"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 6: Authorization Bypass",
+            "text": "Step 6: Authorization Bypass",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-6-authorization-bypass"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 7: Exploitation Summary",
+            "text": "Step 7: Exploitation Summary",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-7-exploitation-summary"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 8: Sample Exploitation Flow",
+            "text": "Step 8: Sample Exploitation Flow",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-application#step-8-sample-exploitation-flow"
+          }
+        ]
+      }
+    },
+    "/Hexstrike-AI-guide/docs/full-pt-walkthroughs/full-pt-guide": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1113,
+      "title": "HexStrike AI — Controlled Lab Assessment | 1200km",
+      "description": "Plan and document an authorized lab assessment with HexStrike, from scope and discovery through reviewed validation, evidence capture, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/getting-started/installation": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 3151,
+      "title": "Installation & Configuration | 1200km",
+      "description": "Install HexStrike AI on Kali Linux, connect Gemini, Codex, Cursor, or Ollama through MCP, and validate a controlled, evidence-focused lab workflow."
+    },
+    "/Hexstrike-AI-guide/docs/getting-started/overview": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 909,
+      "title": "HexStrike AI — Red-Team Uses and Risks | 1200km",
+      "description": "Understand how AI-assisted security orchestration changes red-team workflows, lowers barriers and creates new defensive risks in authorized labs."
+    },
+    "/Hexstrike-AI-guide/docs/llm-integrations/overview": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 192,
+      "title": "LLM Integrations Overview | 1200km",
+      "description": "Choose among Gemini CLI, OpenAI Codex, Cursor MCP, and local Ollama clients for HexStrike workflows based on privacy, cost, control, and lab needs."
+    },
+    "/Hexstrike-AI-guide/docs/password-recovery/modern-cracking": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 4102,
+      "title": "AI-Assisted Password Security Auditing | 1200km",
+      "description": "Audit password resilience in controlled environments with Gemini and HexStrike, covering hash workflows, recovery limits, evidence, and hardening."
+    },
+    "/Hexstrike-AI-guide/docs/recon-osint/shodan": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1111,
+      "title": "Shodan with HexStrike AI and Gemini CLI | 1200km",
+      "description": "Use Gemini and HexStrike to organize Shodan reconnaissance, validate external exposure, preserve evidence, and turn findings into defensive priorities.",
+      "howTo": {
+        "@type": "HowTo",
+        "@id": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan#howto",
+        "name": "Shodan with HexStrike AI and Gemini CLI | 1200km",
+        "mainEntityOfPage": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Step 1: Obtain a Shodan API Key",
+            "text": "Step 1: Obtain a Shodan API Key",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan#step-1-obtain-a-shodan-api-key"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 2: Configure Gemini-CLI to Use HexStrike with Shodan",
+            "text": "Step 2: Configure Gemini-CLI to Use HexStrike with Shodan",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan#step-2-configure-gemini-cli-to-use-hexstrike-with-shodan"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 3: Understanding the Execution Flow",
+            "text": "Step 3: Understanding the Execution Flow",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan#step-3-understanding-the-execution-flow"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 4: Practical Usage — Pentesting Internet-Exposed Cameras",
+            "text": "Step 4: Practical Usage — Pentesting Internet-Exposed Cameras",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/recon-osint/shodan#step-4-practical-usage--pentesting-internet-exposed-cameras"
+          }
+        ]
+      }
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/adcs-esc8": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1567,
+      "title": "AI-Assisted ADCS ESC8 Lab Validation in GOAD-Mini | 1200km",
+      "description": "Validate ADCS ESC8 conditions in a controlled GOAD-Mini lab with Cursor and HexStrike, preserving evidence, limitations, and remediation guidance."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/smb-brute-force": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1875,
+      "title": "SMB Exposure & Credential Brute-Force | 1200km",
+      "description": "Assess SMB exposure in an authorized lab with Gemini and HexStrike, from service fingerprinting and authentication checks to share-risk remediation."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/ssh-brute-force": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 578,
+      "title": "SSH Credential Brute-Force | 1200km",
+      "description": "Assess SSH exposure in an authorized lab with Gemini and HexStrike, covering service validation, credential-risk checks, evidence and remediation guidance."
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/web-cloud": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 7638,
+      "title": "Web & Cloud Penetration Testing | 1200km",
+      "description": "Coordinate authorized web and cloud testing with Cursor, HexStrike, and Burp Suite MCP while preserving scope, approvals, evidence, and limitations.",
+      "howTo": {
+        "@type": "HowTo",
+        "@id": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud#howto",
+        "name": "Web & Cloud Penetration Testing | 1200km",
+        "mainEntityOfPage": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Step 1: Install Cursor AI",
+            "text": "Step 1: Install Cursor AI",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud#step-1-install-cursor-ai"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 2: Configure HexStrike MCP",
+            "text": "Step 2: Configure HexStrike MCP",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud#step-2-configure-hexstrike-mcp"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 3: Configure Burp Suite MCP",
+            "text": "Step 3: Configure Burp Suite MCP",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud#step-3-configure-burp-suite-mcp"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 4: Verify Integration",
+            "text": "Step 4: Verify Integration",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/attack-techniques/web-cloud#step-4-verify-integration"
+          }
+        ]
+      }
+    },
+    "/Hexstrike-AI-guide/docs/attack-techniques/wireless-wifi": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 711,
+      "title": "Wireless / WiFi Cracking | 1200km",
+      "description": "Examine an authorized wireless-security lab using Gemini, HexStrike, and Aircrack-ng, with scope controls, evidence handling, and defensive takeaways."
+    },
+    "/Hexstrike-AI-guide/docs/changelog": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 775,
+      "title": "Changelog — HexStrike Guide | 1200km",
+      "description": "Track HexStrike guide updates, including content synchronization, safety framing, redactions, technical corrections, navigation, and release history."
+    },
+    "/Hexstrike-AI-guide/docs/full-pt-walkthroughs/black-box-ad": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 2925,
+      "title": "Black-Box Active Directory PT Walkthrough | 1200km",
+      "description": "Study a black-box Active Directory lab workflow for scoped discovery, reviewed validation, attack-path evidence, remediation, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/full-pt-walkthroughs/full-subnet": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 6788,
+      "title": "Full Subnet Compromise Walkthrough | 1200km",
+      "description": "Follow a controlled subnet-assessment lab from discovery and credential validation to multi-host evidence, risk analysis, cleanup, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 3020,
+      "title": "Lab Setup: Vulnerable Ubuntu 24.04 Server | 1200km",
+      "description": "Build a deliberately vulnerable Ubuntu 24.04 lab for authorized HexStrike practice, with isolated networking, services, controls, and reset guidance.",
+      "howTo": {
+        "@type": "HowTo",
+        "@id": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#howto",
+        "name": "Lab Setup: Vulnerable Ubuntu 24.04 Server | 1200km",
+        "mainEntityOfPage": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Step 1: Download the Ubuntu 24.04.3 Server ISO",
+            "text": "Step 1: Download the Ubuntu 24.04.3 Server ISO",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#step-1-download-the-ubuntu-24043-server-iso"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 2: Create a New Virtual Machine In VirtualBox:",
+            "text": "Step 2: Create a New Virtual Machine In VirtualBox:",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#step-2-create-a-new-virtual-machine-in-virtualbox"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 3: Install Ubuntu 24.04.3 Server",
+            "text": "Step 3: Install Ubuntu 24.04.3 Server",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#step-3-install-ubuntu-24043-server"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 4: Configure Basic Networking and Access",
+            "text": "Step 4: Configure Basic Networking and Access",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#step-4-configure-basic-networking-and-access"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Step 5: Introduce Vulnerabilities Using Bash Script",
+            "text": "Step 5: Introduce Vulnerabilities Using Bash Script",
+            "url": "https://1200km.com/Hexstrike-AI-guide/docs/full-pt-walkthroughs/lab-setup#step-5-introduce-vulnerabilities-using-bash-script"
+          }
+        ]
+      }
+    },
+    "/Hexstrike-AI-guide/docs/getting-started/vs-other-tools": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 958,
+      "title": "HexStrike vs. HackerAI | 1200km",
+      "description": "Compare HexStrike with HackerAI across orchestration, tool execution, context handling, evidence capture, limitations, and safe use in authorized labs."
+    },
+    "/Hexstrike-AI-guide/docs/llm-integrations/cursor-mcp": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 6692,
+      "title": "Cursor MCP Integration | 1200km",
+      "description": "Configure Cursor as a HexStrike MCP client and follow a controlled multi-host lab workflow for discovery, validation, evidence capture, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/llm-integrations/gemini": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 3087,
+      "title": "Gemini CLI Integration | 1200km",
+      "description": "Connect Gemini CLI to HexStrike through MCP, verify the server and tool catalog, handle common setup failures, and run controlled security-lab workflows."
+    },
+    "/Hexstrike-AI-guide/docs/llm-integrations/ollama-local": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1860,
+      "title": "Ollama Local Integration | 1200km",
+      "description": "Run HexStrike with local Ollama models across an Ubuntu host and Kali VM, including SSH bridging, model selection, performance limits, and recovery."
+    },
+    "/Hexstrike-AI-guide/docs/llm-integrations/openai-codex": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 1326,
+      "title": "OpenAI Codex Integration | 1200km",
+      "description": "Connect OpenAI Codex to HexStrike for authorized Metasploitable assessment, structured tool orchestration, evidence capture, validation, and reporting."
+    },
+    "/Hexstrike-AI-guide/docs/password-recovery/office-documents": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 692,
+      "title": "Office Documents Password Recovery | 1200km",
+      "description": "Recover access to owned Office documents with Gemini and HexStrike through a controlled process for format checks, evidence, limits, and remediation."
+    },
+    "/Hexstrike-AI-guide/docs/password-recovery/pdf": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 697,
+      "title": "PDF Password Recovery | 1200km",
+      "description": "Recover access to an owned PDF with Gemini and HexStrike through a controlled workflow covering format checks, tool recovery, evidence, and limitations."
+    },
+    "/Hexstrike-AI-guide/docs/password-recovery/zip": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 553,
+      "title": "ZIP Password Recovery | 1200km",
+      "description": "Recover access to an owned ZIP archive with Gemini and HexStrike in a controlled workflow that documents failures, evidence, limits, and safer practices."
+    },
+    "/Hexstrike-AI-guide/docs/recon-osint/email-osint": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 3065,
+      "title": "OSINT: From One Email to a Full Exposure Map | 1200km",
+      "description": "Build a privacy-conscious exposure map from an email address using Cursor and HexStrike, with evidence boundaries, validation steps, and safe reporting."
+    }
+  },
+  "gitHistory": true,
+  "person": {
+    "@type": "Person",
+    "@id": "https://1200km.com/#person",
+    "name": "Andrey Pautov",
+    "url": "https://1200km.com/",
+    "sameAs": [
+      "https://github.com/anpa1200",
+      "https://medium.com/@1200km",
+      "https://www.linkedin.com/in/andrey-pautov/",
+      "https://infosecwriteups.com/@1200km"
+    ]
+  },
+  "website": {
+    "@type": "WebSite",
+    "@id": "https://1200km.com/#website",
+    "url": "https://1200km.com/",
+    "name": "1200km Security Research",
+    "publisher": {
+      "@id": "https://1200km.com/#person"
+    }
+  }
+}

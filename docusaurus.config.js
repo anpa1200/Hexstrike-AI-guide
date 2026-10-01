@@ -1,3 +1,4 @@
+import applyTechnicalSitemap from './technical-seo-sitemap.cjs';
 // @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
@@ -26,6 +27,7 @@ const homepageLastmod = gitLastModifiedDate('src/pages/index.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: ['./technical-seo-plugin.cjs'],
   title: '1200km',
   titleDelimiter: '|',
   tagline: 'AI-Driven Penetration Testing & Security Research',
@@ -193,4 +195,5 @@ const config = {
     }),
 };
 
+applyTechnicalSitemap(config);
 export default config;
